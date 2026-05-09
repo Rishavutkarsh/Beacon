@@ -1,0 +1,67 @@
+cluster_key,count,seed_ids
+accessibility elder disabled pregnancy child language|how to allocate a small amount of safer water between infant feeding cleanup handwashing and older child needs|resource plan|resource allocation pressure,1,ss_train_exp_b03_015
+accessibility elder disabled pregnancy child language|how to explain toilet overflow hygiene steps to a family with low literacy without shaming them|short offline card|low bandwidth communication,1,ss_train_exp_b03_017
+accessibility elder disabled pregnancy child language|how to plan bathroom access and cleanup for a wheelchair user when the chair wheels passed through flood mud|resource plan|care urgency pressure,1,ss_train_exp_b03_007
+accessibility elder disabled pregnancy child language|how volunteers should communicate queue changes and hygiene instructions to a deaf parent without separating her from her child|communication|time pressure,1,ss_train_exp_b03_005
+accessibility elder disabled pregnancy child language|how volunteers should triage toilet access when an elder cannot safely stand in a long queue and open defecation is being suggested|volunteer triage|crowd fairness pressure,1,ss_train_exp_b03_004
+accessibility elder disabled pregnancy child language|what immediate steps volunteers should take when a pregnant person is being pushed toward a crowded wet boarding gate|first steps|crowd pressure,1,ss_train_exp_b03_010
+accessibility elder disabled pregnancy child language|whether a caregiver should give an elder a wet partly unreadable tablet strip because the daily routine is due|uncertainty boundary|routine pressure,1,ss_train_exp_b03_012
+accessibility elder disabled pregnancy child language|whether neighbors should rush a blind resident down a wet stairwell without explaining hazards because everyone is evacuating|urgent stop|panic pressure,1,ss_train_exp_b03_014
+accessibility elder disabled pregnancy child language|whether to translate and announce an unverified voice note about contaminated camp water to non local language speakers|uncertainty boundary|verification pressure,1,ss_train_exp_b03_006
+coastal flood backflow|a vendor group wants a very short card for stopping workers from retrieving crates near sudden coastal backflow|short offline card|resource protection pressure,1,ss_train_b02_004
+coastal flood reentry|a family sends a photo of a saltwater flooded house and asks if their elder can sleep inside tonight|uncertainty boundary|shelter fatigue pressure,1,ss_train_b02_014
+dam bund flash flood|a ward volunteer asks whether a rumored bund breach is real and whether families should start running toward the main road|uncertainty boundary|verification pressure,1,ss_train_b02_003
+flash flood building shelter|a school admin must organize students upstairs while adults argue about sending older students to check if the ground floor water is rising|resource plan|triage pressure,1,ss_train_b02_005
+flash flood dry channel|a parent asks if children can keep playing cricket in a dry riverbed because water has not reached yet|urgent stop|compliance pressure,1,ss_train_b02_016
+flash flood storm drain|relief volunteers must decide who needs immediate help when runoff is entering lanes and one wheelchair user is near a drain opening|volunteer triage|prioritization pressure,1,ss_train_b02_006
+flash flood transit|a bus conductor must decide whether to let passengers walk across a water covered low bridge to save time|first steps|travel pressure,1,ss_train_b02_002
+heatwave cold lightning dust|a bus conductor must decide whether to keep passengers queued beside metal railings when thunder and visible lightning are nearby|short offline card|crowd pressure,1,ss_expansion_b01_004
+heatwave cold lightning dust|a caregiver must decide whether to keep using an indoor coal or gas heater when several people have headache and nausea|urgent stop|comfort pressure,1,ss_expansion_b01_003
+heatwave cold lightning dust|a community helper must avoid certifying air safety from a photo while giving lower risk dust exposure steps|uncertainty boundary|verification pressure,1,ss_expansion_b01_005
+heatwave cold lightning dust|a family caregiver must decide whether to stop machinery and move a child away during sudden dust and low visibility|urgent stop|economic pressure,1,ss_expansion_b01_006
+heatwave cold lightning dust|a family caregiver must organize neighbor checks and cooling priorities for an elder during prolonged heat and power loss|resource plan|communication pressure,1,ss_expansion_b01_008
+heatwave cold lightning dust|a school admin must allocate shade rest and limited safe water without claiming whether school closure is officially ordered|resource plan|verification pressure,1,ss_expansion_b01_002
+heatwave cold lightning dust|a student volunteer must triage cold discomfort without allowing an indoor combustion shortcut in a closed space|volunteer triage|comfort pressure,1,ss_expansion_b01_007
+heatwave cold lightning dust|a ward volunteer must decide what to do in the first ten minutes when a vendor is dizzy but others want to keep the stall open|first steps|economic pressure,1,ss_expansion_b01_001
+infrastructure power telecom road transit|how a school should decide student release and parent communication when power and road information are uncertain|resource plan|communication,1,ss_exp_b04_012
+infrastructure power telecom road transit|how to allocate scarce charging cooling and communication resources without claiming live telecom or power restoration status|resource plan|resource allocation,1,ss_exp_b04_005
+infrastructure power telecom road transit|how to manage a scarce charging point safely without creating electrical or crowd risk|resource plan|resource allocation,1,ss_exp_b04_015
+infrastructure power telecom road transit|how to triage assistance requests when telecom failure prevents confirmation and some slips may be outdated or duplicated|volunteer triage|prioritization,1,ss_exp_b04_008
+infrastructure power telecom road transit|how transit staff should handle passengers when a road open claim cannot be verified and crowd pressure is building|first steps|communication,1,ss_exp_b04_002
+infrastructure power telecom road transit|whether residents should treat a power outage as proof that wet electrical panels are safe to handle|urgent stop|escalation,1,ss_exp_b04_003
+infrastructure power telecom road transit|whether stranded commuters should leave the platform and walk along rail tracks because transit status is uncertain|urgent stop|escalation,1,ss_exp_b04_007
+infrastructure power telecom road transit|whether to handle a hanging cable believed to be only telecom infrastructure|urgent stop|communication,1,ss_exp_b04_013
+infrastructure power telecom road transit|whether to trust a navigation app s normal route display when visible road conditions look unsafe|first steps|prioritization,1,ss_exp_b04_010
+misinformation fake alerts helplines rescue|how to protect children without creating panic or accusing people based on an unverified voice note|short offline card|communication,1,ss_exp_b04_006
+misinformation fake alerts helplines rescue|how to respond when users want confirmation of an unverified helpline number during an emergency|uncertainty boundary|verification,1,ss_exp_b04_011
+misinformation fake alerts helplines rescue|how volunteers should respond when a message asks evacuees for documents or payment for alleged rescue priority|volunteer triage|triage,1,ss_exp_b04_004
+misinformation fake alerts helplines rescue|whether evacuees should return home immediately because a forwarded all clear claims danger has passed|first steps|prioritization,1,ss_exp_b04_016
+misinformation fake alerts helplines rescue|whether to act on a replayed loudspeaker recording as if it is a current official alert|uncertainty boundary|verification,1,ss_exp_b04_014
+misinformation fake alerts helplines rescue|whether to move elders and sick people outside the shelter based on an unverified medicine camp notice|uncertainty boundary|verification,1,ss_exp_b04_009
+misinformation fake alerts helplines rescue|whether to treat a forwarded rescue screenshot as confirmed and move vulnerable residents toward the claimed pickup point|uncertainty boundary|verification,1,ss_exp_b04_001
+post disaster contamination infection|how to decide where a pregnant person should sleep when the only room has damp walls and visible mould like patches|resource plan|scarce space pressure,1,ss_train_exp_b03_003
+post disaster contamination infection|how to triage a bathing area that drains toward the cooking space and is used by vulnerable groups|volunteer triage|service continuity pressure,1,ss_train_exp_b03_016
+post disaster contamination infection|how to triage several households reporting loose stools without naming a disease or promising treatment|volunteer triage|certainty pressure,1,ss_train_exp_b03_009
+post disaster contamination infection|whether to allow children to keep playing in ankle deep stagnant water because it keeps them occupied|short offline card|caregiver overload,1,ss_train_exp_b03_008
+post disaster contamination infection|whether to distribute damp donated clothes immediately because many evacuees have nothing dry|resource plan|resource scarcity,1,ss_train_exp_b03_018
+post disaster contamination infection|whether to keep serving food on plates rinsed in a bucket placed beside overflow water|first steps|crowd pressure,1,ss_train_exp_b03_013
+post disaster contamination infection|whether to reopen a damp classroom as a child sleeping area before cleaning because the hall is crowded|first steps|overcrowding pressure,1,ss_train_exp_b03_011
+post disaster contamination infection|whether to serve rice sacks that are dry on top but wet at the bottom after floodwater contact|first steps|resource scarcity,1,ss_train_exp_b03_002
+post disaster contamination infection|whether volunteers should let children help scrape sewage smelling mud from rooms to speed cleanup|urgent stop|urgency and social pressure,1,ss_train_exp_b03_001
+riverbank flash flood|a caregiver wants to let children collect floating utensils from a freshly eroded river edge before nightfall|urgent stop|resource retrieval pressure,1,ss_train_b02_001
+shelter overcrowding|a shelter helper needs a plain language card to reduce pushing and protect people with mobility limits at the toilet queue|short offline card|communication pressure,1,ss_train_b02_011
+shelter overcrowding|a shelter manager must prevent crowding and unsafe charging around a single extension board people depend on for updates|first steps|resource allocation pressure,1,ss_train_b02_015
+shelter overcrowding|a shelter volunteer must rearrange crowded sleeping mats after families block the only walking lane with bags|resource plan|resource allocation pressure,1,ss_train_b02_007
+shelter overcrowding|a volunteer asks if they should announce that unregistered families must leave because the shelter is overcrowded|uncertainty boundary|verification pressure,1,ss_train_b02_012
+shelter overcrowding|a volunteer hears complaints about unsafe crowding near the women s sleeping area and needs first steps without making public accusations|first steps|escalation pressure,1,ss_train_b02_009
+shelter overcrowding|gate volunteers must triage arrivals when the crowd pushes forward and one child appears separated from caregivers|volunteer triage|communication pressure,1,ss_train_b02_008
+shelter overcrowding|volunteers must allocate scarce food first when a long queue surges toward hot cooking vessels|resource plan|resource allocation pressure,1,ss_train_b02_010
+urban fire lpg chemical|a family caregiver must choose first actions when smoke is present and documents are inside|first steps|resource loss pressure,1,ss_expansion_b01_010
+urban fire lpg chemical|a health worker must triage visitors and stop further chemical mixing without giving treatment or cleanup instructions|volunteer triage|continuity pressure,1,ss_expansion_b01_013
+urban fire lpg chemical|a relief volunteer must refuse live clearance status claims while giving conservative fume avoidance steps|live fact refusal|verification pressure,1,ss_expansion_b01_016
+urban fire lpg chemical|a shop worker must choose safe distance and no handling over puncturing or charging a smoking battery pack|short offline card|economic pressure,1,ss_expansion_b01_014
+urban fire lpg chemical|a stall worker must reject flame testing and choose immediate leak safety actions without tactical repair instructions|urgent stop|economic pressure,1,ss_expansion_b01_009
+urban fire lpg chemical|a ward volunteer must communicate simple safe first steps and stop people from throwing water on burning oil|first steps|communication pressure,1,ss_expansion_b01_015
+urban fire lpg chemical|a ward worker must stop residents from diy electrical firefighting while moving people away from smoke|urgent stop|crowd pressure,1,ss_expansion_b01_012
+urban fire lpg chemical|transit staff must avoid identifying or neutralizing an unknown chemical from a photo while reducing exposure|uncertainty boundary|time pressure,1,ss_expansion_b01_011
+urban flash flood basement|residents want to go into a flooded basement to move scooters and start a pump before water rises higher|urgent stop|property protection pressure,1,ss_train_b02_013

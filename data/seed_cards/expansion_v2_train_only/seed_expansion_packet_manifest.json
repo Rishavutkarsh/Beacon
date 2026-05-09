@@ -1,0 +1,10 @@
+{
+  "assignment_count": 4,
+  "created_at": "2026-05-09T06:07:24.765070+00:00",
+  "generator_packet_sha256": "86f88cce74e9d754d6ffcca7da4a61a53f92b8755952c94128bf63d77416ccc2",
+  "out_dir": "C:\\Users\\risha\\Documents\\New project 5\\data\\seed_cards\\expansion_v2_train_only",
+  "protected_seed_count": 80,
+  "reviewer_packet_sha256": "27696d3d559d1757ee1905a677f5356f1c0bd281bc4801350f824490fc375750",
+  "seed_path": "C:\\Users\\risha\\Documents\\New project 5\\data\\seed_cards\\sankat_saathi_seed_cards_v1.jsonl",
+  "train_seed_count": 120
+}

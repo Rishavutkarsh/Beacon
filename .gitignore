@@ -1,0 +1,39 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+outputs/
+*.egg-info/
+kaggle_2.json
+.kaggle_2/
+
+# Unrelated sibling projects that should not be part of Beacon history.
+himraah/
+padhai_lens/
+pashu_saathi/
+
+# Cross-project helpers kept in this workspace but outside Beacon.
+scripts/padhai_*.py
+tests/test_padhai_*.py
+training/train_padhai_*.py
+
+# Generated or bulky experiment artifacts. Commit release snapshots explicitly.
+kaggle/
+kaggle_gemma_eval/
+kaggle_gemma_eval_tiny/
+kaggle_gemma_preflight/
+kaggle_gemma_sft/
+kaggle_sankat_eval/
+kaggle_outputs/
+kaggle_cpu_sft_smoke_bundle.zip
+data/eval/
+data/expanded/
+data/images/
+data/processed/
+data/sources/
+*.safetensors
+*.bin
+*.pt
+*.pth
+adapter_model.*
+checkpoint-*/

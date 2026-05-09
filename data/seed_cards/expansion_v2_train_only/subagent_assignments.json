@@ -1,0 +1,256 @@
+{
+  "assignments": [
+    {
+      "assignment_id": "seed_expansion_batch_01",
+      "forbidden": [
+        "do not use exact protected dev/final text",
+        "do not invent official orders, live road/shelter/rescue status, casualty counts, helplines, dam levels, or timestamps",
+        "do not satisfy novelty by changing names or places only"
+      ],
+      "mini_quota_matrix": {
+        "actor_type": [
+          "ASHA_or_health_worker",
+          "panchayat_or_ward_worker",
+          "school_admin",
+          "bus_or_transit_staff",
+          "relief_volunteer",
+          "family_caregiver"
+        ],
+        "answer_archetype": [
+          "urgent_stop",
+          "first_steps",
+          "resource_plan",
+          "volunteer_triage",
+          "uncertainty_boundary",
+          "short_offline_card"
+        ],
+        "decision_pressure": [
+          "triage",
+          "verification",
+          "prioritization",
+          "escalation",
+          "communication",
+          "resource_allocation"
+        ],
+        "setting_type": [
+          "urban",
+          "rural",
+          "peri_urban",
+          "transit",
+          "informal_settlement",
+          "institutional"
+        ],
+        "vulnerable_group": [
+          "none_required",
+          "elder",
+          "disabled_person",
+          "pregnant_person",
+          "child",
+          "language_barrier"
+        ]
+      },
+      "proposal_target": "15-20",
+      "required_answer_move_constraints": [
+        "at least 3 distinct answer_archetype values",
+        "at least 2 low-network or offline-safe scenarios",
+        "no live-status confirmation tasks unless the answer boundary is the core lesson",
+        "at least 3 distinct setting_type values",
+        "at least 3 distinct decision_pressure values"
+      ],
+      "split": "train",
+      "target_gap_ids": [
+        "heatwave_cold_lightning_dust",
+        "urban_fire_lpg_chemical"
+      ]
+    },
+    {
+      "assignment_id": "seed_expansion_batch_02",
+      "forbidden": [
+        "do not use exact protected dev/final text",
+        "do not invent official orders, live road/shelter/rescue status, casualty counts, helplines, dam levels, or timestamps",
+        "do not satisfy novelty by changing names or places only"
+      ],
+      "mini_quota_matrix": {
+        "actor_type": [
+          "ASHA_or_health_worker",
+          "panchayat_or_ward_worker",
+          "school_admin",
+          "bus_or_transit_staff",
+          "relief_volunteer",
+          "family_caregiver"
+        ],
+        "answer_archetype": [
+          "urgent_stop",
+          "first_steps",
+          "resource_plan",
+          "volunteer_triage",
+          "uncertainty_boundary",
+          "short_offline_card"
+        ],
+        "decision_pressure": [
+          "triage",
+          "verification",
+          "prioritization",
+          "escalation",
+          "communication",
+          "resource_allocation"
+        ],
+        "setting_type": [
+          "urban",
+          "rural",
+          "peri_urban",
+          "transit",
+          "informal_settlement",
+          "institutional"
+        ],
+        "vulnerable_group": [
+          "none_required",
+          "elder",
+          "disabled_person",
+          "pregnant_person",
+          "child",
+          "language_barrier"
+        ]
+      },
+      "proposal_target": "15-20",
+      "required_answer_move_constraints": [
+        "at least 3 distinct answer_archetype values",
+        "at least 2 low-network or offline-safe scenarios",
+        "no live-status confirmation tasks unless the answer boundary is the core lesson",
+        "at least 3 distinct setting_type values",
+        "at least 3 distinct decision_pressure values"
+      ],
+      "split": "train",
+      "target_gap_ids": [
+        "dam_flash_flood_riverbank_coastal",
+        "crowd_shelter_overcrowding"
+      ]
+    },
+    {
+      "assignment_id": "seed_expansion_batch_03",
+      "forbidden": [
+        "do not use exact protected dev/final text",
+        "do not invent official orders, live road/shelter/rescue status, casualty counts, helplines, dam levels, or timestamps",
+        "do not satisfy novelty by changing names or places only"
+      ],
+      "mini_quota_matrix": {
+        "actor_type": [
+          "ASHA_or_health_worker",
+          "panchayat_or_ward_worker",
+          "school_admin",
+          "bus_or_transit_staff",
+          "relief_volunteer",
+          "family_caregiver"
+        ],
+        "answer_archetype": [
+          "urgent_stop",
+          "first_steps",
+          "resource_plan",
+          "volunteer_triage",
+          "uncertainty_boundary",
+          "short_offline_card"
+        ],
+        "decision_pressure": [
+          "triage",
+          "verification",
+          "prioritization",
+          "escalation",
+          "communication",
+          "resource_allocation"
+        ],
+        "setting_type": [
+          "urban",
+          "rural",
+          "peri_urban",
+          "transit",
+          "informal_settlement",
+          "institutional"
+        ],
+        "vulnerable_group": [
+          "none_required",
+          "elder",
+          "disabled_person",
+          "pregnant_person",
+          "child",
+          "language_barrier"
+        ]
+      },
+      "proposal_target": "15-20",
+      "required_answer_move_constraints": [
+        "at least 3 distinct answer_archetype values",
+        "at least 2 low-network or offline-safe scenarios",
+        "no live-status confirmation tasks unless the answer boundary is the core lesson",
+        "at least 3 distinct setting_type values",
+        "at least 3 distinct decision_pressure values"
+      ],
+      "split": "train",
+      "target_gap_ids": [
+        "post_disaster_contamination_infection",
+        "accessibility_elder_disabled_pregnancy_child_language"
+      ]
+    },
+    {
+      "assignment_id": "seed_expansion_batch_04",
+      "forbidden": [
+        "do not use exact protected dev/final text",
+        "do not invent official orders, live road/shelter/rescue status, casualty counts, helplines, dam levels, or timestamps",
+        "do not satisfy novelty by changing names or places only"
+      ],
+      "mini_quota_matrix": {
+        "actor_type": [
+          "ASHA_or_health_worker",
+          "panchayat_or_ward_worker",
+          "school_admin",
+          "bus_or_transit_staff",
+          "relief_volunteer",
+          "family_caregiver"
+        ],
+        "answer_archetype": [
+          "urgent_stop",
+          "first_steps",
+          "resource_plan",
+          "volunteer_triage",
+          "uncertainty_boundary",
+          "short_offline_card"
+        ],
+        "decision_pressure": [
+          "triage",
+          "verification",
+          "prioritization",
+          "escalation",
+          "communication",
+          "resource_allocation"
+        ],
+        "setting_type": [
+          "urban",
+          "rural",
+          "peri_urban",
+          "transit",
+          "informal_settlement",
+          "institutional"
+        ],
+        "vulnerable_group": [
+          "none_required",
+          "elder",
+          "disabled_person",
+          "pregnant_person",
+          "child",
+          "language_barrier"
+        ]
+      },
+      "proposal_target": "15-20",
+      "required_answer_move_constraints": [
+        "at least 3 distinct answer_archetype values",
+        "at least 2 low-network or offline-safe scenarios",
+        "no live-status confirmation tasks unless the answer boundary is the core lesson",
+        "at least 3 distinct setting_type values",
+        "at least 3 distinct decision_pressure values"
+      ],
+      "split": "train",
+      "target_gap_ids": [
+        "misinformation_fake_alerts_helplines_rescue",
+        "infrastructure_power_telecom_road_transit"
+      ]
+    }
+  ]
+}

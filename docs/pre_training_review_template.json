@@ -1,0 +1,23 @@
+{
+  "dataset_dir": "data/processed/hardened",
+  "mode": "full",
+  "reviewed_at": "YYYY-MM-DD",
+  "user_approved_training": false,
+  "reviews": [
+    {
+      "reviewer": "safety_source_grounding",
+      "decision": "go",
+      "notes": ""
+    },
+    {
+      "reviewer": "multimodal_image_dataset",
+      "decision": "go",
+      "notes": ""
+    },
+    {
+      "reviewer": "training_eval_readiness",
+      "decision": "go",
+      "notes": ""
+    }
+  ]
+}

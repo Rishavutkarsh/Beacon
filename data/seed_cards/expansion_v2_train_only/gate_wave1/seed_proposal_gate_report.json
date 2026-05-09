@@ -1,0 +1,11 @@
+{
+  "acceptance_target": "at least 80 accepted train-only seed proposals",
+  "accepted_count": 0,
+  "cluster_counts": {},
+  "created_at": "2026-05-09T06:22:05.150822+00:00",
+  "metadata_collision_count": 0,
+  "proposal_count": 66,
+  "rejected_count": 37,
+  "review_count": 29,
+  "status": "fail"
+}
