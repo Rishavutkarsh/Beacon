@@ -22,6 +22,7 @@ def main() -> None:
     parser.add_argument("--final-target", type=int, default=None)
     parser.add_argument("--max-variants-per-seed", type=int, default=5)
     parser.add_argument("--rule-manifest", default="data/seed_cards/source_rule_manifest_v1.jsonl")
+    parser.add_argument("--fail-if-exists", action="store_true", help="Refuse to write into a non-empty immutable run directory.")
     args = parser.parse_args()
     out_dir = args.out_dir or f"data/expanded/sankat_expansion_{args.profile}"
     stage = args.stage or ("calibration" if args.profile == "calibration" else "full")
@@ -36,6 +37,8 @@ def main() -> None:
         final_target=args.final_target,
         max_variants_per_seed=args.max_variants_per_seed,
         rule_manifest_path=ROOT / args.rule_manifest,
+        fail_if_exists=args.fail_if_exists,
+        command=" ".join(sys.argv),
     )
     print(json.dumps(manifest, indent=2, ensure_ascii=False, sort_keys=True))
     if manifest.get("feasibility_errors"):

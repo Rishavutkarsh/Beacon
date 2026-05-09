@@ -121,18 +121,29 @@ def test_validation_writes_required_audit_artifacts_even_when_gate_fails() -> No
         "behavior_distribution_report.json",
         "deterministic_gate_report.json",
         "review_sampling_manifest.json",
+        "commands_transcript.jsonl",
+        "environment_manifest.json",
+        "git_manifest.json",
+        "input_snapshot_manifest.json",
         "critic_report.jsonl",
         "subagent_review_report.jsonl",
         "reviewer_decisions.jsonl",
         "repair_lineage.jsonl",
+        "repair_prompt_lineage.jsonl",
+        "row_failure_ledger.jsonl",
+        "review_calibration_report.json",
         "accepted_rows.jsonl",
         "final_accepted_rows.jsonl",
         "rejected_rows.jsonl",
         "rejected_row_ledger.jsonl",
         "dataset_freeze_manifest.json",
+        "freeze_decision.md",
         "run_summary.md",
     ]:
         assert (out_dir / name).exists(), name
+    ledger = read_jsonl(out_dir / "row_failure_ledger.jsonl")
+    assert ledger
+    assert {"gate_layer", "blocking", "repair_owner", "repair_allowed_inputs"} <= set(ledger[0])
     shutil.rmtree(out_dir, ignore_errors=True)
 
 
@@ -197,6 +208,60 @@ def test_final_eval_isolation_fails_on_train_reference() -> None:
 
     assert errors
     assert report["violation_count"] == 1
+
+
+def test_final_eval_isolation_fails_on_train_row_referencing_final_eval() -> None:
+    rows = [
+        {"row_id": "final_row", "split": "final_eval", "parent_row_id": ""},
+        {"row_id": "train_row", "split": "train", "parent_row_id": "", "generation_source_refs": ["final_row"]},
+    ]
+    errors, report = validate_final_eval_isolation(rows, {"config": {"final_eval_isolation": "strict"}})
+
+    assert errors
+    assert report["violation_count"] == 1
+
+
+def test_final_eval_isolation_fails_on_repair_prompt_lineage_leak() -> None:
+    rows = [
+        {"row_id": "final_row", "split": "final_eval", "parent_row_id": ""},
+        {"row_id": "train_row", "split": "train", "parent_row_id": ""},
+    ]
+    repair_lineage = [
+        {
+            "repair_id": "repair_001",
+            "new_row_id": "train_row",
+            "target_split": "train",
+            "input_row_ids": ["final_row"],
+            "uses_exact_final_eval_text": True,
+        }
+    ]
+    errors, report = validate_final_eval_isolation(rows, {"config": {"final_eval_isolation": "strict"}}, repair_lineage)
+
+    assert errors
+    assert report["violation_count"] == 1
+
+
+def test_build_expansion_refuses_non_empty_immutable_run_dir() -> None:
+    out_dir = scratch_dir("_test_expansion_gate_fail_if_exists")
+    out_dir.mkdir(parents=True)
+    (out_dir / "marker.txt").write_text("existing", encoding="utf-8")
+    result = subprocess.run(
+        [
+            sys.executable,
+            "scripts/build_expansion.py",
+            "--profile",
+            "calibration",
+            "--out-dir",
+            str(out_dir),
+            "--fail-if-exists",
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode != 0
+    assert "refusing to overwrite" in result.stderr
+    shutil.rmtree(out_dir, ignore_errors=True)
 
 
 def test_build_expansion_cli_exits_nonzero_for_infeasible_full_target() -> None:

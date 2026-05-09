@@ -33,17 +33,20 @@ Phase 2 `v2_1015` uses the expanded reviewed seed bank:
 python scripts/build_expansion.py --profile v2_1015 --stage full \
   --seed-cards data/seed_cards/sankat_saathi_seed_cards_v2_train_expanded.jsonl \
   --rule-manifest data/seed_cards/source_rule_manifest_v2_train_seed_expansion.jsonl \
-  --out-dir data/expanded/beacon_v2_1015
+  --out-dir data/expanded/beacon_v2_1015/run_001 \
+  --fail-if-exists
 python scripts/validate_expansion.py --profile v2_1015 \
   --rule-manifest data/seed_cards/source_rule_manifest_v2_train_seed_expansion.jsonl \
-  --run-dir data/expanded/beacon_v2_1015
-python scripts/make_audit_bundle.py --run-dir data/expanded/beacon_v2_1015
+  --run-dir data/expanded/beacon_v2_1015/run_001
+python scripts/make_audit_bundle.py --run-dir data/expanded/beacon_v2_1015/run_001
 ```
 
 The profile asserts the seed snapshot has 203 train, 40 dev, and 40 final-eval
 seeds. It targets exact accepted counts of 1015 train, 120 dev, and 120
 final-eval rows. Final-eval is treated as a strict isolated split: exact
 final-eval examples must not feed train/dev repair or tuning prompts.
+Each run must use an immutable directory such as `run_001`, `run_002`, and
+`run_003`; do not rerun generation into a prior non-empty run directory.
 
 ## Required Approval Artifacts
 
@@ -64,15 +67,23 @@ Every validation run writes:
 - `behavior_distribution_report.json`
 - `deterministic_gate_report.json`
 - `review_sampling_manifest.json`
+- `commands_transcript.jsonl`
+- `environment_manifest.json`
+- `git_manifest.json`
+- `input_snapshot_manifest.json`
 - `critic_report.jsonl`
 - `subagent_review_report.jsonl`
 - `reviewer_decisions.jsonl`
 - `repair_lineage.jsonl`
+- `repair_prompt_lineage.jsonl`
+- `row_failure_ledger.jsonl`
+- `review_calibration_report.json`
 - `accepted_rows.jsonl`
 - `final_accepted_rows.jsonl`
 - `rejected_rows.jsonl`
 - `rejected_row_ledger.jsonl`
 - `dataset_freeze_manifest.json`
+- `freeze_decision.md`
 - `run_summary.md`
 
 `critic_report.jsonl` and `subagent_review_report.jsonl` are placeholder
@@ -83,3 +94,8 @@ reviews deliberately fail the approval gate.
 must not start unless it reports `status: pass` and hashes the seed snapshot,
 rule manifest, generated candidates, final accepted rows, rejected ledger, and
 review artifacts.
+
+When a run fails, use `row_failure_ledger.jsonl` to decide whether the next
+immutable run repairs renderer output, source grounding, leakage, pattern
+diversity, or reviewer artifacts. Any train/dev repair must write
+`repair_prompt_lineage.jsonl` and prove exact final-eval text was not used.

@@ -4,7 +4,11 @@ import csv
 import hashlib
 import json
 import math
+import os
+import platform
 import re
+import subprocess
+import sys
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -151,6 +155,10 @@ class GateResult:
     reports: dict[str, Any]
 
 
+def utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
     if not path.exists():
         return []
@@ -171,6 +179,12 @@ def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
 def write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+
+
+def append_jsonl(path: Path, row: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
 
 
 def sha256_text(text: str) -> str:
@@ -459,7 +473,11 @@ def build_rows(
     max_variants_by_split: dict[str, int] | None = None,
     created_by: str = "sankat_expansion_gate_v1",
     rule_manifest_path: Path | None = None,
+    fail_if_exists: bool = False,
+    command: str = "",
 ) -> dict[str, Any]:
+    if fail_if_exists and out_dir.exists() and any(out_dir.iterdir()):
+        raise FileExistsError(f"refusing to overwrite non-empty immutable run directory: {out_dir}")
     seeds = load_seeds(seed_path)
     by_split: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for seed in seeds:
@@ -496,6 +514,8 @@ def build_rows(
     generation_run_id = f"gen_{profile}_{prompt_config_hash[:12]}"
     seed_snapshot_hash = hash_rows(seeds)
     source_rule_snapshot_hash = sha256_file(rule_manifest_path) if rule_manifest_path else ""
+    git_manifest_path = out_dir / "git_manifest.json"
+    git_manifest = json.loads(git_manifest_path.read_text(encoding="utf-8")) if git_manifest_path.exists() else {}
     rows: list[dict[str, Any]] = []
     feasibility_errors: list[str] = [*seed_snapshot_errors]
     for split, target in targets.items():
@@ -536,14 +556,29 @@ def build_rows(
         rows.extend(split_rows)
     out_dir.mkdir(parents=True, exist_ok=True)
     clear_derived_artifacts(out_dir)
+    input_manifest = write_run_preflight_artifacts(
+        out_dir,
+        seed_path=seed_path,
+        rule_manifest_path=rule_manifest_path,
+        seeds=seeds,
+        command=command,
+        cwd=Path.cwd(),
+    )
     write_jsonl(out_dir / "generated_rows.jsonl", rows)
     write_jsonl(out_dir / "repair_lineage.jsonl", [])
+    write_jsonl(out_dir / "repair_prompt_lineage.jsonl", [])
+    write_jsonl(out_dir / "row_failure_ledger.jsonl", [])
+    write_json(out_dir / "review_calibration_report.json", {"status": "not_run", "created_at": utc_now(), "errors": ["review calibration has not been run"]})
+    (out_dir / "freeze_decision.md").write_text("# Freeze Decision\n\nStatus: not frozen\n", encoding="utf-8")
     manifest = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": utc_now(),
         "seed_path": str(seed_path),
         "seed_snapshot_hash": seed_snapshot_hash,
         "source_rule_manifest_path": str(rule_manifest_path) if rule_manifest_path else "",
         "source_rule_snapshot_hash": source_rule_snapshot_hash,
+        "input_snapshot_manifest_hash": sha256_file(out_dir / "input_snapshot_manifest.json"),
+        "git_commit_sha": git_manifest.get("commit_sha", ""),
+        "git_dirty": git_manifest.get("dirty", True),
         "generation_run_id": generation_run_id,
         "generator_config_hash": generator_config_hash,
         "stage": stage,
@@ -552,6 +587,7 @@ def build_rows(
         "row_count": len(rows),
         "feasibility_errors": feasibility_errors,
         "generated_rows_sha256": sha256_file(out_dir / "generated_rows.jsonl"),
+        "input_snapshot_manifest": input_manifest,
     }
     write_json(out_dir / "dataset_manifest.json", manifest)
     return manifest
@@ -577,6 +613,14 @@ def clear_derived_artifacts(out_dir: Path) -> None:
         "rejected_row_ledger.jsonl",
         "review_sampling_manifest.json",
         "reviewer_decisions.jsonl",
+        "commands_transcript.jsonl",
+        "environment_manifest.json",
+        "git_manifest.json",
+        "input_snapshot_manifest.json",
+        "row_failure_ledger.jsonl",
+        "repair_prompt_lineage.jsonl",
+        "review_calibration_report.json",
+        "freeze_decision.md",
         "review_report.json",
         "run_summary.md",
         "safety_lint_report.json",
@@ -599,6 +643,89 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: handle.read(65536), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def command_result(args: list[str]) -> dict[str, Any]:
+    try:
+        result = subprocess.run(args, text=True, capture_output=True, timeout=30)
+        return {
+            "command": args,
+            "returncode": result.returncode,
+            "stdout": result.stdout.strip()[:4000],
+            "stderr": result.stderr.strip()[:4000],
+        }
+    except Exception as exc:  # pragma: no cover - defensive environment capture
+        return {"command": args, "returncode": None, "error": str(exc)}
+
+
+def build_environment_manifest() -> dict[str, Any]:
+    pip_freeze = command_result([sys.executable, "-m", "pip", "freeze"])
+    packages_hash = sha256_text(pip_freeze.get("stdout", ""))
+    return {
+        "created_at": utc_now(),
+        "python_version": sys.version,
+        "python_executable": sys.executable,
+        "platform": platform.platform(),
+        "os_name": os.name,
+        "timezone": datetime.now().astimezone().tzname(),
+        "packages_hash": packages_hash,
+        "packages": pip_freeze.get("stdout", "").splitlines()[:500],
+    }
+
+
+def build_git_manifest(repo_root: Path) -> dict[str, Any]:
+    head = command_result(["git", "rev-parse", "HEAD"])
+    branch = command_result(["git", "branch", "--show-current"])
+    status = command_result(["git", "status", "--short"])
+    diff = command_result(["git", "diff"])
+    return {
+        "created_at": utc_now(),
+        "commit_sha": head.get("stdout", ""),
+        "branch": branch.get("stdout", ""),
+        "dirty_status": status.get("stdout", ""),
+        "dirty": bool(status.get("stdout", "")),
+        "diff_hash": sha256_text(diff.get("stdout", "")),
+    }
+
+
+def write_run_preflight_artifacts(
+    out_dir: Path,
+    *,
+    seed_path: Path,
+    rule_manifest_path: Path | None,
+    seeds: list[dict[str, Any]],
+    command: str,
+    cwd: Path | None = None,
+) -> dict[str, Any]:
+    repo_root = Path.cwd() if cwd is None else cwd
+    rule_hash = sha256_file(rule_manifest_path) if rule_manifest_path else ""
+    protected = [seed for seed in seeds if seed.get("split") == "final_eval"]
+    input_manifest = {
+        "created_at": utc_now(),
+        "seed_path": str(seed_path),
+        "seed_sha256": sha256_file(seed_path),
+        "seed_split_counts": dict(Counter(seed.get("split", "") for seed in seeds)),
+        "rule_manifest_path": str(rule_manifest_path) if rule_manifest_path else "",
+        "rule_manifest_sha256": rule_hash,
+        "protected_eval_snapshot_hash": hash_rows(protected),
+        "protected_eval_count": len(protected),
+    }
+    write_json(out_dir / "environment_manifest.json", build_environment_manifest())
+    write_json(out_dir / "git_manifest.json", build_git_manifest(repo_root))
+    write_json(out_dir / "input_snapshot_manifest.json", input_manifest)
+    append_jsonl(
+        out_dir / "commands_transcript.jsonl",
+        {
+            "timestamp": utc_now(),
+            "phase": "build",
+            "cwd": str(repo_root),
+            "command": command,
+            "exit_code": 0,
+            "stdout_path": "",
+            "stderr_path": "",
+        },
+    )
+    return input_manifest
 
 
 def validate_schema(rows: list[dict[str, Any]]) -> tuple[list[str], dict[str, Any]]:
@@ -963,26 +1090,49 @@ def validate_per_seed_diversity(rows: list[dict[str, Any]]) -> tuple[list[str], 
     return errors, report
 
 
-def validate_final_eval_isolation(rows: list[dict[str, Any]], manifest: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
+def validate_final_eval_isolation(
+    rows: list[dict[str, Any]],
+    manifest: dict[str, Any],
+    repair_prompt_lineage: list[dict[str, Any]] | None = None,
+) -> tuple[list[str], dict[str, Any]]:
     strict = manifest.get("config", {}).get("final_eval_isolation") == "strict"
     errors: list[str] = []
     violations = []
     if strict:
         train_or_dev_ids = {row.get("row_id", "") for row in rows if row.get("split") in {"train", "dev"}}
+        final_ids = {row.get("row_id", "") for row in rows if row.get("split") == "final_eval"}
         for row in rows:
-            if row.get("split") != "final_eval":
-                continue
             refs = row.get("generation_source_refs", [])
             if isinstance(refs, str):
                 refs = [refs]
-            leaked_refs = sorted(set(refs) & train_or_dev_ids)
             parent = row.get("parent_row_id", "")
-            if leaked_refs or parent in train_or_dev_ids:
+            if row.get("split") == "final_eval":
+                leaked_refs = sorted(set(refs) & train_or_dev_ids)
+                leaked_parent = parent if parent in train_or_dev_ids else ""
+            else:
+                leaked_refs = sorted(set(refs) & final_ids)
+                leaked_parent = parent if parent in final_ids else ""
+            if leaked_refs or leaked_parent:
                 violations.append(
                     {
                         "row_id": row.get("row_id", ""),
+                        "split": row.get("split", ""),
                         "leaked_generation_source_refs": leaked_refs,
-                        "parent_row_id": parent if parent in train_or_dev_ids else "",
+                        "parent_row_id": leaked_parent,
+                    }
+                )
+        for entry in repair_prompt_lineage or []:
+            target_split = entry.get("target_split", entry.get("split", ""))
+            input_ids = set(entry.get("input_row_ids", []))
+            uses_exact_final_eval_text = entry.get("uses_exact_final_eval_text") is True
+            if target_split in {"train", "dev"} and (input_ids & final_ids or uses_exact_final_eval_text):
+                violations.append(
+                    {
+                        "row_id": entry.get("row_id", entry.get("new_row_id", "")),
+                        "split": target_split,
+                        "leaked_generation_source_refs": sorted(input_ids & final_ids),
+                        "uses_exact_final_eval_text": uses_exact_final_eval_text,
+                        "lineage_entry_id": entry.get("repair_id", ""),
                     }
                 )
         if violations:
@@ -1217,6 +1367,113 @@ def build_review_sampling_manifest(
     }
 
 
+def classify_error_layer(error: str) -> str:
+    lowered = error.lower()
+    if "schema" in lowered or "missing fields" in lowered or "invalid" in lowered:
+        return "schema"
+    if "source" in lowered or "rule" in lowered or "claim" in lowered:
+        return "source_grounding"
+    if "safety" in lowered or "prohibited" in lowered or "diagnosis" in lowered or "dose" in lowered:
+        return "safety"
+    if "similarity" in lowered or "overlap" in lowered or "leak" in lowered or "crosses splits" in lowered:
+        return "leakage_similarity"
+    if "pattern" in lowered or "cluster" in lowered or "diversity" in lowered or "renderer" in lowered:
+        return "pattern_diversity"
+    if "count" in lowered:
+        return "count"
+    if "critic" in lowered or "subagent" in lowered or "review" in lowered:
+        return "review"
+    return "run_level"
+
+
+def build_row_failure_ledger(rows: list[dict[str, Any]], errors: list[str], warnings: list[str]) -> list[dict[str, Any]]:
+    ledger = []
+    row_ids = {row.get("row_id", "") for row in rows}
+    for error in errors:
+        matched = [row_id for row_id in row_ids if row_id and row_id in error]
+        targets: list[dict[str, Any]]
+        if matched:
+            row_by_id = {row.get("row_id", ""): row for row in rows}
+            targets = [row_by_id[row_id] for row_id in matched]
+        else:
+            targets = [{"row_id": "", "candidate_id": "", "split": "run", "seed_id": ""}]
+        for target in targets:
+            layer = classify_error_layer(error)
+            ledger.append(
+                {
+                    "row_id": target.get("row_id", ""),
+                    "candidate_id": target.get("candidate_id", ""),
+                    "split": target.get("split", ""),
+                    "seed_id": target.get("seed_id", ""),
+                    "gate_layer": layer,
+                    "blocking": True,
+                    "failure_reason": error,
+                    "repair_owner": "renderer" if layer in {"pattern_diversity", "source_grounding", "safety"} else "gate_or_review",
+                    "repair_allowed_inputs": "same-split seed, source rules, aggregate final_eval failure classes only",
+                }
+            )
+    for warning in warnings:
+        ledger.append(
+            {
+                "row_id": "",
+                "candidate_id": "",
+                "split": "run",
+                "seed_id": "",
+                "gate_layer": classify_error_layer(warning),
+                "blocking": False,
+                "failure_reason": warning,
+                "repair_owner": "reviewer",
+                "repair_allowed_inputs": "review sampling bundle",
+            }
+        )
+    return ledger
+
+
+def validate_review_calibration(run_dir: Path) -> tuple[list[str], dict[str, Any]]:
+    path = run_dir / "review_calibration_report.json"
+    if not path.exists():
+        report = {"status": "fail", "errors": ["review calibration report is missing"]}
+        return report["errors"], report
+    report = json.loads(path.read_text(encoding="utf-8"))
+    errors = list(report.get("errors", []))
+    if report.get("status") != "pass":
+        errors.append("review calibration has not passed")
+    if report.get("canary_failure_catch_rate", 0) < 0.9:
+        errors.append("review calibration canary catch rate below 90%")
+    if report.get("agreement_rate", 0) < 0.75:
+        errors.append("review calibration agreement below 75%")
+    report["status"] = "fail" if errors else "pass"
+    report["errors"] = errors
+    return errors, report
+
+
+def make_freeze_decision(manifest: dict[str, Any], errors: list[str], warnings: list[str]) -> str:
+    status = "PASS" if not errors else "FAIL"
+    lines = [
+        "# Freeze Decision",
+        "",
+        f"Status: **{status}**",
+        f"Generated at: {utc_now()}",
+        f"Generation run: `{manifest.get('generation_run_id', '')}`",
+        f"Counts: `{manifest.get('counts', {})}`",
+        f"Seed snapshot: `{manifest.get('seed_snapshot_hash', '')}`",
+        f"Rule snapshot: `{manifest.get('source_rule_snapshot_hash', '')}`",
+        f"Git commit: `{manifest.get('git_commit_sha', '')}`",
+        "",
+        "## Checklist",
+        f"- Deterministic gates: {'pass' if not errors else 'fail'}",
+        f"- Calibrated reviewer artifacts: {'pass' if not errors else 'not approved'}",
+        f"- Exact accepted counts: {'pass' if not errors else 'not approved'}",
+        f"- Final-eval isolation: {'pass' if not errors else 'not approved'}",
+        "",
+    ]
+    if errors:
+        lines.extend(["## Blocking Issues", *[f"- {error}" for error in errors[:100]], ""])
+    if warnings:
+        lines.extend(["## Warnings", *[f"- {warning}" for warning in warnings[:100]], ""])
+    return "\n".join(lines)
+
+
 def critic_stub(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     reviews = []
     for row in rows:
@@ -1373,6 +1630,18 @@ def validate_expansion(
     accepted_count_ranges: dict[str, tuple[int, int]] | None = None,
 ) -> GateResult:
     rows = read_jsonl(run_dir / "generated_rows.jsonl")
+    append_jsonl(
+        run_dir / "commands_transcript.jsonl",
+        {
+            "timestamp": utc_now(),
+            "phase": "validate",
+            "cwd": str(Path.cwd()),
+            "command": f"validate_expansion(profile={profile}, run_dir={run_dir}, rule_manifest={rule_manifest})",
+            "exit_code": 0,
+            "stdout_path": "",
+            "stderr_path": "",
+        },
+    )
     errors: list[str] = []
     warnings: list[str] = []
     reports: dict[str, Any] = {}
@@ -1409,7 +1678,8 @@ def validate_expansion(
     errors.extend(per_seed_errors)
     warnings.extend(per_seed_report.get("warnings", []))
     reports["per_seed_diversity_report"] = per_seed_report
-    final_eval_errors, final_eval_report = validate_final_eval_isolation(rows, manifest)
+    repair_prompt_lineage = read_jsonl(run_dir / "repair_prompt_lineage.jsonl")
+    final_eval_errors, final_eval_report = validate_final_eval_isolation(rows, manifest, repair_prompt_lineage)
     errors.extend(final_eval_errors)
     reports["final_eval_isolation_report"] = final_eval_report
     pattern_errors, pattern_report, oversized, cluster_md = validate_pattern_collapse(rows)
@@ -1451,6 +1721,9 @@ def validate_expansion(
     review_errors, review_report = validate_reviews(critic_rows, subagent_rows)
     errors.extend(review_errors)
     reports["review_report"] = review_report
+    calibration_errors, calibration_report = validate_review_calibration(run_dir)
+    errors.extend(calibration_errors)
+    reports["review_calibration_report"] = calibration_report
     accepted = [dict(row, quality_status="accepted", review_state="frozen") for row in rows if not errors]
     rejected = [dict(row, quality_status="rejected", review_state="rejected") for row in rows if errors]
     if accepted_count_ranges is None:
@@ -1469,17 +1742,9 @@ def validate_expansion(
     write_jsonl(run_dir / "accepted_rows.jsonl", accepted if not errors else [])
     write_jsonl(run_dir / "final_accepted_rows.jsonl", accepted if not errors else [])
     write_jsonl(run_dir / "rejected_rows.jsonl", rejected if errors else [])
-    rejected_ledger = [
-        {
-            "row_id": row.get("row_id", ""),
-            "candidate_id": row.get("candidate_id", ""),
-            "split": row.get("split", ""),
-            "seed_id": row.get("seed_id", ""),
-            "rejection_reasons": errors[:100],
-        }
-        for row in rows
-    ] if errors else []
+    rejected_ledger = build_row_failure_ledger(rows, errors, warnings) if errors or warnings else []
     write_jsonl(run_dir / "rejected_row_ledger.jsonl", rejected_ledger)
+    write_jsonl(run_dir / "row_failure_ledger.jsonl", rejected_ledger)
     reviewer_decisions = [
         {
             "row_id": row.get("row_id", ""),
@@ -1523,23 +1788,32 @@ def validate_expansion(
     )
     write_json(manifest_path, manifest)
     freeze_manifest = {
-        "created_at": datetime.now(timezone.utc).isoformat(),
+        "created_at": utc_now(),
         "status": "pass" if not errors else "fail",
         "generation_run_id": manifest.get("generation_run_id", ""),
         "accepted_counts": dict(Counter(row["split"] for row in accepted)) if not errors else {},
         "seed_snapshot_hash": manifest.get("seed_snapshot_hash", ""),
         "source_rule_snapshot_hash": manifest.get("source_rule_snapshot_hash", ""),
         "generator_config_hash": manifest.get("generator_config_hash", ""),
+        "git_commit_sha": manifest.get("git_commit_sha", ""),
+        "git_dirty": manifest.get("git_dirty", True),
         "artifact_hashes": {
             name: sha256_file(run_dir / name)
             for name in [
                 "generated_rows.jsonl",
                 "final_accepted_rows.jsonl",
                 "rejected_row_ledger.jsonl",
+                "row_failure_ledger.jsonl",
+                "repair_prompt_lineage.jsonl",
+                "review_calibration_report.json",
                 "critic_report.jsonl",
                 "subagent_review_report.jsonl",
                 "reviewer_decisions.jsonl",
                 "deterministic_gate_report.json",
+                "commands_transcript.jsonl",
+                "environment_manifest.json",
+                "git_manifest.json",
+                "input_snapshot_manifest.json",
             ]
             if (run_dir / name).exists()
         },
@@ -1548,6 +1822,7 @@ def validate_expansion(
     write_json(run_dir / "dataset_freeze_manifest.json", freeze_manifest)
     summary = make_run_summary(manifest, reports, errors, warnings)
     (run_dir / "run_summary.md").write_text(summary, encoding="utf-8")
+    (run_dir / "freeze_decision.md").write_text(make_freeze_decision(manifest, errors, warnings), encoding="utf-8")
     return GateResult("fail" if errors else "pass", errors, warnings, reports)
 
 
@@ -1596,15 +1871,23 @@ def make_audit_bundle(run_dir: Path) -> dict[str, Any]:
         "behavior_distribution_report.json",
         "deterministic_gate_report.json",
         "review_sampling_manifest.json",
+        "commands_transcript.jsonl",
+        "environment_manifest.json",
+        "git_manifest.json",
+        "input_snapshot_manifest.json",
         "critic_report.jsonl",
         "subagent_review_report.jsonl",
         "reviewer_decisions.jsonl",
         "repair_lineage.jsonl",
+        "repair_prompt_lineage.jsonl",
+        "row_failure_ledger.jsonl",
+        "review_calibration_report.json",
         "accepted_rows.jsonl",
         "final_accepted_rows.jsonl",
         "rejected_rows.jsonl",
         "rejected_row_ledger.jsonl",
         "dataset_freeze_manifest.json",
+        "freeze_decision.md",
         "run_summary.md",
     ]
     bundle = {
