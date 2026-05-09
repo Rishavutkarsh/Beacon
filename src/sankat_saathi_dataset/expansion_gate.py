@@ -14,6 +14,7 @@ from typing import Any
 
 SPLITS = {"train", "dev", "final_eval"}
 QUALITY_STATUSES = {"generated", "lint_failed", "critic_failed", "accepted", "rejected", "repair_needed"}
+REVIEW_STATES = {"generated", "deterministic_pass", "critic_pending", "subagent_reviewed", "approved", "rejected", "frozen"}
 RENDERER_STYLES = {
     "urgent_stop_refusal",
     "first_10_minutes_checklist",
@@ -41,6 +42,13 @@ EXPANSION_PROFILES = {
         "max_variants_by_split": {"train": 5, "dev": 3, "final_eval": 3},
         "accepted_count_ranges": {"train": [900, 1000], "dev": [100, 150], "final_eval": [100, 150]},
     },
+    "v2_1015": {
+        "targets": {"train": 1015, "dev": 120, "final_eval": 120},
+        "max_variants_by_split": {"train": 5, "dev": 3, "final_eval": 3},
+        "accepted_count_ranges": {"train": [1015, 1015], "dev": [120, 120], "final_eval": [120, 120]},
+        "expected_seed_counts": {"train": 203, "dev": 40, "final_eval": 40},
+        "final_eval_isolation": "strict",
+    },
 }
 HIGH_RISK_HAZARDS = {"electrical_wet_devices", "diabetes_medication", "route_rescue_live_fact"}
 HIGH_RISK_RULES = {
@@ -55,6 +63,8 @@ HIGH_RISK_RULES = {
     "unsafe_rescue_self_protection",
 }
 REQUIRED_ROW_FIELDS = {
+    "candidate_id",
+    "generation_run_id",
     "row_id",
     "parent_row_id",
     "seed_id",
@@ -76,8 +86,13 @@ REQUIRED_ROW_FIELDS = {
     "quality_status",
     "generation_attempt",
     "repair_attempt",
+    "review_state",
+    "prompt_template_version",
+    "source_rule_snapshot_hash",
+    "seed_snapshot_hash",
     "created_by",
     "prompt_config_hash",
+    "generator_config_hash",
     "contract_hash",
     "content_hash",
 }
@@ -164,6 +179,10 @@ def sha256_text(text: str) -> str:
 
 def stable_hash(value: Any) -> str:
     return sha256_text(json.dumps(value, ensure_ascii=False, sort_keys=True))
+
+
+def hash_rows(rows: list[dict[str, Any]]) -> str:
+    return stable_hash(rows)
 
 
 def normalize_text(text: str) -> str:
@@ -329,7 +348,17 @@ def seed_to_response(seed: dict[str, Any], variant_index: int) -> str:
     return "\n".join(lines)
 
 
-def make_row(seed: dict[str, Any], variant_index: int, created_by: str, prompt_config_hash: str) -> dict[str, Any]:
+def make_row(
+    seed: dict[str, Any],
+    variant_index: int,
+    created_by: str,
+    prompt_config_hash: str,
+    *,
+    generation_run_id: str = "gen_legacy",
+    generator_config_hash: str | None = None,
+    source_rule_snapshot_hash: str = "",
+    seed_snapshot_hash: str = "",
+) -> dict[str, Any]:
     prompt = seed_to_prompt(seed, variant_index)
     target_response = seed_to_response(seed, variant_index)
     split = seed["split"]
@@ -340,8 +369,11 @@ def make_row(seed: dict[str, Any], variant_index: int, created_by: str, prompt_c
         "source_rule_ids": seed.get("source_rule_ids", []),
     }
     row_id = f"ss_exp_{split}_{seed['seed_id']}_{variant_index:02d}"
+    candidate_id = "cand_" + stable_hash({"generation_run_id": generation_run_id, "row_id": row_id})[:24]
     content = {"prompt": prompt, "target_response": target_response}
     return {
+        "candidate_id": candidate_id,
+        "generation_run_id": generation_run_id,
         "row_id": row_id,
         "parent_row_id": "",
         "seed_id": seed["seed_id"],
@@ -363,8 +395,13 @@ def make_row(seed: dict[str, Any], variant_index: int, created_by: str, prompt_c
         "quality_status": "generated",
         "generation_attempt": 1,
         "repair_attempt": 0,
+        "review_state": "generated",
+        "prompt_template_version": "seed_renderer_v1",
+        "source_rule_snapshot_hash": source_rule_snapshot_hash,
+        "seed_snapshot_hash": seed_snapshot_hash,
         "created_by": created_by,
         "prompt_config_hash": prompt_config_hash,
+        "generator_config_hash": generator_config_hash or prompt_config_hash,
         "contract_hash": stable_hash(contract),
         "content_hash": stable_hash(content),
     }
@@ -394,6 +431,21 @@ def load_seeds(seed_path: Path) -> list[dict[str, Any]]:
     return read_jsonl(seed_path)
 
 
+def assert_seed_snapshot(
+    seeds: list[dict[str, Any]],
+    profile_config: dict[str, Any],
+) -> list[str]:
+    expected = profile_config.get("expected_seed_counts")
+    if not expected:
+        return []
+    counts = Counter(seed.get("split", "") for seed in seeds)
+    errors = []
+    for split, expected_count in expected.items():
+        if counts[split] != expected_count:
+            errors.append(f"{split} seed count {counts[split]} does not match expected {expected_count}")
+    return errors
+
+
 def build_rows(
     seed_path: Path,
     out_dir: Path,
@@ -406,6 +458,7 @@ def build_rows(
     max_variants_per_seed: int = 5,
     max_variants_by_split: dict[str, int] | None = None,
     created_by: str = "sankat_expansion_gate_v1",
+    rule_manifest_path: Path | None = None,
 ) -> dict[str, Any]:
     seeds = load_seeds(seed_path)
     by_split: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -414,6 +467,7 @@ def build_rows(
     profile_config = EXPANSION_PROFILES.get(profile)
     if profile_config is None:
         raise ValueError(f"unknown expansion profile: {profile}")
+    seed_snapshot_errors = assert_seed_snapshot(seeds, profile_config)
     targets = dict(profile_config["targets"])
     if train_target is not None:
         targets["train"] = train_target
@@ -434,10 +488,16 @@ def build_rows(
         "final_target": targets["final_eval"],
         "max_variants_by_split": split_caps,
         "created_by": created_by,
+        "prompt_template_version": "seed_renderer_v1",
+        "final_eval_isolation": profile_config.get("final_eval_isolation", "shared"),
     }
     prompt_config_hash = stable_hash(config)
+    generator_config_hash = prompt_config_hash
+    generation_run_id = f"gen_{profile}_{prompt_config_hash[:12]}"
+    seed_snapshot_hash = hash_rows(seeds)
+    source_rule_snapshot_hash = sha256_file(rule_manifest_path) if rule_manifest_path else ""
     rows: list[dict[str, Any]] = []
-    feasibility_errors: list[str] = []
+    feasibility_errors: list[str] = [*seed_snapshot_errors]
     for split, target in targets.items():
         if target == 0:
             continue
@@ -455,7 +515,18 @@ def build_rows(
                 used_for_seed = sum(1 for row in split_rows if row["seed_id"] == seed["seed_id"])
                 if used_for_seed >= split_cap:
                     continue
-                split_rows.append(make_row(seed, used_for_seed, created_by, prompt_config_hash))
+                split_rows.append(
+                    make_row(
+                        seed,
+                        used_for_seed,
+                        created_by,
+                        prompt_config_hash,
+                        generation_run_id=generation_run_id,
+                        generator_config_hash=generator_config_hash,
+                        source_rule_snapshot_hash=source_rule_snapshot_hash,
+                        seed_snapshot_hash=seed_snapshot_hash,
+                    )
+                )
                 progressed = True
                 if len(split_rows) >= min(target, capacity):
                     break
@@ -470,6 +541,11 @@ def build_rows(
     manifest = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "seed_path": str(seed_path),
+        "seed_snapshot_hash": seed_snapshot_hash,
+        "source_rule_manifest_path": str(rule_manifest_path) if rule_manifest_path else "",
+        "source_rule_snapshot_hash": source_rule_snapshot_hash,
+        "generation_run_id": generation_run_id,
+        "generator_config_hash": generator_config_hash,
         "stage": stage,
         "config": config,
         "counts": dict(Counter(row["split"] for row in rows)),
@@ -485,15 +561,26 @@ def clear_derived_artifacts(out_dir: Path) -> None:
     for name in [
         "accepted_rows.jsonl",
         "audit_bundle_manifest.json",
+        "behavior_distribution_report.json",
         "cluster_examples.md",
         "critic_report.jsonl",
+        "dataset_freeze_manifest.json",
+        "deterministic_gate_report.json",
+        "final_accepted_rows.jsonl",
+        "output_similarity_report.csv",
         "oversized_clusters.csv",
         "pattern_collapse_report.json",
+        "per_seed_diversity_report.json",
+        "final_eval_isolation_report.json",
         "quota_report.json",
         "rejected_rows.jsonl",
+        "rejected_row_ledger.jsonl",
+        "review_sampling_manifest.json",
+        "reviewer_decisions.jsonl",
         "review_report.json",
         "run_summary.md",
         "safety_lint_report.json",
+        "source_claim_support_report.csv",
         "schema_validation_report.json",
         "source_grounding_report.csv",
         "split_leakage_report.json",
@@ -527,6 +614,8 @@ def validate_schema(rows: list[dict[str, Any]]) -> tuple[list[str], dict[str, An
             errors.append(f"{rid}: invalid split {row.get('split')!r}")
         if row.get("quality_status") not in QUALITY_STATUSES:
             errors.append(f"{rid}: invalid quality_status {row.get('quality_status')!r}")
+        if row.get("review_state") not in REVIEW_STATES:
+            errors.append(f"{rid}: invalid review_state {row.get('review_state')!r}")
         if row.get("renderer_style") not in RENDERER_STYLES:
             errors.append(f"{rid}: invalid renderer_style {row.get('renderer_style')!r}")
         if row.get("risk_level") not in RISK_LEVELS:
@@ -538,6 +627,52 @@ def validate_schema(rows: list[dict[str, Any]]) -> tuple[list[str], dict[str, An
             if not isinstance(row.get(field), int) or row.get(field) < 0:
                 errors.append(f"{rid}: {field} must be a non-negative integer")
     return errors, {"status": "fail" if errors else "pass", "row_count": len(rows), "missing_by_row": missing_by_row, "errors": errors}
+
+
+def validate_lineage(rows: list[dict[str, Any]], manifest: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
+    errors: list[str] = []
+    candidate_ids = Counter(row.get("candidate_id", "") for row in rows)
+    row_ids = Counter(row.get("row_id", "") for row in rows)
+    duplicate_candidates = sorted(key for key, count in candidate_ids.items() if key and count > 1)
+    duplicate_rows = sorted(key for key, count in row_ids.items() if key and count > 1)
+    if duplicate_candidates:
+        errors.append(f"duplicate candidate_id values: {len(duplicate_candidates)}")
+    if duplicate_rows:
+        errors.append(f"duplicate row_id values: {len(duplicate_rows)}")
+    expected_run = manifest.get("generation_run_id", "")
+    expected_seed_hash = manifest.get("seed_snapshot_hash", "")
+    expected_rule_hash = manifest.get("source_rule_snapshot_hash", "")
+    mismatched_run = [row.get("row_id", "") for row in rows if expected_run and row.get("generation_run_id") != expected_run]
+    mismatched_seed_hash = [row.get("row_id", "") for row in rows if expected_seed_hash and row.get("seed_snapshot_hash") != expected_seed_hash]
+    mismatched_rule_hash = [
+        row.get("row_id", "") for row in rows if expected_rule_hash and row.get("source_rule_snapshot_hash") != expected_rule_hash
+    ]
+    if mismatched_run:
+        errors.append(f"generation_run_id mismatch rows: {len(mismatched_run)}")
+    if mismatched_seed_hash:
+        errors.append(f"seed_snapshot_hash mismatch rows: {len(mismatched_seed_hash)}")
+    if mismatched_rule_hash:
+        errors.append(f"source_rule_snapshot_hash mismatch rows: {len(mismatched_rule_hash)}")
+    parent_missing = [
+        row.get("row_id", "")
+        for row in rows
+        if row.get("parent_row_id") and row.get("parent_row_id") not in row_ids
+    ]
+    if parent_missing:
+        errors.append(f"parent_row_id references missing rows: {len(parent_missing)}")
+    report = {
+        "status": "fail" if errors else "pass",
+        "row_count": len(rows),
+        "unique_candidate_ids": len(candidate_ids),
+        "unique_row_ids": len(row_ids),
+        "duplicate_candidate_ids": duplicate_candidates[:50],
+        "duplicate_row_ids": duplicate_rows[:50],
+        "generation_run_id": expected_run,
+        "seed_snapshot_hash": expected_seed_hash,
+        "source_rule_snapshot_hash": expected_rule_hash,
+        "errors": errors,
+    }
+    return errors, report
 
 
 def validate_source_grounding(rows: list[dict[str, Any]], rule_manifest: Path, out_csv: Path | None = None) -> tuple[list[str], dict[str, Any]]:
@@ -579,6 +714,56 @@ def validate_source_grounding(rows: list[dict[str, Any]], rule_manifest: Path, o
         "status": "fail" if errors else "pass",
         "known_rule_count": len(rules),
         "audit_rows": len(audit_rows),
+        "errors": errors,
+    }
+
+
+def validate_source_claim_support(
+    rows: list[dict[str, Any]],
+    rule_manifest: Path,
+    out_csv: Path,
+) -> tuple[list[str], dict[str, Any]]:
+    rules = load_rules(rule_manifest)
+    errors: list[str] = []
+    warnings: list[str] = []
+    audit_rows: list[dict[str, str]] = []
+    for row in rows:
+        rid = row.get("row_id", "<missing>")
+        rule_ids = row.get("source_rule_ids", [])
+        rule_text = " ".join(rules.get(rule_id, {}).get("derived_rule", "") for rule_id in rule_ids)
+        response_sentences = [part.strip() for part in re.split(r"(?<=[.!?])\s+|\n+", row.get("target_response", "")) if part.strip()]
+        rule_tokens = set(normalize_text(rule_text).split())
+        if not rule_tokens:
+            errors.append(f"{rid}: no source text available for material claim support")
+        for index, sentence in enumerate(response_sentences):
+            normalized = normalize_text(sentence)
+            sentence_tokens = set(normalized.split())
+            material = bool(sentence_tokens & (ACTION_VERBS | {"safe", "unsafe", "danger", "risk", "escalate", "avoid", "stop", "do", "not"}))
+            support_score = len(sentence_tokens & rule_tokens) / max(1, len(sentence_tokens))
+            certainty_claim = bool(re.search(r"\b(safe|guaranteed|definitely|because)\b", normalized))
+            required_support = 0.2 if certainty_claim else 0.08
+            passed = (not material) or support_score >= required_support or any(rule_id in normalized for rule_id in rule_ids)
+            audit_rows.append(
+                {
+                    "row_id": rid,
+                    "seed_id": row.get("seed_id", ""),
+                    "split": row.get("split", ""),
+                    "sentence_index": str(index),
+                    "sentence_hash": sha256_text(sentence)[:16],
+                    "source_rule_ids": "|".join(rule_ids),
+                    "material_claim": str(material).lower(),
+                    "support_score": f"{support_score:.3f}",
+                    "pass_fail": "pass" if passed else "review",
+                }
+            )
+            if not passed:
+                warnings.append(f"{rid}: material claim needs source-support review sentence {index}")
+    write_csv_rows(out_csv, audit_rows)
+    return [], {
+        "status": "review" if warnings else "pass",
+        "audit_rows": len(audit_rows),
+        "warning_count": len(warnings),
+        "warnings": warnings[:100],
         "errors": errors,
     }
 
@@ -677,6 +862,140 @@ def validate_split_leakage(rows: list[dict[str, Any]]) -> tuple[list[str], dict[
     return errors, reports
 
 
+def validate_output_similarity(rows: list[dict[str, Any]], out_csv: Path | None = None) -> tuple[list[str], dict[str, Any]]:
+    errors: list[str] = []
+    similarity_rows: list[dict[str, Any]] = []
+    train = [row for row in rows if row.get("split") == "train"]
+    dev_final = [row for row in rows if row.get("split") in {"dev", "final_eval"}]
+    for left in train:
+        for right in dev_final:
+            prompt_score = token_jaccard(left.get("prompt", ""), right.get("prompt", ""))
+            answer_score = token_jaccard(left.get("target_response", ""), right.get("target_response", ""))
+            shape_match = bullet_shape(left.get("target_response", "")) == bullet_shape(right.get("target_response", ""))
+            action_score = token_jaccard(action_sequence(left.get("target_response", "")), action_sequence(right.get("target_response", "")))
+            if answer_score >= 0.78 or action_score >= 0.82 or (answer_score >= 0.68 and shape_match):
+                similarity_rows.append(
+                    {
+                        "left_row_id": left.get("row_id", ""),
+                        "right_row_id": right.get("row_id", ""),
+                        "left_split": left.get("split", ""),
+                        "right_split": right.get("split", ""),
+                        "prompt_jaccard": round(prompt_score, 3),
+                        "answer_jaccard": round(answer_score, 3),
+                        "action_jaccard": round(action_score, 3),
+                        "shape_match": shape_match,
+                    }
+                )
+                if len(similarity_rows) >= 200:
+                    break
+        if len(similarity_rows) >= 200:
+            break
+    final_exact_answers = {}
+    exact_answer_overlap = []
+    for row in rows:
+        key = normalize_text(row.get("target_response", ""))
+        if not key:
+            continue
+        split = row.get("split", "")
+        if split == "train":
+            final_exact_answers.setdefault(key, row.get("row_id", ""))
+        elif split == "final_eval" and key in final_exact_answers:
+            exact_answer_overlap.append({"train_row_id": final_exact_answers[key], "final_row_id": row.get("row_id", "")})
+    if similarity_rows:
+        errors.append(f"train/dev-final output similarity above threshold: {len(similarity_rows)} sampled")
+    if exact_answer_overlap:
+        errors.append(f"exact train/final answer overlap: {len(exact_answer_overlap)}")
+    if out_csv is not None:
+        write_csv_rows(out_csv, similarity_rows)
+    return errors, {
+        "status": "fail" if errors else "pass",
+        "sampled_similarity_pairs": len(similarity_rows),
+        "exact_train_final_answer_overlap": exact_answer_overlap[:50],
+        "errors": errors,
+    }
+
+
+def validate_per_seed_diversity(rows: list[dict[str, Any]]) -> tuple[list[str], dict[str, Any]]:
+    errors: list[str] = []
+    warnings: list[str] = []
+    rows_by_seed: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in rows:
+        rows_by_seed[row.get("seed_id", "")].append(row)
+    failing_seed_examples: list[dict[str, Any]] = []
+    for seed_id, seed_rows in rows_by_seed.items():
+        if len(seed_rows) <= 1:
+            continue
+        prompt_keys = {normalize_text(row.get("prompt", "")) for row in seed_rows}
+        answer_keys = {normalize_text(row.get("target_response", "")) for row in seed_rows}
+        action_keys = {action_sequence(row.get("target_response", "")) for row in seed_rows}
+        shape_keys = {bullet_shape(row.get("target_response", "")) for row in seed_rows}
+        max_answer_similarity = 0.0
+        for index, left in enumerate(seed_rows):
+            for right in seed_rows[index + 1 :]:
+                max_answer_similarity = max(
+                    max_answer_similarity,
+                    token_jaccard(left.get("target_response", ""), right.get("target_response", "")),
+                )
+        if len(seed_rows) >= 5 and (len(answer_keys) < 3 or len(action_keys) < 2):
+            errors.append(f"{seed_id}: insufficient sibling answer/action diversity")
+            failing_seed_examples.append(
+                {
+                    "seed_id": seed_id,
+                    "row_count": len(seed_rows),
+                    "unique_prompts": len(prompt_keys),
+                    "unique_answers": len(answer_keys),
+                    "unique_action_sequences": len(action_keys),
+                    "unique_shapes": len(shape_keys),
+                    "max_answer_similarity": round(max_answer_similarity, 3),
+                    "example_row_ids": [row.get("row_id", "") for row in seed_rows[:5]],
+                }
+            )
+        elif max_answer_similarity >= 0.92:
+            warnings.append(f"{seed_id}: high sibling answer similarity {max_answer_similarity:.3f}")
+    report = {
+        "status": "fail" if errors else "pass",
+        "seed_count": len(rows_by_seed),
+        "failing_seed_count": len(failing_seed_examples),
+        "failing_seed_examples": failing_seed_examples[:50],
+        "warnings": warnings[:100],
+        "errors": errors[:100],
+    }
+    return errors, report
+
+
+def validate_final_eval_isolation(rows: list[dict[str, Any]], manifest: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
+    strict = manifest.get("config", {}).get("final_eval_isolation") == "strict"
+    errors: list[str] = []
+    violations = []
+    if strict:
+        train_or_dev_ids = {row.get("row_id", "") for row in rows if row.get("split") in {"train", "dev"}}
+        for row in rows:
+            if row.get("split") != "final_eval":
+                continue
+            refs = row.get("generation_source_refs", [])
+            if isinstance(refs, str):
+                refs = [refs]
+            leaked_refs = sorted(set(refs) & train_or_dev_ids)
+            parent = row.get("parent_row_id", "")
+            if leaked_refs or parent in train_or_dev_ids:
+                violations.append(
+                    {
+                        "row_id": row.get("row_id", ""),
+                        "leaked_generation_source_refs": leaked_refs,
+                        "parent_row_id": parent if parent in train_or_dev_ids else "",
+                    }
+                )
+        if violations:
+            errors.append(f"final_eval isolation violations: {len(violations)}")
+    return errors, {
+        "status": "fail" if errors else "pass",
+        "strict_isolation": strict,
+        "violation_count": len(violations),
+        "violations": violations[:50],
+        "errors": errors,
+    }
+
+
 def validate_pattern_collapse(rows: list[dict[str, Any]]) -> tuple[list[str], dict[str, Any], list[dict[str, Any]], str]:
     errors: list[str] = []
     accepted_count = max(1, len(rows))
@@ -731,6 +1050,38 @@ def validate_pattern_collapse(rows: list[dict[str, Any]]) -> tuple[list[str], di
                         "example_row_ids": examples[(bucket_name, key)],
                     }
                 )
+    scoped_counters: dict[str, Counter[str]] = defaultdict(Counter)
+    scoped_examples: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for row in rows:
+        response = row.get("target_response", "")
+        scope_keys = {
+            "split": row.get("split", ""),
+            "seed_family": row.get("seed_family_id", ""),
+            "renderer": row.get("renderer_style", ""),
+            "source_rules": "|".join(row.get("source_rule_ids", [])),
+            "generator_batch": row.get("generation_run_id", ""),
+        }
+        shape_key = "|".join([normalize_first_sentence(response), bullet_shape(response), action_sequence(response)])
+        for scope_name, scope_value in scope_keys.items():
+            key = f"{scope_name}:{scope_value}:{shape_key}"
+            scoped_counters[scope_name][key] += 1
+            if len(scoped_examples[(scope_name, key)]) < 5:
+                scoped_examples[(scope_name, key)].append(row.get("row_id", ""))
+    scoped_oversized = []
+    for scope_name, counter in scoped_counters.items():
+        for key, count in counter.items():
+            threshold = 5 if scope_name in {"split", "renderer", "source_rules"} else 3
+            if count > threshold:
+                scoped_oversized.append(
+                    {
+                        "cluster_type": f"scoped_{scope_name}",
+                        "cluster_key": key,
+                        "count": count,
+                        "threshold": threshold,
+                        "example_row_ids": scoped_examples[(scope_name, key)],
+                    }
+                )
+    oversized.extend(scoped_oversized)
     if oversized:
         errors.append(f"pattern clusters above threshold: {len(oversized)}")
     numbered_share = numbered_first / accepted_count
@@ -751,6 +1102,7 @@ def validate_pattern_collapse(rows: list[dict[str, Any]]) -> tuple[list[str], di
         "refusal_share": refusal_share,
         "oversized_cluster_count": len(oversized),
         "largest_clusters": sorted(oversized, key=lambda item: item["count"], reverse=True)[:25],
+        "scoped_oversized_cluster_count": len(scoped_oversized),
         "errors": errors,
     }
     return errors, report, oversized, "\n".join(cluster_markdown) + "\n"
@@ -790,6 +1142,81 @@ def validate_quotas(rows: list[dict[str, Any]]) -> tuple[list[str], dict[str, An
     return errors, report
 
 
+def behavior_distribution_report(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    by_split = Counter(row.get("split", "") for row in rows)
+    by_difficulty = Counter()
+    by_behavior = Counter()
+    by_forbidden = Counter()
+    by_rule = Counter()
+    by_split_renderer = Counter()
+    for row in rows:
+        tags = row.get("target_behavior_tags", [])
+        forbidden = row.get("forbidden_behavior_tags", [])
+        if len(tags) > 1:
+            by_difficulty[tags[1]] += 1
+        for tag in tags:
+            by_behavior[tag] += 1
+        for tag in forbidden:
+            by_forbidden[tag] += 1
+        for rule_id in row.get("source_rule_ids", []):
+            by_rule[rule_id] += 1
+        by_split_renderer[(row.get("split", ""), row.get("renderer_style", ""))] += 1
+    warnings = []
+    for split in SPLITS:
+        split_count = by_split[split]
+        if not split_count:
+            continue
+        refusal_like = sum(1 for row in rows if row.get("split") == split and row.get("renderer_style") in {"urgent_stop_refusal", "live_fact_refusal", "visual_uncertainty"})
+        if refusal_like / split_count > 0.5:
+            warnings.append(f"{split}: refusal/uncertainty renderers exceed 50%")
+    return {
+        "status": "pass",
+        "by_split": dict(by_split),
+        "by_difficulty": dict(by_difficulty),
+        "by_behavior_tag": dict(by_behavior),
+        "by_forbidden_tag": dict(by_forbidden),
+        "top_source_rules": dict(by_rule.most_common(50)),
+        "by_split_renderer": {f"{split}|{renderer}": count for (split, renderer), count in by_split_renderer.items()},
+        "warnings": warnings,
+    }
+
+
+def build_review_sampling_manifest(
+    rows: list[dict[str, Any]],
+    pattern_report: dict[str, Any],
+    similarity_report: dict[str, Any],
+    safety_report: dict[str, Any],
+) -> dict[str, Any]:
+    high_risk = [row.get("row_id", "") for row in rows if row.get("risk_level") == "high"]
+    final_eval = [row.get("row_id", "") for row in rows if row.get("split") == "final_eval"]
+    cluster_examples = []
+    for cluster in pattern_report.get("largest_clusters", [])[:25]:
+        cluster_examples.extend(cluster.get("example_row_ids", []))
+    sample = []
+    seen = set()
+    for row_id in [*final_eval, *high_risk[:80], *cluster_examples]:
+        if row_id and row_id not in seen:
+            sample.append(row_id)
+            seen.add(row_id)
+    return {
+        "status": "pass",
+        "sampling_policy": "all final_eval rows, high-risk rows, and examples from largest pattern clusters",
+        "required_reviewer_roles": [
+            "safety_source_grounding",
+            "leakage_eval_contamination",
+            "diversity_pattern_collapse",
+            "adversarial_skeptic",
+        ],
+        "sample_row_count": len(sample),
+        "sample_row_ids": sample[:250],
+        "final_eval_rows_included": len(final_eval),
+        "high_risk_rows_included": min(80, len(high_risk)),
+        "source_support_warnings": 0,
+        "safety_warnings": len(safety_report.get("warnings", [])),
+        "output_similarity_status": similarity_report.get("status"),
+    }
+
+
 def critic_stub(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     reviews = []
     for row in rows:
@@ -808,10 +1235,15 @@ def critic_stub(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
             {
                 "row_id": row.get("row_id"),
                 "reviewer_role": "deterministic_critic_stub",
+                "reviewer_version": "critic_stub_v1",
                 "prompt_version": "critic_stub_v1",
                 "model": "none_deterministic",
                 "temperature": 0,
                 "verdict": verdict,
+                "severity": "medium" if issues else "none",
+                "issue_tags": issues,
+                "rationale": "length-only deterministic placeholder; not a safety or source-grounding approval",
+                "blocking": verdict in {"reject", "escalate"},
                 "scores": {
                     "safety": 3,
                     "target_fidelity": 2,
@@ -840,6 +1272,11 @@ def subagent_review_stub(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     "row_id": row.get("row_id"),
                     "reviewer_role": role,
                     "verdict": "keep",
+                    "reviewer_version": "subagent_stub_v1",
+                    "severity": "none",
+                    "issue_tags": [],
+                    "rationale": "placeholder structured review; not approval",
+                    "blocking": False,
                     "scores": {
                         "safety": 3,
                         "target_fidelity": 2,
@@ -868,17 +1305,39 @@ def select_subagent_sample(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 def validate_reviews(critic_rows: list[dict[str, Any]], subagent_rows: list[dict[str, Any]]) -> tuple[list[str], dict[str, Any]]:
     errors: list[str] = []
-    critic_rejects = [row for row in critic_rows if row.get("verdict") in {"reject", "escalate"}]
-    subagent_rejects = [row for row in subagent_rows if row.get("verdict") in {"reject", "escalate"}]
+    reviewer_required = {"reviewer_role", "reviewer_version", "verdict", "severity", "issue_tags", "rationale", "row_id", "blocking"}
+    critic_rejects = [row for row in critic_rows if row.get("verdict") in {"reject", "escalate"} or row.get("blocking") is True]
+    subagent_rejects = [row for row in subagent_rows if row.get("verdict") in {"reject", "escalate"} or row.get("blocking") is True]
     if critic_rejects:
         errors.append(f"critic rejects/escalations unresolved: {len(critic_rejects)}")
     if subagent_rejects:
         errors.append(f"subagent rejects/escalations unresolved: {len(subagent_rejects)}")
+    placeholder_critic = [row for row in critic_rows if row.get("reviewer_role") == "deterministic_critic_stub"]
+    placeholder_subagent = [row for row in subagent_rows if row.get("calibrated") is False or "placeholder" in str(row.get("evidence", "")).lower()]
+    if placeholder_critic:
+        errors.append("critic review records are placeholders; replace with calibrated critic outputs")
     calibrated = [row for row in subagent_rows if row.get("calibrated") is True]
-    if subagent_rows and not calibrated:
+    if subagent_rows and (not calibrated or placeholder_subagent):
         errors.append("subagent review records are not calibrated; run 30-row canary calibration before approval")
+    missing_fields = []
+    for row in [*critic_rows, *subagent_rows]:
+        missing = sorted(reviewer_required - set(row))
+        if missing:
+            missing_fields.append({"row_id": row.get("row_id", ""), "reviewer_role": row.get("reviewer_role", ""), "missing": missing})
+    if missing_fields:
+        errors.append(f"review records missing required fields: {len(missing_fields)}")
     roles = {row.get("reviewer_role") for row in subagent_rows}
-    missing_roles = {"safety_harm", "task_fidelity_source", "diversity_pattern", "adversarial_skeptic"} - roles
+    required_roles = {"safety_source_grounding", "leakage_eval_contamination", "diversity_pattern_collapse", "adversarial_skeptic"}
+    legacy_roles = {"safety_harm", "task_fidelity_source", "diversity_pattern"}
+    normalized_roles = set(roles)
+    if legacy_roles & normalized_roles:
+        normalized_roles |= {
+            "safety_source_grounding" if "safety_harm" in roles else "",
+            "leakage_eval_contamination" if "task_fidelity_source" in roles else "",
+            "diversity_pattern_collapse" if "diversity_pattern" in roles else "",
+        }
+        normalized_roles.discard("")
+    missing_roles = required_roles - normalized_roles
     if missing_roles:
         errors.append(f"missing subagent reviewer roles: {sorted(missing_roles)}")
     return errors, {
@@ -889,13 +1348,16 @@ def validate_reviews(critic_rows: list[dict[str, Any]], subagent_rows: list[dict
         "subagent_rejects": len(subagent_rejects),
         "reviewer_roles": sorted(roles),
         "calibrated_review_rows": len(calibrated),
+        "placeholder_critic_rows": len(placeholder_critic),
+        "placeholder_subagent_rows": len(placeholder_subagent),
+        "missing_required_field_examples": missing_fields[:50],
         "errors": errors,
     }
 
 
 def write_csv_rows(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    fieldnames = sorted({key for row in rows for key in row})
+    fieldnames = sorted({key for row in rows for key in row}) if rows else ["status"]
     with path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
@@ -914,12 +1376,25 @@ def validate_expansion(
     errors: list[str] = []
     warnings: list[str] = []
     reports: dict[str, Any] = {}
+    manifest_path = run_dir / "dataset_manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
     schema_errors, schema_report = validate_schema(rows)
     errors.extend(schema_errors)
     reports["schema_validation_report"] = schema_report
+    lineage_errors, lineage_report = validate_lineage(rows, manifest)
+    errors.extend(lineage_errors)
+    reports["lineage_validation_report"] = lineage_report
     source_errors, source_report = validate_source_grounding(rows, rule_manifest, run_dir / "source_grounding_report.csv")
     errors.extend(source_errors)
     reports["source_grounding_report"] = source_report
+    source_support_errors, source_support_report = validate_source_claim_support(
+        rows,
+        rule_manifest,
+        run_dir / "source_claim_support_report.csv",
+    )
+    errors.extend(source_support_errors)
+    warnings.extend(source_support_report.get("warnings", []))
+    reports["source_claim_support_report"] = source_support_report
     safety_errors, safety_report = validate_safety(rows)
     errors.extend(safety_errors)
     warnings.extend(safety_report.get("warnings", []))
@@ -927,6 +1402,16 @@ def validate_expansion(
     leakage_errors, leakage_report = validate_split_leakage(rows)
     errors.extend(leakage_errors)
     reports["split_leakage_report"] = leakage_report
+    output_similarity_errors, output_similarity_report = validate_output_similarity(rows, run_dir / "output_similarity_report.csv")
+    errors.extend(output_similarity_errors)
+    reports["output_similarity_report"] = output_similarity_report
+    per_seed_errors, per_seed_report = validate_per_seed_diversity(rows)
+    errors.extend(per_seed_errors)
+    warnings.extend(per_seed_report.get("warnings", []))
+    reports["per_seed_diversity_report"] = per_seed_report
+    final_eval_errors, final_eval_report = validate_final_eval_isolation(rows, manifest)
+    errors.extend(final_eval_errors)
+    reports["final_eval_isolation_report"] = final_eval_report
     pattern_errors, pattern_report, oversized, cluster_md = validate_pattern_collapse(rows)
     errors.extend(pattern_errors)
     reports["pattern_collapse_report"] = pattern_report
@@ -936,6 +1421,25 @@ def validate_expansion(
     errors.extend(quota_errors)
     warnings.extend(quota_report.get("warnings", []))
     reports["quota_report"] = quota_report
+    behavior_report = behavior_distribution_report(rows)
+    warnings.extend(behavior_report.get("warnings", []))
+    reports["behavior_distribution_report"] = behavior_report
+    deterministic_errors = list(errors)
+    deterministic_warnings = list(warnings)
+    deterministic_report = {
+        "status": "fail" if deterministic_errors else "pass",
+        "errors": deterministic_errors,
+        "warnings": deterministic_warnings,
+        "gate_reports": {
+            key: report.get("status", "n/a")
+            for key, report in reports.items()
+            if key != "review_report"
+        },
+    }
+    write_json(run_dir / "deterministic_gate_report.json", deterministic_report)
+    review_sampling = build_review_sampling_manifest(rows, pattern_report, output_similarity_report, safety_report)
+    reports["review_sampling_manifest"] = review_sampling
+    write_json(run_dir / "review_sampling_manifest.json", review_sampling)
     critic_path = run_dir / "critic_report.jsonl"
     subagent_path = run_dir / "subagent_review_report.jsonl"
     if not critic_path.exists():
@@ -947,8 +1451,8 @@ def validate_expansion(
     review_errors, review_report = validate_reviews(critic_rows, subagent_rows)
     errors.extend(review_errors)
     reports["review_report"] = review_report
-    accepted = [dict(row, quality_status="accepted") for row in rows if not errors]
-    rejected = [dict(row, quality_status="rejected") for row in rows if errors]
+    accepted = [dict(row, quality_status="accepted", review_state="frozen") for row in rows if not errors]
+    rejected = [dict(row, quality_status="rejected", review_state="rejected") for row in rows if errors]
     if accepted_count_ranges is None:
         profile_config = EXPANSION_PROFILES.get(profile)
         if profile_config is None:
@@ -963,14 +1467,38 @@ def validate_expansion(
             if counts[split] < minimum or counts[split] > maximum:
                 errors.append(f"{split} accepted count {counts[split]} not in required range {minimum}-{maximum}")
     write_jsonl(run_dir / "accepted_rows.jsonl", accepted if not errors else [])
+    write_jsonl(run_dir / "final_accepted_rows.jsonl", accepted if not errors else [])
     write_jsonl(run_dir / "rejected_rows.jsonl", rejected if errors else [])
+    rejected_ledger = [
+        {
+            "row_id": row.get("row_id", ""),
+            "candidate_id": row.get("candidate_id", ""),
+            "split": row.get("split", ""),
+            "seed_id": row.get("seed_id", ""),
+            "rejection_reasons": errors[:100],
+        }
+        for row in rows
+    ] if errors else []
+    write_jsonl(run_dir / "rejected_row_ledger.jsonl", rejected_ledger)
+    reviewer_decisions = [
+        {
+            "row_id": row.get("row_id", ""),
+            "reviewer_role": row.get("reviewer_role", ""),
+            "reviewer_version": row.get("reviewer_version", ""),
+            "verdict": row.get("verdict", ""),
+            "severity": row.get("severity", ""),
+            "issue_tags": row.get("issue_tags", []),
+            "blocking": row.get("blocking", False),
+            "rationale": row.get("rationale", row.get("evidence", "")),
+        }
+        for row in [*critic_rows, *subagent_rows]
+    ]
+    write_jsonl(run_dir / "reviewer_decisions.jsonl", reviewer_decisions)
     for key, report in reports.items():
         filename = key if key.endswith(".json") else f"{key}.json"
-        if key == "source_grounding_report":
+        if key in {"source_grounding_report", "source_claim_support_report", "output_similarity_report"}:
             continue
         write_json(run_dir / filename, report)
-    manifest_path = run_dir / "dataset_manifest.json"
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
     manifest.update(
         {
             "validated_at": datetime.now(timezone.utc).isoformat(),
@@ -994,6 +1522,30 @@ def validate_expansion(
         }
     )
     write_json(manifest_path, manifest)
+    freeze_manifest = {
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "status": "pass" if not errors else "fail",
+        "generation_run_id": manifest.get("generation_run_id", ""),
+        "accepted_counts": dict(Counter(row["split"] for row in accepted)) if not errors else {},
+        "seed_snapshot_hash": manifest.get("seed_snapshot_hash", ""),
+        "source_rule_snapshot_hash": manifest.get("source_rule_snapshot_hash", ""),
+        "generator_config_hash": manifest.get("generator_config_hash", ""),
+        "artifact_hashes": {
+            name: sha256_file(run_dir / name)
+            for name in [
+                "generated_rows.jsonl",
+                "final_accepted_rows.jsonl",
+                "rejected_row_ledger.jsonl",
+                "critic_report.jsonl",
+                "subagent_review_report.jsonl",
+                "reviewer_decisions.jsonl",
+                "deterministic_gate_report.json",
+            ]
+            if (run_dir / name).exists()
+        },
+        "errors": errors[:100],
+    }
+    write_json(run_dir / "dataset_freeze_manifest.json", freeze_manifest)
     summary = make_run_summary(manifest, reports, errors, warnings)
     (run_dir / "run_summary.md").write_text(summary, encoding="utf-8")
     return GateResult("fail" if errors else "pass", errors, warnings, reports)
@@ -1032,16 +1584,27 @@ def make_audit_bundle(run_dir: Path) -> dict[str, Any]:
     artifact_names = [
         "dataset_manifest.json",
         "schema_validation_report.json",
+        "lineage_validation_report.json",
         "split_leakage_report.json",
         "source_grounding_report.csv",
+        "source_claim_support_report.csv",
         "safety_lint_report.json",
+        "output_similarity_report.csv",
         "pattern_collapse_report.json",
+        "per_seed_diversity_report.json",
         "quota_report.json",
+        "behavior_distribution_report.json",
+        "deterministic_gate_report.json",
+        "review_sampling_manifest.json",
         "critic_report.jsonl",
         "subagent_review_report.jsonl",
+        "reviewer_decisions.jsonl",
         "repair_lineage.jsonl",
         "accepted_rows.jsonl",
+        "final_accepted_rows.jsonl",
         "rejected_rows.jsonl",
+        "rejected_row_ledger.jsonl",
+        "dataset_freeze_manifest.json",
         "run_summary.md",
     ]
     bundle = {
