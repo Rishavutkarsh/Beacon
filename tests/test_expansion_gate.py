@@ -8,8 +8,13 @@ from pathlib import Path
 
 from sankat_saathi_dataset.expansion_gate import (
     EXPANSION_PROFILES,
+    action_sequence,
     build_rows,
+    bullet_shape,
+    make_row,
+    normalize_text,
     read_jsonl,
+    validate_artifacts,
     validate_expansion,
     validate_final_eval_isolation,
     validate_output_similarity,
@@ -73,6 +78,173 @@ def test_v2_1015_profile_builds_full_capacity_from_expanded_seeds() -> None:
     assert manifest["source_rule_snapshot_hash"]
     rows = read_jsonl(out_dir / "generated_rows.jsonl")
     assert max(sum(1 for row in rows if row["seed_id"] == seed_id and row["split"] == "train") for seed_id in {row["seed_id"] for row in rows if row["split"] == "train"}) == 5
+    shutil.rmtree(out_dir, ignore_errors=True)
+
+
+def test_variant_renderer_produces_semantic_sibling_diversity() -> None:
+    seed = next(row for row in read_jsonl(Path("data/seed_cards/sankat_saathi_seed_cards_v2_train_expanded.jsonl")) if row["split"] == "train")
+    rows = [make_row(seed, index, "test", "hash", generation_run_id="gen_test") for index in range(5)]
+
+    assert len({normalize_text(row["prompt"]) for row in rows}) == 5
+    assert len({normalize_text(row["target_response"]) for row in rows}) == 5
+    assert len({row["renderer_style"] for row in rows}) >= 3
+    assert len({bullet_shape(row["target_response"]) for row in rows}) >= 2
+    assert len({action_sequence(row["target_response"]) for row in rows}) >= 3
+    assert all(row["prompt_template_version"] == "seed_renderer_v2" for row in rows)
+    assert all("variant_contract" in row for row in rows)
+
+
+def test_variant_renderer_keeps_prompt_response_styles_aligned() -> None:
+    seed = next(row for row in read_jsonl(Path("data/seed_cards/sankat_saathi_seed_cards_v2_train_expanded.jsonl")) if row["split"] == "train")
+    rows = [make_row(seed, index, "test", "hash", generation_run_id="gen_test") for index in range(5)]
+    joined = {row["renderer_style"]: normalize_text(row["prompt"] + " " + row["target_response"]) for row in rows}
+
+    assert any("triage" in text and "handoff" in text for style, text in joined.items() if style == "volunteer_triage_plan")
+    assert any("family" in text or "household" in text for style, text in joined.items() if style == "family_resource_plan")
+    assert any("hinglish" in text or "pehle" in text for style, text in joined.items() if style == "low_literacy_hinglish")
+    assert all("i cannot verify" not in row["target_response"].lower() for row in rows)
+
+
+def test_renderer_does_not_promote_style_notes_to_safety_actions() -> None:
+    seeds = read_jsonl(Path("data/seed_cards/sankat_saathi_seed_cards_v2_train_expanded.jsonl"))
+    problem_seed_ids = {"ss_seed_050", "ss_seed_074", "ss_seed_124"}
+    rows = [make_row(seed, 0, "test", "hash", generation_run_id="gen_test") for seed in seeds if seed["seed_id"] in problem_seed_ids]
+    joined = "\n".join(row["target_response"].lower() for row in rows)
+
+    assert "assign simple roles" not in joined
+    assert "use short simple" not in joined
+    assert "scarce-resource fallback" not in joined
+    assert "put life safety" not in joined
+    assert any("fallen power line" in row["target_response"].lower() or "dry safe location" in row["target_response"].lower() for row in rows)
+    assert any("fresh air" in row["target_response"].lower() or "fuel-burning" in row["target_response"].lower() for row in rows)
+    assert any("high ground" in row["target_response"].lower() or "verified alternate route" in row["target_response"].lower() for row in rows)
+
+
+def test_artifact_gate_catches_split_eval_debug_and_duplicate_lines() -> None:
+    rows = [
+        {
+            "row_id": "bad_artifact",
+            "prompt": "final-eval competing-pressure variant: keep the locked-eval response self-contained.",
+            "target_response": "Pehle flooded basement breaker train 0 scene mein risk ko halka mat lo.\n- Move away.\n1) Move away.",
+        }
+    ]
+
+    errors, report = validate_artifacts(rows)
+
+    assert errors
+    assert report["hits_by_type"]["eval_marker"] >= 1
+    assert report["hits_by_type"]["split_debug"] >= 1
+    assert report["hits_by_type"]["seed_debug"] >= 1
+    assert report["duplicate_response_line_row_count"] == 1
+
+
+def test_artifact_gate_allows_natural_train_word() -> None:
+    rows = [
+        {
+            "row_id": "rail_context",
+            "prompt": "A train passenger sees water near the platform. Give practical safety guidance.",
+            "target_response": "Move away from the flooded edge.\nShare only locally verified platform updates.",
+        }
+    ]
+
+    errors, report = validate_artifacts(rows)
+
+    assert errors == []
+    assert report["status"] == "pass"
+
+
+def test_artifact_gate_catches_run006_mechanical_residue() -> None:
+    rows = [
+        {
+            "row_id": "slot_residue",
+            "split": "train",
+            "renderer_style": "family_resource_plan",
+            "prompt": "How should the family use scarce help for none_required?",
+            "target_response": "Verify none_required first.\nOne helper handles the immediate action: move away.",
+        },
+        {
+            "row_id": "target_meta",
+            "split": "dev",
+            "renderer_style": "visual_uncertainty",
+            "prompt": "Give a brief practical answer.",
+            "target_response": "Keep the wording compact so the safety behavior is easy to follow.\nMove away from the hazard.",
+        },
+        {
+            "row_id": "triage_template",
+            "split": "train",
+            "renderer_style": "volunteer_triage_plan",
+            "prompt": "A volunteer asks what to do.",
+            "target_response": "Triage starts when volunteers guide around urban flood, not reassurance.\nImmediate danger queue: move back.",
+        },
+        {
+            "row_id": "hinglish_template",
+            "split": "train",
+            "renderer_style": "low_literacy_hinglish",
+            "prompt": "Make a simple note.",
+            "target_response": "Pehle is relief camp setting mein risk wali risk ko halka mat lo: do not assume safe.",
+        },
+        {
+            "row_id": "checklist_template",
+            "split": "final_eval",
+            "renderer_style": "first_10_minutes_checklist",
+            "prompt": "In the next few minutes, no-photo/no-live-status certainty both matter.",
+            "target_response": "When urban flood discard food is the issue, move people away.",
+        },
+        {
+            "row_id": "live_template",
+            "split": "final_eval",
+            "renderer_style": "live_fact_refusal",
+            "prompt": "Someone wants current status.",
+            "target_response": "Treat live status as unverified while deciding about road status.",
+        },
+    ]
+
+    errors, report = validate_artifacts(rows)
+
+    assert errors
+    assert report["hits_by_type"]["slot_residue"] >= 1
+    assert report["hits_by_type"]["target_instruction"] >= 1
+    assert report["hits_by_type"]["triage_starts_when_volunteers"] == 1
+    assert report["hits_by_type"]["pehle_is_setting"] == 1
+    assert report["hits_by_type"]["when_is_the_issue"] == 1
+    assert report["hits_by_type"]["treat_live_status_unverified"] == 1
+
+
+def test_v2_1015_scratch_build_passes_key_deterministic_renderer_gates() -> None:
+    out_dir = scratch_dir("_test_expansion_gate_v2_1015_renderer_preflight")
+    build_rows(
+        Path("data/seed_cards/sankat_saathi_seed_cards_v2_train_expanded.jsonl"),
+        out_dir,
+        stage="full",
+        profile="v2_1015",
+        rule_manifest_path=Path("data/seed_cards/source_rule_manifest_v2_train_seed_expansion.jsonl"),
+    )
+    result = validate_expansion(
+        out_dir,
+        Path("data/seed_cards/source_rule_manifest_v2_train_seed_expansion.jsonl"),
+        profile="v2_1015",
+    )
+    blocking = [
+        error
+        for error in result.errors
+        if "review records are not calibrated" not in error
+        and "review calibration status must pass" not in error
+        and "review calibration has not been run" not in error
+        and "review calibration has not passed" not in error
+        and "review canary failure catch rate" not in error
+        and "review calibration canary catch rate" not in error
+        and "review agreement rate" not in error
+        and "review calibration agreement rate" not in error
+        and "review calibration agreement below" not in error
+        and "review calibration report is missing" not in error
+        and "placeholder" not in error
+    ]
+
+    assert not blocking
+    source_support = result.reports["source_claim_support_report"]
+    review_sampling = json.loads((out_dir / "review_sampling_manifest.json").read_text(encoding="utf-8"))
+    assert review_sampling["source_support_warnings"] == source_support["review_sentence_count"]
+    assert review_sampling["source_support_warning_rows"] == source_support["review_row_count"]
     shutil.rmtree(out_dir, ignore_errors=True)
 
 

@@ -1,0 +1,19 @@
+{
+  "id": "rishavutkarsh/beacon-low-lr-final-eval-qwen-judge",
+  "title": "Beacon Low LR Final Eval Qwen Judge",
+  "code_file": "beacon_low_lr_final_eval_qwen_judge.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": true,
+  "dataset_sources": [
+    "rishavutkarsh/beacon-low-lr-final-eval-qwen-judge-inputs"
+  ],
+  "model_sources": [
+    "qwen-lm/qwen2.5/Transformers/7b-instruct/1"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

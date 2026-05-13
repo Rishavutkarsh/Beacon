@@ -1,0 +1,15 @@
+{
+  "base": {
+    "copies_prompt_span": 3,
+    "possible_live_fact_or_route_claim": 8
+  },
+  "attention_only_best_dev": {
+    "generic_template_language": 1,
+    "copies_prompt_span": 4,
+    "possible_live_fact_or_route_claim": 3
+  },
+  "all_linear_best_dev": {
+    "possible_live_fact_or_route_claim": 5,
+    "copies_prompt_span": 8
+  }
+}

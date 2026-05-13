@@ -1,0 +1,115 @@
+{"example_id": "ss_exp_dev_ss_seed_015_00", "label_map_to_original_bundle_label": {"A": "A", "B": "C", "C": "B", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_015_01", "label_map_to_original_bundle_label": {"A": "B", "B": "A", "C": "D", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_015_02", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "B", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_016_00", "label_map_to_original_bundle_label": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_016_01", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_016_02", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "A", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_017_00", "label_map_to_original_bundle_label": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_017_01", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "A", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_017_02", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_018_00", "label_map_to_original_bundle_label": {"A": "B", "B": "A", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_019_00", "label_map_to_original_bundle_label": {"A": "B", "B": "A", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_019_01", "label_map_to_original_bundle_label": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_019_02", "label_map_to_original_bundle_label": {"A": "C", "B": "D", "C": "B", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_040_00", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "C", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_040_02", "label_map_to_original_bundle_label": {"A": "B", "B": "A", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_041_00", "label_map_to_original_bundle_label": {"A": "C", "B": "D", "C": "A", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_041_01", "label_map_to_original_bundle_label": {"A": "B", "B": "A", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_042_00", "label_map_to_original_bundle_label": {"A": "C", "B": "A", "C": "B", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_042_01", "label_map_to_original_bundle_label": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_042_02", "label_map_to_original_bundle_label": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_043_00", "label_map_to_original_bundle_label": {"A": "B", "B": "D", "C": "A", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_043_01", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "C", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_043_02", "label_map_to_original_bundle_label": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_044_00", "label_map_to_original_bundle_label": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_044_01", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_044_02", "label_map_to_original_bundle_label": {"A": "A", "B": "C", "C": "D", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_062_00", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_062_01", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_062_02", "label_map_to_original_bundle_label": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_063_00", "label_map_to_original_bundle_label": {"A": "D", "B": "A", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_063_01", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "A", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_063_02", "label_map_to_original_bundle_label": {"A": "A", "B": "B", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_064_00", "label_map_to_original_bundle_label": {"A": "D", "B": "A", "C": "C", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_064_01", "label_map_to_original_bundle_label": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_064_02", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "C", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_065_00", "label_map_to_original_bundle_label": {"A": "A", "B": "C", "C": "D", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_065_01", "label_map_to_original_bundle_label": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_065_02", "label_map_to_original_bundle_label": {"A": "B", "B": "C", "C": "A", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_081_01", "label_map_to_original_bundle_label": {"A": "B", "B": "D", "C": "A", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_081_02", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "A", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_082_01", "label_map_to_original_bundle_label": {"A": "C", "B": "D", "C": "A", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_083_00", "label_map_to_original_bundle_label": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_084_00", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_084_01", "label_map_to_original_bundle_label": {"A": "B", "B": "A", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_099_00", "label_map_to_original_bundle_label": {"A": "B", "B": "D", "C": "A", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_099_01", "label_map_to_original_bundle_label": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_099_02", "label_map_to_original_bundle_label": {"A": "C", "B": "A", "C": "D", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_100_00", "label_map_to_original_bundle_label": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_100_01", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "B", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_100_02", "label_map_to_original_bundle_label": {"A": "A", "B": "B", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_101_00", "label_map_to_original_bundle_label": {"A": "A", "B": "B", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_101_01", "label_map_to_original_bundle_label": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_101_02", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_117_00", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_117_01", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "A", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_117_02", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_118_00", "label_map_to_original_bundle_label": {"A": "D", "B": "A", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_118_01", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "A", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_118_02", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "A", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_119_00", "label_map_to_original_bundle_label": {"A": "C", "B": "D", "C": "A", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_119_01", "label_map_to_original_bundle_label": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_119_02", "label_map_to_original_bundle_label": {"A": "A", "B": "B", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_137_00", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "B", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_137_01", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "A", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_137_02", "label_map_to_original_bundle_label": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_138_00", "label_map_to_original_bundle_label": {"A": "D", "B": "A", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_138_01", "label_map_to_original_bundle_label": {"A": "D", "B": "A", "C": "C", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_138_02", "label_map_to_original_bundle_label": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_139_00", "label_map_to_original_bundle_label": {"A": "B", "B": "C", "C": "A", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_139_01", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "A", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_139_02", "label_map_to_original_bundle_label": {"A": "D", "B": "A", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_140_00", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "A", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_140_01", "label_map_to_original_bundle_label": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_140_02", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_141_00", "label_map_to_original_bundle_label": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_156_01", "label_map_to_original_bundle_label": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_156_02", "label_map_to_original_bundle_label": {"A": "C", "B": "B", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_157_00", "label_map_to_original_bundle_label": {"A": "D", "B": "A", "C": "C", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_157_01", "label_map_to_original_bundle_label": {"A": "B", "B": "A", "C": "D", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_158_00", "label_map_to_original_bundle_label": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_158_01", "label_map_to_original_bundle_label": {"A": "A", "B": "B", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_158_02", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "A", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_159_00", "label_map_to_original_bundle_label": {"A": "C", "B": "D", "C": "B", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_176_00", "label_map_to_original_bundle_label": {"A": "A", "B": "C", "C": "D", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_176_01", "label_map_to_original_bundle_label": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_176_02", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "B", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_177_00", "label_map_to_original_bundle_label": {"A": "B", "B": "A", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_177_01", "label_map_to_original_bundle_label": {"A": "C", "B": "A", "C": "D", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_177_02", "label_map_to_original_bundle_label": {"A": "A", "B": "C", "C": "D", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_178_00", "label_map_to_original_bundle_label": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_178_01", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "B", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_178_02", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "B", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_179_00", "label_map_to_original_bundle_label": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_179_01", "label_map_to_original_bundle_label": {"A": "D", "B": "C", "C": "B", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_179_02", "label_map_to_original_bundle_label": {"A": "A", "B": "D", "C": "C", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_015_00::stability", "base_example_id": "ss_exp_dev_ss_seed_015_00", "label_map_to_preference_label": {"A": "C", "B": "A", "C": "B", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_015_01::stability", "base_example_id": "ss_exp_dev_ss_seed_015_01", "label_map_to_preference_label": {"A": "A", "B": "D", "C": "C", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_015_02::stability", "base_example_id": "ss_exp_dev_ss_seed_015_02", "label_map_to_preference_label": {"A": "C", "B": "B", "C": "A", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_016_00::stability", "base_example_id": "ss_exp_dev_ss_seed_016_00", "label_map_to_preference_label": {"A": "B", "B": "A", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_016_01::stability", "base_example_id": "ss_exp_dev_ss_seed_016_01", "label_map_to_preference_label": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_016_02::stability", "base_example_id": "ss_exp_dev_ss_seed_016_02", "label_map_to_preference_label": {"A": "C", "B": "A", "C": "B", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_017_00::stability", "base_example_id": "ss_exp_dev_ss_seed_017_00", "label_map_to_preference_label": {"A": "D", "B": "A", "C": "C", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_017_01::stability", "base_example_id": "ss_exp_dev_ss_seed_017_01", "label_map_to_preference_label": {"A": "D", "B": "A", "C": "C", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_017_02::stability", "base_example_id": "ss_exp_dev_ss_seed_017_02", "label_map_to_preference_label": {"A": "B", "B": "C", "C": "A", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_018_00::stability", "base_example_id": "ss_exp_dev_ss_seed_018_00", "label_map_to_preference_label": {"A": "A", "B": "C", "C": "B", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_019_00::stability", "base_example_id": "ss_exp_dev_ss_seed_019_00", "label_map_to_preference_label": {"A": "C", "B": "A", "C": "D", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_019_01::stability", "base_example_id": "ss_exp_dev_ss_seed_019_01", "label_map_to_preference_label": {"A": "A", "B": "C", "C": "B", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_019_02::stability", "base_example_id": "ss_exp_dev_ss_seed_019_02", "label_map_to_preference_label": {"A": "C", "B": "D", "C": "A", "D": "B"}}
+{"example_id": "ss_exp_dev_ss_seed_040_00::stability", "base_example_id": "ss_exp_dev_ss_seed_040_00", "label_map_to_preference_label": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_040_02::stability", "base_example_id": "ss_exp_dev_ss_seed_040_02", "label_map_to_preference_label": {"A": "C", "B": "A", "C": "B", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_041_00::stability", "base_example_id": "ss_exp_dev_ss_seed_041_00", "label_map_to_preference_label": {"A": "C", "B": "B", "C": "D", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_041_01::stability", "base_example_id": "ss_exp_dev_ss_seed_041_01", "label_map_to_preference_label": {"A": "B", "B": "A", "C": "C", "D": "D"}}
+{"example_id": "ss_exp_dev_ss_seed_042_00::stability", "base_example_id": "ss_exp_dev_ss_seed_042_00", "label_map_to_preference_label": {"A": "B", "B": "D", "C": "A", "D": "C"}}
+{"example_id": "ss_exp_dev_ss_seed_042_01::stability", "base_example_id": "ss_exp_dev_ss_seed_042_01", "label_map_to_preference_label": {"A": "C", "B": "D", "C": "B", "D": "A"}}
+{"example_id": "ss_exp_dev_ss_seed_042_02::stability", "base_example_id": "ss_exp_dev_ss_seed_042_02", "label_map_to_preference_label": {"A": "C", "B": "A", "C": "D", "D": "B"}}

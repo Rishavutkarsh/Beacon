@@ -25,6 +25,11 @@ kaggle_gemma_preflight/
 kaggle_gemma_sft/
 kaggle_sankat_eval/
 kaggle_outputs/
+kaggle_inputs/
+kaggle_gemma_sft_smoke/
+kaggle_uploads/beacon_low_lr1e5_best_adapters_run018/
+.publish_pashupulse/
+tmp_qwen_model_meta/
 kaggle_cpu_sft_smoke_bundle.zip
 data/eval/
 data/expanded/

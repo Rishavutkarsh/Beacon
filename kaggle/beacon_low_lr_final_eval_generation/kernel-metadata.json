@@ -1,0 +1,20 @@
+{
+  "id": "rishavutkarsh/beacon-low-lr-final-eval-generation-run018",
+  "title": "Beacon Low LR Final Eval Generation Run018",
+  "code_file": "beacon_low_lr_final_eval_generation.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": true,
+  "dataset_sources": [
+    "rishavutkarsh/beacon-sft-run018-pruned",
+    "rishavutkarsh/beacon-low-lr1e5-best-adapters-run018"
+  ],
+  "model_sources": [
+    "google/gemma-4/Transformers/gemma-4-e2b-it/1"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

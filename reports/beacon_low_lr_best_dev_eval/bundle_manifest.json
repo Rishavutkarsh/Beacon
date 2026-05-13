@@ -1,0 +1,19 @@
+{
+  "row_count": 95,
+  "candidates": [
+    "base",
+    "attention_only_best_dev",
+    "all_linear_best_dev",
+    "old_high_lr_checkpoint_175"
+  ],
+  "primary_candidates": [
+    "base",
+    "attention_only_best_dev",
+    "all_linear_best_dev"
+  ],
+  "final_eval_policy": "not used; dev only",
+  "judge_files": [
+    "low_lr_best_judge_bundle.jsonl",
+    "low_lr_best_label_map.jsonl"
+  ]
+}

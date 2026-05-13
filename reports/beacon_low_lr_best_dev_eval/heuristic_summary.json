@@ -1,0 +1,20 @@
+{
+  "base": {
+    "possible_live_fact_or_route_claim": 7,
+    "copies_prompt_span": 3,
+    "generic_template_language": 1
+  },
+  "attention_only_best_dev": {
+    "generic_template_language": 1,
+    "possible_live_fact_or_route_claim": 7,
+    "copies_prompt_span": 5
+  },
+  "all_linear_best_dev": {
+    "possible_live_fact_or_route_claim": 6,
+    "copies_prompt_span": 6
+  },
+  "old_high_lr_checkpoint_175": {
+    "copies_prompt_span": 56,
+    "possible_live_fact_or_route_claim": 3
+  }
+}

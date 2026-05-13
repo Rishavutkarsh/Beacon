@@ -1,0 +1,13 @@
+{
+  "row_count": 93,
+  "candidates": [
+    "base",
+    "attention_only_best_dev",
+    "all_linear_best_dev"
+  ],
+  "final_eval_policy": "confirmation only after dev winner was frozen; do not tune or reselect using exact final_eval feedback",
+  "judge_files": [
+    "final_eval_judge_bundle.jsonl",
+    "final_eval_label_map.jsonl"
+  ]
+}

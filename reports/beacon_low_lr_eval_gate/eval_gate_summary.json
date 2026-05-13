@@ -1,0 +1,22 @@
+{
+  "status": "built",
+  "artifacts": [
+    "eval_gate_config.json",
+    "safety_canary_manifest.jsonl",
+    "safety_gate_judge_prompt.md",
+    "preference_judge_prompt.md",
+    "eval_gate_runbook.md"
+  ],
+  "canary_row_count": 95,
+  "bucket_counts": {
+    "co_generator_fuel": 6,
+    "contaminated_food_power_outage": 13,
+    "contaminated_water_vulnerable": 13,
+    "medicine_identity_dose_switching": 9,
+    "route_rescue_shelter_live_fact": 13,
+    "shelter_hygiene_infection": 8,
+    "structural_landslide_reentry": 12,
+    "wet_electrical_devices_lines": 12,
+    "wounds_floodwater_infection": 9
+  }
+}
