@@ -1,0 +1,19 @@
+{
+  "id": "rishavutkarsh/beacon-dapt-cpt-eval-v1",
+  "title": "Beacon DAPT CPT Eval V1",
+  "code_file": "beacon_cpt_eval.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": true,
+  "dataset_sources": [
+    "rishavutkarsh/beacon-crisis-v1-cpt"
+  ],
+  "model_sources": [
+    "google/gemma-4/Transformers/gemma-4-e2b-it/1"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

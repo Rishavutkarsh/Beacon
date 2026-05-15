@@ -1,0 +1,23 @@
+{
+  "created_at_utc": "2026-05-15T17:36:16.679989+00:00",
+  "eval_steps": 25,
+  "gradient_accumulation_steps": 8,
+  "learning_rate": 2.5e-05,
+  "lora_alpha": 32,
+  "lora_dropout": 0.0,
+  "lora_r": 16,
+  "lr_scheduler_type": "cosine",
+  "max_grad_norm": 0.3,
+  "max_seq_length": 2048,
+  "num_train_epochs": 2,
+  "optim": "paged_adamw_8bit",
+  "packing": true,
+  "per_device_train_batch_size": 1,
+  "save_steps": 50,
+  "save_total_limit": 3,
+  "schema_version": "beacon-cpt-kaggle-package-v1",
+  "status": "draft_user_tunes_before_launch",
+  "target_scope": "language_attention_plus_mlp",
+  "warmup_ratio": 0.03,
+  "weight_decay": 0.01
+}

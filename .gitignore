@@ -36,6 +36,10 @@ data/expanded/
 data/images/
 data/processed/
 data/sources/
+data/source_corpus/raw/ndma_dos_donts.html
+data/dapt_corpus/beacon_crisis_v1/
+data/dapt_corpus/beacon_crisis_v1_download/raw/
+data/dapt_corpus/beacon_crisis_v1_download/extracted/
 *.safetensors
 *.bin
 *.pt

@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-05-15T12:28:59.921579+00:00",
+  "dataset": {
+    "dev_file": "dapt_dev.jsonl",
+    "dev_rows": 54,
+    "estimated_tokens": 2131792,
+    "train_file": "dapt_train.jsonl",
+    "train_rows": 1361
+  },
+  "launch_policy": "do_not_train_until_user_approves_variables",
+  "model": {
+    "base_model": "google/gemma-4-e2b-it",
+    "kaggle_model_path": "/kaggle/input/models/google/gemma-4/transformers/gemma-4-e2b-it/1"
+  },
+  "purpose": "Beacon first DAPT/CPT run configuration draft; tune before launch.",
+  "qlora_draft": {
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 2e-05,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0,
+    "lora_r": 16,
+    "max_grad_norm": 0.3,
+    "max_seq_length": 2048,
+    "num_train_epochs": 1,
+    "optim": "adamw_8bit",
+    "packing": false,
+    "per_device_train_batch_size": 1,
+    "target_scope": "attention_plus_mlp"
+  },
+  "schema_version": "beacon-dapt-train-ready-v1"
+}

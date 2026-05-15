@@ -50,7 +50,7 @@
     {
       "document_id": "ndma_dos_donts",
       "url": "https://sachet.ndma.gov.in/DosDont",
-      "reason": "ValueError: extracted_text_too_short chars=97"
+      "reason": "sachet_static_capture_contains_embedded_browser_api_key"
     },
     {
       "document_id": "ndma_flood_guidelines_pdf",
