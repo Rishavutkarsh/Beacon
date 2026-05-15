@@ -1,0 +1,33 @@
+Clinical Guidance for Carbon Monoxide Poisoning Following Disasters and Severe Weather | Carbon Monoxide Poisoning | CDC
+Clinical Guidance for Carbon Monoxide Poisoning Following Disasters and Severe Weather
+Carbon monoxide (CO) is an odorless, colorless, poisonous gas that can cause sudden illness and death if present in sufficient concentration.
+When power outages occur the use of alternative sources of fuel or electricity can cause CO to build up in a home, garage, or camper and poison the people inside.
+Generators, grills, camp stoves, or other gasoline, propane, natural gas, or charcoal-burning devices should never be used inside a home, basement, garage, or camper – or outside near an open window or window air conditioner.
+The symptoms and signs of carbon monoxide poisoning are variable and nonspecific. The most common symptoms of CO poisoning are headache, dizziness, weakness, nausea, vomiting, chest pain, and altered mental status.
+The clinical presentation of CO poisoning is the result of its underlying systemic toxicity. Its effects are caused not only by impaired oxygen delivery but also by disrupting oxygen utilization and respiration at the cellular level, particularly in high-oxygen demand organs (i.e., heart and brain).
+Symptoms of severe CO poisoning include malaise, shortness of breath, headache, nausea, chest pain, irritability, ataxia, altered mental status, other neurologic symptoms, loss of consciousness, coma, and death; signs include tachycardia, tachypnea, hypotension, various neurologic findings including impaired memory, cognitive and sensory disturbances; metabolic acidosis, arrhythmias, myocardial ischemia or infarction, and noncardiogenic pulmonary edema, although any organ system might be involved.
+With a focused history, exposure to a CO source may become apparent. Appropriate and prompt diagnostic testing and treatment is very important.
+Consider CO poisoning especially in these situations: No fever associated with symptoms, history of exposure, multiple patients with similar complaints.
+Diagnosis is based on a suggestive history and physical findings coupled with confirmatory testing. Patients should be examined for other conditions, including smoke inhalation, trauma, medical illness, or intoxication.
+Neurological exam should include an assessment of cognitive function such as a Mini-Mental Status Exam.
+All women of childbearing age who are suspected of having CO poisoning should have a pregnancy test.
+An elevated carboxyhemoglobin ( COHgb) level of 2% for non-smokers and >9% COHgb level for smokers strongly supports a diagnosis of CO poisoning.
+Administer 100% oxygen until the patient is symptom-free, usually about 4-5 hours. Serial neurologic exams should be performed to assess progress, and to detect the signs of developing cerebral edema.
+Consider hyperbaric oxygen therapy (HBO) therapy when the patient has a COHgb level of more than 25- 30%, there is evidence of cardiac involvement, severe acidosis, transient or prolonged unconsciousness, neurological impairment, or abnormal neuropsychiatric testing. HBO is also administered at lower COHgb(<25%) levels if suggested by clinical condition and/history of exposure.
+Hyperbaric oxygen is the treatment of choice for pregnant women, even if they are less severely poisoned. Hyperbaric oxygen is safe to administer and international consensus favors it as part of a more aggressive role in treating pregnant women.
+People with chronic heart disease, anemia or respiratory illness.
+Charcoal grills, propane stoves, and charcoal briquettes for both cooking and heating indoors
+Power washers and other gas powered tools.
+The key to confirming the diagnosis is measuring carboxyhemoglobin (COHgb) level.
+It is important to know how much time has elapsed since the patient has left the toxic environment. This will impact the COHgb level. If the patient has been breathing normal room air for several hours, COHgb testing may be less useful.
+The most common technology available in hospital laboratories for analyzing the blood is the multiple wavelength spectrophotometer, also known as a CO-oximeter. Venous or arterial blood may be used for testing.
+A fingertip pulse CO-oximeter can be used to measure heart rate and oxygen saturation, and COHgb levels. The conventional two-wavelength pulse oximeter is not accurate when COHgb is present.
+COHgb levels do not correlate well with severity of illness, outcomes or response to therapy so it is important to assess clinical symptoms and history of exposure when determining type and intensity of treatment.
+Other testing, such as a fingerstick blood sugar, alcohol and toxicology screen, head CT scan or lumbar puncture may be needed to exclude other causes of altered mental status when the diagnosis of carbon monoxide poisoning is inconclusive.
+Note: carbon monoxide can be produced endogenously as a byproduct of heme metabolism. Patients with sickle cell disease can have an elevated COHgb level as a result of hemolytic anemia or hemolysis.
+Cardiac injury during poisoning increases risk of mortality within 10 years following poisoning, so in patients with severe CO poisoning, it may be important to perform an EKG and measurement of troponin and cardiac enzymes during the evaluation for CO poisoning.
+Chest radiography is recommended for seriously poisoned patients, especially those with loss of consciousness or cardiopulmonary signs and symptoms. Head CT or brain MRI is also recommended in these cases; these tests may show signs of cerebral infarction secondary to hypoxia or ischemia.
+All discharged patients should be warned of possible delayed neurological complications and given instructions on what to do if these occur. Follow-up should include a repeat medical and neurological exam in 2 weeks.
+National Center for Environmental Health
+Sources https://snapshot2024.cdc.gov/disasters/co_guidance.html
+Carbon monoxide (CO) is an odorless, colorless gas produced when fossil fuel is burnt. CO poisoning can cause sudden illness and death, but it can be prevented.

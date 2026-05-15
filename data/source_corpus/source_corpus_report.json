@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-05-15",
+  "source_count": 13,
+  "candidate_document_count": 40,
+  "accepted_document_count": 31,
+  "rejected_document_count": 9,
+  "dapt_row_count": 78,
+  "retrieval_chunk_count": 286,
+  "news_event_card_count": 3,
+  "accepted_by_source": {
+    "cdc": 8,
+    "epa": 2,
+    "fda": 2,
+    "imd": 1,
+    "ndma": 3,
+    "nws": 5,
+    "ready": 6,
+    "unicef": 1,
+    "who": 3
+  },
+  "accepted_by_jurisdiction": {
+    "global": 4,
+    "india": 4,
+    "us/global-applicable": 23
+  },
+  "dapt_by_source": {
+    "cdc": 31,
+    "epa": 9,
+    "fda": 8,
+    "nws": 11,
+    "ready": 19
+  },
+  "retrieval_by_source": {
+    "cdc": 48,
+    "epa": 11,
+    "fda": 13,
+    "imd": 2,
+    "ndma": 150,
+    "nws": 16,
+    "ready": 27,
+    "unicef": 4,
+    "who": 15
+  },
+  "rejections": [
+    {
+      "document_id": "usgs_landslide_signs",
+      "url": "https://www.usgs.gov/programs/landslide-hazards/what-are-signs-landslide-development-what-do-i-do-if-a-landslide-occurs",
+      "reason": "ValueError: empty_extracted_text"
+    },
+    {
+      "document_id": "ndma_dos_donts",
+      "url": "https://sachet.ndma.gov.in/DosDont",
+      "reason": "ValueError: extracted_text_too_short chars=97"
+    },
+    {
+      "document_id": "ndma_flood_guidelines_pdf",
+      "url": "https://ndma.gov.in/images/guidelines/flood.pdf",
+      "reason": "HTTPError: 404 Client Error: Not Found for url: https://ndma.gov.in/images/guidelines/flood.pdf"
+    },
+    {
+      "document_id": "ndma_heatwave_guidelines_pdf",
+      "url": "https://ndma.gov.in/sites/default/files/PDF/Guidelines/heatwaveguidelines.pdf",
+      "reason": "known_bad_pdf_extraction_too_short"
+    },
+    {
+      "document_id": "nidm_ndma_heatwave_pdf",
+      "url": "https://nidm.gov.in/PDF/pubs/NDMA/27.pdf",
+      "reason": "known_bad_pdf_extraction_too_short"
+    },
+    {
+      "document_id": "ndma_floods",
+      "url": "https://ndma.gov.in/Natural-Hazards/Floods",
+      "reason": "HTTPError: 404 Client Error: Not Found for url: https://ndma.gov.in/Natural-Hazards/Floods"
+    },
+    {
+      "document_id": "ndma_landslide",
+      "url": "https://ndma.gov.in/Natural-Hazards/Landslide",
+      "reason": "HTTPError: 404 Client Error: Not Found for url: https://ndma.gov.in/Natural-Hazards/Landslide"
+    },
+    {
+      "document_id": "ifrc_public_awareness",
+      "url": "https://www.ifrc.org/document/public-awareness-and-public-education-disaster-risk-reduction",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://www.ifrc.org/document/public-awareness-and-public-education-disaster-risk-reduction"
+    },
+    {
+      "document_id": "sphere_handbook",
+      "url": "https://spherestandards.org/handbook/",
+      "reason": "HTTPError: 403 Client Error: Forbidden for url: https://spherestandards.org/handbook/"
+    }
+  ]
+}

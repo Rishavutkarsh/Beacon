@@ -1,0 +1,3352 @@
+National Disaster Management Authority
+1.6 Naming of Tropical Cyclones 6
+1.9 Past Initiatives: National Level 7
+1.10 P aradigm Shift: Past Initiatives by some States 10
+1.11 Paradigm Sh ift in DM: Genesis of the DM Act 10
+1.12 Institutional Framework 11
+1.13 E xisting Institutional Arrangements 13
+1.14 Nati onal Cyclone Risk Mitigation Project 15
+1.15 N ational Guidelines: Genesis, Structure and Implementation Strategy 15
+2.2 Present Status and Future Strategies 17
+2.3 Prediction of Severe Weather and Storm Surges 23
+2.4 Cyclone Forecasting and Emergency Management Networks 24
+2.5 Parametric Wind Field and Cyclone Risk Models 24
+2.6 Implementation of Impact Assessment and
+Emergency Response Management System 25
+2.8 Cyclone Warning Generation 27
+2.9 Requirement of Additional Support Infrastructure 30
+2.10 Suggested Common and Differentiated Activities 32
+2.12 Im plementation Strategy and Time-Frame 35
+3 Warning: Communication and Dissemination 36
+3.3 Initiatives at the National Level 37
+3.6 Communication Support for DM 41
+3.7 Existing Backbone Communication Infrastructure 41
+3.8 Development of State-of-the-Art Dissemination and
+Communication Infrastructure 47
+3.9 Integration of Networks 49
+3.10 Prio rities at State/District Level 49
+3.11 Implementation I ssues 50
+3.13 Im plementation Strategy and Time-Frame 52
+4 Structural Mitigation Measures 53
+4.2 Buildings: Cyclone Shelters 54
+4.3 Road Links, Culverts and Bridges 60
+4.4 Canals, Drains, Surface Water Tanks 62
+4.6 Communication Towers and Power Transmission Networks 63
+4.9 Implementation Strategy and Time-Frame 67
+5 Management of Coastal Zones 68
+5.2 Coastal Zone Management Issues 68
+5.3 Issues of Sustainability of Coastal Resources and Environment 77
+5.7 Shelterbelt Plantations 84
+5.8 Coastal Flood Plain Management 86
+5.11 New Environment Policy 90
+5.12 C rop and Livestock Protection 90
+5.13 Live lihood Protection of Handloom Weavers 92
+5.15 Im plementation Strategy and Time-Frame 97
+6.4 Community Based Disaster Management (CBDM) 102
+6.6 Implementation Strategy and Time-Frame 105
+7 Disaster Risk Management and Capacity Development 106
+7.2 Issues of Cyclone Disaster Risk Management 106
+7.3 Vulnerability Analysis and Risk Assessment 106
+7.4 Estimation of Possible Inundation Levels 106
+7.5 Estimation of Maximum Possible Damage 108
+7.7 Village Scale Risk and Vulnerability 109
+7.8 Spatial Decision Support Systems for Cyclone Management 110
+7.9 Cyclone Disaster Management Information System 112
+7.10 C apacity Development 117
+7.11 Community C apacity Building 120
+7.12 H andling Societal Impacts of Tropical Cyclones 122
+7.13 Documentation of Events 123
+7.14 N ational Cyclone Disaster Management Institute (NCDMI) 124
+7.15 R ole of DM Department in States 126
+7.17 Im plementation Strategy and Time-Frame 129
+8.2 Disaster Response Mechanism 130
+8.3 Disaster Response Platform 133
+8.4 Linking Risk Knowledge with Response Planning 134
+8.5 Effective Disaster Response Capability 135
+8.6 Other Supportive Efforts 136
+8.7 Development of Evacuation Plan with Schedule of Actions 137
+8.8 Medical Preparedness and Response 137
+8.9 India Disaster Resource Network 139
+8.11 Im plementation Strategy and Time-Frame 140
+9 Implementation of the Guidelines:
+Preparation of Cyclone DM Plans 142
+9.2 Implementing the Guidelines 143
+9.3 Implementation and Coordination at the National Level 143
+9.4 Institutional Mechanism and Coordination at State and District Levels 144
+9.5 Financial Arrangements for Implementation 144
+24 April 2008 PVSM, UYSM, A VSM (Retd)
+India has a coastline of 7,516 km, of which 5,700 km are prone to cyclones of various degrees.
+About eight per cent of the Country’s area and one-third of it’s population live in 13 coastal states and
+UTs who are, thus vulnerable to cyclone related disasters. Loss of lives, livelihood opportunities, damage
+to public and private property and severe damage to infrastructure are the resultant consequences,
+which can disrupt the process of development. Climate change and the resultant sea-level rise is also
+likely to exacerbate the seriousness of this problem in the coming decades.
+The National Guidelines for the Management of Cyclones have been formulated after a ‘nine step’
+process taking on board completely, various Central Ministries, Departments, States and UTs. The
+process also included wide consultations with scientific and technical institutions, academics, technocrats
+and humanitarian organisations. The draft guidelines document was circulated to all the Ministries/
+Departments at the Centre and the States and UTs for their feedback. All workable suggestions have
+These guidelines call for a participatory approach involving all stakeholder groups to strengthen the
+national vision of moving towards a more proactive pre-disaster preparedness and mitigation-centric
+approach. These contain all the details that are required by planners and implementers and will help in
+the preparation of plans by the Central Ministries/Departments and the States/UTs.
+A National Cyclone Risk Mitigation Project of approximately Rs. 1,600 crore, with assistance from
+the World Bank, is in the process of finalization, covering all the 13 coastal States/UTs. The various
+activities under this project will include construction of cyclone shelters, shelter belt/mangrove plantations,
+establishing last mile connectivity, improving link roads, etc. Once all the activities, as laid down in these
+guidelines are implemented, we will be much better prepared to face the hazards of cyclones.
+I am grateful to the members of the core group and coordinators and members of different sub-
+groups who contributed to this effort. Finally, I am pleased to place on record my sincere appreciation
+for Shri M. Shashidhar Reddy, MLA, Member, NDMA, who guided and coordinated the entire exercise.
+I am thankful to the members of the Core Group and Sub Groups for their untiring efforts in helping
+the NDMA in the formulation of the National Disaster Management Guidelines for the Management of
+Cyclones. I must place on record my sincere appreciation of the special efforts made by Dr. K. J.
+Ramesh, Adviser and Scientist (G), Ministry of Earth Sciences, New Delhi for his contribution and by
+Dr. G. S. Mandal, (Retd. Addl. D.G., IMD), Specialist, NDMA.
+I would like to express my sincere thanks to the representatives of all concerned central ministries
+and departments, States/UTs, Ministry of Science and Technology and academic institutions for their
+contribution. I also wish to thank the representatives of the corporate sectors, NGOs and other key
+stakeholders for their valuable insights.
+I am also happy to acknowledge the support extended by Dr. C.V . Dharma Rao, Mr. Srinivasulu
+Gunda, Dr. Susanta Kumar Jena, Mr. Ch. Gangadhara Rao and Mr. A.C. Naveen Kumar during the
+various workshops, meetings, video conferences and their assistance in the preparation of these Guidelines.
+I also wish to acknowledge the support extended by Dr. P.K. Mishra, Former Secretary of NDMA, Shri
+H.S. Brahma, Addl. Secretary, NDMA and other administrative staff of NDMA.
+Finally, I would like to express my gratitude to General N.C. Vij, PVSM, UYSM, A VSM (Retd),
+Vice Chairman, NDMA for his valuable guidance at various stages of the preparation of the Guidelines.
+I must also acknowledge my gratitude to the distinguished Members of the NDMA for their valuable
+insights, guidance and feedback from time to time.
+New Delhi M. Shashidhar Reddy, MLA
+ACTS Advanced Computational Testing and Simulation
+ACWC Area Cyclone Warning Centre
+AICTE All India Council for Technical Education
+AMSU Advance Microwave Sounding Unit
+APC Aircraft Probing of Cyclone facility
+APC¹ Ar eas of Particular Concern
+APHM & ECRP Andhra Pradesh Hazard Mitigation and Emergency Cyclone Recovery Project
+APSDMS Andhra Pradesh State Disaster Mitigation Society
+ARC Armoured Reconnaissance Aircraft
+ASSOCHAM Associated C hambers of Commerce and Industry
+ATI Administrative Training Institute
+BARC Bhabha Atomic Research Centre
+BIS Bureau of Indian Standards
+BOOT Build Operate Own Transfer
+BSNL Bharat Sanchar Nigam Limited
+CBDM Comm unity Based Disaster Management
+CBO Community Based Organization
+CBRN Chemical, Biological, Radiological and Nuclear Agencies
+CCMNC Cabinet Committee on Management of Natural Calamities
+CCS Cabinet Committee on Security
+CDM Cyclone Disaster Management
+CDMA Code Division Multiple Access
+CDMC C yclone Distress Mitigation Committee
+CDMIS Cyclone Disaster Management Information System
+CERP C yclone Emergency Reconstruction Project
+CESS Centre for Earth Science Studies
+CEWS Cyclone Early Warning System
+CGWA Central Ground Water Authority
+CGWB Central Ground Water Board
+CIDS Chief of the Integrated Defence Staff
+CII Confederation of Indian Industry
+CMC Crisis Management Committee
+CPAP Continuous Positive Air Pressure
+CPDAC Coastal Protection & Development Advisory Committee
+CRMI Cyclone Risk Mitigation Investments
+CSIR Council of Scientific and Industrial Research
+CSO Central Statistical Organisation
+CWDS Cyclone Warning Dissemination System
+DAMA Demand Assigned Multiple Access
+DBT Department of Biotechnology
+DCWDS Digital Cycl one Warning Dissemination System
+DDMA D istrict Disaster Mitigation Authorities
+DEOC District Emergency Operations Centre
+DES Directorate of Economics and Statistics
+DIT Department of Information Technology
+DMIS Disaster Management Information System
+DoT Department of Telecommunications
+DPAD Data Processing and Application Development
+DRDO Def ence Research and Development Organisation
+DRMP Disaster Risk Management Programme
+DST Department of Science & Technology
+DVB-RCS Digital Video Broadcast with Return Carrier through Satellite
+ECMWF European Centre for Medium-Range Weather Forecasting
+EGIA Ecologically and Geomorphologically Important Areas
+EIA Environment Impact Assessment
+EPA Environmental Protection Act, 1986
+ERP Emergency Response Platform
+ESCAP Unit ed Nations Economic and Social Commission for Asia & Pacific
+EWER Early Warning Emergency Response
+FICCI Federation of Indian Chambers of Commerce and Industry
+FTDMA Fr equency Time Division Multiple Access
+GIS Geographical Information System
+GPRS General Packet Radio Service
+GSDMA Gujarat State Disaster Management Authority
+GSDP Gr oss State Domestic Product
+GSI Geological Survey of India
+GSM Global System for Mobile Communications
+GTS Global Telecommunication System
+HDSS H azard Decision Support System
+HLCC High Level Cabinet Committee
+ICAR Indian Council of Agricultural Research
+ICMAM Integrated Coastal Area & Marine Management
+ICRC International Committee on Red Cross
+ICT Information and Communication Technology
+ICZM Integrated Coastal Zone Management
+IDKN India Disaster Knowledge Network
+IDNDR Internati onal Decade of Natural Disaster Reduction
+IDRN India Disaster Resource Network
+IGNOU Ind ira Gandhi National Open University
+IIT Indian Institute of Technology
+IMD India Meteorological Department
+INCOIS Indian Nati onal Centre for Ocean Information Services
+INMARSAT International Maritime Satellite
+IOC Integrated Operation Centre
+ISDN Integrated Service Digital Network
+ISRO Indian Space Research Organisation
+JMA Japan Meteorological Agency
+JNNURM Jaw aharlal Nehru National Urban Renewal Mission
+JTWC Joint Typhoon Warning Centre
+LBSNAA Lal Bahadur Shastri National Academy of Administration
+MCS Meso-scale Convective System
+MDD Meteorological Data Distribution
+MFTDMA Mu lti-Frequency Time Division Multiple Access
+MHRD Mini stry of Human Resource Development
+MoEF Ministry of Environment and Forests
+MoES Ministry of Earth Sciences
+MoHFW Ministry of Health & Family Welfare
+MoI&B Ministry of Information and Broadcasting
+MoIT Ministry of Information Technology
+MoRD Ministry of Rural Development
+MoUD & PA Ministry of Urban Development and Poverty Alleviation
+MoWR Ministry of Water Resources
+MPCS Multipurpose Cyclone Shelters
+MSSRF M.S. Swaminat han Research Foundation
+MTN Main Telecommunication Network
+MTNL Mahanagar Telephone Nigam Limited
+NABARD National Bank for Agriculture and Rural Development
+NAP National Afforestation Programme
+NASA National Aeronautical and Space Administration
+NATMO National Thematic Mapping Organization
+NBSSLUP National Bureau of Soil Survey and Land-Use Planning
+NCCF Nati onal Calamity Contingency Fund
+NCDMI Nati onal Cyclone Disaster Management Institute
+NCEP National Centre for Environmental Prediction
+NCERT Nati onal Council of Educational Research and Training
+NCMC Nati onal Crisis Management Committee
+NCMRWF N ational Centre for Medium Range Weather Forecasting
+NCPP National Coastal Protection Project
+NCRMF National Cyclone Risk Management Facility
+NCRMP Nati onal Cyclone Risk Mitigation Project
+NCST N ational Committee of Science & Technology
+NCZP National Coastal Zone Policy
+NDCI Nati onal Disaster Communication Infrastructure
+NDEM Nati onal Database for Emergency Management
+NDM National Disaster Management
+NDMA National Disaster Management Authority
+NDMR National Disaster Mitigation Reserve
+NDMRC National Disaster Mitigation Resource Centre
+NDRF National Disaster Response Force
+NEC National Executive Committee
+NeGP Nati onal e-Governance Plan
+NEP National Environment Policy
+NHMIS Natu ral Hazards Management Informatics Program of NIC
+NIC National Informatics Centre
+NIDM National Institute of Disaster Management
+NIOT National Institute of Ocean Technology
+NIRD National Institute of Rural Development
+NISA National Industrial Security Academy
+NMS Network Management Software
+NMTN National Meteorological Telecommunication Network
+NRSA National Remot e Sensing Agency
+NSDI National Spatial Data Infrastructure
+NSSO Nati onal Sample Survey Organisation
+NTRO National Thematic Research Organisation
+NFVM Nati onal Forest Vegetation Map
+NWP Numerical Weather Prediction
+NWSTG National Weather Service Telecommunications Gateway
+NYKS N ehru Yuvak Kendra Sangathan
+OSDMA Ori ssa State Disaster Mitigation Authority
+PMSS Probable Maximum Storm Surge
+PPP Public-Private Partnership
+PRI Panchayati Raj Institution
+PSDN Pub lic Switched Data Network
+PSTN Public Swit ched Telephone Network
+PVA Participatory Vulnerability Assessment
+RMTN Regional Meteorological Telecommunication Network
+RSMC Regional Specialised Meteorological Centre
+RTH Regional Telecommunication Hub
+SACC Scien tific Advisory Committee to the Cabinet
+SCPC Singl e Channel per Carrier
+SCS Satellite Communication System
+SDMA State Disaster Management Authorities
+SDRF State Disaster Response Force
+SDSS Spatial Decision Support System
+SEOC State Emergency Operations Centre
+SERC S tructural Engineering Research Centre
+SFR State of the Forest Report
+SHIFOR Statistical Hurricane Intensity Forecast
+SHIPS Statistical Hurricane Intensity Prediction Scheme
+SIRD State Institute of Rural Development
+SOPs Standard Operating Procedures
+SRSA Stat e Remote Sensing Agency
+SSM/I Special Sensor Microwave/Imager
+STIFOR Statistical Typhoon Intensity Forecast
+TIPS Typhoon Intensity Prediction Scheme
+TRAI Telecom Regulatory Authority of India
+TRMM Tropical Rainfall Measuring Mission
+UGC University Grants Commission
+UKMO United Kingdom Meteorological Office
+USWS United States Weather Service
+VIC Village Information Centre
+VSAT Very Small Aperture Terminal
+VSS Vana Samrakshana Samithies
+WMO World Meteorological Organisation
+ZSI Zoological Survey of India
+The tidal levels and character which would result from gravitational effects, e.g., of the Earth, Sun and
+Moon, without any atmospheric influences.
+The measurement of depth of water in oceans, seas and lakes; also information derived from such
+Are also used to define probability distribution for characteristics of tropical cyclones (e.g., forward
+motion and intensity) in a risk model.
+Breakwaters are structures placed offshore to dissipate the energy of incoming waves. The breakwaters
+are smaller structures, placed one to three hundred feet offshore in relatively shallow water, designed to
+protect a gently sloping beach.
+A high, steep face of rock; a precipice.
+A notable physiographic feature of salt marshes, especially low marshes, in the development of tidal
+creeks in the marsh itself. These creeks develop, as do rivers, ‘with minor irregularities sooner or later
+causing the water to be deflected into definite channels’.
+A weather system consisting of an area of low pressure, in which winds circulate at speeds exceeding
+61 km/hr, also known as ‘Cyclone’ or Tropical Storm. These are non-frontal synoptic scale weather systems
+originating over tropical waters with organized convention and definite cyclonic surface wind circulation.
+Winds rotate around the low pressure centre in an anti-clockwise direction in the Northern Hemisphere
+and in a clockwise direction in the Southern Hemisphere.
+Generation of hazard maps in respect of habitation of different infrastructure, housing and crop damages
+based on the cyclone wind distribution of storm surge and heavy rainfall along the cyclone track starting
+Depression (low pressure area)
+Region where the barometric pressure is lower relative to that in the surrounding regions at the same
+level and wind speed in circulation is between 17 and 27 knot (31 and 49 kmph).
+A radar capable of measuring the change in frequency of a radar wave caused by the relative motion of
+an object in the atmosphere within the area of radar coverage. Doppler capabilities are not used in the
+process of converting radar echoes to precipitation estimates.
+The population, properties, economic activities, including public services, etc. at risk in a given area.
+Environmental Impact Assessment (EIA)
+Studies undertaken in order to assess the effect on a specified environment of the introduction of any
+new factor, which may upset the current ecological balance.
+An estuary is a semi-enclosed coastal body of water which has a free connection with the open sea and
+within which sea water is measurably diluted with fresh water derived from ‘land drainage’.
+Organised, phased and supervised dispersal of people from dangerous or potentially dangerous areas.
+A term used for the centre of a cyclone. It is the point where the wind rotates in a counter-clockwise
+direction. In the centre of eye the wind is calm or slight and rainfall and cloudiness is nil or light.
+Wind with a speed between 34 and 40 knots (Beaufort scale wind force 8).
+A knot is a unit of speed and used around the world for maritime and aviation purposes. 1 international
+knot = 1 nautical mile per hour = 1.852 kilometres per hour.
+A point on the land where a cyclone just crosses the coast.
+Branch of physical and socio-economic planning that determines the means and assesses the values or
+limitations of various options in which land is to be utilized, with the corresponding effects on different
+segments of the population or interests of a community taken into account in resulting decisions.
+Period of a particular hazard between its announcement and arrival.
+Mangroves are basically halophytic trees, shrubs, and other plants growing on sheltered shores, typically
+on tidal flats, deltas, estuaries, bays, creeks and the barrier islands. The best locations are where
+abundant silt and fresh water is brought down by rivers or on the backshore of accreting sandy beaches.
+Non-engineered measures to reduce or avoid possible impacts of hazards such as education, training,
+capacity development, public awareness, early warning, hazard vulnerability risk analysis, communication,
+Principle adopted by the UN Conference on thr Environment and Development (1992) that in order to
+protect the environment, a precautionary approach should be widely applied, meaning that where there
+are threats of serious or irreversible damage to the environment, lack of full scientific certainty should not
+be used as a reason for postponing cost-effective measures to prevent environmental degradation.
+This principle allows action to be taken to protect the environment at an early stage.
+Radar (Radi o Detection and Ranging)
+System to assist in determining at a single station, the direction and distance of an object.
+A balloon-borne instrument that measures meteorological parameters from the Earth’s surface up to 20
+miles or more in the atmosphere. The radiosonde measures temperature, pressure and humidity and
+transmits or ‘radios’ these data back to Earth. Upper air winds also are determined through tracking of
+The technology of acquiring data and information about objects or phenomena with the help of a device
+that is not in physical contact with it. In other words, remote sensing refers to gathering information
+about the Earth and its environment from a distance, a critical capability of the Earth Observing System.
+The capacity of a system to tolerate perturbation or disturbances without collapsing into a qualitatively
+different state; to withstand shock and rebuild when necessary.
+The principal purpose of emergency response is the preservation of life and property. Response is
+defined as the ‘actions taken in anticipation of, during, and immediately after an emergency to ensure
+that its effects are minimised, and that people affected are given immediate relief and support’.
+The process of identifying high-risk areas by correlating a hazard to the terrain and to the probability of
+occurrence. The results of these analyses are usually presented in the form of risk maps which show the
+type and degree of hazard represented by a natural phenomenon at a given geographic location.
+Rainwater that flows over the land and into streams and lakes; it often picks up soil particles along the
+way and transports it to streams and lakes.
+It is an abnormal rise in the level of water along a shore, primarily as a result of the high winds and low
+pressures generated with tropical cyclones; generally affects only coastal areas but may intrude some
+Any physical construction to reduce or avoid possible impact of hazards, which include engineering
+measures and construction of hazard-resistant and protective structures and infrastructure.
+A series of large waves generated by sudden displacement of seawater (caused by earthquake, volcanic
+eruption or submarine landslide); capable of propagation over large distances and causing a destructive
+surge on reaching land. The Japanese term for this phenomenon, which is observed mainly in the
+Pacific, has been adopted for general usage.
+Unmanned Aerial Vehicle (UAVs)
+For collecting special observations from the core cyclone environment in addition to the data collected
+from land, ocean and space-based observational platforms for facilitating improved cyclone early warning.
+A vegetated eco-system where water is a dominant factor in its development and existence.
+In general, it is the subdivision of a geographical entity (country, region, etc.) into homogenous sectors
+with respect to certain criteria (for example, intensity of the hazard, degree of risk, same overall protection
+against a given hazard, etc.).
+The Disaster Management Act, 2005 (DM Act,
+2005) lays down institutional and coordination
+mechanism for effective Disaster Management (DM)
+at the national, state, district and local levels. As
+mandated by this Act, the Government of India (GoI)
+created a multi-tiered institutional system consisting
+of the National Disaster Management Authority
+(NDMA) headed by the Prime Minister, the State
+Disaster Management Authorities (SDMAs) by the
+respective Chief Ministers and the District Disaster
+Management Authorities (DDMAs) by the District
+Collectors and co-chaired by Chairpersons of the
+local bodies. These bodies have been set up to
+facilitate a paradigm shift from the hitherto relief-
+centric approach to a more proactive, holistic and
+integrated approach of strengthening disaster
+preparedness, mitigation and emergency response.
+Soon after the NDMA was set up, a series of
+consultations were initiated with various stakeholders
+to facilitate the development of guidelines for
+strengthening cyclone disaster management. Senior
+representatives from government departments and
+agencies, academics, professionals and
+representatives of multilateral and humanitarian
+agencies and the corporate sector participated in
+these meetings. These meetings acknowledged
+several initiatives taken up by government agencies
+in the recent past which are significant and have
+far-reaching consequences. They also highlighted
+the need for a holistic and integrated strategy. On
+the basis of these deliberations, the NDMA has
+prepared these Guidelines for the Management of
+Cyclones (hereinafter referred to as the Guidelines)
+to assist ministries and departments of GoI and
+state governments to prepare their DM plans.
+Cyclone Vulnerability in India
+A long coastline of about 7,516 km of flat
+coastal terrain, shallow continental shelf, high
+population density, geographical location and
+physiological features of its coastal areas makes
+India, in the North Indian Ocean (NIO) Basin,
+extremely vulnerable to cyclones and its associated
+hazards like storm tide (the combined effects of
+storm surge and astronomical tide), high velocity
+Though the frequency of Tropical Cyclones (TCs)
+in the NIO covering the Bay of Bengal and the
+Arabian Sea is the least in the world (7% of the
+global total), their impact on the east coast of India
+as well as the Bangladesh coast is relatively more
+devastating. This is evident from the fact that in
+the last 270 years, 21 of the 23 major cyclones (with
+a loss of about 10,000 lives or more) worldwide
+occurred over the area surrounding the Indian
+subcontinent (India and Bangladesh). This is
+primarily due to the serious storm tide effect in the
+Thirteen coastal states and Union Territories (UTs)
+in the country, encompassing 84 coastal districts,
+are affected by tropical cyclones. Four states (Tamil
+Nadu, Andhra Pradesh, Orissa and West Bengal)
+and one UT (Puducherry) on the east coast and one
+state (Gujarat) on the west coast are more
+vulnerable to hazards associated with cyclones.
+About 8% of the area in the country is prone to
+cyclone-related disasters. Recurring cyclones
+account for large number of deaths, loss of
+livelihood opportunities, loss of public and private
+property and severe damage to infrastructure, thus
+seriously reversing developmental gains at regular
+Broad-scale assessment of the population at
+risk suggests that an estimated 32 crore people,
+which accounts for almost a third of the country’s
+total population, are vulnerable to cyclone-
+related hazards. Climate change and its
+resultant sea-level rise can significantly increase
+the vulnerability of the coastal population.
+National Cyclone Risk Mitigation Project
+The National Cyclone Risk Mitigation Project
+(NCRMP), to be implemented with financial
+assistance from the World Bank, is envisaged to
+• Component A: Improvement of early
+warning dissemination system by
+strengthening the Last Mile Connectivity
+(LMC) of cyclone warnings and advisories.
+• Component B: Cyclone risk mitigation
+• Component C: Technical assistance for
+hazard risk management and capacity-
+• Component D: Project management and
+These components are highly interdependent
+and have to be implemented in a coherent manner.
+The planned framework of activities under this
+project provides end-to-end solutions for effective
+Cyclone Disaster Management (CDM) in all the 13
+A paradigm shift in the approach to DM
+proceeds from the conviction that development
+cannot be sustainable unless disaster mitigation is
+built into the developmental process. The
+cornerstone of the approach is that mitigation has
+to be multi-sectoral. It has been universally accepted
+that returns on mitigation investments are very high.
+Developing appropriate coping strategies and risk
+reduction plans, along with greater public
+awareness, is the high priority agenda for disaster
+management in India. This will have to be based
+i) Enhancing national, state, district and local-
+level advocacy partnerships and knowledge
+management for mainstreaming disaster
+ii) Developing hazard risk management tools,
+These guidelines are an important step towards
+the development of plans for the management of
+cyclones and their attendant disasters. These have
+been prepared to provide guidance to the ministries,
+departments and state authorities for the preparation
+of their detailed DM plans. These guidelines call
+for a proactive, participatory, well-structured, fail-
+safe, multi-disciplinary and multi-sector approach
+The guidelines are presented in nine chapters
+i) Chapter 1 provides an introductory overview
+that reflects the risk and vulnerability of the
+country to cyclones, including the
+dimensions and magnitude of the problem.
+ii) Chapter 2 discusses the Early Warning
+Systems (EWS) for cyclones. In this chapter,
+the present status of EWSs has been
+discussed and the gaps have been
+identified. Requirement to bring them up to
+international standards and making them
+state-of-the-art systems has been
+iii) Chapt er 3 deals with the present status of
+Dissemination, its gaps and future
+improvements required towards making it
+iv) Chapter 4 covers structural measures for
+preparedness and mitigation, covering
+cyclone shelters, buildings, road links,
+culverts and bridges, canals, drains, saline
+embankments surface water tanks, cattle
+mounds and communication/power
+v) In Chapter 5, important aspects of the
+management of coastal zones and its
+relevance to CDM, including some other
+non-structural mitigation options have been
+presented. This chapter discusses issues
+related to coastal zone management,
+sustainability of coastal resources, bio-
+shields, coastal flood plain management,
+coastal erosion, natural resources
+vi) Chapter 6 deals with various aspects of
+awareness generation related to CDM as
+an important preparedness measure.
+vii) Chapter 7 covers Disaster Risk Management
+(DRM) issues, risk assessment and
+vulnerability analysis, hazard zoning and
+mapping, data generation, including the use
+of GIS tools, and capacity development.
+viii) Chapter 8 deals with CDM-related response
+and relief strategies. A detailed account of
+several issues related to effective response
+such as response platforms, linking risk
+knowledge with response planning, evolving
+disaster response capabilities, etc., is
+ix) In Chapter 9, guidelines and implementation
+strategies have been discussed. Other
+supportive mechanisms for effective
+implementation of guidelines such as
+preparation of DM and vulnerability reduction
+action plans, coordination at all levels of
+government, mobilization of financial
+resources and implementation methodology,
+Major Action Points are listed at the end of each
+chapter. The following are some of the salient
+initiatives recommended for implementation as part
+of the National Guidelines for Management of
+1. Establishing a state-of-the-art cyclone EWS
+involving observations, predictions,
+warnings and customised local-scale advice
+for decision-makers (national/state/district
+level) for managing the impact of cyclones.
+[Action: Ministry of Earth Sciences
+Department (IMD) with academic and
+R&D institutions; Operations Centre
+(OC) of the NDMA/MHA] [Time-frame:
+2. Commissioning of Aircraft Probing of
+Cyclone (APC) facility for India with a
+combination of manned aircraft and high
+altitude Unmanned Aerial Vehicles (UAV)
+which can effectively fill the critical
+observational data gaps in the case of
+cyclones over the Bay of Bengal and the
+Arabian Sea to a great extent. An actual
+flight by an aircraft into and around the
+tropical cyclone during various stages of its
+development and movement can provide
+invaluable data for studying and
+understanding the structure and movement
+of a cyclone, thus reducing track and
+intensity prediction errors significantly.
+(MoES)—IMD, Ministry of Defence—
+Indian Air Force/ Indian Navy;
+Department of Space (DoS)—National
+[Time-Frame: 2008–09 to 2011–12]
+3. Commissioning of the National Disaster
+Communication Infrastructure (NDCI) at the
+NDMA/MHA, State Disaster Management
+Authorities (SDMAs) of coastal states/UTs
+and District Disaster Management
+Authorities (DDMAs) of the 84 coastal
+districts vulnerable to cyclones with the
+adoption of state-of-the-art operational
+infrastructure covering the following:
+i) High End Computing (scalable 30–50
+Teraflops peak performance), Storage
+(800 Terabytes) and Communication
+ii) 3-D Virtual Reality Visual Studio;
+iii) Cen tralised Comprehensive Databank
+for Cyclone Risk Management with
+nodes in various coastal states over a
+fail-safe communication backbone
+between the OCs of NDMA, SDMAs
+and DDMAs (for Information and Data
+Fusion involving collating, analysing,
+interpreting, translating and monitoring
+departments based on state-of-the-art
+scientific and technological know-how);
+iv) Comprehensive state-of-the-art OC for
+effective coordination of Disaster
+Response Actions at the state and local
+[Action: Operations Centres (OC) of
+NDMA; Ministry of Home Affairs
+Department of Space (DoS); Ministry
+Technology (DST—National Spatial
+Data Infrastructure (NSDI)] [Time-
+4. Expanding the warning dissemination
+outreach by using the services of Direct-To-
+Home (DTH) transmission in remote and rural
+areas (Panchayats) which cannot be
+otherwise covered, to introduce weather
+channel and broadcast cyclone warnings
+from high-power coastal radio stations
+including the use of satellite radio service
+like World Space, Ham radios, community
+[Action: Ministry of Information and
+Broadcasting (MoI&B); Ministry of
+Earth Sciences (MoES)] [Time-Frame:
+5. The following specific actions will be carried
+out for taking structural measures for cyclone
+i) Structural safety of lifeline infrastructure
+ii) Establishing a robust system of
+locating multi-purpose cyclone shelters
+iii) Ensuring cyclone resistant design
+standards are incorporated in the rural/
+urban housing schemes in coastal
+iv) Building all-weather road links to all
+habitations and cyclone shelters/cattle
+v) Maintaining the full designed carrying
+capacity of main drains and canals
+along with feeder primary/secondary/
+tertiary channels, creating additional
+flood flow canals in frequently
+vi) Construction of saline embankments
+to prevent ingress of saline water
+associated with cyclonic storm
+vii) Encouraging public-private partnership
+Development and Poverty Alleviation;
+Bureau of Indian Standards (BIS);
+Planning, Municipal Administration,
+Authorities; Planning Boards of
+Coastal States and UTs] [Time-Frame:
+6. Actions for effective cyclone risk reduction
+through management of coastal zones
+i) Mapping and delineation of coastal
+wetlands, patches of mangroves and
+shelterbelts, identification of potential
+zones for expanding bio-shield spread
+based on remote sensing tools.
+ii) Regulating infrastructure and
+development activities in coastal zones.
+iii) M onitoring of water quality as well as
+the carrying and assimilative capacities
+of open waters with institutionalised
+iv) Developing Integrated Coastal Zone
+Management (ICZM) frameworks for
+addressing the sustainability and
+optimal utilisation of coastal resources
+as also cyclone impact minimisation
+v) Evolving eco-system restoration plans
+for degraded ecological zones.
+vi) Developing delta water management
+and freshwater recharge/management
+vii) Coastal bio-shields spread,
+viii) Implementing coastal flood zoning,
+flood plain development and flood
+inundation management and regulatory
+ix) Groundwater development and
+requirement in coastal urban centres.
+x) Development of Aquaculture Parks in
+the identified potential zones.
+[Action: Ministry of Environment and
+Forests (MoEF); Department of Space
+(DoS); Ministry of Water Resources
+(MoWR), Coastal States and UTs;
+(SRSAs); Coastal Area Development,
+and Irrigation and Command Area
+Development Authorities; Central and
+7. Setting up of an exclusive eco-system
+monitoring network to study the impact of
+of Earth Sciences (MoES); Institutions
+under the Council of Scientific and
+Industrial Research (CSIR); Technical
+and Scientific Institutions under the
+Governments of Coastal States and
+8. Developing integrated hazard mitigation
+framework taking into account cyclone and
+associated storm surge, wind hazard,
+rainfall-runoff, river flood and Geographical
+Information System (GIS) models for
+estimating possible areas of inundation
+along with the depth of inundation (levels),
+possible damage to infrastructure, crops,
+houses, etc., evaluating not only the
+vulnerability but also the changing profile of
+vulnerability from time to time.
+(MoES); Ministry of Water Resources
+Management Departments of Coastal
+States and UTs] [Time-Frame: 2008–
+9. Integrate ongoing efforts of the Survey of
+India, Department of Space under National
+Spatial Data Infrastructure, National
+Database for Emergency Management and
+MoEF initiatives for speedy completion of
+digital spatial data generation to cover 84
+coastal districts that are vulnerable to
+cyclones, for evolving holistic cyclone risk
+reduction strategies on priority. High
+resolution (at least 0.5 m interval) coastal
+Digital Elevation Models (DEMs) are to be
+developed for micro-scale delineation of
+cyclone risk, hazard and vulnerability.
+[Action: Department of Science and
+Technology (DST); Survey of India
+(SoI); Department of Space (DoS);
+National Database for Emergency
+Management (NDEM); National Spatial
+Data Infrastructure (NSDI); Ministry of
+Environment and Forests (MoEF);
+(SRSAs); Technical and Scientific
+Institutions of Coastal States and UTs]
+[Time-Frame: 2008–09 to 2009–12]
+10. Augmentation of additional surveys by the
+Census Commissioner will be carried out
+for generating household, disaster specific
+[Action: Ministry of Planning and
+Programme Implementation; Central
+Statistical Organisation (CSO),
+National Sample Survey Organisation
+(NSSO); Directorates of Economics
+and Statistics (DES) in Coastal States
+and UTs] [Time-Frame: 2008–09 to
+11. Establishing a comprehensive Cyclone
+Disaster Management Information System
+(CDMIS) covering all phases of DM to
+provide on-line services to the departments
+of Disaster Management in the states.
+[Action: Directorates of Economics
+Departments of Information and
+Communication Technologies (ICT)
+Planning, Coastal Area Development
+Development Authorities, State
+Remote Sensing Agencies (SRSAs),
+Disaster Management Departments of
+12. Specifying the roles and responsibilities of
+Departments in institutionalising Cyclone
+Risk Mitigation with Developmental
+[Action: State Disaster Management
+Authorities (SDMAs) in Coastal States
+13. Launching Community Based Disaster
+Management (CBDM) activities similar to
+the DRM Project initiatives of MHA in all
+villages of the 84 districts vulnerable to
+cyclones that have not yet been covered.
+[Action: SDMAs in Coastal States and
+UTs] [Time-Frame: 2008–09 to 2011–
+14. NCDMI will be established as an exclusive
+institutional set-up in one of the coastal
+states to address all issues related to
+cyclone risk. NDMA will conceptualise the
+entire project. NCDMI will involve
+stakeholders from the government and the
+community, focusing on preparedness,
+mitigation, response, rehabilitation and
+recovery. It will bridge the gap in the
+integration of disaster related technical
+support of all the concerned departments/
+ministries of the Central Government with
+those of the states/UTs and local authorities.
+It will serve as a platform for all academics
+and S&T institutions to synergise their efforts
+to offer better disaster risk reduction options.
+Operations Centres (OCs) of Ministry
+of Home Affairs (MHA); Ministry of
+Technology (DST)—SoI; DoS-NRSA;
+15. Institutionalising specific Emergency
+Response (ER) Actions for Cyclone Disaster
+Figure 1 (a): Cyclone Frequency and Wind Hazard Map
+Figure 1 (b): Cyclone Wind Hazard and PMSS Map
+1.1.1 Tropical Cyclone (TC), also known as
+‘Cyclone’ is the term used globally to cover tropical
+weather systems in which winds equal or exceed
+‘gale force’ (minimum of 34 knot, i.e., 62 kmph).
+These are intense low pressure areas of the earth-
+atmosphere coupled system and are extreme
+weather events of the tropics.
+1.1.2 India has a coastline of about 7,516 km,
+5,400 km along the mainland, 132 km in
+Lakshadweep and 1,900 km in the Andaman and
+Nicobar Islands. Although the North Indian Ocean
+(NIO) Basin (including the Indian coast) generates
+only about 7% of the world’s cyclones, their impact
+is comparatively high and devastating, especially
+when they strike the coasts bordering the North Bay
+1.1.3 The frequency of cyclones in the NIO Basin
+is bi-modal, which is specific to this region.
+Cyclones occur in the months of May–June and
+October–November, with their primary peak in
+November and secondary peak in May.
+1.1.4 Tropical cyclones generally originate in the
+eastern side of the NIO Basin and initially move in a
+west-north westerly direction. More cyclones form
+in the Bay of Bengal than in the Arabian Sea and
+the ratio is 4:1. It has been observed that between
+1891 and 2006, 308 cyclones crossed the east
+coast, out of which 103 were severe. Less cyclonic
+activity was observed on the west coast during the
+same period, with 48 cyclones crossing the west
+coast, out of which 24 were of severe intensity.
+1.1.5 Tropical cyclones are characterised by
+destructive winds, storm surges and very heavy
+rainfall, each one having its own impact on human
+and livestock, and their activities. Of these, storm
+surge is responsible for 90% of the loss of lives
+associated with cyclone disaster. Past records of
+destructive cyclones (human deaths numbering
+around 10,000 and above) are given in Table 1.1.
+This list does not include TCs which have caused
+severe loss to properties (such as ‘Katrina’ in USA
+in 2005 which has resulted in economic losses of
+about US$ 82 billion) or the severest TC ever
+recorded in terms of intensity (‘Typhoon Tip’ in the
+Pacific Ocean). However, it has been observed
+the world over that even though damage to property
+is continuously increasing loss of life shows a
+declining trend. This is because of improved
+early warning system and dissemination,
+various risk reduction measures, preparedness,
+mitigation measures and improved response
+1.1.6 It can be seen that since 1737, 21 of the 23
+major cyclone disasters (in terms of loss of lives) in
+the world have occurred over the Indian subcontinent
+(India and Bangladesh). Tropical cyclones in the
+Bay of Bengal striking the east coast of India and
+Bangladesh usually produce a higher storm surge
+as compared to elsewhere in the world because of
+the special nature of the coastline, shallow coastal
+bathymetry and characteristics of tides. Their coastal
+impact is significant because of the low flat coastal
+terrain, high density of population, low awareness
+of the community, inadequate response and
+preparedness and absence of any hedging
+NATIONAL DISASTER MANAGEMENT GUIDELINES: MANAGEMENT OF CYCLONES
+1.1.7 There are 13 coastal states and union
+territories (UTs) in the country, encompassing 84
+coastal districts which are affected by tropical
+cyclones. Four states (Tamil Nadu, Andhra Pradesh,
+Orissa and West Bengal) and one UT (Puducherry)
+on the east coast and one state (Gujarat) on the
+west coast are highly vulnerable to cyclone
+disasters. The details of cyclones which crossed
+the coastal districts of India during the period 1891–
+2006, is presented in Table 1.2.
+1.2.1 Cyclones are atmospheric and oceanic
+phenomena. Listed below are some of the
+favourable conditions identified through
+Source: CRC Report; HPC Report; IMD Publications.
+*Population affected 15,681,072.
+Table 1.1 Major Tropical Cyclone Disasters during the past 270 Years in terms of Human Loss
+(with Human Deaths 10,000 or more)
+observational facts and scientific studies for the
+formation of TCs. The weightage of individual
+conditions is, however, yet unknown.
+i) A warm sea surface (temperature in excess
+of 26 o–27oC) and associated warming
+extending up to a depth of 60m with
+abundant water vapour in the overlying air
+ii) High relative humidity in the atmosphere up
+to a height of about 5,000 metres,
+Table 1.2 Number of Cyclones crossing various Coastal Districts of the East and West Coasts
+of India during the Period 1891– 2002
+Source: IMD:2002: Damage Potential of TC
+iii) At mospheric instability that encourages the
+formation of massive vertical cumulus
+clouds due to condensation of rising moist
+iv) Low vertical wind shear between the lower
+and higher levels of the atmosphere that do
+not allow the heat generated and released
+by the clouds to get transported from the
+area (vertical wind shear is the rate of
+change of wind between the higher and
+lower levels of the atmosphere),
+v) The presence of cyclonic vorticity (rate of
+rotation of air) that initiates and favours
+rotation of the air cyclonically, and
+vi) Location over the ocean, at least 4–5
+1.2.2 Within the cyclone field, strong winds blow
+around the low pressure centre in an anticlock-wise
+direction in the Northern Hemisphere and clockwise
+in Southern Hemisphere, though the wind at the
+centre (known as eye of the cyclone) is very little
+and generally free from cloud and rain. Winds
+increase rapidly to its peak (often exceeding 150
+km/h) at about 20 to 30 km from the centre and
+thereafter decrease gradually to become normal
+around 300 to 500 km away. Cyclones vary in
+diameter from 100 to 1,000 km but their effect
+dominates over thousands of square kilometres over
+the ocean as well as along the coast. The
+powerhouse is located within a 100 km radius of
+the eye of the cyclone where very strong winds,
+sometimes more than 250 km per hour, can be
+generated in a narrow zone beyond the eye
+1.3.1 The frequency of cyclonic disturbances that
+formed in the Bay of Bengal between 1891 and
+Source: India Meteorological Department.
+Table 1.3 Various Types of Cyclonic Disturbances formed in the Bay of Bengal Affecting the
+East Coast of India between 1891 and 2000
+1.4.1 Cyclones are known by many names the world over—typhoons in the North West Pacific including
+the South China Sea, hurricanes in the North Atlantic including the West Indies and in the Caribbean Sea
+and the North East Pacific, the aboriginal name of Willy-Willies in North-Western Australia and TCs in the
+1.4.2 Though TCs differ by name across regions, they are classified according to their wind speed.
+The classification, however, varies from region to region. The Indian classification of these intense low
+pressure systems (cyclonic disturbances) is shown in Table 1.4.
+Table 1.4 Indian Classification of Cyclonic Disturbances in the North Indian Ocean (Bay of
+1.4.3 In the US, cyclones are classified into five different categories on the basis of their wind speed
+as measured on the Saffir-Simpson scale. This classification is given in Table 1.5.
+Table 1.5 Saffir-Simpson Hurricane Scale
+Source: National Weather Services (NWS), National Oceanic and Atmospheric Administration (NOAA)
+Note: Tropical Storms: winds 39–73 mph (34–63 kt)
+1.5.1 Cyclones are characterized by their
+destructive potential to damage structures such as
+houses, lifeline infrastructure such as power and
+communication towers, hospitals, food storage
+facilities, roads, bridges, culverts, crops, etc., due
+1.5.2 Exceptionally heavy rainfall causes
+flooding. Storm surge inundates low-lying areas in
+the coastal areas resulting in loss of life and
+destruction of property, besides eroding beaches
+and embankments, destroying vegetation and
+1.5.3 The dangerous dimension of cyclone
+disasters over the Indian subcontinent is evident
+from the figures in Table 1.1 showing the number
+of deaths due to cyclone disasters from 1737
+onwards. Besides the loss of lives and livestock,
+cyclones have high destructive potential due to the
+strong winds that damage structures, and heavy
+rainfall which causes floods and storm surge that
+inundates low-lying coastal areas.
+1.5.4 Although it is not possible to completely
+avoid natural disasters, their effects can be
+minimised by taking some known long- and short-
+term structural and non-structural mitigation
+measures such as developing proper early warning
+systems, creating awareness at all levels in the
+concerned communities, coastal afforestation,
+construction of shelters, embankments, dykes,
+coastal roads, bridges, canals, etc., through better
+preparedness, mitigation measures and improved
+1.6 Naming of Tropical Cyclones
+1.6.1 Tropical cyclones are named to enable easy
+identification and to eliminate confusion when there
+are multiple systems in any individual basin at the
+same time, and to assist people to identify the
+system from which danger is most imminent. In
+most cases, TCs retain their names throughout their
+life; however, under special circumstances, TCs
+may be renamed while active. These names are
+taken from lists which vary from region to region
+and are selected a few years earlier. The list is
+decided upon, depending on the region, either by
+committees of the World Meteorological
+Organisation (WMO) or by national weather offices
+(IMD in India) involved in the forecasting of cyclones.
+Each year, the names of highly destructive cyclones
+are ‘retired’, to be replaced by new ones.
+1.7.1 Storm surge, which is a coastal phenomena,
+is the inherent catastrophic feature of cyclones the
+world over. The degree of disaster potential
+depends on the storm surge amplitude associated
+with the cyclone at the time of landfall,
+characteristics of the coast, phases of the tides
+and vulnerability of the area and community. The
+world’s highest recorded storm tide was about 12.5
+m (about 41 ft) and it was associated with the
+Backergunj cyclone in 1876 near the Meghna estuary
+in present-day Bangladesh. A storm tide of closer
+magnitude (12.1 m) was also observed in West
+Bengal at the mouth of the Hooghly River in
+association with a severe cyclone in October 1737.
+When a cyclone approaches the coast, the right
+forward sector of the cyclone experiences wind
+from ocean to land (on-shore wind) which pushes
+the sea water towards the coast and finally appears
+as storm surge. The direction of the wind on the
+left forward sector of the cyclone is from land to
+ocean (off-shore wind) which pushes the water from
+the coast towards the ocean producing even
+1.7.2 As explained at the outset, although the
+impact of cyclones is generally devastating over
+the coastal areas of West Bengal and Orissa,
+bordering the North Bay of Bengal, the effects of
+cyclones are also pronounced in the states/UT of
+Andhra Pradesh and Tamil Nadu/Puducherry. On
+the west coast, Gujarat is the most vulnerable state.
+1.7.3 The Probable Maximum Storm Surge
+(PMSS) is the highest along the West Bengal coast
+where it ranges from 9–12.5 m. It reduces to about
+3.8 m in Khurda district, Orissa, increasing again
+to about 8.2 m along the south Andhra Pradesh
+coast in Krishna, Guntur and Prakasam districts. A
+small region in south Tamil Nadu around
+Nagapattinam coast also has higher PMSS of about
+8.4 m. Along the west coast, the PMSS varies from
+about 2 m near Thiruvananthapuram to around 5 m
+near the Gulf of Khambat in the Saurashtra region
+1.7.4 The super cyclone of October 1999
+generated a wind speed of 252 km/h with an
+ensuing surge of 7–9m close to Paradip in Orissa
+which caused unprecedented inland inundation up
+to 35 km from the coast. It is worth noting that, at
+times, persistent standing water was identified in
+the satellite imageries even 11 days after the cyclone
+landfall, as it happened in the Krishna delta in May
+1990 and in several other instances. The Andhra
+Pradesh cyclone in 1977 which hit Divi Seema also
+generated winds exceeding 250 km per hour.
+1.8.1 The Vulnerability Atlas of India (1997)
+contains cyclone hazard maps for the country as a
+whole, depicting the vulnerability of states/UTs to
+1.8.2 Vulnerability to natural disasters like
+cyclones can be conceptualised as the exposure
+to hazard (cyclone) and coping capacity of the
+people, and the institutional support (e.g., early
+warning systems and capacity-building) to adapt
+and reduce adverse impacts. This coping capacity
+also includes defence mechanisms and access to
+resources (e.g., education and infrastructure) as well
+as emergency response systems.
+1.8.3 Broad scale assessment of the population
+at risk suggests that an estimated 32 crore people,
+total population, are vulnerable to cyclone-related
+hazards. Climate change and its resultant sea-level
+rise can significantly increase the vulnerability of
+1.8.4 Further, analysis combining storm risk and
+poverty suggests that Orissa is most vulnerable
+due to its low coping capacity (per capita income
+of Rs 6,767 and cyclonic vulnerability). Tamil Nadu,
+Andhra Pradesh and West Bengal are also
+vulnerable because they lie in the high cyclone
+hazard zones and also have low per capita incomes.
+Maharashtra and Goa are the two states which are
+also affected by cyclones but they are less vulnerable
+as cyclones are less frequent and people living there
+have better coping capacity because of higher
+incomes (per capita income is more than Rs
+A list of various coastal districts and their broad-
+scale vulnerability is provided overleaf in Table 1.6.
+1.8.5 Cyclone wind hazard along with probable
+maximum storm surges for coastal districts of India
+are shown in Fig. 1(a) & (b). [Reference: Building
+Material Technology Promotion Council (BMTPC),
+1.9 Past Initiatives: National Level
+1.9.1 Following the extensive damage caused by
+two cyclones that struck Andhra Pradesh in 1969,
+the Government of India (Ministry of Irrigation and
+Power in consultation with the Ministry of Tourism
+and Civil Aviation) appointed the Cyclone Distress
+Mitigation Committee (CDMC) in 1970. The CDMC
+was chaired by the then Director General of
+Source: HPC Report, UNDP and NIDM
+Legend: M – Medium; H – High; VH – Very High; FLZ – Flood Zone
+Table 1.6 List of Vulnerable Districts for Cyclone Wind and Coastal/Inland Flooding
+Observatories, Dr. P . Koteswaram of the IMD, to
+review the mitigation efforts on cyclones.
+1.9.2 The Committee submitted its report in May
+1971 with 59 major recommendations comprising
+installation and upgrading of the warning system;
+demarcation of vulnerable areas; relief
+preparedness; availability of drinking water;
+restoration of the damaged infrastructure;
+construction of cyclone shelters, bunds or
+embankments; a model cyclone plan; cyclone
+protection measures; educational awareness;
+coordination committees from different groups; and
+finally, a calamities fund. Even though this report
+was directly concerned with the consequences of
+cyclones for the Andhra Pradesh coast, many of
+the recommendations were valid for other coastal
+states/UTs vulnerable to cyclones.
+1.9.3 Similar committees were also constituted
+for the state of Orissa (1971) and West Bengal
+(1974). The Tamil Nadu Government prepared an
+anti-disaster plan to meet cyclone emergencies
+1.9.4 After the November 1977 cyclone that
+caused huge loss of life and property in Andhra
+Pradesh, a Committee of Secretaries (CoS) of the
+Government of India had discussed the issue to
+find out the status of the implementation of the
+recommendations of the CDMC in various coastal
+states and to suggest remedies for any lacunae.
+The Committee observed in May 1978 that many
+important recommendations of the CDMC had not
+been implemented till then. Subsequently, it made
+its own recommendations and inter alia decided to
+set up an Empowered Committee of Secretaries
+with the aim of ensuring speedy implementation of
+the recommendations of the CDMC and modify
+1.9.5 After all these efforts, it was realised that
+many aspects of cyclone management require
+further infusion of latest science and technology
+(S&T) developments for satisfactory solutions. In
+1979, the Secretary of the Department of Science
+and Technology (DST) brought the cyclone issues
+to the notice of the National Committee of Science
+and Technology (NCST) that was subsequently
+named the Scientific Advisory Committee (SAC) to
+the Prime Minister. The Secretary, DST, suggested
+that a Cyclone Review Committee (CRC) should
+be set up under the auspices of the NCST to carry
+out a complete review of all aspects of cyclone
+management. The CRC submitted its report along
+1.9.6 Apart from some institutional arrangements
+related to the operational issues of cyclone warning,
+till date the major recommendations of the CRC
+have not been implemented. One of the major
+recommendations was to commission the Aircraft
+Probing of Cyclone (APC) facility for India to generate
+critical observations from the cyclone core environment.
+1.9.7 A High Powered Committee (HPC) on
+Disaster Management (DM) was constituted in 1999,
+prior to the Orissa super cyclone, to prepare
+comprehensive model plans for the management
+of disasters at the national, state and district levels.
+Based on its recommendations, state governments
+have set up State Crisis Management Groups
+headed by the chief secretaries, designated relief
+commissioners and put in place state/district
+contingency plans. A separate Calamity Relief Fund
+(CRF) has been set up on the recommendation of
+the IXth Finance Commission for each state where
+75% of the fund is contributed by the central
+government and the remaining is contributed by
+the various state governments. It was also
+recommended that Ministry of Home Affairs (MHA)
+will be notified as the nodal ministry for overall
+management of disasters which was finally done
+in 2002 after the devastating Bhuj earthquake.
+However, the Ministry of Agriculture continues to
+be the nodal ministry for drought management.
+Other ministries have been assigned the
+responsibility of providing emergency support.
+1.10 Paradigm Shift: Past Initiatives by
+1.10.1 There have been some efforts in the past
+by some of the most vulnerable states by taking up
+institutionalised mitigation efforts. The first effort
+was the World Bank-assisted Cyclone Emergency
+Reconstruction Project (CERP) taken up by the
+Government of Andhra Pradesh in 1990 itself
+following the severe cyclone of May 1990. This is
+referred to as one of the first initiatives heralding
+the paradigm shift to a holistic approach of cyclone
+risk management in the country.
+1.10.2 In the aftermath of another devastating
+cyclone that affected the north Andhra Pradesh
+coast in 1996, the Government of Andhra Pradesh
+has set up a separate Disaster Management Unit
+(DMU) to implement the World Bank-funded Andhra
+Pradesh Hazard Mitigation and Emergency Cyclone
+Recovery Project (APHM & ECRP), and is currently
+functioning as the Andhra Pradesh State Disaster
+1.10.3 The Government of Orissa constituted the
+Orissa State Disaster Mitigation Authority
+(OSDMA), as a Government owned autonomous
+body after the October 1999 super cyclone to have
+a systematic and planned approach to disaster
+management in the state with the objective of
+making the people of the state more disaster
+resilient. OSDMA coordinates various activities of
+disaster mitigation in the state including capacity-
+building of the community and disaster managers
+and strengthening of infrastructure, improvement
+1.10.4 The Government of Orissa has constituted
+five units of Orissa Disaster Rapid Action Force
+(ODRAF) which is specially trained and equipped
+force to deal with cyclones and other disasters.
+They are stationed at Jharsugda, Balasore, Cuttack,
+Chhatrapur and Koraput. In addition to the other
+modes of communication, Orissa has established
+an extensive VHF network connecting different
+levels of administration and the community to
+communicate cyclone warnings and advisories.
+Besides, the state government has undertaken several
+initiatives for multi-hazard mitigation in the state.
+1.10.5 In the aftermath of the Bhuj earthquake in
+January 2001, a massive reconstruction programme
+was launched by the Gujarat state government with
+financial assistance from multi-lateral funding
+agencies including the World Bank. The Gujarat State
+Disaster Management Authority (GSDMA) was
+established for the implementation of the
+reconstruction programme. Further, GSDMA has
+come out with a Composite Risk Atlas to help the
+concerned departments of the state in disaster
+mitigation planning in the areas most vulnerable to
+natural and man-made hazards. The taluks most
+vulnerable to cyclones have been mapped by
+utilising Geographic Information System (GIS) tools.
+1.11 Paradigm Shift in DM: Genesis of
+1.11.1 In the i mmediate aftermath of the
+December 2004 tsunami, the Government of India
+took a far-reaching decision to set up an institutional
+mechanism for effective DM with a vision to
+transforming the approach toward DM in the
+country. In March 2005, the Disaster Management
+Bill was introduced in both houses of Parliament,
+which became an Act in December 2005, after it
+was adopted by Parliament. This initiative has been
+hailed in all quarters as a defining moment in
+attempting to organise a paradigm shift in DM. The
+erstwhile relief-centric and post-event syndrome
+was set to change to a well-orchestrated process
+that focuses on the important but neglected areas
+of prevention, mitigation, preparedness and more
+robust and efficient measures for response,
+1.11.2 The Disaster Management Act, 2005
+1.11.2.1 This Act lays down the institutional, legal,
+financial and coordination mechanism at the central,
+state, district and local levels. These institutions
+are not parallel structures, and will work in close
+harmony. The institutional framework will ensure
+implementation of the national will for a paradigm
+shift in DM from a post-event and relief-centric
+syndrome to a regime that lays greater emphasis
+on preparedness, prevention and mitigation, leading
+to a more prompt and effective response to disasters.
+The institutional framework under the DM Act
+includes the creation of NDMA at the national level,
+SDMAs at state levels and DDMAs at district levels.
+1.12.1 National Disaster Management
+1.12.1.1 The National Disaster Management
+Authority (NDMA), as the apex body in the GoI, has
+the responsibility of laying down policies, plans and
+guidelines for DM and coordinating their
+enforcement and implementation for ensuring timely
+and effective response to disasters. The guidelines
+will assist the central ministries, departments and
+states to formulate their respective plans. It will
+approve the national DM plan prepared by the
+National Executive Committee (NEC) and plans of
+the central ministries and departments. It will take
+such other measures as it may consider necessary,
+for the prevention of disasters, or mitigation, or
+preparedness and capacity building, for dealing
+with a threatening disaster situation or disaster. To
+this end, it will be the responsibility of every central
+ministry or department to provide assistance to
+NDMA, and the state governments will also extend
+necessary cooperation and assistance. It will
+oversee the provision and application of funds for
+mitigation and preparedness measures. It has the
+power to authorise the departments or authorities
+concerned, to make emergency procurement of
+provisions or materials for rescue and relief in a
+threatening disaster situation or disaster. It will also
+provide such support to other countries in times of
+disasters as may be determined by the central
+government. The general superintendence, direction
+and control of the National Disaster Response Force
+(NDRF) are vested in and will be exercised by the
+Authority. The National Institute of Disaster
+Management (NIDM) will work within the framework
+of the broad policies and guidelines of NDMA.
+In essence, NDMA will concentrate on prevention,
+preparedness, mitigation, rehabilitation,
+reconstruction and recovery and also formulate
+appropriate policies and guidelines for effective and
+synergised national disaster response and relief. It
+will also coordinate the enforcement and
+implementation of policies and plans.
+1.12.2 The National Executive Committee
+1.12.2.1 The National Executive Committee (NEC)
+comprises the secretary to the GoI in the ministry
+or department having administrative control of the
+subject of DM, as the chairperson, and the
+secretaries to the GoI in the ministries/departments
+of Agriculture, Atomic Energy, Defence, Drinking
+Water Supply, Environment and Forests, Finance
+(Expenditure), Health, Power, Rural Development,
+Science and Technology, Space,
+Telecommunications, Urban Development, Water
+Resources and the Chief of the Integrated Defence
+Staff of the Chiefs of Staff Committee as members.
+Secretary, NDMA will be a special invitee to the
+1.12.2.2 NEC is the executive committee of NDMA,
+and is mandated to assist NDMA in the discharge
+of its functions and also ensure compliance of the
+directions issued by the central government for the
+purposes of DM. One of the important functions
+assigned to NEC is to coordinate the immediate
+response in the event of any threatening disaster
+situation or disaster on behalf of NDMA. Based on
+the policy and guidelines, NEC will be responsible
+for preparing the national plan, getting it approved
+by NDMA and then operationalising it. NEC will also
+require any department or agency of the
+government to make available to NDMA or state
+authorities, such men or material resources as are
+available with it, for the purposes of handling
+threatening disasters, emergency response, rescue
+and relief. It will also perform such other functions
+as NDMA may require it to perform.
+1.12.2.3 The functions presently being discharged
+by the Inter-Ministerial Group (IMG) in appraising
+the assessments made by the Inter-Ministerial
+Central Teams of the damage, the requirement of
+funds from the National Calamity Contingency Fund
+(NCCF) and recommending the quantum of
+assistance to be provided to the states will now be
+1.12.3 National Disaster Response Force
+1.12.3.1 The DM Act 2005 has mandated the
+constitution of the National Disaster Response Force
+(NDRF) for the purpose of specialised response to
+a threatening disaster situation or disaster. The
+general superintendence, direction and control of
+the force is vested in, and exercised by, NDMA
+and the command and supervision of this force is
+vested in the Director General of NDRF . Presently,
+NDRF comprises eight battalions with further
+expansion to be considered in due course. Seven
+of these battalions have been positioned at nine
+different locations in the country based on the
+vulnerability profile. This force is being trained and
+equipped as a multi-disciplinary, multi-skilled, high-
+tech force with state-of-the-art equipment. To ensure
+prompt response during any disaster, each of the
+eight NDRF battalions will have three to four states/
+UTs as their areas of responsibility. Each battalion
+will have three to four Regional Response Centres
+(RRCs) at high vulnerability locations where trained
+personnel with equipment will be pre-positioned.
+NDRF units will maintain close liaison with the state
+administration and be available to them pro-actively,
+thus avoiding long procedural delays in deployment
+in the event of any serious threatening disaster
+situation. Besides, NDRF will also have a pivotal
+role in Community Capacity Building and Public
+Awareness. NDRF is also enjoined with the
+responsibility of basic training of personnel of the
+State Disaster Response Force (SDRF), Police, Civil
+Defence, Home Guards and other stakeholders in
+1.12.4.1 The experience of major disasters in the
+last decade has clearly established the need for a
+national initiative for pre-positioning of some
+essential reserves at crucial locations, including
+some for high altitude areas. These reserves are
+intended to augment the resources of the states.
+These will be co-located with NDRF battalions at
+nine different locations in the country and released
+to the states on the recommendation of the NDMA.
+1.12.5 National Institute of Disaster
+1.12.5.1 The National Institute of Disaster
+Management (NIDM) has institutional capacity
+development as one of its major responsibilities
+along with training, documentation of research,
+networking and development of a national level
+information base. NIDM will function closely within
+the broad policies and guidelines laid down by
+NDMA and assist in developing training modules,
+impart training to trainers and DM officials and
+strengthening of Administrative Training Institutes
+(ATIs) in the state. It will also be responsible for
+synthesising research activities. NIDM will be geared
+towards emerging as a ‘Centre of Excellence’ at
+the national and international levels.
+1.12.6 State Disaster Management Authority
+1.12.6.1 At the state level, the State Disaster
+Management Authority (SDMA) headed by the Chief
+Minister, will lay down policies and plans for DM in
+the state. It will, inter alia, approve the state plan in
+accordance with the guidelines laid down by NDMA,
+coordinate the implementation of the state plan,
+recommend provision of funds for mitigation and
+preparedness measures and review the
+developmental plans of the different departments
+of the state to ensure integration of prevention,
+preparedness and mitigation measures.
+1.12.6.2 The state government will constitute a
+State Executive Committee (SEC) to assist the
+SDMA in the performance of its functions. The SEC
+will be headed by the Chief Secretary to the state
+government and coordinate and monitor the
+implementation of the national policy, the national
+plan and the state plan. It will also provide information
+to NDMA relating to different aspects of DM.
+1.12.7 District Disaster Management Authority
+1.12.7.1 At the cutting edge level, the District
+Disaster Management Authority (DDMA) headed
+by the District Magistrate, with the elected
+representative of the local authority as the co-
+chairperson, will act as the planning, coordinating
+and implementing body for DM and take all
+necessary measures for the purposes of DM in the
+district in accordance with the guidelines laid down
+by NDMA and SDMA. It will, inter alia, prepare the
+district DM plan including the response plan for
+the district, coordinate and monitor the
+implementation of the national and state policies,
+the national, state and district plans and ensure
+that the guidelines for prevention, mitigation,
+preparedness and response measures laid down
+by NDMA and SDMA are followed by all
+departments of the government at the district level
+and the local authorities in the district.
+1.12.8.1 This includes Urban Local Bodies (ULBs),
+Panchayati Raj Institutions (PRIs), district and
+Cantonment Boards and Town Planning Authorities
+for control and management of civic services. These
+bodies will ensure capacity building of their officers
+and employees in DM, carry out relief, rehabilitation
+and reconstruction activities in the affected areas
+and will prepare DM plans in consonance with
+guidelines of NDMA, SDMAs and DDMAs.
+1.12.9.1 In any disaster, it is the community that is
+always the first responder. Outside help comes in
+only later. Training the community and making such
+response organised is therefore of utmost
+1.12.9.2 A revamping of the Civil Defence under
+this scheme has been proposed in which the Civil
+Defence will be made district-centric to cover all
+the districts of the country in two phases. In the
+first phase, 241 multi hazard districts will be
+covered. Of these, 37 districts which are cyclone
+prone, already have a Civil Defence set-up in its
+1.12.9.3 In the meanwhile, the Civil Defence set-up
+already existing in the country will be immediately
+utilised to train the community for disaster response
+in the concerned districts of the already activated
+towns. The DG, Civil Defence, in their respective
+states will work out training modules for disaster
+management covering awareness generation, first
+aid and rescue drills. Selected Civil Defence
+personnel will be trained for Chemical, Biological,
+Radiological and Nuclear (CBRN) emergencies and
+will be closely involved in assisting all response
+agencies. Other Civil Defence personnel will support
+the response agencies for management of CBRN.
+NIDM will prepare a comprehensive training module
+simultaneously and circulate it, which will be
+incorporated in the already ongoing training.
+1.13 Existing Institutional Arrangements
+1.13.1.1 The Cabinet Committee on Management
+of Natural Calamities (CCMNC) and the Cabinet
+1.13.1.2 CCMNC has been constituted to oversee
+all aspects relating to the management of natural
+calamities, including assessment of the situation
+and identification of measures and programmes
+considered necessary to reduce its impact, monitor
+and suggest long-term measures for the prevention
+of such calamities formulate and recommend
+programmes for public awareness for building up
+society’s resilience to them. In specific cases, CCS
+will also be kept informed of the manner in which
+these disasters are being managed. NDMA’s linkages
+with these committees will be institutionalised.
+1.13.2 Role of Central Ministries and
+1.13.2.1 As DM is a multi-disciplinary process, all
+central ministries and departments will have a key
+role in assisting NDMA in the discharge of its
+functions. The nodal ministries and departments
+of the GoI, i.e., the Ministries of Home Affairs,
+Agriculture, Civil Aviation, Environment and Forests,
+Health, Atomic Energy, Space, Earth Sciences,
+Water Resources, Mines, Railways. etc., will
+continue to address specific disasters as assigned
+to them. Further, MHA will act as the administrative
+ministry on the subject of DM.
+1.13.3 National Crisis Management
+1.13.3.1 The National Crisis Management
+Committee (NCMC), comprising high-level officials
+of the GoI headed by the Cabinet Secretary, will
+also deal with specified major crises. It will be
+supported by the Crisis Management Groups (CMG)
+of the central nodal ministries. The Secretary,
+NDMA, will be a member of this Committee.
+1.13.4.1 The primary responsibility for DM rests
+with the states. The arrangements put in place will
+be such as to enable, empower and strengthen
+the DM apparatus at the state level. Appropriate
+policy, financial and administrative systems will be
+established by the state governments. The central
+government will provide all cooperation and
+assistance to the state governments in consonance
+with the gravity of the disaster situation.
+1.13.4.2 State governments will take all measures
+specified in the guidelines laid down by NDMA and
+extend cooperation and assistance in DM to NDMA
+1.13.5 District Administration
+1.13.5.1 At the district level, the District Disaster
+Management Authorities (DDMAs), which
+constitute the very bedrock of the entire DM
+apparatus, will be in charge of DM and will control
+and coordinate all line departments, i.e., police,
+fire services and any other form of support system
+as part of their response. In the planning stage, the
+Collector/District Magistrate/Deputy Commissioner
+will head all planning and preparedness exercises
+1.13.6 Management of Disasters Impacting
+1.13.6.1 At times, the impact of disasters occurring
+in one state may spread over to areas in other states.
+Similarly, preventive measures in respect of certain
+disasters, such as floods, etc. may be required to
+be taken in one state, while the impact of their
+occurrence may affect another. The administrative
+hierarchy of the country is organised into the
+national, state and district level administrations. This
+presents some difficulties in respect of disasters
+impacting more than one state. The management
+of such situations calls for a coordinated approach
+which can respond to a range of issues quite
+different from those that normally present
+themselves before, during and after the event.
+1.14 N ational Cyclone Risk Mitigation
+1.14.1 The Government of India has drawn up the
+National Cyclone Risk Mitigation Project (NCRMP)
+to be implemented with World Bank assistance.
+Initially, the MHA formulated the project that was
+transferred to NDMA in September 2006. The main
+aim and objective of the project is to strengthen
+the structural and non-structural cyclone mitigation
+efforts and reduce the risk and vulnerability of the
+coastal districts which are prone to cyclones.
+NCRMP will assist states/UTs which are prone to
+cyclones and will go a long way in building
+capacities for cyclone risk mitigation. This is the
+first such effort at the national level with World Bank
+assistance of about US $300 million, covering 13
+coastal states and UTs. NCRMP consists of the
+i) Component A: Improvement of early
+strengthening Last Mile Connectivity (LMC)
+of cyclone warnings and advisories from
+source/district/sub-district levels to
+ii) Component B: Cyclone risk mitigation
+investment which has identified nine sub-
+components like construction of cyclone
+shelters, construction of saline
+embankments, mangrove plantations,
+iii) Com ponent C: Technical assistance for
+iv) Component D: Project management and
+1.15 National Guidelines: Genesis,
+1.15.1 The paradigm shift in the Government of
+India’s focus from the earlier rescue and relief-
+centric approach to a holistic approach covering all
+aspects of DM has been the thrust of this effort to
+evolve national guidelines for the management of
+1.15.2 A nine-st ep process has been followed that
+includes review of the present status and
+assessment of critical gaps. This has been done
+by taking on board the nodal agencies, ministries/
+departments of GoI and state governments/UTs,
+academic, scientific and technical institutions and
+NGOs, and obtaining exhaustive feedback from
+district and sub-district levels through interaction
+with elected representatives, including those from
+ULBs and PRIs. Mitigation and preparedness
+aspects of the management of cyclones have been
+dealt with in other chapters. Other non-structural
+measures like micro-finance, insurance and re-
+insurance, etc., have been covered separately.
+1.15.3 There are several structural and non-
+structural measures for effective cyclone DM. The
+structural measures include construction of cyclone
+resistant buildings, road links, culverts, bridges,
+canals, drains, saline embankments, surface water
+tanks, communication and power transmission
+networks, etc. Non-structural measures like early
+warning systems, communication and
+dissemination, management of coastal zones,
+awareness generation and disaster risk
+management and capacity development, have also
+2.1.1 Natural hazards like hydro-meteorological
+events occur in all parts of the world, although some
+regions are more vulnerable than others. Hazards
+become disasters when people’s lives and
+livelihoods are destroyed. Further, human and
+material losses caused by disasters are a major
+obstacle to sustainable development. By
+developing a system of issuing accurate forecasts
+and warnings in a form that is readily understood,
+lives and property can be protected. The WMO
+coordinates the efforts of national meteorological
+services to mitigate human and property losses
+through improved early warning services, risk
+assessments and to raise public awareness on the
+risk and vulnerability for TCs.
+2.1.2 By 2019, WMO aims at reducing by 50%
+the 10 year average fatality (observed during the
+period 1994–2003) for hydro-meteorological
+disasters. Early warning in the context of cyclones
+is a short-term mitigation measure. It employs
+detection of the system, its continuous monitoring,
+prediction, formulation of warnings, identification
+of threat areas and population and communication
+of warning with lead time and clarity so that action
+is taken by the concerned people to avoid negative
+consequences. The emphasis is on disaster risk
+reduction. It is said that one dollar invested in
+disaster preparedness can prevent seven dollars’
+worth of disaster-related economic losses which
+is a considerable return on investment.
+2.1.3 Due to the very destructive nature of TCs
+and their adverse impact on human activities the
+world over, considerable attention of scientists and
+engineers has been drawn towards this subject
+from early days. As a result, early warning systems
+for TCs have been developed. In fact, most of the
+meteorological services, including IMD, had been
+established towards the middle or later part of the
+nineteenth century to provide cyclone warnings to
+sea-faring communities. With advanced science
+and technology and global efforts, today it is
+possible to organise dependable cyclone early
+warning services and minimise the loss of life and
+property by taking appropriate action on advance
+warnings resulting in better and improved response.
+2.1.4 In order to monitor and forecast cyclones,
+data is required not only from the ocean where it
+forms, but also from the entire globe if warnings
+are to be provided with sufficient lead time. Data is
+required from the oceans and atmosphere, from
+accessible and inaccessible places during the day
+and night at regular intervals.
+2.1.5 Climatological data on the frequency and
+intensity of TCs in the Indian seas that affected India
+are available for a period of more than 110 years.
+Frequency analyses have also been carried out to
+determine the risk on a macro scale (up to the district
+level). With the available data, hazard parameters
+have also been analysed by some researchers on a
+macro scale. But such data is not sufficient for
+micro-scale (taluka/block/mandal level) analysis.
+Hence, necessary data needs to be generated for
+micro-scale analysis by strengthening observation
+networks based on long-term planning. In the mean
+time, cyclone risk assessment on a micro scale
+will be attempted for all the cyclone-affected states
+and Union Territories (UTs) of India by considering
+2.1.6 The most important requirement is the
+development of robust and reliable operational
+techniques for forecasting the track, intensity and
+hazards associated with TCs such as storm surge,
+strong winds and heavy rainfall based on sound
+hydrodynamics through numerical models and
+storm surge modelling. Particular attention needs
+be given to the coastal regions taking into account
+the complex coastal orientation, estuaries—
+including the massive freshwater discharges from
+various river systems of the Arabian Sea and the
+Bay of Bengal in the NIO Basin.
+2.1.7 Surge prediction demands accurate surface
+wind forecasts for several hours before the cyclone
+landfall. Hence, further development of a suitable
+meso-scale cyclone model along with generating
+most representative high resolution (1 km grid scale)
+surface wind vector field surrounding the cyclone
+combining meso-scale model fields and all
+available surface observations from land, ocean and
+space based platforms is equally important. The
+total water level is the combined effect of storm
+surge and astronomical tide. Therefore, accurate
+prediction of the tidal height in the model is
+essential. For driving models, reliable real time data
+of meteorological, hydrological and oceanographic
+variables are fundamental. The data will be freely
+available to participating agencies through fail-safe
+networks, including meteorological satellite data
+reception facilities and associated
+telecommunication support infrastructure.
+2.2.1.1 Cyclones in the NIO Basin are monitored
+with the help of land-based, ocean-based and
+space-based observational systems which include
+conventional meteorological observations, reports
+from ships, observations from ocean data buoys,
+coastal radars (conventional and Doppler) and
+national and international satellites (geo-stationary
+2.2.1.2 To facilitate quantification of the likely
+impact associated with cyclone landfall, land-
+based observational density will be enhanced
+beyond IMD’s modernisation plan. Table 2.1
+overleaf provides the present level of the land-based
+observational set-up of IMD’s enhancements
+proposed under its modernisation plan and
+additional augmentation required to be established
+beyond its modernisation plan.
+2.2.1.3 Observations by automatic instruments
+and quick fail-proof communication of observations
+to forecasting centres are modern concepts.
+Doppler Radars are used the world over to detect
+and monitor localised severe weather systems.
+Sustainability of the instruments against adverse
+weather conditions is essential. Adequate density
+of network is another factor which needs to be looked
+into during the process of modernisation.
+Modernisation, augmentation and standardisation
+of the meteorological observation network
+maintained by other agencies at the centre and
+states will assign priority in the modernisation of
+their network, so that observations are useful and
+IMD will carry out modernisation of its observation
+network with density augmentation, wherever
+needed, on a priority basis, covering the 84 cyclone-
+prone districts in all coastal states and UTs. Central
+and state government agencies, other than IMD,
+dealing with meteorological observations will
+assign priority to the modernisation of the
+meteorological and hydrological observation network
+in their domain in these 84 districts.
+2.2.1.4 Efforts are to be made for the reception of
+all available data at the earliest, directly from the
+original data generating agencies for their effective
+utilisation in cyclone warning systems in India.
+2.2.1.5 All necessary data reception facilities from
+the forthcoming satellite payloads such as METSAT,
+INSAT , OCEANSAT and MEGHATROPIQUES,
+algorithm development, timely product generation,
+updated terrain/land use mapping, etc., in respect
+of each of the future satellites will be put in place
+by the Department of Space/ IMD in time with the
+satellite launch so that the respective products can
+become available for cyclone early warning
+2.2.1.6 Enhancement of Observational Network
+The following enhancements will be carried out in
+respect of different types of observational network:
+• Early establishment of planned Automatic
+Weather Stations (AWS) and Rain-gauge
+• Establishment of at least one High Wind
+Speed Recorder and one surge recorder for
+each coastal district, vulnerable to cyclones
+* Covering the entire country, including coastal districts.
+** To be activated during the High Impact Weather Period
+*** Likely to be provided in airports. Augmentation to cover all coastal districts.
+Table 2.1 Additional Augmentation of Land Based Observational Networks of IMD
+• Enhancement of a Doppler Weather Radar
+Network over coastal regions at an interval
+• Augmentation of high resolution vertical
+soundings with the enhancement of Radio
+Sonde (RS)/Radio Wind (RW) Network and
+introduction of Wind Profilers
+• Enhancement of shallow water and deep
+water buoy network over Indian seas.
+• Enhancement of ocean observations
+involving ships of opportunity, Coast Guard
+vessels and Indian Naval Ships; off-shore
+• Inclusion of subsurface ocean parameters
+from space and in situ observations,
+especially in the mixed layer.
+• Ensure the operational service of at least two
+geostationary satellites over Indian seas at any
+given point of time (with water vapour channel
+and vertical sounder capability as planned
+in INSAT 3D), especially during cyclone months.
+• Generation of high spatial resolution data
+sets of land-surface parameters on weekly/
+bi-weekly basis utilising IRS and other global
+• Real time reception of global satellite
+products, especially from microwave
+sensors, over Indian seas for operational use
+through bilateral and multi-lateral
+2.2.2 Further Issues to be Addressed
+2.2.2.1 The NDMA Sub-Group on Early Warning
+Systems (EWS) for cyclone guidelines has identified
+some more issues to be addressed beyond the
+IMD’s modernisation plans which are essential to
+raise our cyclone DM capabilities to international
+standards. The table below provides the major
+issues that have been identified, and the efforts to
+2.2.3 Aircraft Probing of Cyclone (APC)
+2.2.3.1 In the absence of aircraft probing facilities,
+it has not been possible to obtain realistic initial
+state three-dimensional description of cyclones in
+the NIO region. Lack of such critical observations
+from the cyclone core environment is resulting in
+large track and intensity forecast errors. The
+establishment of APC facilities of the cyclone core
+environment can significantly address this critical
+data gap in cyclone intensity and track forecasting.
+2.2.3.2 Other applications of APC Facility for multi-
+i) Airborne Doppler Weather Radar for
+identification of heavy rainfall and strong
+wind zones (cyclone impact assessment).
+ii) Airborne Laser Terrain Mapping (ALTM) of
+coastal zones and islands (delineating depth
+and extent of coastal inundation, hazard
+mapping and vulnerability assessment).
+iii) Post-cycl one damage assessment and
+aerial survey (for impact assessment and
+planning post-disaster relief operations).
+iv) Planning observational campaign for the
+advancement of R&D efforts in cyclone
+forewarning (up to 150 days per year,
+including such cyclonic disturbances formed
+during the monsoon season, pre-monsoon
+thunderstorm events in eastern India –
+kalbaisakhi – and the study of other high
+impact weather phenomena over land).
+v) Aerial mapping/observational facility for
+multi-hazard impact assessment (floods,
+earthquakes, landslides, forest fires,
+vi) APC facility can also be used for the study
+of monsoon systems in South Asian
+countries, research on the effects of climate
+change and for defence applications as well.
+2.2.3.3 The recommendations of the Cyclone
+Review Committee (CRC), 1984 were revisited. The
+CRC had fully endorsed the need for establishing
+APC facilities for observations from the inner core
+of cyclones. Similar recommendations were made
+at different workshops organised by NDMA at
+Hyderabad, Ahmedabad and Delhi, and at the First
+India Disaster Management Congress held in
+2.2.3.4 The need for establishing APC facilities was
+also endorsed by top-ranking officials of NTRO, MoD
+and DoS at a meeting specially convened by NDMA
+in December 2006 (see page 154).
+APC facility will be set up on high priority. IMD/
+NRSA will provide the technical control and
+operational control will be provided by the Indian
+Air Force (IAF). Day-to-day operational schedules
+and flight paths will be decided in consultation with
+user departments such as IMD, Central Water
+Commission (CWC), etc. Ministry of Earth Sciences
+(MoES) will initiate all necessary actions for
+2.2.4.1 A high altitude Unmanned Aerial Vehicle
+(UAV) can provide detailed observations of the near
+surface, high wind environment; an area often
+too dangerous for manned aircraft for taking
+observations. The first UAV touched down after a
+10-hour mission into the tropical storm “Ophelia”
+on 16 September 2005. This aircraft, known as an
+Aerosonde, has the potential to emerge as a cost-
+effective observational platform for the
+reconnaissance and surveillance of tropical
+Considering its vast coastline, India will develop
+and utilize UAV capabilities for surveillance and
+prediction of TCs. This effort can be coordinated
+2.2.5 Implementation Strategy of
+2.2.5.1 It is necessary to organise the efforts
+required for generating real time observational data
+for cyclone Early Warning (EW) from various
+government departments and agencies at the
+national and state levels. In order to ensure timely
+collection and accessibility of data for its utilisation
+with regard to cyclone EW, specific tasks are to be
+carried out by various nodal agencies assigned with
+specific responsibilities as per the existing arrange-
+ments and further augmentation of responsibilities.
+These are are shown in Table 2.2 below.
+Table 2.2 Real time Observational Data for Cyclone EW
+2.2.5.2 The designated agencies shown in Table 2.2 will be responsible for coordinating efforts to
+collect the required data in collaboration with other agencies. Comprehensive quality control and data
+assimilation of the combined data set will be carried out by the respective agencies for generating most
+representative cyclone specific, high resolution data sets for numerical weather prediction models. These
+analysed cyclone data sets, along with observational data, will be made available to the various agencies
+involved in operational/R&D efforts in cyclone EW, mitigation and risk management activities.
+2.2.6 Forecasting of Tropical Cyclones
+2.2.6.1 The track forecast of TCs is prepared with the help of track forecast models of different types,
+including numerical techniques. Currently, IMD uses a limited run of the quasi-lagrangian dynamic model
+for track prediction along with other synoptic, climatological and empirical techniques. Intensity forecasts
+are made by using satellite techniques. For prediction of storm surge, different dynamical techniques are
+used. The forecast advisories received from different international agencies such as the Joint Typhoon
+Warning Centre (JTWC), Pearl Harbour, USA; United Kingdom Meteorological Office (UKMO); European
+Centre for Medium Range Weather Forecasting
+(ECMWF); and National Centre for Medium-Range
+Weather Forecasting (NCMRWF) are also
+considered while finalising the forecast. The current
+accuracy of track forecast is about ±140 km for a
+24 hour forecast and ±250 km for a 48-hour
+forecast. The error increases with increase in the
+duration of the forecast projection. This translates
+into warnings covering very large areas if issued
+more than 24 hours ahead. This limits the lead time
+of the warning to 24 hours. The accuracy of these
+forecasts need to be improved significantly.
+Globally, with the use of multi-ensemble and meso-
+scale models, accuracy in the range of ± 60–80
+km for a 24-hour forecast has been achieved.
+Track and intensity forecasts will be improved by
+using state-of-the-art, multi-layer meso-scale
+models with real time inputs of data from satellites
+and ground-based radar systems.
+2.2.6.2 IMD will lead the concentrated national
+effort to achieve improvements involving:
+i) Selection of a suitable model and
+establishing a system of generating the
+most representative initial state 3-D
+atmospheric fields with the implementation
+of an appropriate data assimilation system
+for satellite data inputs (scatterometer
+winds, high resolution satellite derived
+winds, satellite derived temperature and
+ii) Track prediction using several advanced
+techniques, including the super ensemble
+iii) Extensive validation using data of several
+iv) Developing institutional interfaces with IMD,
+2.2.7 Real time Data Reception, Processing
+2.2.7.1 To generate a most representative 3-D
+structure of the atmosphere for forcing cyclone
+forecast models, the following are to be carried
+i) All the observational data from various
+heterogeneous platforms will be collected
+and transmitted to operational forecast
+centres for their utilisation in improving
+ii) Appropriate automated data processing and
+quality control algorithms will be developed
+by agencies like IMD, NCMRWF and
+research institutes connected with
+meteorological data processing and
+iii) Im proved high resolution meso-scale data
+assimilation systems involving 3-D and 4-D
+variational assimilation techniques will be
+iv) Cyclone specific, most representative, initial
+state and boundary fields will be generated.
+2.2.8 Multi-Model Track, Intensity Hazards
+2.2.8.1 Following are some of the important
+recommendations for the improvement of track,
+intensity hazard and landfall forecast:
+i) Improvement of global, regional and meso-
+scale modelling systems for prediction of
+the track, intensity and landfall of cyclones,
+ii) Development of a coupled ocean-
+atmospheric meso-scale model for the
+prediction of genesis, intensification of TCs
+over seas and prediction of storm surges,
+inland inundation and ocean waves,
+iii) Real time reception of cyclone forecast fields
+from other leading global centres (US
+Weather Service, UKMO, ECMWF , Japan
+Meteorological Agency (JMA), etc.) to use
+in the objective assessment of striking
+potential and heavy rainfall forecasts.
+2.2.9 Historical Digital Cyclone Track
+2.2.9.1 Accurate determination of TC landfall,
+location and timing is the key to the effectiveness
+of TC warnings/forecasts for a specific region. The
+relevance and availability of best cyclone track data
+for economic analysis is of particular importance to
+risk models that estimate the probability of future
+losses from TCs. Based on this basic information,
+it is possible to produce normalised databases for
+losses and damage estimates from natural
+disasters and for predicting the probabilities and
+costs of future events based on changes of the
+Historical track data with details like position,
+intensity (wind and sea level pressure), size, radius
+of maximum wind and landfall parameters will be
+archived in digital form and this data will be made
+available to users/institutions.
+2.2.10 Appropriate Modelling Framework
+2.2.10.1 Forecasting of land-falling TCs with a lead-
+time of 48–72 hours is important. Some coastal
+areas have developed to such an extent that more
+than 12 hours are needed for organizing emergency
+response preparations. Although track forecasting
+has improved dramatically for longer time periods,
+further improvements are required. This becomes
+imperative as population increases rapidly in many
+2.2.10.2 Advancement in operational TC intensity
+prediction is lagging behind improvement in TC track
+forecasting. In this regard, the use of the satellite
+scatterometer data (e.g. QuickSCAT , SSM/I, TMI)
+has the potential for providing a Dvorak-like intensity
+estimation technique. Forecasters will benefit from
+these latest developments by cross-checking
+available wind distributions with the synoptic
+observations and satellite/radar images while
+estimating the TC intensity. Effective assimilation
+of the QuickSCAT and SSM/I wind data as well as
+other remotely sensed data into Numerical Weather
+Prediction (NWP) will help to improve the TC track
+and intensity forecast by with the use of numerical
+IMD will ensure real time reception of the satellite
+scatterometer data, wind fields from TMI and SSM/
+I sources as their assimilation into the NWP model
+is essential for improving forecast accuracy.
+2.2.10.3 Ensemble forecasting techniques are
+being increasingly used in TC track prediction in
+recent years. The single model ensemble approach
+defines perturbed initial conditions that represent
+the uncertainty in the analysis and then integrates
+the ensemble members with a single model, and
+verifications show that the multiple model ensemble
+approach results in noticeable improvement in TC
+track forecast errors. Recent research suggests that
+a TC track forecasting system can be developed to
+assist forecasters in selecting the best performing
+NWP models to construct the ensemble forecast
+IMD will introduce multi-model ensemble forecast
+techniques for operational cyclone warnings.
+2.3 Prediction of Severe Weather and
+2.3.1 To predict the time of onset of severe
+weather and storm surges at specific locations,
+detailed knowledge of the wind and precipitation
+structure of the TC (e.g., TC size, gale wind radius)
+have to be known besides the forecast track.
+Observations in recent years from advanced
+sensors (e.g., Tropical Rainfall Measuring Mission
+(TRMM), Special Sensor Microwave/Imager (SSM/
+I), Advanced Microwave Sounding Unit (AMSU),
+and (QuickSCAT) on the new generation of
+meteorological satellites have greatly enhanced our
+knowledge on the structural characteristics of wind
+and precipitation fields associated with cyclones.
+2.3.2 Valuable and critical information on wind
+fields can only be obtained from GPS dropsondes
+and Stepped Frequency Microwave Radiometers
+from aircraft reconnaissance. The Doppler Weather
+Radar is an important equipment in terms of
+obtaining very high resolution wind and rainfall
+distribution of land-falling TCs. Correlation and
+extrapolation techniques have been usefully
+employed to depict the wind structure of TCs and
+to make very short-range rainfall forecasts.
+2.3.3 IMD has been using locally developed
+nomograms and a PC-based storm surge model
+developed by the Indian Institute of Technology,
+Delhi, for storm surge prediction at the time of TC
+landfall without having any means of generating
+spatial inundation of surge waters. Recently, under
+the World Bank funded Andhra Pradesh Hazard
+Mitigation and Emergency Cyclone Recovery Project
+(APHM and ECRP), a tailor-made framework model
+of storm surge and wind damage, along with GIS
+based Decision Support Systems (DSS) has been
+developed to demarcate the extent, duration and
+depth of inundation scenarios and quantifiable
+damages to houses, crops, power/communication
+Storm surge modelling efforts for generating spatial
+inundation and wind damage over the land will be
+developed and incorporated in the operational
+2.4.1 Some countries have set up dedicated
+video/audio facilities and websites to communicate
+with other emergency organisations and technical
+groups. A consensus assessment of the cyclone
+forecast is arrived at through broad based
+consultation and coordination.
+2.4.2 Weather information is being accessed by
+general public—ranging from highly intelligent and
+knowledgeable people to weather illiterate
+individuals. At the intelligent and highly weather-
+literate end of the spectrum, there is greater demand
+for real time meteorological data relevant to current
+weather conditions (e.g., winds, rain and
+temperatures). Many weather services now make
+available information from automatic weather
+stations (AWS) on their websites. Some put radar
+images on their websites as well, which has been
+found to strengthen the credibility of the services.
+This is being done in India as well by IMD. Some
+emergency services as well as operators of public
+utilities such as airports, ferries, buses and trains
+would like to be given advance alert prior to
+community-wide dissemination of TC warnings,
+even if it is as short as a few minutes. This allows
+them to organise and/or mobilize necessary
+response resources before the public actually reacts
+to the warnings. This is particularly useful when
+the public’s reaction to a warning translates
+immediately into increased demand on public
+2.4.3 Besides, traditional synoptic observations
+and TC warning advisories, global operational
+agencies [National Centre for Environmental
+Prediction (NCEP), UKMO, ECMWF , JMA, etc.] and
+major global research institutes have put much
+effort in sharing Numerical Weather Prediction
+products ‘best track’ databases, radar images and
+satellite images as well as scatterometer data over
+2.5.1 Parametric wind models form the basis of
+the TC hazard component of many risk models.
+The next-generation parametric wind model would
+provide a more realistic wind field and improve the
+TC hazard component of a risk model, which can
+lead to and thereby improve loss and cost
+estimates associated with TC landfall. Recent wind
+field observations collected with Global Positioning
+System (GPS) dropsondes have many
+characteristics that are not represented by standard
+2.5.2 Risk models are made of four basic
+components: a hazard component, vulnerability
+component, a damage component, and a loss
+component. The hazard component provides the
+probabilities and characteristics of a specific hazard.
+For a TC, it would provide information such as nature
+of storm track at landfall, forward motion, wind field
+and decay over land. The vulnerability component
+provides information about the impact on structures
+and human population considering several factors.
+The damage component of the risk model uses
+this information to calculate the expected damage
+and the loss component estimates the costs
+associated with rebuilding, loss of business and
+liabilities. Best-track data are also used to define
+probability distributions for characteristics of TCs
+(e.g., forward motion and intensity) in a risk model.
+Additional storm characteristics such as the radius
+of maximum winds, maximum gusts and rainfall
+would improve the depiction of TCs by the hazard
+component of a risk model and lead to a more
+realistic estimate of future losses and costs and
+improve estimates of the benefits of mitigation
+2.6.1 Based on the analysis carried out above, it
+will be appropriate to consider establishing a
+suitable institutional framework in the form of a
+institute at national level (discussed in detail in
+section 7.14) so that all the developmental objectives
+required for total cyclone risk management at the
+local level can be achieved. Further, to supplement
+this endeavour, efforts discussed earlier to procure
+a specially instrumented Reconnaissance Aircraft
+and UAVs for collecting spatial observations from
+the core cyclone environment are to be organised
+for facilitating improved cyclone EW. Such a facility
+has been the longstanding demand of the scientific
+community in India. Such a direction figures in the
+recommendations of the Scientific Advisory
+Committee to the Cabinet (SACC) in December 1984
+and the Reports of Recommendations of CRC
+(Volumes I, II and, III) for implementation by various
+central and state government agencies.
+2.6.2 Multi-model cyclone forecast products from
+various sources (national and international weather
+centres) are to be considered for framing operational
+cyclone warning and, accordingly, respective state/
+UT authorities will take all necessary emergency
+response and mitigation activities to deal with the
+disaster effectively. Such a mechanism is working
+very successfully in many advanced countries.
+Similar capabilities in this country can also be
+attained by the adoption of a suitable framework of
+hazard mitigation modelling, GIS-based Spatial
+Decision Support Systems (SDSS), well defined
+communication protocols for various emergency
+responder groups both at the government and
+community levels, stating well defined
+responsibilities of the participating agencies.
+2.7.1 Very Short-range Forecasting
+The critical period for some places is 6–12 hours
+before TC landfall. In such a short time-frame, NWP
+guidance cannot offer much assistance to
+forecasters. Very often, forecasters have to
+subjectively now-cast the TC movement in the next
+6–12 hours based on radar images and limited
+synoptic/AWS data. Any abrupt change in the
+direction of movement and/or looping motion of
+these TCs near the coast poses much difficulty in
+forecasting the landfall location and timing.
+Therefore, movement of the TC prior to landfall has
+an important bearing on the formulation of an
+effective warning and emergency response strategy.
+Research initiatives to improve the capability of
+forecasters in very short-range forecasting of land-
+falling TCs are essential and will be carried out by
+IMD and other institutions dealing with the subject.
+2.7.2 Developments in data assimilation and
+numerical models will continue independent of the
+TC forecast problem. Ongoing improvements to 3D
+and 4D variational assimilation methods with the
+inclusion of new data sources and the use of
+physical initialisation procedures will continue to
+produce improvement in the definition of the large-
+scale environment and outer structure of TCs (and
+hence in track forecasts). For those basins (tropical
+part of US Atlantic and Pacific) that are fortunate
+enough to have aircraft reconnaissance, availability
+of dropsonde data and eventually advanced NWP
+targeting strategies will result in further significant
+improvement in track forecasting. The question of
+vortex specification synthetically remains open. Its
+use is possibly dependent on the application. For
+short-term track and intensity forecasts, it would
+seem necessary in the near future. Careful
+diagnosis of its impact on short- to medium-range
+prediction will be undertaken. With increase in
+resolution, the question also arises of how much
+real TC structure can or needs to be represented in
+The issue of vortex initialisation will be investigated,
+2.7.3 With continuous improvement in numerical
+guidance on track, there appears to have been a
+slight reduction in basic research on TC motion.
+The problem of these environmental interactions,
+erratic tracks such as looping, stalling or rapidly
+accelerating cyclones and recurving are generally
+unpredictable and much research is needed to
+tackle these issues. For short-term track forecasts,
+it is possible to improve the details in forecasts via
+improved meso-scale assimilation techniques (3D,
+4D variational assimilation) that take advantage of
+the latest observational data sets with high spatial
+and temporal resolution, e.g., scatterometer, radar,
+rain rate and remotely sensed data. At these high
+resolutions, initialisation and performance of
+physical parameterisations become significant
+research issues in themselves . The effect of
+surrounding meso-scale convective systems
+(MCSs) and convective asymmetries on TC motion
+is mostly unexplained. Now that models can
+generally handle the ‘smooth’ motion of TCs, is it
+possible to predict details in the tracks that might
+be related to such meso-scale features in the
+environment? For short-term, high-resolution
+prediction, will attempts be made to simulate eye-
+wall cycles and their potential effect on small-scale
+track deviations? Questions relating to storm track,
+structure, rainfall and landfall are yet to be answered
+to the level of satisfaction. Further work is needed
+to determine how to initialise circulation in such
+circumstances and to understand the interaction
+between the storm’s circulation and the underlying
+ocean surface and feedback mechanism.
+Advanced atmosphere-ocean-land assimilation-
+prediction systems need to be employed.
+2.7.4 For further improvements in short-term
+forecast, a major issue will be meso-scale data
+analysis and initialisation, eventually within a coupled
+atmosphere-ocean-land system. Defining details in
+storm structure and meso-scale aspects of the
+storm’s environment is a challenging task. It will no
+doubt require very high resolution, use of some of
+the data sets previously mentioned, and in the short-
+term, the use of a synthetic vortex. At high resolution
+and for intense circulations, other significant issues
+are initialisation and the performance of physical
+2.7.5 Research support is required to be
+improved dramatically in India with regard to the
+skill of both track and intensity forecasting of TCs.
+Satellite radiometry and scatterometry data have
+the potential to improve TC track and intensity
+forecasting, provided they are suitably employed
+in hazard modelling and now-casting systems that
+IMD will address these aspects in its modernisation
+2.7.6 Developing Centralised Lead-Time
+2.7.6.1 It is established world over that science
+and technology options offer examples of good
+practices in terms of demonstrable disaster risk
+reduction that can be built into ongoing
+development planning policies both in terms of long-
+term mitigation/risk reduction and short-term
+mitigation measures (monitoring, EW, impact
+assessment and customised warning
+dissemination protocol). Further, the necessary
+steps needed for early implementation are to be
+organised by establishing necessary institutional
+support for holistic cyclone risk management
+beyond the early warning. These include damage
+assessment spatial scenarios of local-scale storm
+surge inundation, wind damage to lifeline
+infrastructure, crops, houses, appropriate mitigation
+strategies, and the development of DSS with tailor-
+made warning dissemination protocols to DM
+2.8 Cyclone Warning Generation
+2.8.1.1 IMD is the nodal agency in India for
+providing cyclone warnings through its Area Cyclone
+Warning Centres (ACWCs) at Kolkata, Chennai and
+Mumbai and the Cyclone Warning Centres¹ (CWCs)
+at Visakhapatnam, Bhubaneshwar and
+Ahmedabad. The cyclone warning process is
+coordinated by the office of the Deputy Director
+General of Meteorology (Weather Forecasting) at
+Pune and office of Deputy Director General (Cyclone
+Warning) in the cyclone warning division of the
+Northern Hemispheric Analysis Centre (NHAC) at
+New Delhi. Considering the capability of cyclone
+warning and the facilities available there, NHAC at
+New Delhi has been designated as a Regional
+Specialised Meteorological Centre (RSMC) for TCs.
+It is one of six such centres in the world; the others
+being RSMC–Miami, RSMC–Honolulu (USA),
+RSMC–Tokyo (Japan), RSMC–St. Denis (La-reunion),
+and RSMC–Nadi (Fiji), recognised by WMO under
+a global system of cyclone warnings. WMO
+coordinates cyclone warning activities globally to
+standardise the system and to bring about
+improvements. As an international commitment
+through the WMO/ESCAP (Economic and Social
+Commission for Asia and Pacific) Panel on TCs, TC
+advisories are issued by RSMC, New Delhi, to
+ESCAP panel member countries during TCs in the
+Bay of Bengal and the Arabian Sea. The three–
+hourly advisory messages are issued eight times a
+day. The ESCAP Panel countries are Bangladesh,
+India, Maldives, Myanmar, Oman, Pakistan, Sri
+2.8.1.2 Doordarshan and All India Radio (AIR)
+stations at New Delhi are provided cyclone warning
+information by RSMC–New Delhi for inclusion in
+the national broadcast/telecast. Information on
+cyclone warnings is furnished on a real time basis
+to the Control Room in the MHA, Government of
+India and NDMA, besides other ministries and
+departments of the Government and to the cyclone-
+2.8.1.3 User specific warnings are issued to
+commercial shipping lines, the merchant navy,
+ports, Fisheries Departments and fishermen,
+government agencies, all transportation services
+(land, ocean and air), farmers, others specially
+registered with IMD, AIR, Doordharshan and other
+TV channels, print media and the general public.
+2.8.2 Existing Four-stage Warning System
+2.8.2.1 A four-stage cyclone warning system was
+introduced in IMD from the pre-monsoon season of
+1999, replacing the previous two-stage warning
+i) First, a special bulletin called Pre-Cyclone
+Watch is issued containing early potential
+indications about the development of a
+cyclonic disturbance in the NIO region, its
+possible development into a cyclone and
+adverse weather that specific areas of the
+coastal belt are likely to experience.
+Additional warnings in respect of fisheries
+and ports are issued to enable the respective
+authorities to take necessary precautionary
+ii) At the second stage, a Cyclone Alert
+message is issued 48 hours prior to the
+expected time of commencement of
+adverse weather over the specific coastal
+iii) A Cyclone Warning is issued 24 hours in
+advance of the cyclone’s landfall in order to
+cover the devastating impact of cyclones
+iv) Finally, a Post Landfall Outlook is issued
+12 hours before the landfall and continues
+till such time as cyclone force gusty winds
+are expected to prevail over the interior areas.
+2.8.3 Increased stages and Frequency of
+2.8.3.1 There is a need for increasing the frequency
+and lead-time of warnings covering the pre- and
+post-cyclone landfall phases. The targeted
+requirements for improvement of the system are
+Table 2.3 Targeted Requirements for Increasing Frequency of Warnings
+2.8.4 Generation of Customised Cyclone
+a) Participation of operational agencies
+(IMD, NCMRWF , Indian Air Force, Indian
+Coast Guard, Navy, CWC, Prasar
+Bharati), research scientists, the Central
+personnel in the preparation of sector-
+specific multi-lingual cyclone warning.
+a) Evolving appropriate institutional
+arrangements involving offices of IMD
+(State Meteorological Centres), SDMA,
+DM Commissioner, CWC and other line
+departments for sectoral customisation
+of cyclone impact in respect of
+protecting their infrastructure.
+b) Preparation of user friendly warnings
+in local language for facilitating
+2.9 Requirement of Additional Support
+2.9.1.1 The effort involves additional support
+infrastructure to be commissioned for implementing
+state-of-the-art cyclone EW and Lead Time Impact
+Assessment Systems as following:
+i) Adaptation of fail-proof data reception
+ii) Adaptation of high-end computing,
+visualisation and networking infrastructure
+2.9.2 Fail-Proof Data Communication
+Infrastructure for Exchange of Meteorological Data
+and Warnings (within Metrological services—
+2.9.2.1 The Global T elecommunication System
+(GTS) for transmission and reception of weather
+and climate data and forecast products between
+meteorological offices nationally and internationally
+consists of an integrated network of point-to-point
+circuits and multi-point circuits which interconnect
+meteorological telecommunication centres (MTCs).
+The circuits of the GTS are composed of a
+combination of terrestrial and satellite
+telecommunication links. MTCs are responsible for
+receiving data and relaying it selectively on GTS
+circuits. GTS is organised on a three-level basis,
+i) The Main Telecommunication Network (MTN).
+ii) The Regional Meteorological
+Telecommunication Networks (RMTNs).
+iii) The National Meteorological
+Telecommunication Networks (NMTNs).
+DRF—Disaster Response Force; CDT—Civil Defence Teams
+The regional telecommunication hubs (RTHs) on the
+MTN perform an interface function between RMTNs
+2.9.2.2 MTN is the core network of GTS. It links
+together three world meteorological centres and
+2.9.2.3 The first component of the Satellite
+Communication System is the Area Forecast System
+(AFS) which supports civil aviation and the second
+component is the GTS satellite data exchange
+system for the WMO Region II (Asia) data exchange.
+They jointly comprise the first component of the
+overall system. This component distributes grid
+products and generates observational and worded
+forecast messages. These products are received
+from other communication centres or are built at
+the gateway. They are distributed on multiple data
+streams of the International Satellite Communication
+System (ISCS). The data is transmitted using the
+X.25 protocol from the RTH/AFC to the
+communication service provider and up-linked via
+IMD will establish Satellite Communication Systems
+(SCS) on priority for meteorological data reception
+and delivery with redundant bandwidth at par with
+2.9.3 Adaptation of high-end Computing,
+2.9.3.1 High-end computing research applications
+harness the raw speed and data storage capacity
+of advanced computing platforms to science’s most
+data-intensive, complex, and challenging problems
+like Earth and Space Science; cyclone track and
+intensity prediction, and the impact of global
+2.9.3.2 Advances in the fields of Internet and
+mobile communication technology have proved to
+have significant impact on warning dissemination
+and information exchange in several countries. As
+regards warning generation and external liaison,
+India has to consciously shift from a predominantly
+science-centred approach to a more user-oriented
+and customised one to suit local needs of various
+sectors (infrastructure, socio-economic, natural
+2.9.3.3 Nurturing partnerships with the media and
+local DM (SDMAs/DDMAs) will become an integral
+part of this imminent change in our strategy and it
+would require seamless interface with NDMA. The
+planned high-end computing and networking
+Infrastructure with nodes in various coastal states/
+UTs will take care of this requirement.
+2.9.3.4 The Virtual Reality (VR) infrastructure
+generally consists of an extensive range of
+computers, projection systems and interaction
+devices. High-end VR systems can be set up by a
+personal computer cluster driven by Linux and a
+five-sided projection system. In the low-end
+domain, PCs and smaller UNIX workstations from
+several producers can be configured for use in
+combination with projection tables or simple
+monitors and stereo glasses. Special care is to be
+taken to ensure the software infrastructure to be
+platform independent, supporting all possible
+heterogeneity in terms of operating systems like
+IRIX, HP UX, Sun Solaris, Linux, Windows 2000/
+XP/Vista. By this strategy, a high scalability to follow
+the trend in the near future of even complex VR
+applications will become feasible on low-cost
+systems with standard PC components.
+2.9.3.5 Computing environments and toolkits that
+are critical for VR environment include architecture
+adaptive computing environment (aCe), Kernel
+lattice parallelism (KeLP), Parallel algorithms and
+software for irregular scientific applications,
+Advanced Computational Testing and Simulation
+(ACTS) toolkit, scalable visualization toolkits and
+tools to explore geometric complexity.
+High-end Computing (scalable 30-50 Teraflops peak
+performance), Storage (800 Terabytes) and
+Communication Network (Gigabit Ethernet)
+Infrastructure will be commissioned as a part of
+the National Cyclone Disaster Management Institute
+(NCDMI) with seamless connectivity with NDMA,
+SDMAs of coastal states/UTs and DDMAs of 84
+coastal districts vulnerable to cyclones. Such a
+facility will also support additional capacity
+enhancements (hazard, risk and vulnerability
+studies) planned for holistic cyclone risk
+management in states and districts.
+2.9.3.6 The planned high-end computing and
+networking infrastructure with nodes in various
+coastal states/UTs would take care of the seamless
+access of local scale spatial and non-spatial data
+sets for customisation and dissemination of various
+sector specific hazard maps over a fail safe
+communication backbone between NDMA and
+SDMAs/DDMAs. Establishment of the proposed
+national-level institutional communication framework
+under the National Disaster Communication
+Infrastructure (NDCI) and cyclone risk management
+capacities under NCDMI would enable addressing
+all the state-level issues related with cyclone risk
+mitigation in a holistic manner.
+2.9.4 Economic Database for Cost-Benefit
+2.9.4.1 The development of a database on the
+economic losses and costs associated with TC
+landfall would allow the losses and costs to be
+normalised for changes in population, wealth and
+inflation in the affected areas. To maximise the
+usefulness of the data for cost-benefit analysis, the
+data will include the expenses associated with TC
+warning and information services and mitigation
+An appropriate system will be established for
+quantifying and evaluating the returns on investments
+pertaining to mitigation projects on a regular basis
+by the central and coastal state governments/UTs.
+2.10.1 Role of Central Agencies
+i) Enhancement of observational network.
+ii) Real time data collection and transmission.
+iii) C yclone specific data processing and
+iv) Use of multiple models for track, intensity
+v) Objective assessment of striking potential
+based on decision support systems.
+vi) Multi-sectoral/multi-lingual warning
+customisation in a user-friendly mode for
+2.10.2 Role of State-Level Agencies
+i) Collection and archival of region specific
+ii) Development of customised spatial and non-
+spatial data sets at the smallest village and
+taluka level (involving Survey of India and
+iii) Devel opment of appropriate tools for local-
+scale impact assessment based on landfall
+and intensity forecasts obtained from central
+iv) Development of fully customised hazard
+maps in respect of various attributes (viz.
+houses, infrastructure, crops, power
+transmission/communication network,
+roads and bridges, etc.) for planning
+appropriate strategies by respective
+v) Generation of multi-sectoral customised
+warnings in the local languages for
+vi) Disaggregated demographic data for
+vulnerable sections (elderly, infants and
+1. Improvement of the existing meteorological
+observational and communication network
+with additional augmentation will be carried
+out on a priority basis. Augmentation and
+modernisation of rain gauge network tide
+gauges, etc. will also be carried out. State
+governments as well as some central
+government departments [Indian Air Force,
+Indian Navy, DoS, CWC, Indian Council of
+Agricultural Research (ICAR)] will give priority
+to the modernisation of meteorological
+networks in their domain. Historical cyclone
+track data with details like position, intensity,
+size, wind, pressure and temperature,
+radius of maximum wind and landfall
+parameters will be archived in digital form
+and data needs will be made available to
+users/institutions (refer sections 2.2.1, 2.2.9).
+[Action: MoES, MoWR, DoS, IAF ,
+Indian Navy, Coastal States/UTs]
+2. Operational service of at least two
+geostationary satellites over Indian seas at
+any given point of time will be ensured (with
+water vapour channel and vertical sounder
+capability as planned in INSAT 3D). High
+resolution spatial data sets of land-surface
+parameters will be generated on a weekly/
+satellites. Arrangements will be made for
+cooperation. All observations from various
+heterogeneous platforms (from land, ocean
+and space) will be collected from the original
+global data sources and transmitted to
+operational agencies for improved cyclone
+warning (refer sections 2.2.1.4 to 2.2.1.6).
+3. Arrangements for Special Observations
+from the Cyclone Core Environment
+i) MoES is made responsible for
+commissioning the APC facility for the
+country with the support activities
+ii) IAF to provide necessary command
+control, operations and maintenance
+support of APC facilities and IMD and
+other user agencies to lead the
+planning of flight schedules for probing
+the cyclone environment (refer sections
+4. Action will be taken by various nodal agencies
+to ensure timely collection and accessibility
+of data for its utilisation in cyclone early
+warning as per Table 2.4 overleaf.
+5. Comprehensive quality control and data
+assimilation of the combined data set will
+be carried out by identified agencies for
+generating most representative cyclone
+specific high resolution data sets for
+numerical weather prediction models.
+Research initiatives to improve the capability
+of forecasters in very short-range forecasting
+of land-falling TCs are very essential.
+Analysed cyclone specific data sets along
+with observational data will be made
+available to various agencies involved in
+operational/R&D efforts in cyclone EW,
+mitigation and risk management activities
+(refer sections 2.2.5.2, 2.2.7, 2.7.1).
+[Action: MoES/IMD with Academic
+6. Cyclone specific most representative initial
+through appropriate automated data
+processing and quality control algorithms
+and by development of improved high
+resolution meso-scale data assimilation
+systems involving 3D and 4D Variational
+Assimilation Techniques (refer sections
+[Action: MoES with research and
+7. Multi-model cyclone track, intensity and
+landfall prediction models (global, regional,
+atmospheric models) will be developed
+(refer sections 2.2.8, 2.2.10.3).
+8. Facility for building centralised cyclone
+impact assessment for quantification of
+likely impact based on state-of-the-art
+Cyclone EW by fully harnessing the benefits
+of IMD’s modernisation plan will be
+established. Storm surge and wind damage
+modelling efforts including inundation and
+impact over the land will be developed and
+incorporated in the operational system with
+priority (refer sections 2.4, 2.5, 2.7.6).
+[Action: MoEs, MoWR, State Remote
+Sensing Agency (SRSAs), DM Depts.]
+9. State-level technical capacities will be
+enhanced to develop local-scale cyclone
+impact assessment tools for hazard
+mapping of wind damage and storm surge
+inundation. Such a capability at the state
+level will help in appropriate development
+planning for cyclone risk mitigation and
+emergency response and preparedness
+planning. All coastal states and UTs will work
+with the appropriate central government
+ministries in collection, transmission and
+archiving of regional scale observations.
+States will also work with Survey of India
+(SoI) and DoS towards developing spatial
+and non-spatial data sets at the micro level
+in support of cyclone vulnerability mapping
+[Action: Survey of India, DoS, MoEs,
+10. Efforts by central and state government
+agencies for generating customised sector
+specific multi-lingual cyclone warning for
+facilitating community based emergency
+response will be institutionalised on priority
+[Action: SDMAs, NGOs, Civil Defence
+(Refer section: 2.2.5) [Action: IMD, INCOIS, ISRO, NRSA]
+Table 2.4 Nodal Agencies for Collection of Data related to Early Warning
+2.12 Implementation Strategy and Time-Frame
+2.12.1 Implementation Strategy
+Various ministries/departments and agencies at the national level and states/UTs will have the responsibility
+of implementing the guidelines in this chapter.
+2.12.2 Following is the time-frame for implementation of activities listed in this chapter:
+Time-frame for Different Activities
+11. Satellite Communication System (SCS) for
+meteorological data reception and delivery
+with redundant bandwidth at par with other
+global weather centres will be established
+on priority. All necessary data reception
+facilities, algorithm development, timely
+product generation, etc., in respect of each
+of the future satellites will be put in place in
+time with the satellite launch so that the
+respective products can become available
+for cyclone early warning purposes (refer
+3.1.1 An effective communication infrastructure
+is a pre-requisite for the proper functioning of
+cyclone warning and DM systems. The existing
+communication infrastructure backbone has been
+evolved over a period of time, using various
+communication technologies available from time
+to time. Several agencies play a vital role in
+providing the requisite inputs and information by
+using various communication networks.
+3.1.2 Different types of networks are being used
+for cyclone warning and DM work, such as the
+Department of Telecommunications (DoT) telecom
+network for voice/fax, cellular telephone network,
+Disaster Warning System (DWS) terminals, NIC
+infrastructure and services, Internet Data Centre,
+Internet web-based network, radio broadcasting
+transmitters of AIR, International Maritime Satellite
+(INMARSAT) terminals, HAM radios, VSAT
+networks, etc. Some of these systems are
+vulnerable to cyclonic weather. In this chapter, the
+communication systems used by different
+stakeholders in DM are broadly discussed and
+improvement in the system suggested after gap
+analysis of the existing systems.
+3.1.3 One of the critical short-term cyclone
+disaster mitigation measures is timely warning to
+the affected population and concerned officials
+connected with DM. The IMD issues user-specific
+warnings to various users like government agencies,
+ports, fishermen, merchant navy, media, farmers,
+general public, etc. Vari ous modes of
+communication like telephone, fax, telex, radio
+broadcast, telecast, print media, Internet, railways
+microwave network, etc. are used to communicate
+cyclone warnings to specific users as well as the
+general public. Cyclone Warning Dissemination
+Systems (CWDS) were introduced in India in the
+1980s, and it is a fail-safe and rapid communication
+system to issue cyclone warning directly to the
+concerned communities from the IMD source using
+the INSAT satellite transponder.
+3.1.4 The Ministry of Home Affairs (MHA) is the
+focal point at the national level and it coordinates
+appropriate dissemination of warnings received
+from IMD, CWC, etc. The district administration is
+the focal point for implementation of all
+governmental plans and activities. The actual day-
+to-day function of administering relief is the
+responsibility of the Collector/District Magistrate/
+Deputy Commissioner who exercises coordinating
+and supervising powers over all departments at
+the district level. Fail-safe communication
+infrastructure is essential to continue their functions
+3.1.5 Due to advancement in Information
+Technology (IT) in the form of the Internet, GIS,
+Remote Sensing, Satellite Communication, etc., it
+has become possible to plan and implement
+disaster reduction plans which, in turn, help to
+contain the damage on a long-term basis.
+3.1.6 The weather channel is one of the leading
+modes of dissemination of weather information.
+Weather warnings can be communicated through
+a variety of formats (text, graphics, voice) and
+disseminated via a wide range of media (press,
+radio, television, e-mail, cell phone, Internet, etc.).
+Media broadcasts from the weather office are a
+routine practice in advanced countries. However,
+an exclusive weather channel is not yet available in
+India. Radio broadcast of warning bulletins has
+proved to be one of the most effective and cheapest
+modes of cyclone warnings to communities the
+3.2.1 India Meteorological Department
+3.2.1.1 IMD is the nodal agency for providing
+cyclone warning services. IMD‘s INSAT satellite
+based CWDS is one of the fail-proof systems
+(satellite-based) currently in use in India to
+communicate cyclone warnings from IMD to
+communities and important officials in affected
+areas directly and quickly. The cyclone warnings
+are uplinked to the INSAT satellite in C-band. The
+satellite audio broadcasts in regional languages are
+continuously sent at fixed time intervals to the
+coastal CWDS receiving stations. These warnings
+are selective and received only by the likely affected
+receiving stations in S-band. IMD has installed
+specially designed receivers in the vulnerable coastal
+areas for direct transmission of warnings to officials
+3.2.2.1 Area Cyclone Warning Centres (ACWC) of
+IMD generate these special warning bulletins and
+transmit them every hour in the local languages.
+IMD has installed 252 such analog receivers in the
+field areas. The state-wise breakup of CWDS
+stations is given in Table 3.1
+3.2.2.2 IMD is planning to replace the existing 252
+analog CWDS by Digital CWDS (DCWDS) receivers
+and also to increase the number of DCWDS stations
+all along the east and west coasts of India. Besides
+this, 101 DCWDS stations are currently operational
+only along the coast of Andhra Pradesh, and one in
+Lakshadweep. Thus, the total number of CWDS
+and DCWD receivers currently in position is 353
+with uplink stations at RMC–Chennai and IMD’s
+Satellite Meteorological Division at New Delhi.
+3.2.2.3 There are inherent technological and
+qualitative advantages of DCWDS as compared to
+All analog CWDSs will be converted into DCWDSs
+and some will be located at knowledge centres/
+panchayat offices and community radio stations.
+The DCWDS network will be extended to adequately
+cover the cyclone prone coastal areas of the country.
+3.3 Initiatives at the National Level
+3.3.1 Ministry of Home Affairs (2003–05)
+3.3.1.1 In recent years, the focus of DM is
+increasingly moving towards more effective
+WARNING: COMMUNICATION AND DISSEMINATION
+Table 3.1 List of CWDS Stations installed in India
+utilisation of emerging technologies such as remote
+sensing, GIS and satellite communication, thus
+helping to prepare for and mitigate potential
+impacts. Under the existing framework in the
+country, the responsibility of undertaking rescue,
+relief and rehabilitation measures rests with the
+concerned state government. The central
+government provides financial and logistic support
+in the event of major disasters. A Crisis
+Management Committee (CMC) in the state, with
+senior representatives from government
+departments and central agencies located in the
+state, supervises DM actions and activities.
+3.3.1.2 The collaborative programme on Disaster
+Risk Management taken up with UNDP support
+covers 169 multi-hazard-prone districts which
+include some of the cyclone-prone districts (out of
+84) in the country and envisages assisting the states
+to draw up plans for district/block/village levels to
+build up effective resilience to disasters. Grass-root
+level participation in DM actions is also envisaged.
+3.3.1.3 A National Communication Plan has been
+drawn up to harness the modern system of
+communication for information flow, dissemination
+of warnings, etc. A web-based inventory of
+specialist resources (India Disaster Resource
+Network, IDRN) required for DM support has been
+3.3.2.1 Defence forces play a very important role
+during cyclone disasters. The Armed Forces are
+quickest to reach the affected areas for delivering
+timely action. Restoration of communication by
+them is very often a major contribution. The Air Force
+assists in search and rescue, evacuation and air-
+dropping of relief supplies. The Indian Navy and
+Coast Guard divers assist in rescue operations as
+3.3.3.1 In its basic form, an operation centre (OC)
+is functional with MHA. The communication network
+between the national and state Emergency
+Operation Centres (EOCs) and the site of the
+emergencies is currently based on the DoT network.
+This is the first casualty due to damage to
+communication towers and hence multi-mode
+communication systems are essential with enough
+redundancy for disaster time communication.
+POLNET is extensively used for DM requirements.
+For emergency communication, efforts are on with
+the Department of Space (ISRO) for making available
+alternate satellite communication units to connect
+state EOCs with mobile units which can be
+transported to the site of a disaster through
+SPACENET . Currently, about 35 SPACENET nodes
+are being made operational between NDMA/MHA
+with different state EOCs. The National Disaster
+Management Communication Group at NDMA is
+planning to set up satellite-based mobile voice/data/
+video communication between national EOC, state
+3.4.1 The terminal-end equipment and
+communication back-up equipment support is a
+bare minimum. The communication connectivity is
+purely Public Switched Telephone Network (PSTN)/
+Public Switched Data Network (PSDN) dependent.
+The OC at MHA would require due upgradation.
+For effective DM, both for routine activities and also
+during disasters, there is an urgent need to create
+a fully automated and state-of-the-art OC at NDMA
+and MHA with all terminal-end facilities and
+communication connectivity in various modes (voice,
+data and video) to respective SDMAs and SEOCs,
+DDMAs and DEOCs, with the disaster sites. When
+NDRF arrives at the site, it helps to enhance last
+3.4.2 State/District Level Emergency
+3.4.2.1 The primary function of a state EOC is to
+implement various DM activities under the
+supervision of the Secretary/DM Commissioner. At
+the district level, the Collector/District Magistrate/
+Deputy Commissioner is responsible for
+implementing all governmental DM plans and
+activities. Till the time the DEOCs become fully
+functional, the existing district control rooms will
+serve as nodal facilities for directing operations in
+3.4.3 VSAT Network of the National
+3.4.3.1 The mode of NICNET communication is
+leased lines, VSATs, RF and ISDN/PSDN dial-up
+lines. The service provided over the network is
+primarily data. Voice and video is also provided in
+a limited scale. Video conferencing facilities are
+available in more than 450 locations.
+3.4.3.2 NICNET has been offering network services
+over Ku-Band VSATs Single Channel Per Carrier
+(SCPC) - Demand Assigned Multiple Access
+(DAMA) and Frequency Time Division Multiple
+Access (FTDMA) - satellite broadband Digital Video
+Broadcasts (DVB), Wireless Metropolitan Area
+Networks (MANs) and Local Area Networks (LANs)
+with NICNET gateway for Internet resources. A high-
+speed NICNET national info-highway, an incremental
+overlay over the existing network has been set up
+with SCPC, FTDMA, TDMA VSATs, DVB Broadband
+VSAT technology and wireless Metropolitan Area
+Network (MAN) to take advantage of the Internet
+technology in India. Various satellite networks in use
+by NICNET and their corresponding network
+technologies are shown in Table 3.2.
+3.4.4 Satellite-based real time voice data
+messaging for Cyclone Warning System
+Emergency managers need to send timely and
+appropriate alerts to everyone who needs them.
+Authoritative alert messages will be transmitted
+through all available communication media as
+appropriate, whether land-based, space-based or
+wireless, including individual targeting. Alerts can
+be converted automatically and securely from a
+standard format into forms suitable for each
+technology: the Internet, news media, television,
+radio, wired telephones, mobile phones, etc.
+3.4.5 Satellite-based multi-lingual disaster
+3.4.5.1 Network Management Software (NMS) for
+Digital Cyclone Warning Dissemination Systems
+(DCWDS) is responsible for creation, transmission
+and monitoring of cyclone warning messages to
+unmanned satellite receivers installed all along the
+Indian coastal line. Audio messages, captured by
+a microphone, are digitised using MPEG-II format
+to create message packets in a customised
+protocol, with unique headers for selected stations.
+Header and message packets jointly form a data
+packet so that the required receivers are only
+energised by the transmission while others are not
+energised. Acknowledgement messages sent by
+the remote station’s receivers are captured, analysed
+and checked periodically. All the transmitted
+messages and acknowledgement messages are
+logged systematically. IMD and concerned state
+governments are the users of this system.
+Table 3.2 VSAT services by NICNET
+3.4.6 Digital Video Broadcast with Return
+Carrier through satellite (DVB-RC)
+3.4.6.1 The DVB-RCS system supports
+communication in the channel in two directions:
+• Forward channel from the hub-station to
+• Return channel from the terminals to the hub-
+3.4.6.2 The forward channel provides ‘point to
+multipoint’ service because it is sent by a station at
+a single point to stations at many different points.
+The terminals share the return channel capacity of
+one or more satellite transponders by transmitting
+in burst, using multi-frequency-Time Division
+Multiple Access. This is a two-way communication
+3.4.7.1 EDUSAT is the first Indian satellite designed
+and developed exclusively for serving the
+educational sector. It is mainly intended to meet
+the demand for an interactive satellite-based
+distance education system for the country. It strongly
+reflects India’s commitment to the use of space
+technology for national development, especially in
+remote and rural locations. It is a collaborative
+project of the Ministry of Human Resource
+Development (MHRD), DoS and ISRO.
+3.4.7.2 EDUSAT is being implemented through the
+i) Indira Gandhi National Open University
+ii) National Council of Educational Research
+iii) U niversity Grants Commission (UGC).
+iv) Indian Council of Agricultural Research (ICAR).
+v) All India Council for Technical Education (AICTE).
+3.4.7.3 MHRD has been actively promoting the
+open and distance learning systems in the country.
+The launch of the Gyan Darshan bouquet of satellite-
+based TV channels and Gyan Vani FM Radio
+Network are recent examples. MHRD has also
+proposed the use of Information and
+Communication Technology (ICT) capabilities of the
+EDUSAT satellite for Elementary Education, Literacy,
+Vocational Training and Teachers’ Training. At a later
+phase, it will expand to include Agriculture, Health
+and Community Development Programmes, etc.
+The EDUSAT network offers various application
+capabilities like virtual classroom, video-on-
+demand, database access, data transfer, online
+education and radio networking.
+DM programmes will be developed and telecast
+3.5.1 Feasibility surveys are being carried out in
+all states of India to establish a VSAT network linking
+the state headquarters with divisional and district
+headquarters, and a VHF radio network linking the
+district headquarters with sub-divisional and taluka
+headquarters which will have control at the national
+3.5.2 Various technology options are available to
+provide communication among EOCs at the
+national and state capitals, district headquarters
+control rooms, sub-divisional/taluka level set-up
+and, finally, mobile, temporary VSAT set-ups at the
+disaster sites. A block diagram of the proposed
+communication hub network and technology options
+for communication and connectivity are given in
+Figure 2. In the rare event of a failure of the civil
+communication network, it will be connected with
+headquarters and operations room of the Defence
+Services command/area/sub-area and local level
+to augment the communications further as per the
+3.6 Communication Support for DM
+3.6.1 For efficient management of disasters, an
+effective communication system is one of the key
+factors. DM involves organizations and departments,
+both governmental and non-government, including
+3.6.2 The basic communication and IT support
+for DM is therefore required for the following:
+i ) Monitoring and forecasting agencies like
+IMD, CWC, NRSA and DoS and so on.
+ii) G overnmental machinery for giving out early
+warning of impending disasters/disaster-
+iii) NDMA/OC will link with all stakeholders in
+a bilateral mode at the national, states/UTs
+and district levels, both for routine
+functioning as well as management of EOCs
+iv) Communication and IT support is also
+required for various other ministries,
+departments and organizations involved in
+DM along with NDMA. This is mainly for
+coordination and execution. ICT linkages
+would be required for all such users.
+v) Response forces such as NDRF , SDRF , Para
+Military Force (PMF), Police, Defence forces,
+Corporate, NGOs and any other organization,
+3.7 Existing Backbone Communication
+3.7.1 As already stated, the communication
+infrastructure is a pre-requisite for proper functioning
+of the cyclone warning and DM system. The
+existing communication infrastructure has evolved
+over a period of time using various communication
+technologies available from time to time.
+3.7.2.1 DTH service provides different language
+channels in every nook and corner of the country.
+The most significant aspect of DTH broadcast is
+its digital quality, fail-proof communication. Apart
+from the DTH service of Prasar Bharati (PB), private
+broadcasters like Dish TV and Tata Sky also provide
+services on different television channels all over the
+Since the DTH services of PB, Dish TV and Tata Sky
+are providing reception in remote and rural areas,
+the services of DTH, Dish TV and Tata Sky will be
+utilised for dissemination of cyclone warnings and
+for weather information on radio/TV channels to the
+places not covered by terrestrial and cable operators.
+Figure 2 Block Diagram of Proposed Communication Hub
+3.7.3 World Space Satellite based Digital
+3.7.3.1 IMD has started a new meteorological data
+and processed products broadcasting service from
+1 July 2003 using the World Space ‘ Asia Star’
+satellite. This is a replacement of the HF broadcast
+system which has become outdated.
+3.7.3.2 The receiving system consists of a satellite
+receiver and a Digital Data Adaptor (DDA) designed
+exclusively to work with the World Space Satellite
+System and can be used to visualise data, satellite
+images, weather charts, automatic plotting of data,
+analysis and manipulation of data for the benefit of
+weather forecasters and other users. This could be
+considered as an alternative option. From such
+warning broadcasts, besides others, the fishermen
+out at sea will be benefited the most.
+3.7.4.1 Community radio is defined as radio that
+is owned by the community and airs programmes
+designed and produced by it specifically for its own
+developmental needs. The communities that
+produce these radio programmes cablecast,
+narrowcast or buy time from the AIR local radio
+stations. In order to give wide publicity of natural
+disasters among the communities, community
+radio will be established in cyclone-prone areas with
+the help of IGNOU and other open universities,
+NGOs and Community Based Organisations
+(CBOs); the cost if any, will also be met by them. If
+a DCWDS receiver can be co-located with the
+community radio, it will add value and considerably
+increase the outreach of warnings.
+3.7.5.1 It has been reported that corrosion of
+batteries in transistors carried by some fishermen
+out at sea is one of the major reasons for the non-
+receipt of warning broadcasts by AIR, besides
+attenuation of signals in adverse weather. Some
+battery-less, low-cost hand radios are now available
+in the market which will be useful for receiving
+warnings by fishermen at sea where battery
+operated radios generally do not work.
+Battery-less hand radio sets will be provided to
+3.7.6 Satellite Phone Services
+3.7.6.1 At the time of emerge ncies, a
+communication system with clear voice and data
+communication facility having mobility and reliability,
+are important factors. Satellite phone services
+provide these assurances almost anywhere in the
+world, even in areas of total devastation and in areas
+where even electricity is not available. Satellite
+portable phones work like cellular phones where
+cellular coverage is available, and as satellite phones
+where it is absent. The communications are
+completely independent of any local telephony
+infrastructure. One need not worry about service
+disruptions because of power failures or other
+events common in disaster areas. Therefore, satellite
+phone services can be extremely useful in saving
+lives and coordinating efforts during rescue
+operations, such as the setting up of telemedicine
+links up to the taluka/mandal level. These phone
+services can be used by the Red Cross, doctors,
+police, fire departments, ambulance services,
+search and rescue, NDRF , district collectors and
+other government emergency response
+3.7.7.1 Currently, there are two types of mobile
+phone technologies available in India. These are
+broadly known as Global System for Mobile
+communications (GSM) and Code Division Multiple
+Access (CDMA). BSNL and MTNL and some private
+telecom companies like Bharti, Reliance, Tata, Idea,
+Vodafone offer both GSM and CDMA mobile phone
+services in India. Some GSM operators offer GPRS
+services also, where a download speed of up to 30
+kbps is available. The battery- based mobile base
+stations can be quite helpful during natural disasters
+when electricity supply links become inoperative.
+Besides voice communications, nowadays mobile
+phones also provide pay services like Short Message
+Service (SMS), news updates, railway and airline
+information, etc., that can be used by subscribers.
+BSNL/MTNL and all private telecom companies will
+provide capability to access the designated four-
+digit toll free number for information related to
+cyclone alerts and warnings from landlines and
+3.7.8.1 A GSM mobile network can provide the
+facility to broadcast short messages to mobile
+phone users within the network of an operator on a
+real time basis (in seconds). This is the cell
+3.7.8.2 Radio and TV stations can have access to
+the cell broadcast facility via an entry provided by
+the GSM mobile network operator. Various areas
+can be identified using GIS. For every area, an
+emergency message can be specified such as for
+cyclone alert, cyclone warning, etc. This message
+can be broadcast on a regular basis (for example,
+every 5 minutes). As time passes, the broadcast
+message can be updated, or removed if necessary.
+It is also possible to specify messages in various
+languages so that end-users can receive
+emergency notifications in their native
+language. Geneva Technologies of Bangalore has
+developed an automated multi-lingual SMS
+generation software in 14 regional languages
+through a joint effort with the Department of Science
+i ) Real time emergency notification via GSM
+ii) Location specific information repeated
+frequently and updated if required.
+iii) Areas can be identified with powerful GIS.
+iv) Communities can be informed in
+v) Cost-effective solutions for mass
+communication by making use of existing
+i) Cell broadcast entry at emergency
+organisations to specify messages per area.
+ii) Standardised emergency channels provided
+by mobile network operator(s).
+iii) Create user awareness to activate
+appropriate cell broadcast channels on
+mobile phones (optionally, this can be done
+3.7.8.3 Ce ll broadcast is a non-intrusive push
+technology as mobile users are able to activate or
+de-activate a certain cell broadcast channel (similar
+to adjusting a radio or television to a certain
+3.7.9.1 In the present era of electronic
+communication, the Internet provides a useful
+platform for DM communications. Launching of a
+well-defined web site is a very cost-effective means
+of making an intra-national and international impact.
+It provides a new and potentially revolutionary option
+for the rapid, automatic and global dissemination
+of disaster information. A number of individuals,
+organisations and groups, including IMD, are using
+the Internet for real time dissemination of weather
+observations, forecasts, satellite and other data. In
+the most critical phase of natural disasters,
+electronic communication has provided the most
+effective, and in some instances perhaps the only
+means of communication with the outside world.
+3.7.10.1 AIR has started an interactive broadcasting
+service ‘AIR News-on-Phone’. AIR listeners now do
+not have to wait for the broadcast time to listen to
+the news. AIR news highlights can now be
+accessed on any type of telephone, at any time
+and from anywhere in the world. For this purpose,
+AIR news headlines are directly recorded and stored
+in a dedicated computer system connected with a
+telephone interface for subsequent retrieval on
+telephone lines. The recording as well as playback
+of the news is achieved in real time. Through this
+service, listeners can access a capsule of the latest
+news highlights in Hindi and English, on telephone.
+Such a system can be put into operation at the
+time of emergencies like natural disasters.
+3.7.11 Emergency Warning System for
+3.7.11.1 This system uses relatively simple
+equipment and ensures stable operations. In an
+emergency, the emergency warning system control
+signal replaces the radio and TV programme
+signals and automatically activates the emergency
+warning system ready receivers even when they
+3.7.11.2 In digital broadcasting, the emergency
+warning system control signal is transmitted by
+multiplexing with the broadcast wave to
+automatically activate the receivers even when these
+are in sleep mode. The emergency warning system
+signal will be robust to prevent its misuse.
+It is anticipated that in future the digital emergency
+warning system function will most likely be
+incorporated in mobile hand-held devices. Sending
+emergency information to these terminals will be
+highly effective as these will be carried by the general
+public when the mobile TV becomes popular.
+3.7.12 Radio Receivers for Emergency
+3.7.12.1 AIR has a large network of AM/FM
+transmitters which can be effectively used to
+convey emergency messages to the public on
+natural disasters. Since all these transmitters are
+of analog type, it will be advisable to go in for the
+3.7.12.2 A transmission format which has fixed
+code will be more suitable for India as it does not
+contain the area code. The CD containing EWS
+control signals can be played back on AM/FM
+transmitters located in the region affected by natural
+disasters as an alarm for users of analog radio
+receivers even in sleep mode. A simple algorithm
+that runs on a tiny microprocessor needs to be
+installed in the receiving device. The device can be
+pre-installed in radio sets by electronics
+manufacturers. This can also be considered as an
+3.7.13 Digital Radio Mondiale (DRM)
+3.7.13.1 This technology developed by a
+consortium of broadcasters and equipment
+manufactures, uses the broadcast band below 30
+MHz. It gives near FM quality with the existing
+bandwidth available in MW/SW band. This system
+also has the option of data broadcasting and added
+features like programme associated data (PAD) or
+additional speech channel. This system uses the
+existing band of frequency allocated for MW and
+SW broadcast. Due to its long-range coverage in
+the SW band, the broadcaster can reach across
+the continent carrying digital programmes without
+any fading. The technology is fully developed and
+more than 60 broadcasters all over the world are
+3.7.13.2 The following are the advantages of this
+i) A large area can be covered from own home
+territory by using a single-station infrastructure.
+ii) Common disadvantages like night-time
+shrinkage, interference due to manmade
+noise of the AM bands will disappear.
+iii) It is capable of supporting additional
+channels for associated data and
+iv) It is possible to have an additional speech
+quality and data channel within the available
+v) It has a cost-effective receiver system which
+is compatible with all modes of radio
+transmission (analog as well as digital).
+3.7.13.3 A proposal for replacement of the existing
+50 kw SW transmitters at Port Blair, Hyderabad,
+Thiruvananthapuram, Mumbai and Chennai by DRM
+DRM Transmitters will be installed to cover all
+3.7.14 Common Services Centre Scheme
+3.7.14.1 The Government of India has formulated
+the National e-Governance Plan (NeGP) with the
+vision of providing all government services in an
+integrated manner at the doorstep of the citizen, at
+an affordable cost. NeGP initiatives consist of 26
+central, state and integrated Mission Mode Projects
+(MMPs) along with eight other support components
+for rapid introduction of e-governance in the country.
+NeGP envisions a three-pillar model for delivery of
+‘Web-enabled Anytime, Anywhere, Anyhow access’
+to information and services in rural India.
+i) Connectivity: State Wide Area Networks
+ii) Nati onal Data Bank/State Data Centres
+iii) Common Services Centres (CSCs).
+3.7.14.2 The CSC scheme has a 3-tier
+i) At the first (CSC) level, it would be the local
+village-level entrepreneur (VL-loosely
+analogous to a franchisee) to service the
+rural consumer in a cluster of 5–6 villages.
+ii) At the second/middle level, it would be an
+entity termed the Service Centre Agency
+(SCA—loosely analogous to a franchiser) to
+operate, manage and build the VLE network
+and business. An SCA would be identified
+for one or more districts (one district would
+iii) At t he third level, it would be the agency
+designated by the state—the State
+Designated Agency (SDA), to facilitate
+implementation of the development scheme
+within the state and to provide the requisite
+policy, content and other support to SCAs.
+3.7.14.3 Determining the CSC location
+i) The aim of the CSC scheme is to establish
+100,000 rural kiosks across the country with
+an equitable spread at the rate of one CSC
+for every six census villages. The state
+government will have to work out the number
+of CSCs that will be established in each
+block across the state, based on the above
+ii) The SCA may be given the discretion to
+locate CSCs anywhere within a block within
+the overall ceiling arrived at, based on the
+criterion mentioned above. The SCA,
+however, would need to ensure that not more
+than one CSC is established in one gram
+panchayat, unless the number of gram
+panchayats in a block is less than the
+number worked out, based on the criteria
+DIT/states/UTs will set up one CSC for every
+census village in cyclone vulnerable coastal
+iii) W herever the state government proposes
+to set up a larger number of CSCs than those
+prescribed as per the criteria mentioned
+above for certain specific reasons, prior
+approval of the Department of Information
+T echnology (DIT), Government of India, would
+need to be taken by the concerned state
+3.7.15 State Wide Area Networks (SWAN)
+3.7.15.1 In the states, SWAN is the approved
+scheme of GoI for interconnecting state
+headquarters with District headquarters and District
+headquarters with Block headquarters with
+minimum 2 mbps leased lines, in order to create a
+secure government network for the purpose of
+delivering Government-to-Government (G2G) and
+G2C services. The scheme is approved for 29 states
+and six UTs at an estimated outlay of Rs 3,334 crore,
+with Rs 2,005 crore as grant-in-aid from DIT . The
+balance fund would be supported by the state plan.
+The pre-project implementation period is 18 months
+with a five-year operational period. This scheme is
+presently at various stages of implementation
+across the country. The National Informatics Centre
+(NIC) currently operates a Ku-Band VSAT network
+connecting all districts (barring a few newly created
+ones) with 64 kbps satellite link. Some districts in
+the country are also connected to the video-
+conferencing facility on NICNET through 2 mbps
+DAMA VSATs. Orissa is implementing a VSAT
+network up to the block level through NIC. NIC is
+currently planning restructuring and augmentation
+of the existing NICNET as a viable G2G network in
+order to position it as the core infrastructure for G2G
+3.7.15.2 Implementation options for the states
+i) Using NIC to establish SWAN by suitably
+extending the existing NICNET up to the
+ii) To engage a competent private/public sector
+agency through an appropriate competitive
+bid process and under a suitable service
+level agreement [Build Operate Own (BOO)/
+Build Operate Own Transfer (BOOT etc.)],
+to establish and run the SWAN.
+iii) To estab lish and own the SWAN
+infrastructure directly by the state and use
+a private service provider for operations and
+iv) Any other Public Private Partnership (PPP)
+model considered appropriate by the state.
+3.7.15.3 State/UT governments are presently
+adopting one of the two options approved in the
+Scheme: Option-I is Public Private Partnership (PPP)
+and the other is the NIC option. In the PPP option,
+the state/UT government would be implementing
+the SWAN project by selecting the network operator
+at the state/UT level by following a competitive bid
+process. In Option-II, NIC will be the implementing
+agency and NIC would be operating the SWAN on
+behalf of the state/UT concerned for the next five
+3.7.15.4 All these SWANs would be connected
+through NICNET for all central applications, for which
+suitable guidelines for standardization,
+interoperability and interconnect requirements
+between NICNET and the SWANs and also
+between different SWANs have been worked out.
+The network architecture for such SWANs has been
+specified. SWANs set up under Option-II would
+necessarily have the required interconnectivity with
+NICNET. Irrespective of the implementation option
+adopted, existing NICNET infrastructure would be
+used as a back-up for emergencies and disasters.
