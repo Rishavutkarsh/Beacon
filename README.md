@@ -1,6 +1,28 @@
-# Sankat Saathi Dataset Pipeline
+# Sankat Saathi / Beacon Dataset And Training Pipeline
 
-Offline crisis-companion dataset factory for the Kaggle Gemma 4 Good Hackathon.
+Offline crisis-companion dataset, CPT, SFT, and evaluation workspace for the
+Kaggle Gemma 4 Good Hackathon.
+
+## Current Beacon Status
+
+Beacon now has a train-ready crisis CPT package, Kaggle T4 training/eval
+kernels, a first CPT adapter evaluation, and the start of a separate assistant
+SFT data track.
+
+- CPT corpus package: `data/dapt_corpus/beacon_crisis_v1_cpt_kaggle/`
+- CPT config used for the first run: `lr=1e-5`, `2 epochs`, `max_seq_length=1024`,
+  packed raw-text CPT, QLoRA attention+MLP, `r=16`, `alpha=32`.
+- CPT eval result: CPT improved source-QA knowledge over base, especially on
+  electrical/flood, some CO, water-disinfection, and shelter-hygiene questions.
+  It also produced more unsupported source-adjacent extras, so it is useful as
+  an SFT initialization candidate, not a deployable assistant by itself.
+- Source-QA comparison summary:
+  `analysis/beacon_source_qa_eval_v1/source_qa_base_vs_cpt_comparison.json`
+- Assistant SFT draft bundle:
+  `data/assistant_sft/beacon_assistant_sft_v1_draft/`
+
+Do not treat CPT as final behavior training. CPT is for domain adaptation;
+assistant behavior should come from reviewed SFT/DPO/GRPO-style data later.
 
 ## Padhai Lens Track
 
@@ -26,9 +48,72 @@ python scripts/padhai_validate_dataset.py padhai_lens/data/processed/full --stri
 
 See `padhai_lens/README.md` for the review/export/SFT/DPO gates.
 
-This repo currently focuses on dataset creation and training readiness, not model
-training. It generates reviewable text and image+text examples grounded in
-official disaster, WASH, food-safety, and risk-communication guidance.
+This repo currently focuses on dataset creation, training readiness, Kaggle
+execution scripts, and offline evaluation. It generates reviewable text and
+image+text examples grounded in official disaster, WASH, food-safety, and
+risk-communication guidance.
+
+## Beacon CPT Workflow
+
+Build and validate the CPT package:
+
+```powershell
+python scripts/prepare_beacon_cpt_package.py build
+python scripts/prepare_beacon_cpt_package.py validate
+```
+
+Kaggle kernels used for CPT:
+
+```powershell
+kaggle kernels push -p kaggle\beacon_dapt_cpt_smoke --accelerator NvidiaTeslaT4
+kaggle kernels push -p kaggle\beacon_dapt_cpt_train --accelerator NvidiaTeslaT4
+kaggle kernels push -p kaggle\beacon_dapt_cpt_eval --accelerator NvidiaTeslaT4
+```
+
+Important: always use the explicit `NvidiaTeslaT4` accelerator override. The
+scripts also check for a single visible T4, pinned Unsloth dependencies, dataset
+hashes, QLoRA target scope, finite losses, and adapter save/load artifacts.
+
+## Beacon Behavioral And Source-QA Eval
+
+Two eval tracks are currently separated:
+
+- Real-problem assistant behavior eval: realistic crisis user situations. This
+  is a safety/usefulness side report for behavior, not the main CPT metric.
+- Source-QA knowledge eval: closed-book factual questions grounded in the crisis
+  corpus. This is the main CPT domain-knowledge check.
+
+Source-QA artifacts are produced by:
+
+```powershell
+python scripts/build_beacon_source_qa_eval.py build
+python scripts/build_beacon_source_qa_eval.py validate
+```
+
+Kaggle kernels for source-QA generation and judging:
+
+```powershell
+kaggle kernels push -p kaggle\beacon_source_qa_base_generation --accelerator NvidiaTeslaT4
+kaggle kernels push -p kaggle\beacon_source_qa_cpt_generation --accelerator NvidiaTeslaT4
+kaggle kernels push -p kaggle\beacon_source_qa_qwen_judge --accelerator NvidiaTeslaT4
+```
+
+Lesson learned: prefer separate judge runs per candidate, then aggregate locally.
+The paired judge works, but it rejudges base unnecessarily.
+
+## Beacon Assistant SFT Draft
+
+The SFT track is intentionally separate from CPT. A small reviewed-draft scaffold
+exists at:
+
+```powershell
+python scripts/build_beacon_assistant_sft.py
+python scripts/validate_beacon_assistant_sft.py data/assistant_sft/beacon_assistant_sft_v1_draft
+```
+
+The current assistant SFT draft is not approved for training. Its manifest has
+`training_export_allowed=false`; review, expansion, and safety/source checks are
+required before any SFT launch.
 
 ## What It Builds
 

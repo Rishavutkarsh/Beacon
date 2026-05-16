@@ -40,6 +40,7 @@ data/source_corpus/raw/ndma_dos_donts.html
 data/dapt_corpus/beacon_crisis_v1/
 data/dapt_corpus/beacon_crisis_v1_download/raw/
 data/dapt_corpus/beacon_crisis_v1_download/extracted/
+data/dapt_corpus/beacon_cpt_v1_adapter_best_dev_kaggle/
 *.safetensors
 *.bin
 *.pt

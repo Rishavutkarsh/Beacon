@@ -26,6 +26,12 @@ MODEL_PATH_CANDIDATES = [
     Path("/kaggle/input/models/google/gemma-4/Transformers/gemma-4-e2b-it/1"),
 ]
 ADAPTER_PATH = os.environ.get("BEACON_CPT_ADAPTER_PATH", "")
+ADAPTER_PATH_CANDIDATES = [
+    Path(ADAPTER_PATH) if ADAPTER_PATH else None,
+    Path("/kaggle/input/beacon-dapt-cpt-train-v1/beacon_dapt_cpt_v1/adapter_best_dev"),
+    Path("/kaggle/input/beacon-cpt-v1-adapter-best-dev/adapter_best_dev"),
+    Path("/kaggle/input/datasets/rishavutkarsh/beacon-cpt-v1-adapter-best-dev/adapter_best_dev"),
+]
 PINNED = [
     "unsloth==2026.5.2",
     "unsloth_zoo==2026.5.1",
@@ -69,6 +75,20 @@ def resolve(candidates: list[Path], child: str, label: str) -> Path:
     raise RuntimeError(f"Could not resolve {label}")
 
 
+def resolve_optional(candidates: list[Path | None], child: str, label: str) -> Path | None:
+    for candidate in candidates:
+        if candidate is not None and (candidate / child).exists():
+            return candidate
+    input_root = Path("/kaggle/input")
+    if input_root.exists():
+        for config_path in sorted(input_root.rglob(child)):
+            parent = config_path.parent
+            path_text = str(parent).lower()
+            if "adapter_best_dev" in path_text or "beacon" in path_text:
+                return parent
+    return None
+
+
 def install_dependencies() -> None:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-cache-dir", *PINNED])
 
@@ -107,10 +127,11 @@ def eval_split(SFTConfig, SFTTrainer, model, tokenizer, rows: list[dict[str, Any
     args = SFTConfig(
         output_dir=str(OUT_DIR / f"eval_{split}"),
         dataset_text_field="text",
-        max_length=2048,
+        max_length=1024,
         per_device_eval_batch_size=1,
         dataset_num_proc=1,
         packing=False,
+        prediction_loss_only=True,
         report_to=[],
         remove_unused_columns=False,
     )
@@ -132,8 +153,8 @@ def main() -> None:
         write_json(RESULT_PATH, result)
 
         result["stage"] = "imports"
-        import torch
         from unsloth import FastLanguageModel
+        import torch
         from peft import PeftModel
         from trl import SFTConfig, SFTTrainer
 
@@ -143,16 +164,19 @@ def main() -> None:
         result["data_hashes"] = validate_hashes(data_dir)
         result["data_dir"] = str(data_dir)
         result["model_path"] = str(model_path)
-        result["adapter_path"] = ADAPTER_PATH
+        adapter_path = resolve_optional(ADAPTER_PATH_CANDIDATES, "adapter_config.json", "CPT adapter")
+        if adapter_path is None:
+            visible_inputs = []
+            input_root = Path("/kaggle/input")
+            if input_root.exists():
+                visible_inputs = [str(path) for path in sorted(input_root.iterdir())[:100]]
+            raise RuntimeError(f"Could not resolve selected CPT adapter; visible_inputs={visible_inputs}")
+        result["adapter_path"] = str(adapter_path) if adapter_path else ""
         write_json(RESULT_PATH, result)
 
         result["stage"] = "load_model"
-        model, tokenizer = FastLanguageModel.from_pretrained(str(model_path), max_seq_length=2048, dtype=None, load_in_4bit=True)
-        if ADAPTER_PATH:
-            adapter = Path(ADAPTER_PATH)
-            if not (adapter / "adapter_config.json").exists():
-                raise RuntimeError(f"Missing adapter_config.json at {adapter}")
-            model = PeftModel.from_pretrained(model, str(adapter))
+        model, tokenizer = FastLanguageModel.from_pretrained(str(model_path), max_seq_length=1024, dtype=None, load_in_4bit=True)
+        model = PeftModel.from_pretrained(model, str(adapter_path))
         FastLanguageModel.for_inference(model)
         dev_rows = read_jsonl(data_dir / "cpt_dev.jsonl")
         test_rows = read_jsonl(data_dir / "cpt_test.jsonl")

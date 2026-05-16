@@ -1,7 +1,7 @@
 {
-  "id": "rishavutkarsh/beacon-dapt-cpt-eval-v1",
-  "title": "Beacon DAPT CPT Eval V1",
-  "code_file": "beacon_cpt_eval.py",
+  "id": "rishavutkarsh/beacon-dapt-cpt-smoke-v1",
+  "title": "Beacon DAPT CPT Smoke V1",
+  "code_file": "beacon_cpt_smoke.py",
   "language": "python",
   "kernel_type": "script",
   "is_private": true,
@@ -15,7 +15,5 @@
     "google/gemma-4/Transformers/gemma-4-e2b-it/1"
   ],
   "competition_sources": [],
-  "kernel_sources": [
-    "rishavutkarsh/beacon-dapt-cpt-train-v1"
-  ]
+  "kernel_sources": []
 }

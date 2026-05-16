@@ -1,0 +1,21 @@
+{
+  "id": "rishavutkarsh/beacon-real-problem-qwen-judge-v1",
+  "title": "Beacon Real Problem Qwen Judge V1",
+  "code_file": "beacon_real_problem_qwen_judge.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": true,
+  "dataset_sources": [
+    "rishavutkarsh/beacon-real-problem-eval-v1"
+  ],
+  "model_sources": [
+    "qwen-lm/qwen2.5/Transformers/7b-instruct/1"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [
+    "rishavutkarsh/beacon-real-problem-base-generation-v1"
+  ]
+}

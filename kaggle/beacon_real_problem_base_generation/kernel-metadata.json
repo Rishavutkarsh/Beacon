@@ -1,7 +1,7 @@
 {
-  "id": "rishavutkarsh/beacon-dapt-cpt-eval-v1",
-  "title": "Beacon DAPT CPT Eval V1",
-  "code_file": "beacon_cpt_eval.py",
+  "id": "rishavutkarsh/beacon-real-problem-base-generation-v1",
+  "title": "Beacon Real Problem Base Generation V1",
+  "code_file": "beacon_real_problem_base_generation.py",
   "language": "python",
   "kernel_type": "script",
   "is_private": true,
@@ -9,13 +9,11 @@
   "machine_shape": "NvidiaTeslaT4",
   "enable_internet": true,
   "dataset_sources": [
-    "rishavutkarsh/beacon-crisis-v1-cpt"
+    "rishavutkarsh/beacon-real-problem-eval-v1"
   ],
   "model_sources": [
     "google/gemma-4/Transformers/gemma-4-e2b-it/1"
   ],
   "competition_sources": [],
-  "kernel_sources": [
-    "rishavutkarsh/beacon-dapt-cpt-train-v1"
-  ]
+  "kernel_sources": []
 }

@@ -1,7 +1,7 @@
 {
-  "id": "rishavutkarsh/beacon-dapt-cpt-eval-v1",
-  "title": "Beacon DAPT CPT Eval V1",
-  "code_file": "beacon_cpt_eval.py",
+  "id": "rishavutkarsh/beacon-source-qa-cpt-generation-v1",
+  "title": "Beacon Source QA CPT Generation V1",
+  "code_file": "beacon_source_qa_cpt_generation.py",
   "language": "python",
   "kernel_type": "script",
   "is_private": true,
@@ -9,7 +9,7 @@
   "machine_shape": "NvidiaTeslaT4",
   "enable_internet": true,
   "dataset_sources": [
-    "rishavutkarsh/beacon-crisis-v1-cpt"
+    "rishavutkarsh/beacon-source-qa-eval-v1"
   ],
   "model_sources": [
     "google/gemma-4/Transformers/gemma-4-e2b-it/1"

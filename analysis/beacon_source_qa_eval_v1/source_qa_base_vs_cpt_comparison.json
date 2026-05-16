@@ -1,0 +1,521 @@
+{
+  "paired_summary_file": "kaggle_outputs\\beacon_source_qa_qwen_judge_v1\\beacon_source_qa_qwen_judge_v1\\knowledge_eval_summary.json",
+  "base_only_summary": {
+    "valid": 59,
+    "invalid": 1,
+    "counts": {
+      "incorrect": 45,
+      "correct": 5,
+      "partial": 9
+    },
+    "strict_correct_rate": 0.0847,
+    "partial_or_correct_rate": 0.2373,
+    "avg_score": 0.322,
+    "unsafe_extra": 0,
+    "unsupported_extra": 14
+  },
+  "paired_base_summary": {
+    "valid": 59,
+    "invalid": 1,
+    "counts": {
+      "incorrect": 45,
+      "correct": 5,
+      "partial": 9
+    },
+    "strict_correct_rate": 0.0847,
+    "partial_or_correct_rate": 0.2373,
+    "avg_score": 0.322,
+    "unsafe_extra": 0,
+    "unsupported_extra": 14
+  },
+  "cpt_only_summary_from_paired": {
+    "valid": 60,
+    "invalid": 0,
+    "counts": {
+      "partial": 13,
+      "correct": 9,
+      "incorrect": 38
+    },
+    "strict_correct_rate": 0.15,
+    "partial_or_correct_rate": 0.3667,
+    "avg_score": 0.5167,
+    "unsafe_extra": 0,
+    "unsupported_extra": 35
+  },
+  "paired_kernel_summary": {
+    "status": "success",
+    "stage": "complete",
+    "score_count": 120,
+    "invalid_judge_count": 1,
+    "systems": {
+      "base_gemma": {
+        "valid_count": 59,
+        "verdict_counts": {
+          "incorrect": 45,
+          "correct": 5,
+          "partial": 9
+        },
+        "strict_correct_rate": 0.0847,
+        "partial_or_correct_rate": 0.2373,
+        "unsafe_extra_count": 0,
+        "unsupported_extra_count": 14,
+        "avg_score": 0.322
+      },
+      "cpt_best_dev": {
+        "valid_count": 60,
+        "verdict_counts": {
+          "partial": 13,
+          "correct": 9,
+          "incorrect": 38
+        },
+        "strict_correct_rate": 0.15,
+        "partial_or_correct_rate": 0.3667,
+        "unsafe_extra_count": 0,
+        "unsupported_extra_count": 35,
+        "avg_score": 0.5167
+      }
+    },
+    "paired": {
+      "comparable_rows": 59,
+      "cpt_wins": 12,
+      "base_wins": 6,
+      "ties": 41,
+      "cpt_win_rate_non_tie": 0.6667
+    },
+    "exposure_breakdown": {
+      "train_seen": {
+        "cpt_wins": 7,
+        "ties": 30,
+        "base_wins": 2
+      },
+      "heldout": {
+        "ties": 11,
+        "cpt_wins": 5,
+        "base_wins": 4
+      }
+    },
+    "decision_note": "Use strict/evidence-supported correctness first; unsafe_extra or unsupported_extra increases are veto signals.",
+    "hashes": {
+      "eval": "531ffdd2b4694642de0a25d36fb78e0e3dbceb4cbe1a275c5c5ec36d4b9c5e79",
+      "base_generations": "b4d374d1f8a247d3b7f6364c8750f8e6b0f1d076d63d2470c9a30075a3ac3f57",
+      "cpt_generations": "bb7914b35b401cae8f5c01082571ba14517d2b18e5a56b770a11b776f5d4ef3a",
+      "judge_results": "16ee03fde199789e41cc251798f28555470b1162b0e0ac8379cb56e90a703577"
+    }
+  },
+  "pairwise": {
+    "cpt_new_unsupported_extra": 23,
+    "cpt_better": 12,
+    "comparable": 59,
+    "same": 41,
+    "base_better": 6
+  },
+  "by_hazard": {
+    "carbon_monoxide": {
+      "same": 5,
+      "cpt_better": 2,
+      "base_better": 1
+    },
+    "electrical_flood": {
+      "same": 1,
+      "cpt_better": 3
+    },
+    "food_after_flood": {
+      "same": 7,
+      "base_better": 1
+    },
+    "landslide_structural": {
+      "same": 4
+    },
+    "lightning": {
+      "cpt_better": 1
+    },
+    "medical_devices": {
+      "same": 1
+    },
+    "medicine_diabetes": {
+      "same": 9
+    },
+    "mental_health": {
+      "same": 1
+    },
+    "response_management": {
+      "same": 1,
+      "base_better": 1
+    },
+    "risk_communication": {
+      "same": 5,
+      "cpt_better": 1,
+      "base_better": 1
+    },
+    "shelter_hygiene": {
+      "cpt_better": 1,
+      "base_better": 1
+    },
+    "volcano_ash": {
+      "base_better": 1
+    },
+    "water_disinfection": {
+      "cpt_better": 3,
+      "same": 7
+    },
+    "winter_storm": {
+      "cpt_better": 1
+    }
+  },
+  "by_exposure": {
+    "heldout": {
+      "same": 11,
+      "cpt_better": 5,
+      "base_better": 4
+    },
+    "train_seen": {
+      "cpt_better": 7,
+      "same": 30,
+      "base_better": 2
+    }
+  },
+  "examples": {
+    "cpt_better": [
+      {
+        "example_id": "beacon_source_qa_v1_000",
+        "hazard": "water_disinfection",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "partial",
+        "base_rationale": "No factual information provided.",
+        "cpt_rationale": "Missing 'use bottled or another safe source' and extra claims about filtration methods.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_007",
+        "hazard": "water_disinfection",
+        "difficulty": "medium",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "partial",
+        "base_rationale": "No relevant information provided.",
+        "cpt_rationale": "Misses 'particles in cloudy water block UV light' but provides related information.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_029",
+        "hazard": "electrical_flood",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "correct",
+        "base_rationale": "No required facts provided.",
+        "cpt_rationale": "Answer matches all required facts and is free of unsupported or dangerous claims.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": false
+      },
+      {
+        "example_id": "beacon_source_qa_v1_030",
+        "hazard": "electrical_flood",
+        "difficulty": "medium",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "correct",
+        "base_rationale": "No factual information provided.",
+        "cpt_rationale": "",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": false
+      },
+      {
+        "example_id": "beacon_source_qa_v1_031",
+        "hazard": "electrical_flood",
+        "difficulty": "medium",
+        "base_verdict": "partial",
+        "cpt_verdict": "correct",
+        "base_rationale": "Missing sewage/chemicals and wound infection, incorrect on drowning risk.",
+        "cpt_rationale": "Includes all required facts without dangerous or unsupported claims.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": false
+      },
+      {
+        "example_id": "beacon_source_qa_v1_032",
+        "hazard": "shelter_hygiene",
+        "difficulty": "medium",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "correct",
+        "base_rationale": "Misses key facts about pet allowance and hygiene.",
+        "cpt_rationale": "Includes all required facts and no wrong claims.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": false
+      },
+      {
+        "example_id": "beacon_source_qa_v1_038",
+        "hazard": "risk_communication",
+        "difficulty": "medium",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "partial",
+        "base_rationale": "No factual content provided.",
+        "cpt_rationale": "Includes reducing cognitive load and immediate response but misses cooperation/recovery. Adds efficacy claim not in gold.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_040",
+        "hazard": "carbon_monoxide",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "correct",
+        "base_rationale": "Misses CO buildup and entry; introduces explosion risk as primary concern.",
+        "cpt_rationale": "Includes all required facts without dangerous or unsupported claims.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": false
+      }
+    ],
+    "base_better": [
+      {
+        "example_id": "beacon_source_qa_v1_010",
+        "hazard": "food_after_flood",
+        "difficulty": "medium",
+        "base_verdict": "partial",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "Misses core fact about unsafe food looking/smelling normal.",
+        "cpt_rationale": "Misses core fact and adds unsupported context.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_033",
+        "hazard": "shelter_hygiene",
+        "difficulty": "medium",
+        "base_verdict": "partial",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "Misses identifying alternatives and unnecessary detail on shelter rules.",
+        "cpt_rationale": "Misses identifying shelters that accept animals or alternatives, and incorrectly assumes all shelters accept pets.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_042",
+        "hazard": "carbon_monoxide",
+        "difficulty": "hard",
+        "base_verdict": "correct",
+        "cpt_verdict": "partial",
+        "base_rationale": "Answer accurately explains spectroscopic overlap and inability to differentiate between CO and O2.",
+        "cpt_rationale": "Missing 'conventional pulse oximeter is not accurate with COHgb' and incorrect on spectroscopic overlap.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_051",
+        "hazard": "risk_communication",
+        "difficulty": "medium",
+        "base_verdict": "partial",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "Missing 'do not casually adjust facts or data' and 'accuracy in posts'.",
+        "cpt_rationale": "Misses 'do not casually adjust facts or data' and 'accuracy in posts', introduces unsupported claims.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_055",
+        "hazard": "response_management",
+        "difficulty": "hard",
+        "base_verdict": "partial",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "Missing key details on policies, plans, procedures, and training.",
+        "cpt_rationale": "Misses core facts and introduces incorrect organization.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_059",
+        "hazard": "volcano_ash",
+        "difficulty": "medium",
+        "base_verdict": "correct",
+        "cpt_verdict": "partial",
+        "base_rationale": "Answer includes all required facts without contradictions.",
+        "cpt_rationale": "Includes respiratory hazard but misses cleanup protection needed. Adds unsupported toxic gases claim.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      }
+    ],
+    "same": [
+      {
+        "example_id": "beacon_source_qa_v1_001",
+        "hazard": "water_disinfection",
+        "difficulty": "medium",
+        "base_verdict": "correct",
+        "cpt_verdict": "correct",
+        "base_rationale": "Answer matches required facts and acceptable variants.",
+        "cpt_rationale": "Answer matches required facts and acceptable variants.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": false
+      },
+      {
+        "example_id": "beacon_source_qa_v1_002",
+        "hazard": "water_disinfection",
+        "difficulty": "hard",
+        "base_verdict": "partial",
+        "cpt_verdict": "partial",
+        "base_rationale": "Misses the core fact about specific parasites and adds unsupported claims.",
+        "cpt_rationale": "Missing core fact about specific parasites and contains unsupported claims about contaminant load and emergency protocols.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_003",
+        "hazard": "water_disinfection",
+        "difficulty": "medium",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No required facts and contradicts gold answer.",
+        "cpt_rationale": "Answer misses the core fact of 30-minute wait time and provides unrelated information.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_004",
+        "hazard": "water_disinfection",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No relevant information provided.",
+        "cpt_rationale": "Misses core fact of doubling bleach amount for cloudy/cold water; adds unsupported proportionality advice.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_005",
+        "hazard": "water_disinfection",
+        "difficulty": "medium",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No required facts and wrong claim 'unsure'.",
+        "cpt_rationale": "No required facts and contradicts safe drinking advice.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": false
+      },
+      {
+        "example_id": "beacon_source_qa_v1_006",
+        "hazard": "water_disinfection",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No factual information provided and contradicts gold answer.",
+        "cpt_rationale": "Misses core facts about filter limitations and adds unsupported claims.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_008",
+        "hazard": "food_after_flood",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No relevant information provided.",
+        "cpt_rationale": "No relevant information provided.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": false
+      },
+      {
+        "example_id": "beacon_source_qa_v1_009",
+        "hazard": "food_after_flood",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No relevant information provided.",
+        "cpt_rationale": "No information provided, contradicts gold answer.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      }
+    ],
+    "cpt_unsafe_extra": [],
+    "cpt_unsupported_extra": [
+      {
+        "example_id": "beacon_source_qa_v1_000",
+        "hazard": "water_disinfection",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "partial",
+        "base_rationale": "No factual information provided.",
+        "cpt_rationale": "Missing 'use bottled or another safe source' and extra claims about filtration methods.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_003",
+        "hazard": "water_disinfection",
+        "difficulty": "medium",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No required facts and contradicts gold answer.",
+        "cpt_rationale": "Answer misses the core fact of 30-minute wait time and provides unrelated information.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_004",
+        "hazard": "water_disinfection",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No relevant information provided.",
+        "cpt_rationale": "Misses core fact of doubling bleach amount for cloudy/cold water; adds unsupported proportionality advice.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_006",
+        "hazard": "water_disinfection",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No factual information provided and contradicts gold answer.",
+        "cpt_rationale": "Misses core facts about filter limitations and adds unsupported claims.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_007",
+        "hazard": "water_disinfection",
+        "difficulty": "medium",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "partial",
+        "base_rationale": "No relevant information provided.",
+        "cpt_rationale": "Misses 'particles in cloudy water block UV light' but provides related information.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_009",
+        "hazard": "food_after_flood",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No relevant information provided.",
+        "cpt_rationale": "No information provided, contradicts gold answer.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_013",
+        "hazard": "food_after_flood",
+        "difficulty": "hard",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No required facts and contradicts evidence on sanitization.",
+        "cpt_rationale": "Misses required facts and contradicts evidence.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      },
+      {
+        "example_id": "beacon_source_qa_v1_015",
+        "hazard": "medicine_diabetes",
+        "difficulty": "medium",
+        "base_verdict": "incorrect",
+        "cpt_verdict": "incorrect",
+        "base_rationale": "No relevant facts or acceptable variants provided.",
+        "cpt_rationale": "Missing copies of prescriptions and current dosages/times, redundant emergency contact details.",
+        "cpt_unsafe_extra": false,
+        "cpt_unsupported_extra": true
+      }
+    ]
+  },
+  "notes": [
+    "Paired run rejudged base; use paired_base_summary for pairwise fairness, base_only_summary as earlier baseline."
+  ]
+}

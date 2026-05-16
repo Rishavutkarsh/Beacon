@@ -1,0 +1,169 @@
+{
+  "created_at_utc": "2026-05-16T13:28:30.952132+00:00",
+  "deterministic_row_report": {
+    "counts": {
+      "hazard": {
+        "carbon_monoxide": 1,
+        "electrical_flood": 1,
+        "food_water": 2,
+        "landslide_structural": 1,
+        "live_route_authority": 2,
+        "medicine_diabetes": 1,
+        "shelter_hygiene": 1,
+        "visual_uncertainty": 1,
+        "wash_ors": 1,
+        "wounds_first_aid": 1
+      },
+      "language": {
+        "english": 7,
+        "hinglish": 5
+      },
+      "risk": {
+        "critical": 4,
+        "high": 4,
+        "low": 1,
+        "medium": 3
+      },
+      "split": {
+        "dev": 2,
+        "final_eval": 2,
+        "train": 8
+      }
+    },
+    "errors": [],
+    "row_count": 12,
+    "status": "pass",
+    "warnings": []
+  },
+  "next_steps": [
+    "complete human review for all rows",
+    "expand toward the target 500-600 reviewed rows with the same gates",
+    "add tool-use/retrieval traces in a separate lane after answer-style rows are stable"
+  ],
+  "package_level_risks": [
+    "small_pilot_size_not_enough_for_behavior_sft",
+    "human_review_pending_for_all_rows",
+    "source_rule_manifest_entries_are_pending_main_review"
+  ],
+  "pending_source_rule_ids": [
+    "co_symptom_escalation",
+    "communicate_uncertainty_plainly",
+    "damaged_building_reentry",
+    "damaged_food_packaging",
+    "damaged_medicine_label",
+    "dehydration_escalation",
+    "diabetes_disrupted_meals",
+    "diabetes_wound_risk",
+    "diarrhea_cluster_escalation",
+    "downed_line_distance",
+    "electrical_flood_hazard",
+    "flood_crossing_turn_around",
+    "floodwater_contact_wounds",
+    "floodwater_food_contact",
+    "fuel_carbon_monoxide",
+    "indoor_fuel_device",
+    "insulin_storage_uncertainty",
+    "live_fact_uncertainty",
+    "minimize_sensitive_data",
+    "no_photo_safety_certainty",
+    "ors_safe_water",
+    "power_outage_perishables",
+    "safe_food_handling_shelter",
+    "shelter_hygiene_wash",
+    "slope_warning_signs",
+    "structural_landslide_danger",
+    "unsafe_rescue_self_protection",
+    "visual_cannot_determine",
+    "water_treat_uncertain_source",
+    "wet_device_reenergizing",
+    "wound_infection_escalation"
+  ],
+  "recommendation": "not_ready_for_sft_training",
+  "status": "review_required",
+  "summary": "Candidate package passed deterministic lint, but is not approved for training until human review and scale-up.",
+  "weak_or_risky_rows": [
+    {
+      "hazard": "carbon_monoxide",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_000"
+    },
+    {
+      "hazard": "electrical_flood",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_001"
+    },
+    {
+      "hazard": "food_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_002"
+    },
+    {
+      "hazard": "wash_ors",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_003"
+    },
+    {
+      "hazard": "medicine_diabetes",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_004"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_005"
+    },
+    {
+      "hazard": "live_route_authority",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_006"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_008"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_009"
+    },
+    {
+      "hazard": "food_water",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_010"
+    },
+    {
+      "hazard": "live_route_authority",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_011"
+    }
+  ]
+}

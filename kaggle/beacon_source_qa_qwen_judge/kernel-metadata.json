@@ -1,0 +1,22 @@
+{
+  "id": "rishavutkarsh/beacon-source-qa-qwen-judge-v1",
+  "title": "Beacon Source QA Qwen Judge V1",
+  "code_file": "beacon_source_qa_qwen_judge.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": true,
+  "dataset_sources": [
+    "rishavutkarsh/beacon-source-qa-eval-v1"
+  ],
+  "model_sources": [
+    "qwen-lm/qwen2.5/Transformers/7b-instruct/1"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [
+    "rishavutkarsh/beacon-source-qa-base-generation-v1",
+    "rishavutkarsh/beacon-source-qa-cpt-generation-v1"
+  ]
+}

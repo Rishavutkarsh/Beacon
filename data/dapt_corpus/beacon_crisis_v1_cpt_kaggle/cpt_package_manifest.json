@@ -4,14 +4,14 @@
     "test": 31,
     "train": 1361
   },
-  "created_at_utc": "2026-05-15T17:36:16.681991+00:00",
+  "created_at_utc": "2026-05-16T03:02:16.640358+00:00",
   "dapt_manifest_sha256": "26ea12ba8e1525d9dc09a77faf0991ce8aa9853df4d2c96083b6509fc90951b0",
   "hashes": {
     "cpt_dev.jsonl": "270d555448118bba4d00416aec9af330035a16451bf042861a08a7b6a68555f7",
-    "cpt_split_manifest.json": "742e849e13d988531efb017ae45988712eb89035cebdf2ab5acc7b3e21579d86",
+    "cpt_split_manifest.json": "94f9e1e7f52b77d9b10d0a20db4093661cfc76fc72d319df91736e4a44d7b1e4",
     "cpt_test.jsonl": "7748a0c923339485c10849624f49bbfa860371cca445e394b084d84611a64249",
     "cpt_train.jsonl": "f13ccb7a7e03b5de9b3ee553c8ac4975a8646accc86c04127edb00c2fc9bad8f",
-    "cpt_training_config.json": "b6d12d89fa301b7a594dad3b991f0a51aa350fb614bd1b049158ae8fa0346aa8"
+    "cpt_training_config.json": "f3da4bdfc88671fdf7aba905ce3a6c5b9e05062fec31e54aa2b1b7d2503919d1"
   },
   "launch_policy": "training_not_started_user_tunes_params_first",
   "schema_version": "beacon-cpt-kaggle-package-v1",

@@ -1,0 +1,92 @@
+{
+  "errors": [],
+  "manifest": {
+    "counts": {
+      "by_hazard": {
+        "carbon_monoxide": 1,
+        "electrical_flood": 1,
+        "food_water": 2,
+        "landslide_structural": 1,
+        "live_route_authority": 2,
+        "medicine_diabetes": 1,
+        "shelter_hygiene": 1,
+        "visual_uncertainty": 1,
+        "wash_ors": 1,
+        "wounds_first_aid": 1
+      },
+      "by_language": {
+        "english": 7,
+        "hinglish": 5
+      },
+      "by_risk": {
+        "critical": 4,
+        "high": 4,
+        "low": 1,
+        "medium": 3
+      },
+      "by_split": {
+        "dev": 2,
+        "final_eval": 2,
+        "train": 8
+      },
+      "total": 12
+    },
+    "created_at_utc": "2026-05-16T13:28:30.938750+00:00",
+    "files": {
+      "dataset_design_note": "dataset_design_note.md",
+      "dev": "dev.jsonl",
+      "draft_rows": "draft_rows.jsonl",
+      "final_eval": "final_eval.jsonl",
+      "review_queue": "review_queue.csv",
+      "review_report": "review_report.json",
+      "source_rule_map": "source_rule_map.jsonl",
+      "train": "train.jsonl"
+    },
+    "readiness_recommendation": "not_ready_for_sft_training",
+    "review_policy": "Every row must be reviewed for safety, source support, and assistant style before export.",
+    "schema_version": "beacon-assistant-sft-v1",
+    "source_rule_manifest": "data\\seed_cards\\source_rule_manifest_v2_train_seed_expansion.jsonl",
+    "source_rule_manifest_sha256": "720829bbf448d7003f35cea02f7881a8fc7b8e7efd4511fa34f4f9fef0b0b3bc",
+    "stage": "sft_draft_package_for_review",
+    "system_prompt": "You are Beacon, an offline crisis companion for India-relevant disaster situations. Give conservative, practical guidance. State uncertainty clearly, do not invent live facts, and give safer next steps before escalation.",
+    "training_export_allowed": false
+  },
+  "review_queue_count": 12,
+  "row_report": {
+    "counts": {
+      "hazard": {
+        "carbon_monoxide": 1,
+        "electrical_flood": 1,
+        "food_water": 2,
+        "landslide_structural": 1,
+        "live_route_authority": 2,
+        "medicine_diabetes": 1,
+        "shelter_hygiene": 1,
+        "visual_uncertainty": 1,
+        "wash_ors": 1,
+        "wounds_first_aid": 1
+      },
+      "language": {
+        "english": 7,
+        "hinglish": 5
+      },
+      "risk": {
+        "critical": 4,
+        "high": 4,
+        "low": 1,
+        "medium": 3
+      },
+      "split": {
+        "dev": 2,
+        "final_eval": 2,
+        "train": 8
+      }
+    },
+    "errors": [],
+    "row_count": 12,
+    "status": "pass",
+    "warnings": []
+  },
+  "stage": "candidate",
+  "status": "pass"
+}
