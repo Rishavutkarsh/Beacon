@@ -258,6 +258,130 @@
       grid-template-columns: 1fr 1fr;
       gap: 14px;
     }
+    .story-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+    .scenario {
+      border: 1px solid rgba(255,255,255,0.18);
+      background: linear-gradient(145deg, rgba(255,107,99,0.12), rgba(87,214,217,0.05)), var(--panel);
+      border-radius: 12px;
+      padding: 20px;
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .message {
+      border-left: 3px solid var(--red);
+      background: rgba(0,0,0,0.18);
+      border-radius: 0 10px 10px 0;
+      padding: 14px;
+      color: #f7e8e6;
+      font-size: 18px;
+      margin: 0;
+    }
+    .scenario-note { color: var(--muted); margin: 18px 0 0; font-size: 15px; }
+    .evidence-stack { display: grid; gap: 10px; }
+    .evidence-row {
+      display: grid;
+      grid-template-columns: 94px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.055);
+      border-radius: 10px;
+      padding: 13px;
+    }
+    .evidence-row b {
+      color: var(--cyan);
+      font-family: "Cascadia Mono", Consolas, monospace;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .evidence-row p { margin: 0; color: var(--muted); font-size: 14px; }
+    .demo-arc {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      counter-reset: arc;
+    }
+    .arc-step {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 10px;
+      padding: 18px 16px 16px;
+      min-height: 170px;
+    }
+    .arc-step::before {
+      counter-increment: arc;
+      content: counter(arc);
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: rgba(116,217,159,0.16);
+      color: var(--green);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .arc-step strong { display: block; margin-bottom: 6px; }
+    .arc-step span { color: var(--muted); font-size: 14px; }
+    .model-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .model-pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.055);
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .model-pill b { display: block; font-size: 13px; color: var(--ink); margin-bottom: 4px; }
+    .model-pill span { color: var(--muted); font-size: 12px; }
+    .closing {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+    .impact-line {
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.02;
+      margin: 0;
+      color: var(--ink);
+    }
+    .checklist {
+      display: grid;
+      gap: 10px;
+    }
+    .check {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.055);
+      border-radius: 10px;
+      padding: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .check::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      flex: 0 0 auto;
+      margin-top: 5px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 14px rgba(116,217,159,0.5);
+    }
     .badge {
       display: inline-flex;
       padding: 5px 8px;
@@ -303,8 +427,8 @@
     }
 
     @media (max-width: 920px) {
-      .hero, .comparison, .run-grid, .trace { grid-template-columns: 1fr; }
-      .flow, .grid-3, .stats { grid-template-columns: 1fr; }
+      .hero, .comparison, .run-grid, .trace, .story-grid, .closing { grid-template-columns: 1fr; }
+      .flow, .grid-3, .stats, .demo-arc, .model-strip { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .hero { padding-top: 38px; }
     }
@@ -315,6 +439,7 @@
     <nav>
       <a class="brand" href="#"><span class="mark">B</span><span>Beacon</span></a>
       <div class="nav-links">
+        <a href="#story">Story</a>
         <a href="#demo">Demo</a>
         <a href="#architecture">Architecture</a>
         <a href="#compare">Compare</a>
@@ -371,6 +496,31 @@
       </div>
     </section>
 
+    <section id="story">
+      <div class="story-grid">
+        <div class="scenario">
+          <div>
+            <span class="label">the disaster moment</span>
+            <h2>People do not ask neat benchmark questions.</h2>
+            <p class="message">"Floodwater touch hue baby bottle nipples/pacifiers ko bleach se sanitize karke use kar sakte hain?"</p>
+            <p class="scenario-note">A plausible generic answer says yes, sanitize with bleach. The official CDC exception says no: throw these items out.</p>
+          </div>
+          <div class="model-strip">
+            <div class="model-pill"><b>Base</b><span>answers from memory</span></div>
+            <div class="model-pill"><b>Beacon</b><span>asks local docs</span></div>
+            <div class="model-pill"><b>Tool</b><span>reads CDC chunk</span></div>
+            <div class="model-pill"><b>Answer</b><span>cites evidence</span></div>
+          </div>
+        </div>
+        <div class="evidence-stack" aria-label="Beacon evidence trail">
+          <div class="evidence-row"><b>Detect</b><p>Beacon identifies a source-sensitive safety claim: floodwater plus baby feeding items.</p></div>
+          <div class="evidence-row"><b>Retrieve</b><p>The local document tool prioritizes `cdc_food_after_emergency_chunk_0002` from the offline index.</p></div>
+          <div class="evidence-row"><b>Ground</b><p>The controller passes the full CDC section text into the hidden model context before the answer.</p></div>
+          <div class="evidence-row"><b>Respond</b><p>Beacon says to throw out the items and cites the exact document chunk instead of improvising bleach instructions.</p></div>
+        </div>
+      </div>
+    </section>
+
     <section id="architecture">
       <h2>What Beacon adds on top of Gemma.</h2>
       <p class="section-lead">The model is local. The evidence is local. The app controller owns tool access, hidden safety instructions, prompt assembly, and citations.</p>
@@ -380,6 +530,17 @@
         <div class="step"><div class="step-num">3</div><strong>Tool</strong><span>Local CLI searches and reads official offline documents.</span></div>
         <div class="step"><div class="step-num">4</div><strong>Gemma</strong><span>Beacon Tool DPO CPT Fullprompt Ckpt50 runs through Ollama.</span></div>
         <div class="step"><div class="step-num">5</div><strong>Cite</strong><span>Answer cites document chunks or admits evidence is missing.</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>The 40-second demo arc.</h2>
+      <p class="section-lead">This is the recording sequence the page is designed to support: show the risk, show the local evidence, show the answer, then show the baseline contrast.</p>
+      <div class="demo-arc">
+        <div class="arc-step"><strong>Ask the messy question</strong><span>Use the floodwater baby-item prompt. It is short, multilingual, and easy to misunderstand.</span></div>
+        <div class="arc-step"><strong>Show the tool</strong><span>Beacon searches the local official-doc index, not the web, and reads the CDC section.</span></div>
+        <div class="arc-step"><strong>Show the answer</strong><span>The tuned Gemma model answers with a concrete action and cites the retrieved evidence.</span></div>
+        <div class="arc-step"><strong>Compare base</strong><span>Run the same prompt against base Gemma with no tools to show why document grounding matters.</span></div>
       </div>
     </section>
 
@@ -421,6 +582,18 @@ python scripts\beacon_ollama_tool_loop_agent.py --model beacon-gemma4-current-be
         <div class="run-card">
           <span class="label">submission framing</span>
           <p>Beacon targets Global Resilience and Safety & Trust. It does not claim Ollama is the whole app; Ollama runs the local model while Beacon owns offline official documents and the tool loop.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="closing">
+        <p class="impact-line">The claim is simple: crisis guidance should be local, cited, and humble when evidence is missing.</p>
+        <div class="checklist">
+          <div class="check">Trained with Unsloth on the Beacon tool-use behavior path.</div>
+          <div class="check">Runs locally through Ollama with a Q4_K_M GGUF artifact.</div>
+          <div class="check">Uses an offline official-doc tool owned by the Beacon controller.</div>
+          <div class="check">Positions mobile deployment as the next packaging step, not as a current overclaim.</div>
         </div>
       </div>
     </section>
