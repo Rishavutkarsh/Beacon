@@ -198,6 +198,10 @@
     }
     .trace-card strong { display: block; margin-bottom: 8px; color: var(--ink); }
     .trace-card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .trace-card.active-step {
+      border-color: rgba(116,217,159,0.42);
+      background: rgba(116,217,159,0.08);
+    }
     .tool { color: var(--amber); font-family: "Cascadia Mono", Consolas, monospace; font-size: 12px; }
     .answer-good { color: var(--green); }
     .citation { color: #c8b9ff; font-family: "Cascadia Mono", Consolas, monospace; font-size: 12px; }
@@ -382,6 +386,59 @@
       background: var(--green);
       box-shadow: 0 0 14px rgba(116,217,159,0.5);
     }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: minmax(340px, 1fr) minmax(0, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+    .transcript {
+      border: 1px solid rgba(255,255,255,0.18);
+      background: #02070b;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .transcript-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .transcript-lines {
+      padding: 14px;
+      display: grid;
+      gap: 9px;
+      font-family: "Cascadia Mono", Consolas, monospace;
+      font-size: 12px;
+      color: #d9f7ff;
+    }
+    .line-muted { color: #7d8f92; }
+    .line-ok { color: var(--green); }
+    .line-warn { color: var(--amber); }
+    .proof-card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .proof-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .proof-item {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 12px;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .proof-item b { color: var(--ink); }
+    .proof-item span { color: var(--muted); word-break: break-word; }
     .badge {
       display: inline-flex;
       padding: 5px 8px;
@@ -427,7 +484,7 @@
     }
 
     @media (max-width: 920px) {
-      .hero, .comparison, .run-grid, .trace, .story-grid, .closing { grid-template-columns: 1fr; }
+      .hero, .comparison, .run-grid, .trace, .story-grid, .closing, .proof-grid { grid-template-columns: 1fr; }
       .flow, .grid-3, .stats, .demo-arc, .model-strip { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .hero { padding-top: 38px; }
@@ -476,7 +533,7 @@
             <div class="prompt-text" id="demo-question">Floodwater touched baby bottle nipples. Can bleach sanitize them?</div>
           </div>
           <div class="trace">
-            <div class="trace-card">
+            <div class="trace-card active-step">
               <span class="label">offline tool</span>
               <strong id="demo-tool">read_official_doc(cdc_food_after_emergency)</strong>
               <p id="demo-evidence">CDC evidence says baby bottle nipples and pacifiers touched by floodwater should be thrown out; sanitizing methods are not effective.</p>
@@ -502,8 +559,8 @@
           <div>
             <span class="label">the disaster moment</span>
             <h2>People do not ask neat benchmark questions.</h2>
-            <p class="message">"Floodwater touch hue baby bottle nipples/pacifiers ko bleach se sanitize karke use kar sakte hain?"</p>
-            <p class="scenario-note">A plausible generic answer says yes, sanitize with bleach. The official CDC exception says no: throw these items out.</p>
+            <p class="message" id="story-question">"Floodwater touch hue baby bottle nipples/pacifiers ko bleach se sanitize karke use kar sakte hain?"</p>
+            <p class="scenario-note" id="story-note">A plausible generic answer says yes, sanitize with bleach. The official CDC exception says no: throw these items out.</p>
           </div>
           <div class="model-strip">
             <div class="model-pill"><b>Base</b><span>answers from memory</span></div>
@@ -562,6 +619,34 @@
     </section>
 
     <section>
+      <h2>Proof that it actually runs locally.</h2>
+      <p class="section-lead">The showcase is static, but the demo path behind it is real: Kaggle export, GGUF import, Ollama local model, and controller-level offline retrieval.</p>
+      <div class="proof-grid">
+        <div class="transcript" aria-label="Local demo transcript">
+          <div class="transcript-head"><span>local transcript</span><span>Windows + Ollama</span></div>
+          <div class="transcript-lines">
+            <span class="line-muted">PS&gt; ollama list</span>
+            <span class="line-ok">beacon-gemma4-current-best  3.4 GB</span>
+            <span class="line-muted">PS&gt; python scripts\beacon_docs_cli.py list-docs --query "generator carbon monoxide placement"</span>
+            <span class="line-warn">cdc_co_clinical_disasters, ready_power_outages, cdc_power_outage</span>
+            <span class="line-muted">PS&gt; python scripts\beacon_ollama_tool_loop_agent.py --model beacon-gemma4-current-best ...</span>
+            <span class="line-ok">Answer cites CDC guidance and refuses unsafe garage generator use.</span>
+          </div>
+        </div>
+        <div class="proof-card">
+          <span class="label">shipping artifact</span>
+          <h3>Beacon Tool DPO CPT Fullprompt Ckpt50</h3>
+          <div class="proof-list">
+            <div class="proof-item"><b>Adapter</b><span>rishavutkarsh/beacon-tool-dpo-from-cpt-fullprompt-ckpt50-adapter</span></div>
+            <div class="proof-item"><b>Quant</b><span>Q4_K_M GGUF for Ollama / llama.cpp</span></div>
+            <div class="proof-item"><b>SHA256</b><span>cd0b68f4d96022a9e59964cc971ccd6edf9b953701e2b303134cc72fdeaf3077</span></div>
+            <div class="proof-item"><b>Baseline</b><span>gemma4:e2b, no Beacon prompt, no offline docs</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <h2>Hackathon-ready local deployment.</h2>
       <div class="grid-3">
         <div class="card metric"><strong>Unsloth</strong><p>Fine-tuned Gemma adapter exported and merged for local serving.</p></div>
@@ -605,6 +690,8 @@ python scripts\beacon_ollama_tool_loop_agent.py --model beacon-gemma4-current-be
     const demos = {
       flood: {
         question: "Floodwater touched baby bottle nipples. Can bleach sanitize them?",
+        story: "\"Floodwater touch hue baby bottle nipples/pacifiers ko bleach se sanitize karke use kar sakte hain?\"",
+        note: "A plausible generic answer says yes, sanitize with bleach. The official CDC exception says no: throw these items out.",
         tool: "read_official_doc(cdc_food_after_emergency)",
         evidence: "CDC evidence says baby bottle nipples and pacifiers touched by floodwater should be thrown out; sanitizing methods are not effective.",
         answer: "Throw them out. Do not bleach-sanitize for reuse.",
@@ -612,6 +699,8 @@ python scripts\beacon_ollama_tool_loop_agent.py --model beacon-gemma4-current-be
       },
       generator: {
         question: "Can I run a generator in my garage if the door is open?",
+        story: "\"Generator garage mein chala sakte hain agar door open hai?\"",
+        note: "A plausible answer may focus on ventilation. The official CO guidance says never run it in a garage, even with doors or windows open.",
         tool: "read_official_doc(cdc_power_outage)",
         evidence: "CDC guidance says generators should never run inside a garage, even with doors or windows open, and should stay at least 20 feet from openings.",
         answer: "No. Keep it outdoors and at least 20 feet from windows, doors, or vents.",
@@ -619,6 +708,8 @@ python scripts\beacon_ollama_tool_loop_agent.py --model beacon-gemma4-current-be
       },
       fridge: {
         question: "How long is food safe in the fridge during a power outage?",
+        story: "\"Power gaya hai. Fridge ka food kab tak safe rahega?\"",
+        note: "People need exact constants in outages. Beacon retrieves the 4-hour refrigerator rule and 40 degrees F threshold.",
         tool: "read_official_doc(ready_power_outages)",
         evidence: "Ready.gov/FEMA guidance says a refrigerator keeps food cold for about 4 hours if unopened; food at 40 degrees or higher should be thrown out.",
         answer: "About 4 hours if unopened. Use 40 degrees F as the safety threshold.",
@@ -636,6 +727,8 @@ python scripts\beacon_ollama_tool_loop_agent.py --model beacon-gemma4-current-be
         document.getElementById("demo-evidence").textContent = demo.evidence;
         document.getElementById("demo-answer").textContent = demo.answer;
         document.getElementById("demo-citation").textContent = demo.citation;
+        document.getElementById("story-question").textContent = demo.story;
+        document.getElementById("story-note").textContent = demo.note;
       });
     });
   </script>
