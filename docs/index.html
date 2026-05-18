@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beacon | Local-first crisis guidance</title>
+  <meta name="description" content="Beacon is a local-first crisis guidance assistant grounded in offline official documents and served with Gemma through Ollama.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111827;
+      --muted: #5b6472;
+      --line: #d8dee8;
+      --paper: #f8fafc;
+      --panel: #ffffff;
+      --red: #c53030;
+      --teal: #007c89;
+      --green: #18794e;
+      --blue: #2357c6;
+      --gold: #b7791f;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      backdrop-filter: blur(16px);
+    }
+
+    nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      min-height: 64px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .mark {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      background: var(--red);
+      color: white;
+      border-radius: 6px;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 56px 20px 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.98fr);
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      background: var(--green);
+    }
+
+    h1 {
+      margin: 14px 0 18px;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 0.95;
+      letter-spacing: 0;
+      max-width: 760px;
+    }
+
+    .lead {
+      font-size: 19px;
+      color: #394150;
+      max-width: 680px;
+      margin: 0 0 24px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 6px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    .demo-window {
+      background: #101827;
+      color: #e8eef9;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 22px 60px rgba(17, 24, 39, 0.22);
+      border: 1px solid #263348;
+    }
+
+    .window-top {
+      height: 38px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 14px;
+      background: #172033;
+      border-bottom: 1px solid #28344b;
+    }
+
+    .dot { width: 10px; height: 10px; border-radius: 999px; background: #e05252; }
+    .dot:nth-child(2) { background: #d9a441; }
+    .dot:nth-child(3) { background: #3ba272; }
+
+    .terminal {
+      padding: 18px;
+      font-family: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .prompt { color: #7dd3fc; }
+    .good { color: #86efac; }
+    .warn { color: #facc15; }
+    .citation { color: #c4b5fd; }
+
+    section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 42px 20px;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-lead {
+      max-width: 760px;
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .step {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 144px;
+    }
+
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .step span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .answer {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .answer h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .answer p {
+      margin: 0 0 12px;
+      color: #364152;
+    }
+
+    .tagline {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      background: #fef3c7;
+      color: #7c4a03;
+      margin-bottom: 10px;
+    }
+
+    .tagline.goodtag {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .metric {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .metric b {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: #0f172a;
+      color: #dbeafe;
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 13px;
+      line-height: 1.5;
+      border: 1px solid #263348;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 20px 40px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 880px) {
+      nav { align-items: flex-start; padding-top: 14px; padding-bottom: 14px; }
+      .nav-links { display: none; }
+      .hero, .comparison, .grid-3 { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .hero { padding-top: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Primary">
+      <div class="brand"><span class="mark">B</span><span>Beacon</span></div>
+      <div class="nav-links">
+        <a href="#architecture">Architecture</a>
+        <a href="#compare">Comparison</a>
+        <a href="#run">Run locally</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <div class="eyebrow"><span class="pulse"></span> Kaggle Gemma 4 Good Hackathon</div>
+        <h1>Beacon</h1>
+        <p class="lead">A local-first crisis guidance assistant that grounds disaster advice in offline official documents before a local Gemma model answers.</p>
+        <div class="actions">
+          <a class="button" href="#run">Run the demo</a>
+          <a class="button secondary" href="beacon_demo_runbook.md">Open runbook</a>
+        </div>
+      </div>
+      <div class="demo-window" aria-label="Beacon terminal demo preview">
+        <div class="window-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="terminal">
+          <div><span class="prompt">user</span> Floodwater touched baby bottle nipples. Can bleach sanitize them?</div>
+          <br>
+          <div><span class="warn">offline tool</span> cdc_food_after_emergency_chunk_0002</div>
+          <div><span class="good">Beacon</span> Throw them out. CDC says sanitizing methods are not effective for removing floodwater contaminants from baby bottle nipples and pacifiers.</div>
+          <br>
+          <div><span class="citation">citation</span> cdc_food_after_emergency / chunk_0002</div>
+        </div>
+      </div>
+    </div>
+
+    <section id="architecture">
+      <h2>Local model, local documents, controlled answers.</h2>
+      <p class="section-lead">Ollama is the model runner. Beacon is the controller that owns the hidden system prompt, offline official-document index, retrieval, tool loop, and citation policy.</p>
+      <div class="flow">
+        <div class="step"><div class="step-num">1</div><strong>User question</strong><span>Natural crisis question in English, Hindi, or Hinglish.</span></div>
+        <div class="step"><div class="step-num">2</div><strong>Beacon controller</strong><span>Applies hidden safety policy and decides whether official evidence is required.</span></div>
+        <div class="step"><div class="step-num">3</div><strong>Offline doc tool</strong><span>Searches local CDC, FEMA, FDA, EPA, WHO, UNICEF, NDMA, IMD, and NWS guidance.</span></div>
+        <div class="step"><div class="step-num">4</div><strong>Local Gemma</strong><span>Beacon Tool DPO CPT Fullprompt Ckpt50 served through Ollama/GGUF.</span></div>
+        <div class="step"><div class="step-num">5</div><strong>Grounded answer</strong><span>Actionable response with document citations or a conservative abstention.</span></div>
+      </div>
+    </section>
+
+    <section id="compare">
+      <h2>Why Beacon beats model memory.</h2>
+      <p class="section-lead">The baseline is plain Gemma 4 E2B with no tools. Beacon uses the same local environment plus an offline official-document controller.</p>
+      <div class="comparison">
+        <div class="answer">
+          <span class="tagline">Base Gemma, no tools</span>
+          <h3>Can drift toward generic disinfection advice</h3>
+          <p>For floodwater-contaminated baby feeding items, generic bleach advice is risky because the relevant official rule is a specific exception.</p>
+        </div>
+        <div class="answer">
+          <span class="tagline goodtag">Beacon with offline evidence</span>
+          <h3>Uses the exact CDC exception</h3>
+          <p>Beacon retrieves CDC guidance saying baby bottle nipples and pacifiers touched by floodwater should be thrown out because sanitizing methods are not effective.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Built for low-connectivity disaster settings.</h2>
+      <div class="grid-3">
+        <div class="metric"><b>Offline docs</b><span>Official guidance is indexed locally for the demo path.</span></div>
+        <div class="metric"><b>Unsloth</b><span>Fine-tuned Gemma adapter exported to GGUF for local inference.</span></div>
+        <div class="metric"><b>Ollama</b><span>Laptop-local proof today; mobile packaging is future LiteRT, MediaPipe, or embedded llama.cpp.</span></div>
+      </div>
+    </section>
+
+    <section id="run">
+      <h2>Run locally.</h2>
+      <p class="section-lead">These commands run the actual local Beacon path: offline doc tool plus the DPO Gemma model in Ollama.</p>
+      <pre>python scripts\beacon_docs_cli.py list-docs --query "generator carbon monoxide placement" --json
+
+python scripts\beacon_ollama_agent.py --model beacon-gemma4-current-best --force-docs --num-predict 260 --timeout-seconds 360 "Can I run a generator in my garage if the door is open?"
+
+powershell -ExecutionPolicy Bypass -File scripts\compare_base_vs_beacon.ps1</pre>
+    </section>
+  </main>
+
+  <footer>
+    Beacon is a Gemma 4 Good project focused on Global Resilience and Safety & Trust.
+  </footer>
+</body>
+</html>

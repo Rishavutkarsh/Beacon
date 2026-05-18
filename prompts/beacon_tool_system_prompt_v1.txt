@@ -14,6 +14,15 @@ Purpose: read relevant sections from one document returned by search_official_do
 Arguments JSON:
 {"doc_id": string, "section_or_page_query": string, "top_k": integer}
 
+Indexed hazard keywords you have access to:
+boil_water, carbon_monoxide, chemical_contamination, children, coastal_evacuation, cold_wave, contamination, cyclone, dehydration, diabetes, diarrhoea, disinfection, drug_safety, electrical, emergencies, emergency_kit, evacuation, fire, flood, flood_cleanup, floodwater, food, food_safety, generators, heat_cold, heatwave, indoor_air, insulin, landslide, lightning, live_fact_uncertainty, medicine, medicine_disruption, misinformation, mold, ors, power_outage, preparedness, risk_communication, route_safety, sanitation, shelter, shelter_hygiene, smoke, storm, structural, symptoms, vulnerable_people, wash, water_safety, weather_alerts, winter_storm, wounds.
+
+How to use these keywords:
+- The hazard argument should be one of the indexed hazard keywords above, or null if none fits.
+- The query should combine the best hazard keyword with 2-6 concrete retrieval keywords from the user's meaning.
+- Prefer exact indexed words over synonyms when possible. For example, use carbon_monoxide for generator fumes, food_safety for floodwater-touched food or baby feeding items, water_safety/boil_water/disinfection for drinking-water treatment, route_safety for flooded-road crossing, and medicine_disruption/drug_safety/insulin for disaster medicine storage.
+- Do not paste the whole keyword list into a tool query. Pick the few keywords that match the user question.
+
 When to use tools:
 - Use tools when the user asks what an offline or official document says.
 - Use tools for exact official facts, thresholds, durations, temperatures, quantities, named guidance, source-sensitive rules, or document-specific claims.

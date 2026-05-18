@@ -1,7 +1,8 @@
 param(
     [string]$Question = "Floodwater touch hue baby bottle nipples/pacifiers ko bleach se sanitize karke use kar sakte hain?",
     [string]$BaseModel = "gemma4:e2b",
-    [string]$BeaconModel = "beacon-gemma4-current-best"
+    [string]$BeaconModel = "beacon-gemma4-current-best",
+    [switch]$ToolLoop
 )
 
 $ErrorActionPreference = "Stop"
@@ -26,7 +27,10 @@ function Resolve-Ollama {
 $ollama = Resolve-Ollama
 
 Write-Host ""
-Write-Host "=== Base Gemma 4 E2B, no Beacon tools ===" -ForegroundColor Yellow
+Write-Host "Question:" -ForegroundColor Cyan
+Write-Host $Question
+Write-Host ""
+Write-Host "=== Base Gemma 4 E2B, no Beacon prompt, no offline docs ===" -ForegroundColor Yellow
 $payload = @{
     model = $BaseModel
     prompt = $Question
@@ -41,5 +45,10 @@ $base = Invoke-RestMethod -Method Post -Uri "http://localhost:11434/api/generate
 Write-Host $base.response
 
 Write-Host ""
-Write-Host "=== Beacon DPO + offline official-doc tool ===" -ForegroundColor Green
-python scripts\beacon_ollama_agent.py --model $BeaconModel --force-docs --num-predict 220 --timeout-seconds 360 $Question
+if ($ToolLoop) {
+    Write-Host "=== Beacon DPO + canonical offline official-doc tool loop ===" -ForegroundColor Green
+    python scripts\beacon_ollama_tool_loop_agent.py --model $BeaconModel --num-predict 220 --timeout-seconds 360 $Question
+} else {
+    Write-Host "=== Beacon DPO + preloaded offline official-doc evidence ===" -ForegroundColor Green
+    python scripts\beacon_ollama_tool_loop_agent.py --model $BeaconModel --preload-docs --num-predict 220 --timeout-seconds 360 $Question
+}

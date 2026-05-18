@@ -50,6 +50,14 @@ def test_parse_tool_call_accepts_canonical_json() -> None:
     assert call["arguments"]["hazard"] == "food_safety"
 
 
+def test_system_prompt_exposes_indexed_hazard_keywords() -> None:
+    assert "Indexed hazard keywords you have access to:" in agent.SYSTEM_PROMPT
+    assert "carbon_monoxide" in agent.SYSTEM_PROMPT
+    assert "food_safety" in agent.SYSTEM_PROMPT
+    assert "route_safety" in agent.SYSTEM_PROMPT
+    assert "The hazard argument should be one of the indexed hazard keywords above" in agent.SYSTEM_PROMPT
+
+
 def test_parse_tool_call_rejects_prose_or_multiple_calls() -> None:
     call = '<tool_call>{"name":"search_official_docs","arguments":{"query":"food","hazard":"food_safety","organization":null,"top_k":4}}</tool_call>'
 
@@ -229,6 +237,80 @@ def test_force_docs_rejects_direct_answer_before_tool_use() -> None:
 
     assert answer == "Final answer after tool use."
     assert len(tools.search_calls) == 1
+
+
+def test_preloaded_evidence_final_answer_passes_through() -> None:
+    evidence = {"sections": []}
+
+    answer = agent.answer_from_preloaded_evidence(
+        "Can I run a generator near a window?",
+        evidence,
+        lambda _prompt: "No. Keep it outside and away from openings.\n\nCitations:\n- cdc_power_outage / chunk_1",
+    )
+
+    assert answer.startswith("No.")
+
+
+def test_preloaded_evidence_hides_parseable_tool_call_and_retries() -> None:
+    evidence = {
+        "sections": [
+            {
+                "doc_id": "cdc_power_outage",
+                "section_id": "cdc_power_outage_chunk_0001",
+                "title": "Power Outages",
+                "text": "Use generators outdoors and away from windows.",
+                "key_facts": [],
+            }
+        ]
+    }
+    prompts: list[str] = []
+    outputs = iter(
+        [
+            '<tool_call>{"name":"search_official_docs","arguments":{"query":"generator window carbon monoxide","hazard":"carbon_monoxide","organization":null,"top_k":3}}</tool_call>',
+            "No. Do not place it beside an open window.\n\nCitations:\n- cdc_power_outage / cdc_power_outage_chunk_0001",
+        ]
+    )
+
+    answer = agent.answer_from_preloaded_evidence(
+        "Generator outside but beside an open window should be okay, right?",
+        evidence,
+        lambda prompt: prompts.append(prompt) or next(outputs),
+    )
+
+    assert "<tool_call>" not in answer
+    assert answer.startswith("No.")
+    assert len(prompts) == 2
+    assert "Do not emit search_official_docs or read_official_doc tool calls" in prompts[1]
+    assert "suppressed internal tool request" in prompts[1]
+
+
+def test_preloaded_evidence_repeated_parseable_tool_call_returns_safe_message_without_raw_call() -> None:
+    evidence = {"sections": []}
+    tool_call = '<tool_call>{"name":"search_official_docs","arguments":{"query":"food","hazard":"food_safety","organization":null,"top_k":4}}</tool_call>'
+    outputs = iter([tool_call, tool_call])
+
+    answer = agent.answer_from_preloaded_evidence(
+        "What about floodwater food?",
+        evidence,
+        lambda _prompt: next(outputs),
+    )
+
+    assert "internal tool call" in answer
+    assert "<tool_call>" not in answer
+    assert "search_official_docs" not in answer
+
+
+def test_preloaded_evidence_malformed_tool_call_text_is_not_repaired() -> None:
+    evidence = {"sections": []}
+    malformed = 'Here is the call: <tool_call>{"name":"search_official_docs"}</tool_call>'
+
+    answer = agent.answer_from_preloaded_evidence(
+        "What about floodwater food?",
+        evidence,
+        lambda _prompt: malformed,
+    )
+
+    assert answer == malformed
 
 
 def test_live_status_regex_catches_current_route_questions() -> None:

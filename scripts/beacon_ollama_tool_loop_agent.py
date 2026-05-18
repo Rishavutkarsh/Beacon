@@ -284,6 +284,34 @@ def prompt_with_evidence(question: str, evidence: dict[str, Any]) -> str:
     )
 
 
+def retry_prompt_without_tool_call(question: str, evidence: dict[str, Any], leaked_call: dict[str, Any]) -> str:
+    return (
+        f"{prompt_with_evidence(question, evidence)}\n\n"
+        "The controller already retrieved the offline evidence above. "
+        "Do not emit search_official_docs or read_official_doc tool calls in this preloaded-evidence mode. "
+        "Hide internal tool-call syntax from the user and write the final answer now, with citations. "
+        f"The suppressed internal tool request was: {json.dumps(leaked_call, ensure_ascii=False)}"
+    )
+
+
+def answer_from_preloaded_evidence(
+    question: str,
+    evidence: dict[str, Any],
+    generate: Callable[[str], str],
+) -> str:
+    output = generate(prompt_with_evidence(question, evidence))
+    leaked_call = parse_tool_call(output)
+    if leaked_call is None:
+        return output
+    retry = generate(retry_prompt_without_tool_call(question, evidence, leaked_call))
+    if parse_tool_call(retry) is not None:
+        return (
+            "Beacon attempted an internal tool call after offline evidence was already preloaded. "
+            "Please rerun with the live tool loop for this question."
+        )
+    return retry
+
+
 def initial_tool_loop_prompt(question: str, force_docs: bool = False) -> str:
     if force_docs:
         return (
@@ -389,7 +417,7 @@ def answer(args: argparse.Namespace) -> None:
 
     if args.preload_docs:
         evidence = tools.retrieve(question)
-        print(generate(prompt_with_evidence(question, evidence)))
+        print(answer_from_preloaded_evidence(question, evidence, generate))
         return
 
     print(run_tool_loop(question, tools, generate, max_tool_calls=args.max_tool_calls, force_docs=args.force_docs))
