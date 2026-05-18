@@ -1,0 +1,26 @@
+{
+  "model_alias": "beacon-gemma4-current-best",
+  "base_model": {
+    "kaggle_model_source": "google/gemma-4/Transformers/gemma-4-e2b-it/1",
+    "kaggle_path": "/kaggle/input/models/google/gemma-4/transformers/gemma-4-e2b-it/1"
+  },
+  "current_best_adapter": {
+    "name": "Beacon Tool DPO CPT Fullprompt Ckpt50",
+    "local_path": "kaggle/beacon_tool_dpo_from_cpt_fullprompt_ckpt50_adapter",
+    "kaggle_dataset_source": "rishavutkarsh/beacon-tool-dpo-from-cpt-fullprompt-ckpt50-adapter",
+    "kaggle_path": "/kaggle/input/beacon-tool-dpo-from-cpt-fullprompt-ckpt50-adapter",
+    "lineage": "Gemma 4 E2B IT -> Beacon CPT checkpoint-300 -> tool-aware full-prompt DPO checkpoint-50",
+    "replacement_policy": "When a better model is selected, update this adapter entry and re-run kaggle/beacon_ollama_export_current_best."
+  },
+  "domain_adapter_reference": {
+    "name": "CPT checkpoint-300",
+    "local_path": "kaggle/beacon_dapt_cpt_v2_checkpoints/checkpoint-300",
+    "kaggle_dataset_source": "rishavutkarsh/beacon-dapt-cpt-v2-checkpoints",
+    "kaggle_path": "/kaggle/input/beacon-dapt-cpt-v2-checkpoints/checkpoint-300"
+  },
+  "ollama": {
+    "expected_model_name": "beacon-gemma4-current-best",
+    "expected_gguf_name": "beacon-gemma4-e2b-current-best-q4_k_m.gguf",
+    "quantization": "q4_k_m"
+  }
+}

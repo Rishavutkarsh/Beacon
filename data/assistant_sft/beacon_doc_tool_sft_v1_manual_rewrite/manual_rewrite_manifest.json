@@ -1,0 +1,18 @@
+{
+  "approved_seed_count": 48,
+  "output_contract": {
+    "decision": "approved|reject",
+    "final_response": "rewritten assistant final answer",
+    "notes": "brief reason if reject or caveat",
+    "row_id": "same row_id"
+  },
+  "rewrite_count": 1152,
+  "shards": {
+    "shard_01": 192,
+    "shard_02": 192,
+    "shard_03": 192,
+    "shard_04": 192,
+    "shard_05": 192,
+    "shard_06": 192
+  }
+}

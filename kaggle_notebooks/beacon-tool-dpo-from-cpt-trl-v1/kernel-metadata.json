@@ -1,0 +1,22 @@
+{
+  "id": "rishavutkarsh/beacon-tool-dpo-from-cpt-trl-v1",
+  "title": "Beacon Tool DPO From CPT TRL V1",
+  "code_file": "beacon_tool_dpo_from_cpt_trl_v1.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "rishavutkarsh/beacon-tool-use-dpo-v1-curated",
+    "rishavutkarsh/beacon-dapt-cpt-v2-checkpoints"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [
+    "google/gemma-4/Transformers/gemma-4-e2b-it/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

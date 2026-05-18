@@ -1,0 +1,50 @@
+{
+  "base_run": "base_gemma4_e2b_it",
+  "pairwise_vs_base": {
+    "cpt_v2_ckpt300": {
+      "by_eval_bucket": {
+        "dev_calibration": {
+          "losses": 2,
+          "ties": 7,
+          "wins": 1
+        },
+        "heldout_test": {
+          "losses": 2,
+          "ties": 52,
+          "wins": 6
+        },
+        "train_seen_probe": {
+          "losses": 2,
+          "ties": 8,
+          "wins": 0
+        }
+      },
+      "comparable_rows": 80,
+      "losses_vs_base": 6,
+      "ties_vs_base": 67,
+      "unsafe_distractor_delta_vs_base": -2,
+      "wins_vs_base": 7
+    }
+  },
+  "run_headline_metrics": {
+    "base_gemma4_e2b_it": {
+      "dev_calibration_accuracy": 0.9,
+      "heldout_test_accuracy": 0.8167,
+      "invalid_rate": 0.0125,
+      "overall_80_accuracy": 0.85,
+      "train_seen_probe_accuracy": 1.0
+    },
+    "cpt_v2_ckpt300": {
+      "dev_calibration_accuracy": 0.8,
+      "heldout_test_accuracy": 0.8833,
+      "invalid_rate": 0.0,
+      "overall_80_accuracy": 0.8625,
+      "train_seen_probe_accuracy": 0.8
+    }
+  },
+  "selection_rule": {
+    "note": "overall_80_accuracy is mixed diagnostic only",
+    "prefer": "highest heldout_test_accuracy",
+    "veto": "unsafe_distractor_selection increase on critical rows or large invalid-rate increase"
+  }
+}

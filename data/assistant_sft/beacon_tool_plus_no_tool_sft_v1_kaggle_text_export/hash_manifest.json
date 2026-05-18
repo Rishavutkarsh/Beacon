@@ -1,0 +1,14 @@
+{
+  "created_at_utc": "2026-05-18T03:23:28+00:00",
+  "files": {
+    "all_rows.jsonl": "7609cfb3667d28adb907201b8d299758b9f73e00b459f4c7b7b7ccefc89a9d43",
+    "dev.jsonl": "f3746cee1700a1a7fea80eb1c608d97aeebb5514a14cb7df32c0c9ada5277778",
+    "final_eval.jsonl": "6de2973d001da234e68113cf8099b2283ddc21ec48dbf60a28fa877967fea4f8",
+    "train.jsonl": "8958468f09aba30e8cdc7acc843d0437fbbc2beb0f363a39183cd7a968110669",
+    "training_config.json": "94a70d5a6707904408be0af1bac477f6f19e6df1ec05965f2d3b5e7f68339458",
+    "validation_report.json": "7d0ece184e6d43eaaf8a279a7679debe6c99a195094596e21ffaa59ac70b6bcd"
+  },
+  "source_all_rows_sha256": "626c8ee4159e49703d0357241ae994859bc6ea8e8fd29d370c729f2208595778",
+  "source_dir": "C:\\Users\\risha\\Documents\\New project 5\\data\\assistant_sft\\beacon_tool_plus_no_tool_sft_v1_final_reviewed",
+  "source_manifest_sha256": "5d6e6fd868c90f63e822f5de564b61193442f72b6421662a8806379af2fabece"
+}

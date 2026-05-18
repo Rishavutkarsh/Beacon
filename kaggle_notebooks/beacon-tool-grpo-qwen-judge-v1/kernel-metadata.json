@@ -1,0 +1,22 @@
+{
+  "id": "rishavutkarsh/beacon-tool-grpo-qwen-judge-v1",
+  "title": "Beacon Tool GRPO Qwen Judge v1",
+  "code_file": "beacon_tool_grpo_qwen_judge_v1.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "rishavutkarsh/beacon-tool-use-grpo-v1",
+    "rishavutkarsh/beacon-tool-sft-best-dev-adapter"
+  ],
+  "kernel_sources": [],
+  "model_sources": [
+    "google/gemma-4/Transformers/gemma-4-e2b-it/1"
+  ],
+  "competition_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

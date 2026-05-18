@@ -1,0 +1,29 @@
+{
+  "by_family_status": {
+    "no_tool_needed::rewrite": 240,
+    "query_rewrite_tool_grounded::rewrite": 366,
+    "query_rewrite_tool_no_support::approved": 24,
+    "query_rewrite_tool_no_support::rewrite": 120,
+    "tool_grounded::rewrite": 303,
+    "tool_no_support::approved": 24,
+    "tool_no_support::rewrite": 123
+  },
+  "by_status": {
+    "approved": 48,
+    "rewrite": 1152
+  },
+  "created_at_utc": "2026-05-17T17:43:33+00:00",
+  "policy": "Strict prototype review: approve only rows with natural user-facing answers, valid tool traces, no unsupported exact claims, no visible scaffold language, and no high repetition.",
+  "row_count": 1200,
+  "source_package": "C:\\Users\\risha\\Documents\\New project 5\\data\\assistant_sft\\beacon_doc_tool_sft_v1",
+  "top_reasons": {
+    "answer stem repeated 10 times": 50,
+    "answer stem repeated 11 times": 22,
+    "answer stem repeated 12 times": 96,
+    "answer stem repeated 48 times": 384,
+    "answer stem repeated 8 times": 80,
+    "answer stem repeated 9 times": 180,
+    "visible scaffold/template language in assistant answer": 909
+  },
+  "training_recommendation": "Do not train on rows marked rewrite or rejected."
+}

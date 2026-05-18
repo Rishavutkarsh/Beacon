@@ -1,0 +1,65 @@
+{
+  "counts": {
+    "by_hazard": {
+      "accessibility_elder_disabled_pregnancy_child_language": 34,
+      "carbon_monoxide_fuel": 54,
+      "crowd_shelter_overcrowding": 20,
+      "dam_bund_flash_flood": 3,
+      "dam_flash_flood_riverbank_coastal": 18,
+      "diabetes_medication": 54,
+      "electrical_wet_devices": 60,
+      "flash_flood_building_shelter": 3,
+      "flash_flood_dry_channel": 3,
+      "flash_flood_storm_drain": 3,
+      "food_flood_power": 75,
+      "heatwave_cold_lightning_dust": 27,
+      "infrastructure_power_telecom_road_transit": 10,
+      "landslide_structural": 60,
+      "misinformation_fake_alerts_helplines_rescue": 20,
+      "post_disaster_contamination_infection": 27,
+      "route_rescue_live_fact": 66,
+      "shelter_hygiene": 54,
+      "urban_fire_lpg_chemical": 32,
+      "visual_uncertainty": 48,
+      "wash_ors_water": 75,
+      "wounds_first_aid": 54
+    },
+    "by_language": {
+      "english": 452,
+      "hinglish": 348
+    },
+    "by_risk": {
+      "critical": 163,
+      "high": 415,
+      "medium": 222
+    },
+    "by_split": {
+      "dev": 120,
+      "final_eval": 120,
+      "train": 560
+    },
+    "total": 800
+  },
+  "created_at_utc": "2026-05-16T14:53:40.656983+00:00",
+  "files": {
+    "dataset_design_note": "dataset_design_note.md",
+    "dev": "dev.jsonl",
+    "draft_rows": "draft_rows.jsonl",
+    "final_eval": "final_eval.jsonl",
+    "review_queue": "review_queue.csv",
+    "review_report": "review_report.json",
+    "source_rule_map": "source_rule_map.jsonl",
+    "train": "train.jsonl"
+  },
+  "readiness_recommendation": "not_ready_for_sft_training",
+  "review_policy": "Every row must be reviewed for safety, source support, and assistant style before export.",
+  "schema_version": "beacon-assistant-sft-v1",
+  "seed_cards": "data\\seed_cards\\sankat_saathi_seed_cards_v2_train_expanded.jsonl",
+  "seed_cards_sha256": "ecc8dddccc0832c63a73cefdb7cb8e6782166c7949fc3a097646bc39cecf86b7",
+  "source_rule_manifest": "data\\seed_cards\\source_rule_manifest_v2_train_seed_expansion.jsonl",
+  "source_rule_manifest_sha256": "720829bbf448d7003f35cea02f7881a8fc7b8e7efd4511fa34f4f9fef0b0b3bc",
+  "stage": "sft_draft_package_for_review",
+  "system_prompt": "You are Beacon, an offline crisis companion for India-relevant disaster situations. Give conservative, practical guidance. State uncertainty clearly, do not invent live facts, and give safer next steps before escalation.",
+  "target_count": 800,
+  "training_export_allowed": false
+}

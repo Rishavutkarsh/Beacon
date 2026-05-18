@@ -115,6 +115,29 @@ The current assistant SFT draft is not approved for training. Its manifest has
 `training_export_allowed=false`; review, expansion, and safety/source checks are
 required before any SFT launch.
 
+## Beacon Ollama Local Demo
+
+Beacon's local demo path is documented in `docs/beacon_ollama_local.md`.
+The short version:
+
+```powershell
+python scripts\beacon_docs_cli.py list-docs --query "generator carbon monoxide placement" --json
+python scripts\export_beacon_ollama.py --help
+ollama create beacon-gemma4-current-best -f ollama\Modelfile
+powershell -ExecutionPolicy Bypass -File scripts\beacon_demo_smoke.ps1
+powershell -ExecutionPolicy Bypass -File scripts\promote_beacon_ollama_export.ps1
+python scripts\beacon_ollama_agent.py --model beacon-gemma4-current-best --force-docs "Can I run a generator in my garage if the door is open?"
+```
+
+The current-best Q4_K_M GGUF has been exported on Kaggle and copied to
+`ollama/beacon-gemma4-e2b-current-best-q4_k_m.gguf`. Ollama is the laptop-local
+model runner; Beacon's controller owns offline official docs, retrieval, prompt
+assembly, and citation policy. The active model pointer is
+`config/beacon_current_model.json`, currently set to Beacon Tool DPO CPT
+Fullprompt Ckpt50; update that and rerun
+`kaggle/beacon_ollama_export_current_best` when a better adapter is selected
+later.
+
 ## What It Builds
 
 - `guidance_facts`: source-backed atomic safety rules.

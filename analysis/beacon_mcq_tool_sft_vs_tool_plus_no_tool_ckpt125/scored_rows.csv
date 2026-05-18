@@ -1,0 +1,161 @@
+candidate_id,example_id,hazard_bucket,difficulty,critical_safety_subset,prediction,correct_label,is_correct,picked_unsafe_distractor,question_stem
+tool_sft_best_dev,beacon_mcq_knowledge_v1_000,carbon_monoxide,medium,True,A,A,True,False,Which property makes carbon monoxide especially hard for people to detect without an alarm?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_001,carbon_monoxide,hard,True,B,B,True,False,Why can a generator outside but near an open window still be dangerous?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_002,carbon_monoxide,medium,True,C,C,True,False,Which set lists common symptoms of carbon monoxide poisoning from the CDC guidance?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_003,carbon_monoxide,hard,True,D,D,True,False,When should clinicians especially consider CO poisoning according to the guidance?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_004,carbon_monoxide,hard,True,A,A,True,False,What COHgb level strongly supports CO poisoning in a non-smoker?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_005,carbon_monoxide,hard,True,D,B,False,False,What COHgb level strongly supports CO poisoning in smokers?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_006,carbon_monoxide,hard,True,C,C,True,False,What oxygen treatment does the CDC clinical guidance recommend until symptoms resolve?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_007,food_after_emergency,medium,True,A,D,False,False,What refrigerator temperature should emergency food safety planning target?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_008,food_after_emergency,medium,True,B,A,False,False,How long can refrigerator food stay safe if doors remain closed during an outage?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_009,food_after_emergency,medium,True,B,B,True,False,"With doors closed, how long can food stay safe in a full freezer?"
+tool_sft_best_dev,beacon_mcq_knowledge_v1_010,food_after_emergency,medium,True,B,C,False,False,"With doors closed, how long can food stay safe in a half-full freezer?"
+tool_sft_best_dev,beacon_mcq_knowledge_v1_011,food_after_emergency,hard,True,D,D,True,False,What should you do if you are unsure whether emergency food is safe?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_012,food_after_emergency,hard,True,A,A,True,False,Why is food that contacted floodwater or storm water risky?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_013,emergency_water_supply,medium,True,B,B,True,False,How much emergency water should be stored per person per day?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_014,emergency_water_supply,medium,True,B,C,False,False,How many days of water does the CDC emergency supply page say to create and store?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_015,emergency_water_supply,hard,True,D,D,True,False,What is the safest and most reliable emergency drinking-water source named by CDC?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_016,emergency_water_supply,medium,True,A,A,True,False,How often should stored water in filled containers be replaced?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_017,emergency_water_supply,hard,True,B,B,True,False,What bleach concentration range does the CDC storage page mention for emergency water disinfection supplies?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_018,water_disinfection,hard,True,C,C,True,False,What limitation does EPA give for boiling or disinfecting emergency drinking water?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_019,water_disinfection,medium,True,A,D,False,False,How long should water be at a rolling boil at normal altitudes according to EPA?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_020,water_disinfection,hard,True,B,A,False,False,"At altitudes above 5,000 feet, how long should emergency water boil?"
+tool_sft_best_dev,beacon_mcq_knowledge_v1_021,water_disinfection,medium,True,B,B,True,False,What should happen before boiling cloudy water?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_022,volcano_ash,medium,True,C,C,True,False,Which volcanic gases does EPA identify as major potential hazards?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_023,volcano_ash,medium,False,D,D,True,False,How far can volcanic ash travel downwind according to EPA?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_024,volcano_ash,hard,True,A,A,True,False,Who can volcanic ash particularly trouble even though it is not highly toxic?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_025,volcano_ash,hard,True,B,B,True,False,What can volcanic ash do to drinking water and wastewater facilities?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_026,winter_storm,medium,True,C,C,True,False,What conditions define a blizzard in the NWS winter safety source?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_027,winter_storm,medium,True,D,D,True,False,Why are blizzards dangerous for roads according to NWS?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_028,winter_storm,medium,True,A,A,True,False,What winter-storm road hazard injures or kills thousands each year according to NWS?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_029,lightning,medium,True,B,B,True,False,"When thunder roars, what does the Ready lightning source say to do?"
+tool_sft_best_dev,beacon_mcq_knowledge_v1_030,lightning,medium,True,C,C,True,False,What is the safest place to be during a thunderstorm in the Ready source?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_031,lightning,hard,True,D,D,True,False,Why should people avoid running water and landline phones indoors during lightning?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_032,lightning,medium,False,A,A,True,False,Which alerts are named as sources of emergency thunderstorm warnings?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_033,flood_preparedness,medium,True,B,B,True,False,What should a family practice before a flood according to the CDC flood-preparedness page?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_034,flood_preparedness,medium,True,C,C,True,False,What does the CDC flood page say about evacuation orders?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_035,flood_preparedness,medium,False,D,D,True,False,Whom should a family choose as a contact if separated during a flood?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_036,firefighting_response,medium,False,A,A,True,False,What is the purpose of ESF #4 in the NRF annex?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_037,firefighting_response,medium,False,A,B,False,False,Which agency is listed as the primary agency for ESF #4 Firefighting?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_038,firefighting_response,hard,False,C,C,True,False,What kind of firefighting resources does ESF #4 coordinate in support of local and state agencies?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_039,firefighting_response,hard,False,D,D,True,False,"How does the annex describe firefighting responsibility at local, state, tribal, and territorial levels?"
+tool_sft_best_dev,beacon_mcq_knowledge_v1_040,firefighting_response,hard,False,A,A,True,False,"Under ESF #4, what does the National Weather Service provide in support of fire planning and response?"
+tool_sft_best_dev,beacon_mcq_knowledge_v1_041,firefighting_response,hard,False,B,B,True,False,What does DOD do for firefighting on DOD installations according to the annex?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_042,fema_training,medium,False,C,C,True,False,What does IS-100.c introduce?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_043,fema_training,medium,False,D,D,True,False,What is the Independent Study Program described as?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_044,fema_training,hard,False,A,A,True,False,What is the goal of IS-251.b for IPAWS Alerting Administrators?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_045,fema_training,hard,False,B,B,True,False,What does IS-393.b define mitigation as?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_046,fema_training,hard,False,C,C,True,False,What does IS-870.b for the Dams Sector address?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_047,fema_training,hard,False,D,D,True,False,What are the last four ISC Risk Management Process steps covered by IS-1173.a?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_048,pfa_support,medium,True,A,A,True,False,Which behavior interferes with giving support after disaster exposure?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_049,pfa_support,medium,True,B,B,True,False,What does the PFA source say about advice without listening?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_050,pfa_support,hard,True,C,C,True,False,"When support is not enough, what help does the PFA page suggest?"
+tool_sft_best_dev,beacon_mcq_knowledge_v1_051,pfa_support,medium,True,D,D,True,False,What does the PFA page say about avoidance and withdrawal?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_052,pfa_children,medium,True,A,A,True,False,How should adults respond to a child's confusion about what happened?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_053,pfa_children,medium,True,B,B,True,False,What does the child-support handout recommend when a child worries after seeing a parent injured?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_054,medical_devices,hard,False,C,C,True,False,What is the FDA medical-device recall communications pilot meant to minimize?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_055,medical_devices,medium,False,D,D,True,False,What should people check before throwing out at-home COVID-19 tests?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_056,medical_devices,medium,False,A,A,True,False,Which FDA database is named for medical device experience reports?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_057,winter_storm,medium,True,B,B,True,False,What types of precipitation can winter storms bring across the United States?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_058,lightning,medium,True,C,C,True,False,What should people do with appliances during a thunderstorm according to Ready.gov?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_059,emergency_water_supply,medium,True,D,D,True,False,When should households store more than the baseline water amount?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_060,water_disinfection,hard,True,A,A,True,False,Why is boiling not enough for emergency water that smells like fuel or chemicals?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_061,water_disinfection,medium,True,B,B,True,False,What should be done before boiling cloudy emergency water?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_062,water_disinfection,hard,True,B,C,False,True,"After adding bleach to disinfect emergency water, how long should it stand before drinking?"
+tool_sft_best_dev,beacon_mcq_knowledge_v1_063,food_after_flood,hard,True,D,D,True,False,Which flood-contact items should be thrown out because sanitizing is not effective?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_064,food_after_flood,medium,True,A,A,True,False,Why is smell not enough to decide if emergency food is safe?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_065,diabetes_emergency,medium,True,B,B,True,False,How long should diabetes emergency supplies last according to the CDC emergency kit source?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_066,diabetes_emergency,medium,True,A,C,False,False,What quick-carb amount does the diabetes emergency source name for low blood sugar?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_067,insulin_emergency,hard,True,D,D,True,False,What is the key storage warning for insulin during an outage?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_068,risk_communication,medium,False,A,A,True,False,What are the six CERC principles emphasized in the CDC material?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_069,cyclone_evacuation,medium,True,B,B,True,False,"In cyclone preparedness, why is coastal evacuation planning important?"
+tool_sft_best_dev,beacon_mcq_knowledge_v1_070,safe_room,medium,False,C,C,True,False,What is FEMA 453 intended to guide?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_071,safe_room,hard,False,D,D,True,False,Why does the safe-room document avoid defining a single explosive design threat?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_072,protection_framework,medium,False,A,A,True,False,What mission does the National Protection Framework describe?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_073,protection_framework,hard,False,B,B,True,False,How does the Protection Framework describe resilience?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_074,protection_framework,hard,False,C,C,True,False,Which three core capabilities span all five mission areas in the Protection Framework excerpt?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_075,protection_framework,hard,False,D,D,True,False,What lifeline functions are named in the protection critical tasks excerpt?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_076,flood_messaging,medium,False,A,A,True,False,What does the flood messaging toolkit discourage changing?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_077,flood_messaging,medium,True,B,B,True,False,What should additions to flood messaging focus on?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_078,pfa_support,medium,True,C,C,True,False,Which PFA behavior interferes with giving support?
+tool_sft_best_dev,beacon_mcq_knowledge_v1_079,pfa_children,medium,True,D,D,True,False,"For a child afraid to sleep alone after disaster, what is one recommended bedtime support?"
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_000,carbon_monoxide,medium,True,A,A,True,False,Which property makes carbon monoxide especially hard for people to detect without an alarm?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_001,carbon_monoxide,hard,True,B,B,True,False,Why can a generator outside but near an open window still be dangerous?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_002,carbon_monoxide,medium,True,C,C,True,False,Which set lists common symptoms of carbon monoxide poisoning from the CDC guidance?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_003,carbon_monoxide,hard,True,A,D,False,False,When should clinicians especially consider CO poisoning according to the guidance?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_004,carbon_monoxide,hard,True,A,A,True,False,What COHgb level strongly supports CO poisoning in a non-smoker?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_005,carbon_monoxide,hard,True,A,B,False,False,What COHgb level strongly supports CO poisoning in smokers?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_006,carbon_monoxide,hard,True,C,C,True,False,What oxygen treatment does the CDC clinical guidance recommend until symptoms resolve?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_007,food_after_emergency,medium,True,A,D,False,False,What refrigerator temperature should emergency food safety planning target?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_008,food_after_emergency,medium,True,B,A,False,False,How long can refrigerator food stay safe if doors remain closed during an outage?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_009,food_after_emergency,medium,True,B,B,True,False,"With doors closed, how long can food stay safe in a full freezer?"
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_010,food_after_emergency,medium,True,B,C,False,False,"With doors closed, how long can food stay safe in a half-full freezer?"
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_011,food_after_emergency,hard,True,D,D,True,False,What should you do if you are unsure whether emergency food is safe?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_012,food_after_emergency,hard,True,A,A,True,False,Why is food that contacted floodwater or storm water risky?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_013,emergency_water_supply,medium,True,B,B,True,False,How much emergency water should be stored per person per day?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_014,emergency_water_supply,medium,True,B,C,False,False,How many days of water does the CDC emergency supply page say to create and store?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_015,emergency_water_supply,hard,True,D,D,True,False,What is the safest and most reliable emergency drinking-water source named by CDC?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_016,emergency_water_supply,medium,True,A,A,True,False,How often should stored water in filled containers be replaced?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_017,emergency_water_supply,hard,True,B,B,True,False,What bleach concentration range does the CDC storage page mention for emergency water disinfection supplies?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_018,water_disinfection,hard,True,C,C,True,False,What limitation does EPA give for boiling or disinfecting emergency drinking water?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_019,water_disinfection,medium,True,A,D,False,False,How long should water be at a rolling boil at normal altitudes according to EPA?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_020,water_disinfection,hard,True,A,A,True,False,"At altitudes above 5,000 feet, how long should emergency water boil?"
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_021,water_disinfection,medium,True,B,B,True,False,What should happen before boiling cloudy water?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_022,volcano_ash,medium,True,C,C,True,False,Which volcanic gases does EPA identify as major potential hazards?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_023,volcano_ash,medium,False,D,D,True,False,How far can volcanic ash travel downwind according to EPA?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_024,volcano_ash,hard,True,A,A,True,False,Who can volcanic ash particularly trouble even though it is not highly toxic?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_025,volcano_ash,hard,True,B,B,True,False,What can volcanic ash do to drinking water and wastewater facilities?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_026,winter_storm,medium,True,C,C,True,False,What conditions define a blizzard in the NWS winter safety source?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_027,winter_storm,medium,True,D,D,True,False,Why are blizzards dangerous for roads according to NWS?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_028,winter_storm,medium,True,A,A,True,False,What winter-storm road hazard injures or kills thousands each year according to NWS?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_029,lightning,medium,True,B,B,True,False,"When thunder roars, what does the Ready lightning source say to do?"
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_030,lightning,medium,True,C,C,True,False,What is the safest place to be during a thunderstorm in the Ready source?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_031,lightning,hard,True,D,D,True,False,Why should people avoid running water and landline phones indoors during lightning?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_032,lightning,medium,False,A,A,True,False,Which alerts are named as sources of emergency thunderstorm warnings?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_033,flood_preparedness,medium,True,B,B,True,False,What should a family practice before a flood according to the CDC flood-preparedness page?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_034,flood_preparedness,medium,True,C,C,True,False,What does the CDC flood page say about evacuation orders?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_035,flood_preparedness,medium,False,D,D,True,False,Whom should a family choose as a contact if separated during a flood?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_036,firefighting_response,medium,False,A,A,True,False,What is the purpose of ESF #4 in the NRF annex?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_037,firefighting_response,medium,False,A,B,False,False,Which agency is listed as the primary agency for ESF #4 Firefighting?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_038,firefighting_response,hard,False,C,C,True,False,What kind of firefighting resources does ESF #4 coordinate in support of local and state agencies?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_039,firefighting_response,hard,False,D,D,True,False,"How does the annex describe firefighting responsibility at local, state, tribal, and territorial levels?"
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_040,firefighting_response,hard,False,A,A,True,False,"Under ESF #4, what does the National Weather Service provide in support of fire planning and response?"
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_041,firefighting_response,hard,False,B,B,True,False,What does DOD do for firefighting on DOD installations according to the annex?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_042,fema_training,medium,False,C,C,True,False,What does IS-100.c introduce?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_043,fema_training,medium,False,D,D,True,False,What is the Independent Study Program described as?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_044,fema_training,hard,False,A,A,True,False,What is the goal of IS-251.b for IPAWS Alerting Administrators?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_045,fema_training,hard,False,B,B,True,False,What does IS-393.b define mitigation as?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_046,fema_training,hard,False,C,C,True,False,What does IS-870.b for the Dams Sector address?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_047,fema_training,hard,False,D,D,True,False,What are the last four ISC Risk Management Process steps covered by IS-1173.a?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_048,pfa_support,medium,True,A,A,True,False,Which behavior interferes with giving support after disaster exposure?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_049,pfa_support,medium,True,B,B,True,False,What does the PFA source say about advice without listening?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_050,pfa_support,hard,True,C,C,True,False,"When support is not enough, what help does the PFA page suggest?"
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_051,pfa_support,medium,True,D,D,True,False,What does the PFA page say about avoidance and withdrawal?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_052,pfa_children,medium,True,A,A,True,False,How should adults respond to a child's confusion about what happened?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_053,pfa_children,medium,True,B,B,True,False,What does the child-support handout recommend when a child worries after seeing a parent injured?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_054,medical_devices,hard,False,C,C,True,False,What is the FDA medical-device recall communications pilot meant to minimize?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_055,medical_devices,medium,False,D,D,True,False,What should people check before throwing out at-home COVID-19 tests?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_056,medical_devices,medium,False,A,A,True,False,Which FDA database is named for medical device experience reports?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_057,winter_storm,medium,True,B,B,True,False,What types of precipitation can winter storms bring across the United States?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_058,lightning,medium,True,C,C,True,False,What should people do with appliances during a thunderstorm according to Ready.gov?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_059,emergency_water_supply,medium,True,D,D,True,False,When should households store more than the baseline water amount?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_060,water_disinfection,hard,True,A,A,True,False,Why is boiling not enough for emergency water that smells like fuel or chemicals?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_061,water_disinfection,medium,True,B,B,True,False,What should be done before boiling cloudy emergency water?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_062,water_disinfection,hard,True,B,C,False,True,"After adding bleach to disinfect emergency water, how long should it stand before drinking?"
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_063,food_after_flood,hard,True,D,D,True,False,Which flood-contact items should be thrown out because sanitizing is not effective?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_064,food_after_flood,medium,True,A,A,True,False,Why is smell not enough to decide if emergency food is safe?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_065,diabetes_emergency,medium,True,B,B,True,False,How long should diabetes emergency supplies last according to the CDC emergency kit source?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_066,diabetes_emergency,medium,True,A,C,False,False,What quick-carb amount does the diabetes emergency source name for low blood sugar?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_067,insulin_emergency,hard,True,D,D,True,False,What is the key storage warning for insulin during an outage?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_068,risk_communication,medium,False,A,A,True,False,What are the six CERC principles emphasized in the CDC material?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_069,cyclone_evacuation,medium,True,B,B,True,False,"In cyclone preparedness, why is coastal evacuation planning important?"
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_070,safe_room,medium,False,C,C,True,False,What is FEMA 453 intended to guide?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_071,safe_room,hard,False,D,D,True,False,Why does the safe-room document avoid defining a single explosive design threat?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_072,protection_framework,medium,False,A,A,True,False,What mission does the National Protection Framework describe?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_073,protection_framework,hard,False,B,B,True,False,How does the Protection Framework describe resilience?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_074,protection_framework,hard,False,C,C,True,False,Which three core capabilities span all five mission areas in the Protection Framework excerpt?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_075,protection_framework,hard,False,D,D,True,False,What lifeline functions are named in the protection critical tasks excerpt?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_076,flood_messaging,medium,False,B,A,False,False,What does the flood messaging toolkit discourage changing?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_077,flood_messaging,medium,True,B,B,True,False,What should additions to flood messaging focus on?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_078,pfa_support,medium,True,C,C,True,False,Which PFA behavior interferes with giving support?
+tool_plus_no_tool_ckpt125,beacon_mcq_knowledge_v1_079,pfa_children,medium,True,D,D,True,False,"For a child afraid to sleep alone after disaster, what is one recommended bedtime support?"

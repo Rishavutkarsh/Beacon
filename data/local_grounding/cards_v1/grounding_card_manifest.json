@@ -1,0 +1,45 @@
+{
+  "approved_by_hazard_family": {
+    "flood_route": 1,
+    "food_safety": 1,
+    "heat_cold_lightning": 2,
+    "power_co_electrical": 3,
+    "water_wash": 2,
+    "wounds_cleanup": 2
+  },
+  "approved_card_count": 11,
+  "by_status": {
+    "approved": 11,
+    "draft": 12,
+    "needs_revision": 33
+  },
+  "created_at_utc": "2026-05-17T08:50:07+00:00",
+  "draft_by_hazard_family": {
+    "cyclone_coastal": 4,
+    "flood_route": 3,
+    "food_safety": 6,
+    "heat_cold_lightning": 7,
+    "landslide_structural": 4,
+    "medicine_diabetes": 5,
+    "misinformation_live_status": 4,
+    "power_co_electrical": 8,
+    "shelter_vulnerable": 4,
+    "water_wash": 9,
+    "wounds_cleanup": 2
+  },
+  "draft_card_count": 56,
+  "review_count": 88,
+  "schema_version": "beacon-local-grounding-card-v1",
+  "status": "valid",
+  "validation": {
+    "errors": [],
+    "warnings": [
+      "approved cards missing hazard family medicine_diabetes",
+      "approved cards missing hazard family shelter_vulnerable",
+      "approved cards missing hazard family cyclone_coastal",
+      "approved cards missing hazard family landslide_structural",
+      "approved cards missing hazard family misinformation_live_status",
+      "approved card count below target after review: 11"
+    ]
+  }
+}

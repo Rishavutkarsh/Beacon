@@ -1,0 +1,5621 @@
+{
+  "created_at_utc": "2026-05-16T14:53:44.516507+00:00",
+  "deterministic_row_report": {
+    "counts": {
+      "hazard": {
+        "accessibility_elder_disabled_pregnancy_child_language": 34,
+        "carbon_monoxide_fuel": 54,
+        "crowd_shelter_overcrowding": 20,
+        "dam_bund_flash_flood": 3,
+        "dam_flash_flood_riverbank_coastal": 18,
+        "diabetes_medication": 54,
+        "electrical_wet_devices": 60,
+        "flash_flood_building_shelter": 3,
+        "flash_flood_dry_channel": 3,
+        "flash_flood_storm_drain": 3,
+        "food_flood_power": 75,
+        "heatwave_cold_lightning_dust": 27,
+        "infrastructure_power_telecom_road_transit": 10,
+        "landslide_structural": 60,
+        "misinformation_fake_alerts_helplines_rescue": 20,
+        "post_disaster_contamination_infection": 27,
+        "route_rescue_live_fact": 66,
+        "shelter_hygiene": 54,
+        "urban_fire_lpg_chemical": 32,
+        "visual_uncertainty": 48,
+        "wash_ors_water": 75,
+        "wounds_first_aid": 54
+      },
+      "language": {
+        "english": 452,
+        "hinglish": 348
+      },
+      "risk": {
+        "critical": 163,
+        "high": 415,
+        "medium": 222
+      },
+      "split": {
+        "dev": 120,
+        "final_eval": 120,
+        "train": 560
+      }
+    },
+    "diversity": {
+      "top_first_line": "do not use this assumption as your water-safety check: clear-looking floodwater is safe after settling.",
+      "top_first_line_count": 3,
+      "unique_first_lines": 762
+    },
+    "errors": [],
+    "row_count": 800,
+    "status": "pass",
+    "warnings": []
+  },
+  "next_steps": [
+    "complete human review for all rows",
+    "edit or remove weak rows found by review",
+    "add tool-use/retrieval traces in a separate lane after answer-style rows are stable"
+  ],
+  "package_level_risks": [
+    "human_review_pending_for_all_rows",
+    "source_rule_manifest_entries_are_pending_main_review"
+  ],
+  "pending_source_rule_ids": [
+    "access_before_paperwork",
+    "accessible_hygiene_message",
+    "accessible_hygiene_point",
+    "attendance_accountability",
+    "avoid_blame",
+    "avoid_channels_during_flash_flood_risk",
+    "avoid_child_sensitive_interpreter",
+    "avoid_drains_and_floodwater",
+    "avoid_edge_crowding",
+    "avoid_electrical_hazards",
+    "avoid_family_separation",
+    "avoid_fast_runoff_and_drains",
+    "avoid_flooded_basement",
+    "avoid_floodwater_travel",
+    "avoid_lift_when_power_uncertain",
+    "avoid_lower_floor_floodwater",
+    "avoid_moving_water",
+    "avoid_open_drains",
+    "avoid_panic_movement",
+    "avoid_platform_edges",
+    "avoid_rumor_amplification",
+    "avoid_sewage_adjacent_food_prep",
+    "avoid_sewage_contact",
+    "avoid_single_point_pressure",
+    "avoid_surge_water",
+    "avoid_unknown_flood_routes",
+    "avoid_unnecessary_climbing",
+    "avoid_unsafe_transfers",
+    "avoid_unstable_edges",
+    "avoid_unverified_pickup_movement",
+    "avoid_wet_charging",
+    "avoid_wet_electrical_areas",
+    "avoid_wet_electrical_panels",
+    "avoid_wet_electrical_points",
+    "battery_avoid_smoke_heat",
+    "battery_no_puncture_charge",
+    "battery_red_flags_escalate",
+    "breathing_red_flags_escalate",
+    "buddy_support_mobility",
+    "chemical_avoid_contact",
+    "chemical_do_not_identify",
+    "chemical_do_not_mix_cleaners",
+    "chemical_do_not_mix_or_neutralize",
+    "chemical_move_away",
+    "chemical_no_guess_identity",
+    "chemical_no_photo_identification",
+    "chemical_no_work_clearance",
+    "chemical_red_flags_escalate",
+    "chemical_reduce_exposure",
+    "chemical_unknown_fumes_avoid_entry",
+    "child_headcount",
+    "child_red_flags_escalate",
+    "child_standback",
+    "clear_walkways",
+    "co_symptom_escalation",
+    "cold_dry_layers",
+    "cold_prioritize_vulnerable",
+    "cold_red_flags_escalate",
+    "communicate_uncertainty_plainly",
+    "confirm_understanding_accessibly",
+    "conserve_phone_battery",
+    "controlled_handover",
+    "cordon_contaminated_area",
+    "covered_raised_water",
+    "covered_waste_disposal",
+    "crowd_standback",
+    "damaged_building_reentry",
+    "damaged_food_packaging",
+    "damaged_medicine_label",
+    "dehydration_escalation",
+    "dehydration_red_flags",
+    "diabetes_disrupted_meals",
+    "diabetes_wound_risk",
+    "diarrhea_cluster_escalation",
+    "discard_flood_contact_food",
+    "do_not_amplify_unverified_accusations",
+    "do_not_certify_infrastructure_safety",
+    "do_not_claim_live_transit_status",
+    "do_not_claim_power_off",
+    "do_not_confirm_live_status",
+    "do_not_require_live_confirmation_to_take_low_risk_action",
+    "do_not_use_children_as_scouts",
+    "downed_line_distance",
+    "dust_avoid_poor_visibility_travel",
+    "dust_eye_breathing_red_flags",
+    "dust_move_vulnerable_to_shelter",
+    "dust_no_photo_air_certification",
+    "dust_prioritize_vulnerable",
+    "dust_reduce_exposure",
+    "dust_stop_low_visibility_work",
+    "elder_red_flag_referral",
+    "electrical_flood_hazard",
+    "electrical_no_panel_diy",
+    "electrical_no_water_on_equipment",
+    "fire_avoid_lifts",
+    "fire_clear_access",
+    "fire_help_vulnerable_first",
+    "fire_keep_away_from_smoke",
+    "fire_keep_crowd_back",
+    "fire_no_entry_for_public",
+    "fire_no_reentry",
+    "fire_people_before_belongings",
+    "fire_red_flags_escalate",
+    "flood_crossing_turn_around",
+    "floodwater_contact_wounds",
+    "floodwater_food_contact",
+    "fuel_carbon_monoxide",
+    "fumes_move_away_ventilate_if_safe",
+    "hand_foot_hygiene",
+    "hand_hygiene_after_contamination",
+    "hand_hygiene_food_queue",
+    "heat_buddy_check",
+    "heat_check_isolated_people",
+    "heat_cool_body_external",
+    "heat_escalate_red_flags",
+    "heat_move_to_cool_place",
+    "heat_move_to_cooler_place",
+    "heat_prioritize_elder",
+    "heat_red_flags_escalate",
+    "heat_stop_activity",
+    "heat_stop_heavy_work",
+    "help_disabled_residents",
+    "household_hygiene_support",
+    "image_uncertainty_lower_risk",
+    "indoor_fuel_device",
+    "insulin_storage_uncertainty",
+    "keep_assistive_devices_with_user",
+    "keep_children_from_floodwater",
+    "keep_exits_clear",
+    "keep_family_together",
+    "keep_household_group_together",
+    "keep_people_off_tracks",
+    "keep_supplies_clean",
+    "language_light_messages",
+    "lightning_avoid_isolated_trees",
+    "lightning_avoid_open_high_conductive",
+    "lightning_escalate_after_strike",
+    "lightning_leave_open_area",
+    "lightning_no_live_distance_claim",
+    "lightning_strike_red_flags",
+    "live_fact_uncertainty",
+    "lpg_avoid_switches_sparks",
+    "lpg_move_away",
+    "lpg_no_flame_test",
+    "machinery_keep_children_away",
+    "manage_doorway_pressure",
+    "manage_entry_flow",
+    "mark_unverified_information",
+    "minimize_sensitive_data",
+    "minimize_sensitive_public_data",
+    "monitor_illness_clusters",
+    "move_children_to_higher_ground",
+    "move_crowd_from_edge",
+    "move_from_visible_immediate_hazard",
+    "multilingual_hygiene_prompt",
+    "no_diagnosis_without_clinician",
+    "no_disposal_tactics",
+    "no_drive_through_floodwater",
+    "no_electrical_safety_certification",
+    "no_firefighting_tactics",
+    "no_flame_near_bedding",
+    "no_floodwater_scouting",
+    "no_formula_shortcuts",
+    "no_live_access_status_claim",
+    "no_live_alert_claims",
+    "no_live_clearance_claim",
+    "no_live_map_confirmation",
+    "no_live_power_safety_certification",
+    "no_live_status_confirmation",
+    "no_live_transit_status_claim",
+    "no_live_transit_status_confirmation",
+    "no_manual_clearance_in_flow",
+    "no_message_delivery_confirmation",
+    "no_outbreak_claim",
+    "no_payment_based_rescue_guarantee",
+    "no_photo_safety_certainty",
+    "no_power_restoration_claim",
+    "no_repair_instructions",
+    "no_rescue_guarantee_from_form",
+    "no_rescue_protocol_confirmation",
+    "no_technical_status_from_rumor",
+    "no_treatment_protocol",
+    "no_untrained_sewage_entry",
+    "no_unverified_allocation_claim",
+    "no_unverified_exclusion_rule",
+    "no_weather_duration_claim",
+    "no_wet_electrical_assumption",
+    "observable_red_flags_only",
+    "offline_short_card",
+    "oil_fire_no_water",
+    "ors_safe_water",
+    "pause_if_crush_risk",
+    "pause_if_hygiene_uncontrolled",
+    "people_before_property",
+    "people_before_vehicles",
+    "photo_cannot_certify_safety",
+    "plain_language_prompts",
+    "power_outage_perishables",
+    "prevent_gate_crowd_surge",
+    "prioritize_access_needs",
+    "prioritize_accessible_sanitation",
+    "prioritize_caregiver_hand_hygiene",
+    "prioritize_children_clean_area",
+    "prioritize_immediate_danger",
+    "prioritize_infant_safe_water",
+    "prioritize_life_safety",
+    "prioritize_pregnant_person_access",
+    "prioritize_urgent_messages",
+    "prioritize_vulnerable",
+    "prioritize_vulnerable_access",
+    "prioritize_vulnerable_people",
+    "prioritize_vulnerable_red_flags",
+    "priority_access_seating",
+    "privacy_dignity",
+    "privacy_for_caregivers",
+    "privacy_minimization",
+    "privacy_preserving_hygiene",
+    "property_secondary",
+    "protect_child_identity",
+    "protect_children_first",
+    "protect_dignity",
+    "protect_infant_feeding_space",
+    "protect_mobility_aid_hygiene",
+    "protect_payment_privacy",
+    "protect_privacy_dignity",
+    "protect_vulnerable_groups",
+    "protect_vulnerable_queue",
+    "protect_vulnerable_routes",
+    "redirect_verified_local_info",
+    "refer_child_red_flags",
+    "refer_elder_red_flags",
+    "refer_pregnancy_red_flags",
+    "refer_red_flags",
+    "refer_severe_red_flags",
+    "refer_wound_or_fever",
+    "refuse_current_status_claims",
+    "respect_privacy",
+    "safe_food_handling_shelter",
+    "safe_storage",
+    "separate_bathing_runoff_from_food",
+    "separate_clean_dirty_utensils",
+    "separate_clean_dirty_zones",
+    "separate_contaminated_supplies",
+    "separate_food_from_overflow",
+    "separate_runoff_from_water",
+    "separate_safe_and_unsafe_water",
+    "separate_sleeping_from_contamination",
+    "separate_soiled_from_food",
+    "separate_waste_food_water",
+    "separate_water_from_contamination",
+    "shelter_hygiene_wash",
+    "slope_warning_signs",
+    "smoke_keep_children_together",
+    "smoke_move_people_back",
+    "smoke_red_flags_escalate",
+    "stay_out_of_restricted_areas",
+    "structural_landslide_danger",
+    "triage_immediate_danger",
+    "triage_immediate_danger_first",
+    "triage_prioritize_breathing_vulnerable",
+    "triage_vulnerable_needs",
+    "uncertain_depth_boundary",
+    "unsafe_rescue_self_protection",
+    "use_accessible_low_tech_signage",
+    "use_consent_guided_assistance",
+    "use_multi_format_messages",
+    "use_pictorial_prompts",
+    "use_plain_access_needs_message",
+    "use_plain_language",
+    "use_plain_multilingual_messages",
+    "use_short_essential_messages",
+    "use_stairs_only_if_safe",
+    "use_verified_safe_shelter",
+    "verify_before_forwarding",
+    "verify_before_redirecting_crowd",
+    "visual_cannot_determine",
+    "visual_point_of_action_prompts",
+    "water_treat_uncertain_source",
+    "wet_device_reenergizing",
+    "wound_infection_escalation",
+    "zone_crowded_shelter"
+  ],
+  "recommendation": "not_ready_for_sft_training",
+  "status": "review_required",
+  "summary": "Candidate package passed deterministic lint, but is not approved for training until human review and scale-up.",
+  "weak_or_risky_rows": [
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0000"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0001"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0002"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0003"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0004"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0006"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0007"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0008"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0009"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0010"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0011"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0012"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0013"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0014"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0015"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0016"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0017"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0018"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0019"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0020"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0021"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0022"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0023"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0024"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0026"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0027"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0028"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0030"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0031"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0032"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0033"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0034"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0035"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0037"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0038"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0039"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0040"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0041"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0042"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0044"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0045"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0046"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0047"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0049"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0050"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0051"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0052"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0053"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0054"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0057"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0058"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0059"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0061"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0062"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0063"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0064"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0065"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0066"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0067"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0068"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0069"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0071"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0072"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0073"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0074"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0075"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0076"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0077"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0078"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0079"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0080"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0081"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0083"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0084"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0085"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0086"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0087"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0088"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0089"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0090"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0091"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0092"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0093"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0094"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0095"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0096"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0097"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0098"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0099"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0100"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0101"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0102"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0103"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0104"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0105"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0106"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0107"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0108"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0110"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0111"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0114"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0115"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0118"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0121"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0122"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0123"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0124"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0125"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0126"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0127"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0128"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0129"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0130"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0131"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0132"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0133"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0134"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0135"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0136"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0137"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0138"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0139"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0140"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0141"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0142"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0143"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0144"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0145"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0146"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0147"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0148"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0149"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0152"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0153"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0154"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0155"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0156"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0158"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0159"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0160"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0161"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0162"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0163"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0164"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0165"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0166"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0169"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0172"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0173"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0176"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0177"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0179"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0180"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0181"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0182"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0184"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0185"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0187"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0188"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0191"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0192"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0195"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0196"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0197"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0199"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0200"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0201"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0202"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0203"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0204"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0205"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0206"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0207"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0208"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0209"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0210"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0211"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0212"
+    },
+    {
+      "hazard": "dam_bund_flash_flood",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0213"
+    },
+    {
+      "hazard": "flash_flood_building_shelter",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0214"
+    },
+    {
+      "hazard": "flash_flood_storm_drain",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0215"
+    },
+    {
+      "hazard": "flash_flood_dry_channel",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0216"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0219"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0220"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0221"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0223"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0224"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0225"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0227"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0229"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0230"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0231"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0232"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0233"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0234"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0235"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0236"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0237"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0238"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0239"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0240"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0243"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0245"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0246"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0248"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0249"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0250"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0251"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0252"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0255"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0256"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0258"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0259"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0260"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0261"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0263"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0265"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0266"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0267"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0268"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0270"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0271"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0272"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0277"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0279"
+    },
+    {
+      "hazard": "infrastructure_power_telecom_road_transit",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0280"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0282"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0283"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0284"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0285"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0286"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0287"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0288"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0289"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0290"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0291"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0292"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0293"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0294"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0295"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0296"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0297"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0298"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0299"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0300"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0301"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0302"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0303"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0304"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0305"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0306"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0307"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0308"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0309"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0310"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0311"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0312"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0313"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0314"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0315"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0316"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0317"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0318"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0319"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0320"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0321"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0322"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0323"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0324"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0325"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0326"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0327"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0328"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0329"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0330"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0331"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0332"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0333"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0334"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0335"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0336"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0337"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0338"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0339"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0340"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0341"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0342"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0343"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0344"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0345"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0346"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0347"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0348"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0349"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0350"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0351"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0352"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0353"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0354"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0355"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0356"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0357"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0358"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0359"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0360"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0361"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0362"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0363"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0364"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0365"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0366"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0367"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0368"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0369"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0370"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0371"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0372"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0373"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0374"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0375"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0376"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0377"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0378"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0379"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0380"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0381"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0382"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0383"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0384"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0385"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0386"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0387"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0388"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0389"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0390"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0391"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0392"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0393"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0394"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0395"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0396"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0397"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0398"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0399"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0400"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0401"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0402"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0403"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0404"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0405"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0406"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0407"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0408"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0409"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0410"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0411"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0412"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0413"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0414"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0415"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0416"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0417"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0418"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0419"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0420"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0421"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0422"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0423"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0424"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0425"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0426"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0427"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0428"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0429"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0430"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0431"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0432"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0433"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0434"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0435"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0436"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0437"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0438"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0439"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0440"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0441"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0442"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0443"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0444"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0445"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0446"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0447"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0448"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0449"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0450"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0451"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0452"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0453"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0454"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0455"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0456"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0457"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0458"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0459"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0460"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0461"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0462"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0463"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0464"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0465"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0466"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0467"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0468"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0469"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0470"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0471"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0472"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0473"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0474"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0475"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0476"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0477"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0478"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0479"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0480"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0481"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0482"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0483"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0484"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0485"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0486"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0487"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0488"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0489"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0490"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0491"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0492"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0493"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0494"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0495"
+    },
+    {
+      "hazard": "dam_bund_flash_flood",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0496"
+    },
+    {
+      "hazard": "flash_flood_building_shelter",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0497"
+    },
+    {
+      "hazard": "flash_flood_storm_drain",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0498"
+    },
+    {
+      "hazard": "flash_flood_dry_channel",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0499"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0500"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0501"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0502"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0503"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0504"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0505"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0506"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0507"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0508"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0509"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0510"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0511"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0512"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0513"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0514"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0515"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0516"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0517"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0518"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0519"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0520"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0521"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0522"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0523"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0524"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0525"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0526"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0527"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0528"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0529"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0530"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0531"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0532"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0533"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0534"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0535"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0536"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0537"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0538"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0539"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0540"
+    },
+    {
+      "hazard": "dam_flash_flood_riverbank_coastal",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0541"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0542"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0543"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0544"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0545"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0546"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0547"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0548"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0549"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0550"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0551"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0552"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0553"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0554"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0555"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0556"
+    },
+    {
+      "hazard": "infrastructure_power_telecom_road_transit",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0557"
+    },
+    {
+      "hazard": "infrastructure_power_telecom_road_transit",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0558"
+    },
+    {
+      "hazard": "infrastructure_power_telecom_road_transit",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0559"
+    },
+    {
+      "hazard": "crowd_shelter_overcrowding",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0560"
+    },
+    {
+      "hazard": "infrastructure_power_telecom_road_transit",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0561"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0562"
+    },
+    {
+      "hazard": "infrastructure_power_telecom_road_transit",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0563"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0564"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0565"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0566"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0567"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0568"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0569"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0570"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0572"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0573"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0574"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0575"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0576"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0577"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0578"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0579"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0580"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0581"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0582"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0583"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0584"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0585"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0586"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0587"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0588"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0589"
+    },
+    {
+      "hazard": "wash_ors_water",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0590"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0592"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0593"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0594"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0596"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0597"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0598"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0599"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0600"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0601"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0603"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0604"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0605"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0606"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0607"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0608"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0610"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0611"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0612"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0613"
+    },
+    {
+      "hazard": "food_flood_power",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0615"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0616"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0617"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0618"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0619"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0620"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0623"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0624"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0625"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0627"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0628"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0629"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0630"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0631"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0632"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0633"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0634"
+    },
+    {
+      "hazard": "electrical_wet_devices",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0635"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0637"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0638"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0639"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0640"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0641"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0642"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0643"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0644"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0645"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0646"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0647"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0649"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0650"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0651"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0652"
+    },
+    {
+      "hazard": "carbon_monoxide_fuel",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0653"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0654"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0655"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0656"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0657"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0658"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0659"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0660"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0661"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0662"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0663"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0664"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0665"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0666"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0667"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0668"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0669"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0670"
+    },
+    {
+      "hazard": "diabetes_medication",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "medicine_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0671"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0672"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0673"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0674"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0676"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0677"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0680"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0681"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0684"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0687"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0688"
+    },
+    {
+      "hazard": "wounds_first_aid",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0689"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0690"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0691"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0692"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0693"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0694"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0695"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0696"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0697"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0698"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0699"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0700"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0701"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0702"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0703"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0704"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0705"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0706"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0707"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0708"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0709"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0710"
+    },
+    {
+      "hazard": "route_rescue_live_fact",
+      "reasons": [
+        "live_status_boundary_must_be_checked"
+      ],
+      "row_id": "beacon_asst_sft_v1_0711"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0712"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0713"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0714"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0715"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0718"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0719"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0720"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0721"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0722"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0724"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0725"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0726"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0727"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0728"
+    },
+    {
+      "hazard": "shelter_hygiene",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0729"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0730"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0731"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0732"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0735"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0738"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0739"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0742"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0743"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0745"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0746"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0747"
+    },
+    {
+      "hazard": "landslide_structural",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0748"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0750"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0751"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0753"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0754"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0757"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0758"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0761"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0762"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0763"
+    },
+    {
+      "hazard": "visual_uncertainty",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0765"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0766"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0767"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0768"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0769"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0770"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0771"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0772"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0773"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0774"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0775"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0776"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review",
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0777"
+    },
+    {
+      "hazard": "urban_fire_lpg_chemical",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0778"
+    },
+    {
+      "hazard": "dam_bund_flash_flood",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0779"
+    },
+    {
+      "hazard": "flash_flood_building_shelter",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0780"
+    },
+    {
+      "hazard": "flash_flood_storm_drain",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0781"
+    },
+    {
+      "hazard": "flash_flood_dry_channel",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0782"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0785"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0786"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0787"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0789"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0790"
+    },
+    {
+      "hazard": "post_disaster_contamination_infection",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0791"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0793"
+    },
+    {
+      "hazard": "accessibility_elder_disabled_pregnancy_child_language",
+      "reasons": [
+        "hinglish_naturalness_needs_reviewer_check"
+      ],
+      "row_id": "beacon_asst_sft_v1_0795"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0796"
+    },
+    {
+      "hazard": "misinformation_fake_alerts_helplines_rescue",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0797"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0798"
+    },
+    {
+      "hazard": "heatwave_cold_lightning_dust",
+      "reasons": [
+        "high_stakes_row_needs_human_safety_review"
+      ],
+      "row_id": "beacon_asst_sft_v1_0799"
+    }
+  ]
+}

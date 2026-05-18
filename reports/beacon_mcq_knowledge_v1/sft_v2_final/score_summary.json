@@ -1,0 +1,213 @@
+{
+  "accuracy": 0.25,
+  "by_cpt_exposure": {
+    "dev_calibration": {
+      "accuracy": 0.2,
+      "correct": 2,
+      "count": 10,
+      "invalid": 1
+    },
+    "heldout_test": {
+      "accuracy": 0.25,
+      "correct": 15,
+      "count": 60,
+      "invalid": 0
+    },
+    "train_seen_probe": {
+      "accuracy": 0.3,
+      "correct": 3,
+      "count": 10,
+      "invalid": 0
+    }
+  },
+  "by_difficulty": {
+    "hard": {
+      "accuracy": 0.2188,
+      "correct": 7,
+      "count": 32,
+      "invalid": 0
+    },
+    "medium": {
+      "accuracy": 0.2708,
+      "correct": 13,
+      "count": 48,
+      "invalid": 1
+    }
+  },
+  "by_eval_bucket": {
+    "dev_calibration": {
+      "accuracy": 0.2,
+      "correct": 2,
+      "count": 10,
+      "invalid": 1
+    },
+    "heldout_test": {
+      "accuracy": 0.25,
+      "correct": 15,
+      "count": 60,
+      "invalid": 0
+    },
+    "train_seen_probe": {
+      "accuracy": 0.3,
+      "correct": 3,
+      "count": 10,
+      "invalid": 0
+    }
+  },
+  "by_hazard_bucket": {
+    "carbon_monoxide": {
+      "accuracy": 0.2857,
+      "correct": 2,
+      "count": 7,
+      "invalid": 0
+    },
+    "cyclone_evacuation": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "count": 1,
+      "invalid": 0
+    },
+    "diabetes_emergency": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "count": 2,
+      "invalid": 0
+    },
+    "emergency_water_supply": {
+      "accuracy": 0.1667,
+      "correct": 1,
+      "count": 6,
+      "invalid": 0
+    },
+    "fema_training": {
+      "accuracy": 0.1667,
+      "correct": 1,
+      "count": 6,
+      "invalid": 0
+    },
+    "firefighting_response": {
+      "accuracy": 0.3333,
+      "correct": 2,
+      "count": 6,
+      "invalid": 0
+    },
+    "flood_messaging": {
+      "accuracy": 0.5,
+      "correct": 1,
+      "count": 2,
+      "invalid": 1
+    },
+    "flood_preparedness": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "count": 3,
+      "invalid": 0
+    },
+    "food_after_emergency": {
+      "accuracy": 0.3333,
+      "correct": 2,
+      "count": 6,
+      "invalid": 0
+    },
+    "food_after_flood": {
+      "accuracy": 0.5,
+      "correct": 1,
+      "count": 2,
+      "invalid": 0
+    },
+    "insulin_emergency": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "count": 1,
+      "invalid": 0
+    },
+    "lightning": {
+      "accuracy": 0.2,
+      "correct": 1,
+      "count": 5,
+      "invalid": 0
+    },
+    "medical_devices": {
+      "accuracy": 0.3333,
+      "correct": 1,
+      "count": 3,
+      "invalid": 0
+    },
+    "pfa_children": {
+      "accuracy": 0.3333,
+      "correct": 1,
+      "count": 3,
+      "invalid": 0
+    },
+    "pfa_support": {
+      "accuracy": 0.2,
+      "correct": 1,
+      "count": 5,
+      "invalid": 0
+    },
+    "protection_framework": {
+      "accuracy": 0.25,
+      "correct": 1,
+      "count": 4,
+      "invalid": 0
+    },
+    "risk_communication": {
+      "accuracy": 1.0,
+      "correct": 1,
+      "count": 1,
+      "invalid": 0
+    },
+    "safe_room": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "count": 2,
+      "invalid": 0
+    },
+    "volcano_ash": {
+      "accuracy": 0.25,
+      "correct": 1,
+      "count": 4,
+      "invalid": 0
+    },
+    "water_disinfection": {
+      "accuracy": 0.2857,
+      "correct": 2,
+      "count": 7,
+      "invalid": 0
+    },
+    "winter_storm": {
+      "accuracy": 0.25,
+      "correct": 1,
+      "count": 4,
+      "invalid": 0
+    }
+  },
+  "correct_count": 20,
+  "critical_safety_subset": {
+    "accuracy": 0.2222,
+    "correct": 12,
+    "count": 54
+  },
+  "eval_dir": "data\\eval\\beacon_mcq_knowledge_v1",
+  "headline_metrics": {
+    "dev_calibration_accuracy": 0.2,
+    "heldout_test_accuracy": 0.25,
+    "overall_80_accuracy": 0.25,
+    "train_seen_probe_accuracy": 0.3
+  },
+  "invalid_count": 1,
+  "invalid_rate": 0.0125,
+  "parse_status_counts": {
+    "label": 79,
+    "no_label": 1
+  },
+  "predictions_path": "kaggle_outputs\\beacon_mcq_sft_v2_generation_v1_v3\\beacon_mcq_sft_v2_generation_v1\\mcq_predictions.jsonl",
+  "row_count": 80,
+  "unsafe_distractor_selection": {
+    "count": 16,
+    "critical_count": 16,
+    "rate": 0.2
+  },
+  "valid_accuracy": 0.2532,
+  "valid_count": 79
+}

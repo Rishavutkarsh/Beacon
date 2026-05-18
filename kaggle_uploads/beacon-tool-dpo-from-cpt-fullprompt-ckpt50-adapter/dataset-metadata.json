@@ -1,0 +1,9 @@
+{
+  "title": "Beacon DPO CPT Fullprompt Ckpt50 Adapter",
+  "id": "rishavutkarsh/beacon-tool-dpo-from-cpt-fullprompt-ckpt50-adapter",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ]
+}

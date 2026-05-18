@@ -1,0 +1,24 @@
+{
+  "id": "rishavutkarsh/beacon-eval-dpo-cpt-fp-ckpt50-e2e-v1",
+  "title": "Beacon Eval DPO CPT FP Ckpt50 E2E V1",
+  "code_file": "beacon-final-eval-tool-dpo-cpt-fullprompt-ckpt50-e2e-answers-v1.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "rishavutkarsh/beacon-official-doc-tool-v1",
+    "rishavutkarsh/beacon-tool-plus-no-tool-final-eval-v1",
+    "rishavutkarsh/beacon-tool-dpo-from-cpt-fullprompt-ckpt50-adapter"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [
+    "google/gemma-4/Transformers/gemma-4-e2b-it/1"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:00377cd1b3d470a605bc5b0ceca79969e369644e9b36802242a1c70e627372f9",
+  "machine_shape": "NvidiaTeslaT4"
+}

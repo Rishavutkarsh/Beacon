@@ -1,0 +1,235 @@
+{
+  "packet_size_source_rows": 100,
+  "packets": [
+    {
+      "by_pair_type": {
+        "final_grounding": 100,
+        "read_doc_decision": 42,
+        "tool_decision": 100,
+        "wrong_tool_contrast": 28
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 100,
+        "unsupported_final_answer": 100,
+        "wrong_read_doc_call": 42,
+        "wrong_tool_query_or_live_lookup": 28
+      },
+      "packet_index": 0,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_000.jsonl",
+      "row_count": 270
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 100,
+        "read_doc_decision": 39,
+        "tool_decision": 100,
+        "wrong_tool_contrast": 21
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 100,
+        "unsupported_final_answer": 100,
+        "wrong_read_doc_call": 39,
+        "wrong_tool_query_or_live_lookup": 21
+      },
+      "packet_index": 1,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_001.jsonl",
+      "row_count": 260
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 100,
+        "read_doc_decision": 48,
+        "tool_decision": 100,
+        "wrong_tool_contrast": 14
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 100,
+        "unsupported_final_answer": 100,
+        "wrong_read_doc_call": 48,
+        "wrong_tool_query_or_live_lookup": 14
+      },
+      "packet_index": 2,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_002.jsonl",
+      "row_count": 262
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 100,
+        "read_doc_decision": 55,
+        "tool_decision": 100,
+        "wrong_tool_contrast": 20
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 100,
+        "unsupported_final_answer": 100,
+        "wrong_read_doc_call": 55,
+        "wrong_tool_query_or_live_lookup": 20
+      },
+      "packet_index": 3,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_003.jsonl",
+      "row_count": 275
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 100,
+        "read_doc_decision": 48,
+        "tool_decision": 100,
+        "wrong_tool_contrast": 21
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 100,
+        "unsupported_final_answer": 100,
+        "wrong_read_doc_call": 48,
+        "wrong_tool_query_or_live_lookup": 21
+      },
+      "packet_index": 4,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_004.jsonl",
+      "row_count": 269
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 100,
+        "read_doc_decision": 54,
+        "tool_decision": 100,
+        "wrong_tool_contrast": 22
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 100,
+        "unsupported_final_answer": 100,
+        "wrong_read_doc_call": 54,
+        "wrong_tool_query_or_live_lookup": 22
+      },
+      "packet_index": 5,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_005.jsonl",
+      "row_count": 276
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 100,
+        "read_doc_decision": 45,
+        "tool_decision": 100,
+        "wrong_tool_contrast": 23
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 100,
+        "unsupported_final_answer": 100,
+        "wrong_read_doc_call": 45,
+        "wrong_tool_query_or_live_lookup": 23
+      },
+      "packet_index": 6,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_006.jsonl",
+      "row_count": 268
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 100,
+        "read_doc_decision": 43,
+        "tool_decision": 100,
+        "wrong_tool_contrast": 23
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 100,
+        "unsupported_final_answer": 100,
+        "wrong_read_doc_call": 43,
+        "wrong_tool_query_or_live_lookup": 23
+      },
+      "packet_index": 7,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_007.jsonl",
+      "row_count": 266
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 100,
+        "read_doc_decision": 50,
+        "tool_decision": 100,
+        "wrong_tool_contrast": 14
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 100,
+        "unsupported_final_answer": 100,
+        "wrong_read_doc_call": 50,
+        "wrong_tool_query_or_live_lookup": 14
+      },
+      "packet_index": 8,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_008.jsonl",
+      "row_count": 264
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 2,
+        "no_tool_decision": 98,
+        "no_tool_helpfulness": 98,
+        "tool_decision": 2
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 2,
+        "unnecessary_refusal_without_tool": 98,
+        "unnecessary_tool_use": 98,
+        "unsupported_final_answer": 2
+      },
+      "packet_index": 9,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_009.jsonl",
+      "row_count": 200
+    },
+    {
+      "by_pair_type": {
+        "no_tool_decision": 100,
+        "no_tool_helpfulness": 100
+      },
+      "by_rejected_type": {
+        "unnecessary_refusal_without_tool": 100,
+        "unnecessary_tool_use": 100
+      },
+      "packet_index": 10,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_010.jsonl",
+      "row_count": 200
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 48,
+        "no_tool_decision": 52,
+        "no_tool_helpfulness": 52,
+        "read_doc_decision": 25,
+        "tool_decision": 48,
+        "wrong_tool_contrast": 10
+      },
+      "by_rejected_type": {
+        "skipped_required_tool_or_fabricated_answer": 48,
+        "unnecessary_refusal_without_tool": 52,
+        "unnecessary_tool_use": 52,
+        "unsupported_final_answer": 48,
+        "wrong_read_doc_call": 25,
+        "wrong_tool_query_or_live_lookup": 10
+      },
+      "packet_index": 11,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_011.jsonl",
+      "row_count": 235
+    },
+    {
+      "by_pair_type": {
+        "no_tool_decision": 100,
+        "no_tool_helpfulness": 100
+      },
+      "by_rejected_type": {
+        "unnecessary_refusal_without_tool": 100,
+        "unnecessary_tool_use": 100
+      },
+      "packet_index": 12,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_012.jsonl",
+      "row_count": 200
+    },
+    {
+      "by_pair_type": {
+        "no_tool_decision": 90,
+        "no_tool_helpfulness": 90
+      },
+      "by_rejected_type": {
+        "unnecessary_refusal_without_tool": 90,
+        "unnecessary_tool_use": 90
+      },
+      "packet_index": 13,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_reviewed\\review_packets\\packet_013.jsonl",
+      "row_count": 180
+    }
+  ]
+}

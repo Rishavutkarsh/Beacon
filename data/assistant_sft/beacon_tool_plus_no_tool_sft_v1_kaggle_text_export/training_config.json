@@ -1,0 +1,15 @@
+{
+  "base_adapter": "beacon-assistant-sft-v1-ckpt300-best-adapter",
+  "counts": {
+    "dev": 132,
+    "final_eval": 132,
+    "train": 1126
+  },
+  "dataset": "beacon-tool-plus-no-tool-sft-v1-kaggle-text",
+  "dataset_text_field": "text",
+  "instruction_part": "<|turn>user\n",
+  "max_length_recommendation": 4096,
+  "response_part": "<|turn>model\n",
+  "tool_result_policy": "tool results are rendered as synthetic user turns and must not be supervised",
+  "train_on_responses_only": true
+}

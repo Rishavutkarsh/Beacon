@@ -45,5 +45,6 @@ data/dapt_corpus/beacon_cpt_v1_adapter_best_dev_kaggle/
 *.bin
 *.pt
 *.pth
+*.gguf
 adapter_model.*
 checkpoint-*/

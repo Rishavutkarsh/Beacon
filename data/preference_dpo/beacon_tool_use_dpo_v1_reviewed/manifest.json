@@ -1,0 +1,43 @@
+{
+  "by_pair_type": {
+    "final_grounding": 950,
+    "no_tool_decision": 440,
+    "no_tool_helpfulness": 440,
+    "read_doc_decision": 449,
+    "tool_decision": 950,
+    "wrong_tool_contrast": 196
+  },
+  "by_rejected_type": {
+    "skipped_required_tool_or_fabricated_answer": 950,
+    "unnecessary_refusal_without_tool": 440,
+    "unnecessary_tool_use": 440,
+    "unsupported_final_answer": 950,
+    "wrong_read_doc_call": 449,
+    "wrong_tool_query_or_live_lookup": 196
+  },
+  "by_split": {
+    "dev": 326,
+    "final_eval": 328,
+    "train": 2771
+  },
+  "created_at_utc": "2026-05-18T07:45:09.209826+00:00",
+  "no_tool_source_rows": 440,
+  "notes": [
+    "This reviewed package replaces full-trajectory DPO with assistant-only continuations.",
+    "Tool-result turns may appear in prompts for final-grounding decisions, but never in chosen/rejected continuations.",
+    "Every pair has an explicit review_decision and review_notes field.",
+    "No DPO/PPO/GRPO run has been launched."
+  ],
+  "packet_count": 14,
+  "pair_count": 3425,
+  "schema_version": "beacon-tool-use-dpo-v1-reviewed-assistant-only",
+  "source_dir": "data\\assistant_sft\\beacon_tool_plus_no_tool_sft_v1_final_reviewed",
+  "source_sft_row_count": 1390,
+  "status": "reviewed_ready_for_sampling",
+  "tool_required_source_rows": 950,
+  "validation": {
+    "error_count": 0,
+    "errors": [],
+    "status": "valid"
+  }
+}

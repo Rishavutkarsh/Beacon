@@ -1,0 +1,33 @@
+{
+  "created_at_utc": "2026-05-18T15:46:40+00:00",
+  "files": {
+    "all_rows.jsonl": {
+      "bytes": 6894875,
+      "sha256": "e91904d7bb6f99c6dd1590e49844f31789de8dd7a420eb4cdca81d9101596f24"
+    },
+    "dataset-metadata.json": {
+      "bytes": 156,
+      "sha256": "0e591420820ea0b7f48357805fdfcacd5fa26c18509d39c56f341421e8ef5012"
+    },
+    "dev.jsonl": {
+      "bytes": 661434,
+      "sha256": "87bae8a5c327e1e1fa52b5c90bd77143f345aff9cebc42cdff3436e60ef6329c"
+    },
+    "final_eval.jsonl": {
+      "bytes": 665578,
+      "sha256": "7e285b6c4515676c5085b3714d6e6f10a06912c1e184f73acafc6f016d1eb838"
+    },
+    "manifest.json": {
+      "bytes": 1739,
+      "sha256": "d7130f94735afc4af8858a775edad0ee06e136af5c51616827037932eda2b4a0"
+    },
+    "train.jsonl": {
+      "bytes": 5567863,
+      "sha256": "001c66a69c3e9cc3532c06a5e0ae6f72ee3d960c312bfbf805ac4cd084de6275"
+    },
+    "validation_report.json": {
+      "bytes": 650,
+      "sha256": "fc74ae3c41ab7847e3405675243bc63c69ea6dd258eab763b7d055b149b588c6"
+    }
+  }
+}

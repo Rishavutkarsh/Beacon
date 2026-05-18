@@ -1,0 +1,6 @@
+{
+  "packet_count": 48,
+  "review_instruction": "Main reviewer must read each packet and write decisions; scripts are packet formatting only.",
+  "row_count": 1152,
+  "rows_per_packet": 24
+}

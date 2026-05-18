@@ -9,20 +9,29 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from sankat_saathi_dataset.assistant_sft import DEFAULT_RULE_MANIFEST, validate_bundle, write_bundle
+from sankat_saathi_dataset.assistant_sft import DEFAULT_RULE_MANIFEST, DEFAULT_SEED_CARDS, validate_bundle, write_bundle
 
 
 def main() -> None:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
-    parser = argparse.ArgumentParser(description="Build a Beacon assistant-SFT draft review bundle.")
-    parser.add_argument("--out-dir", default=str(ROOT / "data" / "assistant_sft" / "beacon_assistant_sft_v1_draft"))
+    parser = argparse.ArgumentParser(description="Build a Beacon assistant-SFT candidate review bundle.")
+    parser.add_argument("--out-dir", default=str(ROOT / "data" / "assistant_sft" / "beacon_assistant_sft_v1_candidate_800"))
     parser.add_argument("--rule-manifest", default=str(DEFAULT_RULE_MANIFEST))
+    parser.add_argument("--seed-cards", default=str(DEFAULT_SEED_CARDS))
+    parser.add_argument("--target-count", type=int, default=800)
+    parser.add_argument("--pilot-12", action="store_true", help="Build only the hand-reviewed 12-row calibration draft.")
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir)
     rule_manifest = Path(args.rule_manifest)
-    manifest = write_bundle(out_dir, rule_manifest)
+    seed_cards = Path(args.seed_cards)
+    manifest = write_bundle(
+        out_dir,
+        rule_manifest,
+        seed_card_path=None if args.pilot_12 else seed_cards,
+        target_count=None if args.pilot_12 else args.target_count,
+    )
     errors, report = validate_bundle(out_dir, stage="candidate", rule_manifest_path=rule_manifest)
     payload = {"manifest": manifest, "validation_report": report, "errors": errors}
     print(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True))

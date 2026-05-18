@@ -1,0 +1,373 @@
+{
+  "packet_size": 150,
+  "packets": [
+    {
+      "by_pair_type": {
+        "final_grounding": 33,
+        "no_tool_decision": 16,
+        "no_tool_helpfulness": 17,
+        "read_doc_decision": 10,
+        "tool_decision": 47,
+        "uncertainty_boundary": 16,
+        "wrong_tool_contrast": 11
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 16,
+        "skipped_required_tool_or_bad_direct_answer": 47,
+        "unnecessary_refusal_without_tool": 17,
+        "unnecessary_tool_use": 16,
+        "unsupported_final_answer": 33,
+        "wrong_but_returned_doc_read": 10,
+        "wrong_tool_query": 11
+      },
+      "packet_index": 0,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_000.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 38,
+        "no_tool_decision": 8,
+        "no_tool_helpfulness": 17,
+        "read_doc_decision": 12,
+        "tool_decision": 39,
+        "uncertainty_boundary": 25,
+        "wrong_tool_contrast": 11
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 25,
+        "skipped_required_tool_or_bad_direct_answer": 39,
+        "unnecessary_refusal_without_tool": 17,
+        "unnecessary_tool_use": 8,
+        "unsupported_final_answer": 38,
+        "wrong_but_returned_doc_read": 12,
+        "wrong_tool_query": 11
+      },
+      "packet_index": 1,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_001.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 56,
+        "no_tool_decision": 11,
+        "no_tool_helpfulness": 14,
+        "read_doc_decision": 7,
+        "tool_decision": 34,
+        "uncertainty_boundary": 19,
+        "wrong_tool_contrast": 9
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 19,
+        "skipped_required_tool_or_bad_direct_answer": 34,
+        "unnecessary_refusal_without_tool": 14,
+        "unnecessary_tool_use": 11,
+        "unsupported_final_answer": 56,
+        "wrong_but_returned_doc_read": 7,
+        "wrong_tool_query": 9
+      },
+      "packet_index": 2,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_002.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 49,
+        "no_tool_decision": 18,
+        "no_tool_helpfulness": 10,
+        "read_doc_decision": 11,
+        "tool_decision": 32,
+        "uncertainty_boundary": 24,
+        "wrong_tool_contrast": 6
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 24,
+        "skipped_required_tool_or_bad_direct_answer": 32,
+        "unnecessary_refusal_without_tool": 10,
+        "unnecessary_tool_use": 18,
+        "unsupported_final_answer": 49,
+        "wrong_but_returned_doc_read": 11,
+        "wrong_tool_query": 6
+      },
+      "packet_index": 3,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_003.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 45,
+        "no_tool_decision": 14,
+        "no_tool_helpfulness": 14,
+        "read_doc_decision": 8,
+        "tool_decision": 41,
+        "uncertainty_boundary": 20,
+        "wrong_tool_contrast": 8
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 20,
+        "skipped_required_tool_or_bad_direct_answer": 41,
+        "unnecessary_refusal_without_tool": 14,
+        "unnecessary_tool_use": 14,
+        "unsupported_final_answer": 45,
+        "wrong_but_returned_doc_read": 8,
+        "wrong_tool_query": 8
+      },
+      "packet_index": 4,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_004.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 38,
+        "no_tool_decision": 10,
+        "no_tool_helpfulness": 12,
+        "read_doc_decision": 13,
+        "tool_decision": 50,
+        "uncertainty_boundary": 14,
+        "wrong_tool_contrast": 13
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 14,
+        "skipped_required_tool_or_bad_direct_answer": 50,
+        "unnecessary_refusal_without_tool": 12,
+        "unnecessary_tool_use": 10,
+        "unsupported_final_answer": 38,
+        "wrong_but_returned_doc_read": 13,
+        "wrong_tool_query": 13
+      },
+      "packet_index": 5,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_005.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 52,
+        "no_tool_decision": 13,
+        "no_tool_helpfulness": 15,
+        "read_doc_decision": 4,
+        "tool_decision": 38,
+        "uncertainty_boundary": 15,
+        "wrong_tool_contrast": 13
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 15,
+        "skipped_required_tool_or_bad_direct_answer": 38,
+        "unnecessary_refusal_without_tool": 15,
+        "unnecessary_tool_use": 13,
+        "unsupported_final_answer": 52,
+        "wrong_but_returned_doc_read": 4,
+        "wrong_tool_query": 13
+      },
+      "packet_index": 6,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_006.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 25,
+        "no_tool_decision": 16,
+        "no_tool_helpfulness": 16,
+        "read_doc_decision": 11,
+        "tool_decision": 50,
+        "uncertainty_boundary": 21,
+        "wrong_tool_contrast": 11
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 21,
+        "skipped_required_tool_or_bad_direct_answer": 50,
+        "unnecessary_refusal_without_tool": 16,
+        "unnecessary_tool_use": 16,
+        "unsupported_final_answer": 25,
+        "wrong_but_returned_doc_read": 11,
+        "wrong_tool_query": 11
+      },
+      "packet_index": 7,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_007.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 40,
+        "no_tool_decision": 12,
+        "no_tool_helpfulness": 19,
+        "read_doc_decision": 9,
+        "tool_decision": 38,
+        "uncertainty_boundary": 18,
+        "wrong_tool_contrast": 14
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 18,
+        "skipped_required_tool_or_bad_direct_answer": 38,
+        "unnecessary_refusal_without_tool": 19,
+        "unnecessary_tool_use": 12,
+        "unsupported_final_answer": 40,
+        "wrong_but_returned_doc_read": 9,
+        "wrong_tool_query": 14
+      },
+      "packet_index": 8,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_008.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 37,
+        "no_tool_decision": 20,
+        "no_tool_helpfulness": 10,
+        "read_doc_decision": 7,
+        "tool_decision": 46,
+        "uncertainty_boundary": 22,
+        "wrong_tool_contrast": 8
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 22,
+        "skipped_required_tool_or_bad_direct_answer": 46,
+        "unnecessary_refusal_without_tool": 10,
+        "unnecessary_tool_use": 20,
+        "unsupported_final_answer": 37,
+        "wrong_but_returned_doc_read": 7,
+        "wrong_tool_query": 8
+      },
+      "packet_index": 9,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_009.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 30,
+        "no_tool_decision": 13,
+        "no_tool_helpfulness": 12,
+        "read_doc_decision": 11,
+        "tool_decision": 59,
+        "uncertainty_boundary": 15,
+        "wrong_tool_contrast": 10
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 15,
+        "skipped_required_tool_or_bad_direct_answer": 59,
+        "unnecessary_refusal_without_tool": 12,
+        "unnecessary_tool_use": 13,
+        "unsupported_final_answer": 30,
+        "wrong_but_returned_doc_read": 11,
+        "wrong_tool_query": 10
+      },
+      "packet_index": 10,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_010.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 58,
+        "no_tool_decision": 12,
+        "no_tool_helpfulness": 11,
+        "read_doc_decision": 11,
+        "tool_decision": 33,
+        "uncertainty_boundary": 19,
+        "wrong_tool_contrast": 6
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 19,
+        "skipped_required_tool_or_bad_direct_answer": 33,
+        "unnecessary_refusal_without_tool": 11,
+        "unnecessary_tool_use": 12,
+        "unsupported_final_answer": 58,
+        "wrong_but_returned_doc_read": 11,
+        "wrong_tool_query": 6
+      },
+      "packet_index": 11,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_011.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 38,
+        "no_tool_decision": 11,
+        "no_tool_helpfulness": 16,
+        "read_doc_decision": 11,
+        "tool_decision": 49,
+        "uncertainty_boundary": 18,
+        "wrong_tool_contrast": 7
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 18,
+        "skipped_required_tool_or_bad_direct_answer": 49,
+        "unnecessary_refusal_without_tool": 16,
+        "unnecessary_tool_use": 11,
+        "unsupported_final_answer": 38,
+        "wrong_but_returned_doc_read": 11,
+        "wrong_tool_query": 7
+      },
+      "packet_index": 12,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_012.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 38,
+        "no_tool_decision": 16,
+        "no_tool_helpfulness": 20,
+        "read_doc_decision": 13,
+        "tool_decision": 34,
+        "uncertainty_boundary": 14,
+        "wrong_tool_contrast": 15
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 14,
+        "skipped_required_tool_or_bad_direct_answer": 34,
+        "unnecessary_refusal_without_tool": 20,
+        "unnecessary_tool_use": 16,
+        "unsupported_final_answer": 38,
+        "wrong_but_returned_doc_read": 13,
+        "wrong_tool_query": 15
+      },
+      "packet_index": 13,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_013.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 40,
+        "no_tool_decision": 14,
+        "no_tool_helpfulness": 16,
+        "read_doc_decision": 10,
+        "tool_decision": 36,
+        "uncertainty_boundary": 19,
+        "wrong_tool_contrast": 15
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 19,
+        "skipped_required_tool_or_bad_direct_answer": 36,
+        "unnecessary_refusal_without_tool": 16,
+        "unnecessary_tool_use": 14,
+        "unsupported_final_answer": 40,
+        "wrong_but_returned_doc_read": 10,
+        "wrong_tool_query": 15
+      },
+      "packet_index": 14,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_014.jsonl",
+      "row_count": 150
+    },
+    {
+      "by_pair_type": {
+        "final_grounding": 40,
+        "no_tool_decision": 10,
+        "no_tool_helpfulness": 7,
+        "read_doc_decision": 5,
+        "tool_decision": 33,
+        "uncertainty_boundary": 12,
+        "wrong_tool_contrast": 11
+      },
+      "by_rejected_type": {
+        "fabricated_or_overconfident_boundary": 12,
+        "skipped_required_tool_or_bad_direct_answer": 33,
+        "unnecessary_refusal_without_tool": 7,
+        "unnecessary_tool_use": 10,
+        "unsupported_final_answer": 40,
+        "wrong_but_returned_doc_read": 5,
+        "wrong_tool_query": 11
+      },
+      "packet_index": 15,
+      "path": "data\\preference_dpo\\beacon_tool_use_dpo_v1_curated\\review_packets\\packet_015.jsonl",
+      "row_count": 118
+    }
+  ]
+}

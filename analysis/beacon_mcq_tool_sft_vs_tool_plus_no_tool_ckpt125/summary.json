@@ -1,0 +1,336 @@
+{
+  "tool_sft_best_dev": {
+    "prediction_file": "C:\\Users\\risha\\Documents\\New project 5\\kaggle_outputs\\beacon_mcq_tool_sft_best_dev_generation_v1\\beacon_mcq_tool_sft_best_dev_generation_v1\\mcq_predictions.jsonl",
+    "total": 80,
+    "correct": 70,
+    "accuracy": 0.875,
+    "unsafe_picks": 1,
+    "missing_from_key": [],
+    "by_difficulty": {
+      "hard": {
+        "total": 32,
+        "correct": 29,
+        "accuracy": 0.9062,
+        "unsafe_picks": 1
+      },
+      "medium": {
+        "total": 48,
+        "correct": 41,
+        "accuracy": 0.8542,
+        "unsafe_picks": 0
+      }
+    },
+    "by_hazard": {
+      "carbon_monoxide": {
+        "total": 7,
+        "correct": 6,
+        "accuracy": 0.8571,
+        "unsafe_picks": 0
+      },
+      "cyclone_evacuation": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "diabetes_emergency": {
+        "total": 2,
+        "correct": 1,
+        "accuracy": 0.5,
+        "unsafe_picks": 0
+      },
+      "emergency_water_supply": {
+        "total": 6,
+        "correct": 5,
+        "accuracy": 0.8333,
+        "unsafe_picks": 0
+      },
+      "fema_training": {
+        "total": 6,
+        "correct": 6,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "firefighting_response": {
+        "total": 6,
+        "correct": 5,
+        "accuracy": 0.8333,
+        "unsafe_picks": 0
+      },
+      "flood_messaging": {
+        "total": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "flood_preparedness": {
+        "total": 3,
+        "correct": 3,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "food_after_emergency": {
+        "total": 6,
+        "correct": 3,
+        "accuracy": 0.5,
+        "unsafe_picks": 0
+      },
+      "food_after_flood": {
+        "total": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "insulin_emergency": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "lightning": {
+        "total": 5,
+        "correct": 5,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "medical_devices": {
+        "total": 3,
+        "correct": 3,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "pfa_children": {
+        "total": 3,
+        "correct": 3,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "pfa_support": {
+        "total": 5,
+        "correct": 5,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "protection_framework": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "risk_communication": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "safe_room": {
+        "total": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "volcano_ash": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "water_disinfection": {
+        "total": 7,
+        "correct": 4,
+        "accuracy": 0.5714,
+        "unsafe_picks": 1
+      },
+      "winter_storm": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      }
+    },
+    "by_critical_safety_subset": {
+      "false": {
+        "total": 26,
+        "correct": 25,
+        "accuracy": 0.9615,
+        "unsafe_picks": 0
+      },
+      "true": {
+        "total": 54,
+        "correct": 45,
+        "accuracy": 0.8333,
+        "unsafe_picks": 1
+      }
+    }
+  },
+  "tool_plus_no_tool_ckpt125": {
+    "prediction_file": "C:\\Users\\risha\\Documents\\New project 5\\kaggle_outputs\\beacon_mcq_tool_plus_no_tool_ckpt125_generation_v1\\beacon_mcq_tool_plus_no_tool_ckpt125_generation_v1\\mcq_predictions.jsonl",
+    "total": 80,
+    "correct": 69,
+    "accuracy": 0.8625,
+    "unsafe_picks": 1,
+    "missing_from_key": [],
+    "by_difficulty": {
+      "hard": {
+        "total": 32,
+        "correct": 29,
+        "accuracy": 0.9062,
+        "unsafe_picks": 1
+      },
+      "medium": {
+        "total": 48,
+        "correct": 40,
+        "accuracy": 0.8333,
+        "unsafe_picks": 0
+      }
+    },
+    "by_hazard": {
+      "carbon_monoxide": {
+        "total": 7,
+        "correct": 5,
+        "accuracy": 0.7143,
+        "unsafe_picks": 0
+      },
+      "cyclone_evacuation": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "diabetes_emergency": {
+        "total": 2,
+        "correct": 1,
+        "accuracy": 0.5,
+        "unsafe_picks": 0
+      },
+      "emergency_water_supply": {
+        "total": 6,
+        "correct": 5,
+        "accuracy": 0.8333,
+        "unsafe_picks": 0
+      },
+      "fema_training": {
+        "total": 6,
+        "correct": 6,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "firefighting_response": {
+        "total": 6,
+        "correct": 5,
+        "accuracy": 0.8333,
+        "unsafe_picks": 0
+      },
+      "flood_messaging": {
+        "total": 2,
+        "correct": 1,
+        "accuracy": 0.5,
+        "unsafe_picks": 0
+      },
+      "flood_preparedness": {
+        "total": 3,
+        "correct": 3,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "food_after_emergency": {
+        "total": 6,
+        "correct": 3,
+        "accuracy": 0.5,
+        "unsafe_picks": 0
+      },
+      "food_after_flood": {
+        "total": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "insulin_emergency": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "lightning": {
+        "total": 5,
+        "correct": 5,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "medical_devices": {
+        "total": 3,
+        "correct": 3,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "pfa_children": {
+        "total": 3,
+        "correct": 3,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "pfa_support": {
+        "total": 5,
+        "correct": 5,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "protection_framework": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "risk_communication": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "safe_room": {
+        "total": 2,
+        "correct": 2,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "volcano_ash": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      },
+      "water_disinfection": {
+        "total": 7,
+        "correct": 5,
+        "accuracy": 0.7143,
+        "unsafe_picks": 1
+      },
+      "winter_storm": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0,
+        "unsafe_picks": 0
+      }
+    },
+    "by_critical_safety_subset": {
+      "false": {
+        "total": 26,
+        "correct": 24,
+        "accuracy": 0.9231,
+        "unsafe_picks": 0
+      },
+      "true": {
+        "total": 54,
+        "correct": 45,
+        "accuracy": 0.8333,
+        "unsafe_picks": 1
+      }
+    }
+  },
+  "pairwise": {
+    "shared_examples": 80,
+    "different_predictions": 4,
+    "different_correctness": 3,
+    "flips_file": "C:\\Users\\risha\\Documents\\New project 5\\analysis\\beacon_mcq_tool_sft_vs_tool_plus_no_tool_ckpt125\\pairwise_flips.jsonl"
+  }
+}

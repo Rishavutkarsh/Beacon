@@ -1,0 +1,28 @@
+{
+  "base_behavior_checkpoint": "sft_v1_ckpt300_best",
+  "by_family": {
+    "insufficient_grounding": 111,
+    "negative_contrast": 152,
+    "no_retrieval_needed": 96,
+    "retrieval_needed": 641
+  },
+  "by_split": {
+    "dev": 103,
+    "final_eval": 100,
+    "train": 797
+  },
+  "created_at_utc": "2026-05-17T09:13:57+00:00",
+  "knowledge_reference_checkpoint": "cpt_v2_ckpt300",
+  "langchain_used": false,
+  "row_count": 1000,
+  "schema_version": "beacon-grounding-aware-sft-v1",
+  "status": "valid",
+  "training_export_allowed": false,
+  "training_ready_count": 0,
+  "unique_target_response_count": 926,
+  "unique_user_prompt_count": 900,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  }
+}
